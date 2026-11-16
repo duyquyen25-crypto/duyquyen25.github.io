@@ -1,0 +1,6 @@
+{
+  "name": "EduMath 2018 — Ngân hàng Câu hỏi Động & Khảo thí Toán THPT",
+  "description": "Hệ thống xây dựng ngân hàng câu hỏi động sinh số tự động theo chương trình Toán THPT GDPT 2018, kiểm thử giá trị biên, xuất đề thi PDF/Word/LaTeX, chấm điểm tự động và báo cáo năng lực học sinh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
