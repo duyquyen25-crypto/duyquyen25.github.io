@@ -1,0 +1,1120 @@
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Phép chiếu song song bảo toàn độ dài của đoạn thẳng }
+   { Phép chiếu song song biến hai đường thẳng chéo nhau thành hai đường thẳng chéo nhau }
+     { Phép chiếu song song bảo toàn diện tích }
+    { \True Hình chiếu song song của hai đường thẳng song song là hai đường thẳng song song hoặc trùng nhau }
+\loigiai{ 
+ Hình chiếu song song của hai đường thẳng song song là hai đường thẳng song song hoặc trùng nhau là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây sai? 
+\choice
+{ Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy }
+   { Phép chiếu song song có thể biến đường tròn thành đường elip }
+     { \True Phép chiếu song song bảo toàn diện tích }
+    { Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng }
+\loigiai{ 
+ Phép chiếu song song bảo toàn diện tích là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Hình chiếu song song của hình chữ nhật luôn giữ nguyên tỉ lệ chiều dài và chiều rộng }
+   { Hình chiếu song song của hình vuông luôn là một hình vuông }
+     { Hình chiếu song song của tam giác đều thành một tam giác đều }
+    { \True Hình chiếu song song của hình vuông là một hình bình hành }
+\loigiai{ 
+ Hình chiếu song song của hình vuông là một hình bình hành là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.DEF}$. Hình chiếu song song của điểm ${A}$ lên mặt phẳng $(DFF)$ theo phương ${CF}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (1,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (3,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (5,4)   node at (F) [above] {$F$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(E)--(D)--(A); 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${F}$ }
+   { Điểm ${C}$ }
+     { \True Điểm ${D}$ }
+    { Điểm ${E}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${D}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A'B'C'}$. Hình chiếu song song của điểm ${A}$ lên mặt phẳng $(A'C'C')$ theo phương ${BB'}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A') at (1,4)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (3,3)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (5,4)   node at (C') [above] {$C'$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B')--(A')--(A); 
+    \draw (B')--(C')--(C)--(B) (A')--(C')--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${B}$ }
+   { Điểm ${B'}$ }
+     { Điểm ${A}$ }
+    { \True Điểm ${A'}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${A'}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm nghiệm của phương trình  $2^{x}=16$.
+ 
+\choice
+{ \True ${x=4}$ }
+   { ${x=-5}$ }
+     { ${x=6}$ }
+    { ${x=14}$ }
+\loigiai{ 
+
+ $2^{x}=16 \Leftrightarrow x=\log_2 16=4$ 
+ }\end{ex}
+
+\begin{ex}
+ Tìm nghiệm của phương trình $3^{x - 4}=\frac{1}{19683}$.
+ 
+\choice
+{ ${x=3}$ }
+   { \True ${x=-5}$ }
+     { ${x=-13}$ }
+    { ${x=-3}$ }
+\loigiai{ 
+
+ $3^{x - 4}=\frac{1}{19683} \Leftrightarrow x - 4=\log_3 \frac{1}{19683}\Leftrightarrow x=-5$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải phương trình $4^{-x+6}=4096$.
+\choice
+{ \True $x=0$ }
+{ $x=-9$ }
+{ $x=\frac{1}{10}$ }
+{ $x=- \frac{3}{10}$ }
+\loigiai{ 
+ $4^{-x+6}=4096\Leftrightarrow 4^{-x+6}=4^{6}$.
+
+ $\Leftrightarrow -x+6=6 \Leftrightarrow x=0$. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm nghiệm của phương trình: $7^{4 - 3 x}=343^{7 x + 1}$.
+ 
+\choice
+{ ${x=\frac{3}{10}}$ }
+   { ${x=\frac{1}{10}}$ }
+     { \True ${x=\frac{1}{24}}$ }
+    { ${x=\frac{73}{24}}$ }
+\loigiai{ 
+
+ $7^{4 - 3 x}=343^{7 x + 1} \Leftrightarrow 7^{4 - 3 x}=7^{21 x + 3}\Leftrightarrow 4 - 3 x=21 x + 3\Leftrightarrow x=\frac{1}{24}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính tổng các nghiệm của phương trình  $9 \cdot 3^{2 x} - 57 \cdot 3^{x} + 60=0$.
+ 
+\choice
+{ ${\frac{40}{3}}$ }
+   { ${\frac{19}{3}}$ }
+     { ${\log_3 \frac{20}{3}+7}$ }
+    { \True ${\log_3 \frac{20}{3}}$ }
+\loigiai{ 
+
+  
+ }\end{ex}
+
+\begin{ex}
+ Nghiệm của phương trình $- 15 . 14^{x} + 14 . 8^{x}=3 . 14^{x} - 7 . 8^{x}$ là
+ 
+\choice
+{ $x={\log_{\frac{4}{7}} \left(\frac{14}{3}\right)}$ }
+   { $x={\log_{\frac{7}{4}} \left(\frac{6}{7}\right)}$ }
+     { \True $x={\log_{\frac{4}{7}} \left(\frac{6}{7}\right)}$ }
+    { $x={\log_{\frac{4}{7}} \left(\frac{27}{7}\right)}$ }
+\loigiai{ 
+
+ $- 15 . 14^{x} + 14 . 8^{x}=3 . 14^{x} - 7 . 8^{x}\Leftrightarrow 21 . 8^{x}=18 . 14^{x}$ 
+
+ $\Leftrightarrow \left(\dfrac{4}{7}\right)^x=\dfrac{6}{7}$$\Leftrightarrow x=\log_{\dfrac{4}{7}} \left(\dfrac{6}{7}\right)$. 
+ }\end{ex}
+
+\begin{ex}
+ Nghiệm của phương trình $5^{x} + 5^{x - 3} + 5^{x - 2}=8^{x} + 8^{x - 2} + 8^{x + 1}$ là
+ 
+\choice
+{ $x={\log_{\frac{5}{8}} \left(\frac{88893}{8384}\right)}$ }
+   { $x={\log_{\frac{8}{5}} \left(\frac{21375}{128}\right)}$ }
+     { $x={\log_{\frac{5}{8}} \left(\frac{2}{3}\right)}$ }
+    { \True $x={\log_{\frac{5}{8}} \left(\frac{72125}{8384}\right)}$ }
+\loigiai{ 
+
+ $5^{x} + 5^{x - 3} + 5^{x - 2}=8^{x} + 8^{x - 2} + 8^{x + 1}\Leftrightarrow 5^x+\dfrac{1}{125}.5^x+\dfrac{1}{25}.5^x=8^x+\dfrac{1}{64}.8^x+8.8^x$ 
+
+$\Leftrightarrow \dfrac{131}{125}.5^x=\dfrac{577}{64}.8^x \Leftrightarrow \left( \dfrac{5}{8}\right)^x=\dfrac{72125}{8384}$$\Leftrightarrow x=\log_{\dfrac{5}{8}} \left(\dfrac{72125}{8384}\right)$. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm nghiệm của phương trình  $\log_3 x = 5$.
+ 
+\choice
+{ ${x=8}$ }
+   { ${x=125}$ }
+     { \True ${x=243}$ }
+    { ${x=15}$ }
+\loigiai{ 
+
+ $\log_3 x = 5 \Leftrightarrow x=3^{5}=243$. 
+ }\end{ex}
+
+\begin{ex}
+ Nghiệm của phương trình $\log_{2}(- 6 x - 9)=4$ là.
+ 
+\choice
+{ \True $x={- \frac{25}{6}}$ }
+   { $x={25}$ }
+     { $x={- \frac{1}{6}}$ }
+    { $x={- \frac{17}{6}}$ }
+\loigiai{ 
+
+ $\log_{2}(- 6 x - 9)=4 \Rightarrow - 6 x - 9=2^4\Rightarrow x=\dfrac{16-(-9)} {-6}\Rightarrow x= - \frac{25}{6}$. 
+ }\end{ex}
+
+\begin{ex}
+ Nghiệm của phương trình $\log_5(4 - 9 x) - \log_5(6 x + 1)=1$ là.
+ 
+\choice
+{ ${x=\frac{38}{39}}$ }
+   { \True ${x=- \frac{1}{39}}$ }
+     { ${x=\frac{116}{39}}$ }
+    { ${x=\frac{77}{39}}$ }
+\loigiai{ 
+
+ Điều kiện: $4 - 9 x>0$ và $6 x + 1>0$.
+
+$\log_5(4 - 9 x) - \log_5(6 x + 1)=1\Leftrightarrow \log_5\dfrac{4 - 9 x}{6 x + 1}=1\Leftrightarrow \dfrac{4 - 9 x}{6 x + 1}=5^1$
+
+$\Leftrightarrow 4 - 9 x=5(6 x + 1)\Leftrightarrow x=- \dfrac{1}{39}$.
+
+Kết hợp điều kiện ta được ${x=- \dfrac{1}{39}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Nghiệm của phương trình $\log_2(5 x - 7)+\log_2(- 3 x - 1)=1$ là
+ 
+\choice
+{ ${x=\frac{16}{15},x=- \frac{1}{3}}$ }
+   { \True Phương trình vô nghiệm }
+     { ${x=\frac{8}{15} - \frac{\sqrt{139}}{15}}$ }
+    { ${x=\frac{8}{15} - \frac{\sqrt{139}}{15},x=\frac{8}{15} + \frac{\sqrt{139}}{15}}$ }
+\loigiai{ 
+
+ Điều kiện: $5 x - 7>0$ và $- 3 x - 1>0$.
+
+$\log_2(5 x - 7) + \log_2(- 3 x - 1)=1\Leftrightarrow \log_2\left(- 3 x - 1\right) \left(5 x - 7\right)=1\Leftrightarrow - 15 x^{2} + 16 x + 7=2^1$
+
+$\Leftrightarrow - 15 x^{2} + 16 x + 5=0\Leftrightarrow x=\dfrac{8}{15} - \dfrac{\sqrt{139}}{15},x=\dfrac{8}{15} + \dfrac{\sqrt{139}}{15}$.
+
+ Kết hợp điều kiện ta được *phương trình vô nghiệm. 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình $5^x \ge 228$ là
+ 
+\choice
+{ \True $S=[\log_5 228;+\infty)$ }
+   { $S=(-\infty;\log_5 228]$ }
+     { $S=(\log_5 228;+\infty)$ }
+    { $S=(-\infty;\log_5 228)$ }
+\loigiai{ 
+
+ $5^x \ge 228 \Leftrightarrow x \ge \log_5 228 \Leftrightarrow x \ge \log_5 228$. 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình $4^x \le 300$ là
+ 
+\choice
+{ $S=(-\infty;\log_4 300)$ }
+   { \True $S=(-\infty;\log_4 300]$ }
+     { $S=(\log_4 300;+\infty)$ }
+    { $S=[\log_4 300;+\infty)$ }
+\loigiai{ 
+
+ $4^x \le 300 \Leftrightarrow x \le \log_4 300 \Leftrightarrow x \le \log_4 300$. 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình $e^x\ge 9$ là 
+\choice
+{ $(1;\log 9)$ }
+   { \True $[\ln 9; +\infty)$ }
+     { $(-\infty;\ln 9]$ }
+    { $(0;\ln 9]$ }
+\loigiai{ 
+ $e^x\ge 9 \Rightarrow x\ge \ln 9$.
+
+Tập nghiệm là $[\ln 9; +\infty)$. 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình $\left(\dfrac{8}{11}\right)^x \le 233$ là
+ 
+\choice
+{ $S=\left(-\infty;\log_{\frac{8}{11}} 233\right]$ }
+   { \True $S=\left[\log_{\frac{8}{11}} 233;+\infty\right)$ }
+     { $S=\left(-\infty;\log_{\frac{8}{11}} 233\right)$ }
+    { $S=\left(\log_{\frac{8}{11}} 233;+\infty\right)$ }
+\loigiai{ 
+
+ $\left(\frac{8}{11}\right)^x \le 233 \Leftrightarrow x \ge \log_{\frac{8}{11}} 233 \Leftrightarrow x \ge \log_{\frac{8}{11}} 233$. 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình $\left(\dfrac{2}{3}\right)^x \ge 102$ là
+ 
+\choice
+{ $S=\left(-\infty;\log_{\frac{2}{3}} 102\right)$ }
+   { \True $S=\left(-\infty;\log_{\frac{2}{3}} 102\right]$ }
+     { $S=\left(\log_{\frac{2}{3}} 102;+\infty\right)$ }
+    { $S=\left[\log_{\frac{2}{3}} 102;+\infty\right)$ }
+\loigiai{ 
+
+ $\left(\frac{2}{3}\right)^x \ge 102 \Leftrightarrow x \le \log_{\frac{2}{3}} 102 \Leftrightarrow x \le \log_{\frac{2}{3}} 102$. 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình $11^{14 x - 7} > 11^{9 x - 2}$ là
+ 
+\choice
+{ \True $S=\left(1;+\infty\right)$ }
+   { $S=\left(- \frac{9}{23};1\right)$ }
+     { $S=\left(-\infty;1\right)$ }
+    { $S=\left[1;+\infty\right)$ }
+\loigiai{ 
+
+ $11^{14 x - 7} > 11^{9 x - 2} \Leftrightarrow 14 x - 7 > 9 x - 2$$\Leftrightarrow x > 1$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình $\left(\frac{1}{2}\right)^{12 x + 5} \ge \left(\frac{1}{2}\right)^{10 x - 1}$ là
+ 
+\choice
+{ \True $S=\left(-\infty;-3\right]$ }
+   { $S=\left(-3;\frac{2}{11}\right]$ }
+     { $S=\left[-3;+\infty\right)$ }
+    { $S=\left(-3;+\infty\right)$ }
+\loigiai{ 
+
+ $\left(\frac{1}{2}\right)^{12 x + 5} \ge \left(\frac{1}{2}\right)^{10 x - 1} \Leftrightarrow 12 x + 5 \le 10 x - 1$$\Leftrightarrow x \le  -3$. 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình ${\log_3x \ge 4}$.
+ 
+\choice
+{ $S=\left(-\infty;81\right)$ }
+   { $S=\left(-\infty;64\right)$ }
+     { \True $S=\left[81;+\infty\right)$ }
+    { $S=\left(64;+\infty\right)$ }
+\loigiai{ 
+
+ ${\log_3x \ge 4} \Leftrightarrow x \ge 3^{4} \Leftrightarrow x \ge 81$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{6}x\ge 4$. 
+\choice
+{ $x>1296$ }
+   { $x<1296$ }
+     { $0<x<1296$ }
+    { \True $x\ge 1296$ }
+\loigiai{ 
+ Điều kiện xác định: $x>0$.
+
+Vì $6>1$ nên hàm số $y=\log_{6}x$ đồng biến.
+
+$\log_{6}x\ge 4\Leftrightarrow x\ge \left(6\right)^{4}=1296$.
+
+Vì $1296>0$ nên nghiệm của bất phương trình là $x\ge 1296$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{\frac{3}{4}}x>4$. 
+\choice
+{ $x<\frac{81}{256}$ }
+{ \True $0<x<\frac{81}{256}$ }
+{ $x>\frac{81}{256}$ }
+{ $x\ge \frac{81}{256}$ }
+\loigiai{ 
+ Điều kiện: $x>0$. 
+
+Vì $0<\frac{3}{4}<1$ nên hàm số $y=\log_{\frac{3}{4}}x$ nghịch biến trên khoảng xác định. 
+
+Từ bất phương trình $\log_{\frac{3}{4}}x>4$ suy ra $x<\left(\frac{3}{4}\right)^{4}=\frac{81}{256}$. 
+
+Kết hợp với điều kiện $x>0$, ta được $0<x<\frac{81}{256}$.  
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{\frac{1}{2}}x\ge 1$. 
+\choice
+{ $0\le x\le \frac{1}{2}$ }
+   { \True $0<x\le \frac{1}{2}$ }
+     { $x\le \frac{1}{2}$ }
+    { $0<x<\frac{1}{2}$ }
+\loigiai{ 
+ Điều kiện xác định: $x>0$.
+
+Vì $0<\frac{1}{2}<1$ nên hàm số $y=\log_{\frac{1}{2}}x$ nghịch biến trên khoảng $(0;+\infty)$.
+
+Do đó
+$\log_{\frac{1}{2}}x\ge 1\Leftrightarrow x\le \left(\frac{1}{2}\right)^{1}=\frac{1}{2}$.
+
+Kết hợp với điều kiện $x>0$, suy ra $0<x\le \frac{1}{2}$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{3}x<3$. 
+\choice
+{ $x\le 27$ }
+   { \True $0<x<27$ }
+     { $x<27$ }
+    { $x\ge 27$ }
+\loigiai{ 
+ Điều kiện xác định: $x>0$.
+
+Vì $3>1$ nên hàm số $y=\log_{3}x$ đồng biến trên $(0;+\infty)$.
+
+$\log_{3}x<3\Leftrightarrow x<3^{3}=27$.
+
+Kết hợp với điều kiện $x>0$, suy ra nghiệm là $0<x<27$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{\frac{7}{3}}x<4$. 
+\choice
+{ \True $0<x<\frac{2401}{81}$ }
+   { $x>\frac{2401}{81}$ }
+     { $0<x\le \frac{2401}{81}$ }
+    { $0\le x<\frac{2401}{81}$ }
+\loigiai{ 
+ Điều kiện xác định: $x>0$.
+
+Vì $\frac{7}{3}>1$ nên hàm số $y=\log_{\frac{7}{3}}x$ đồng biến trên $(0;+\infty)$.
+
+$\log_{\frac{7}{3}}x<4\Leftrightarrow x<\frac{7}{3}^{4}=\frac{2401}{81}$.
+
+Kết hợp với điều kiện $x>0$, suy ra nghiệm là $0<x<\frac{2401}{81}$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{\frac{2}{5}}x<4$. 
+\choice
+{ \True $x>\frac{16}{625}$ }
+   { $0<x\le \frac{16}{625}$ }
+     { $x<\frac{16}{625}$ }
+    { $x\ge \frac{16}{625}$ }
+\loigiai{ 
+ Điều kiện xác định: $x>0$.
+
+Vì $0<\frac{2}{5}<1$ nên hàm số $y=\log_{\frac{2}{5}}x$ nghịch biến trên $(0;+\infty)$.
+
+$\log_{\frac{2}{5}}x<4\Leftrightarrow x>\frac{2}{5}^{4}=\frac{16}{625}$.
+
+Do $\frac{16}{625}>0$ nên nghiệm là $x>\frac{16}{625}$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{\frac{3}{5}}x\le 2$. 
+\choice
+{ \True $x\ge \frac{9}{25}$ }
+   { $0<x<\frac{9}{25}$ }
+     { $x<\frac{9}{25}$ }
+    { $x\le \frac{9}{25}$ }
+\loigiai{ 
+ Điều kiện xác định: $x>0$.
+
+Vì $0<\frac{3}{5}<1$ nên hàm số $y=\log_{\frac{3}{5}}x$ nghịch biến trên $(0;+\infty)$.
+
+$\log_{\frac{3}{5}}x\le 2\Leftrightarrow x\ge \left(\frac{3}{5}\right)^{2}=\frac{9}{25}$.
+
+Do $\frac{9}{25}>0$ nên nghiệm là $x\ge \frac{9}{25}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình $\log_3(x+14) \ge 3$.
+ 
+\choice
+{ $S=(-\infty;41]$ }
+   { \True $S=[13;+\infty)$ }
+     { $S=(13;+\infty)$ }
+    { $S=[41;+\infty)$ }
+\loigiai{ 
+
+ $\log_3(x+14) \ge 3 \Leftrightarrow (x+14)\ge 3^{3} \Leftrightarrow x\ge 13$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{\frac{2}{3}}(x+1)>1$. 
+\choice
+{ $x<- \frac{1}{3}$ }
+   { \True $- 1<x<- \frac{1}{3}$ }
+     { $x>- \frac{1}{3}$ }
+    { $x>-1$ }
+\loigiai{ 
+ Điều kiện xác định: $x+1>0\Leftrightarrow x>- 1$.
+
+$\log_{\frac{2}{3}}(x+1)>1\Leftrightarrow x+1<\frac{2}{3}^{1}=\frac{2}{3}$.
+
+Suy ra $x<\frac{2}{3}-1=- \frac{1}{3}$.
+
+Kết hợp với điều kiện xác định, ta được $- 1<x<- \frac{1}{3}$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{3}(x+7)<1$. 
+\choice
+{ $x>-4$ }
+   { \True $-7<x<-4$ }
+     { $-7<x\le -4$ }
+    { $x\ge -4$ }
+\loigiai{ 
+ Điều kiện xác định: $x+7>0\Leftrightarrow x>-7$.
+
+$\log_{3}(x+7)<1\Leftrightarrow x+7<3^{1}=3$.
+
+Suy ra $x<3-7=-4$.
+
+Kết hợp với điều kiện xác định, ta được $-7<x<-4$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $\log_{\frac{2}{3}}(x+1)<-3$. 
+\choice
+{ $- 1<x\le \frac{19}{8}$ }
+   { \True $x>\frac{19}{8}$ }
+     { $x\le \frac{19}{8}$ }
+    { $x<\frac{19}{8}$ }
+\loigiai{ 
+ Điều kiện xác định: $x+1>0\Leftrightarrow x>- 1$.
+
+$\log_{\frac{2}{3}}(x+1)<-3\Leftrightarrow x+1>\left(\frac{2}{3}\right)^{-3}=\frac{27}{8}$.
+
+Suy ra $x>\frac{27}{8}-1=\frac{19}{8}$.
+
+Vì $\frac{19}{8}>- 1$ nên nghiệm của bất phương trình là $x>\frac{19}{8}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tập nghiệm của bất phương trình $\log_2(3x-3) \ge \log_2(2x+1)$.
+ 
+\choice
+{ $S=(- \frac{1}{2};4]$ }
+   { \True $S=[4;+\infty)$ }
+     { $S=(-\infty;4)$ }
+    { $S=(- \frac{1}{2};+\infty)$ }
+\loigiai{ 
+
+ Điều kiện:$3 x - 3>0, 2 x + 1>0$.
+
+$\log_2(3 x - 3) \ge \log_2(2 x + 1) \Leftrightarrow 3 x - 3 \ge 2 x + 1$
+
+$\Leftrightarrow x \ge 4$. Kết hợp điều kiện ta được nghiệm là: 
+
+$x \ge 4$. 
+ }\end{ex}
+\begin{ex}
+ Cho hình lăng trụ ${ABC.DEF}$. Gọi ${I,H}$ lần lượt là trung điểm của ${DF,BC}$. Gọi ${G}$ là trọng tâm của tam giác ${DBC}$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (1,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (3,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (5,4)   node at (F) [above] {$F$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(E)--(D)--(A); 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choiceTFt
+{ \True Hình chiếu song song của điểm ${D}$ lên mặt phẳng $(ABC)$ theo phương ${EB}$ là điểm ${A}$ }
+   { \True Hình chiếu song song của đoạn thẳng ${BI}$ lên mặt phẳng $(ABC)$ theo phương ${AD}$ là một trung tuyến của tam giác ${ABC}$ }
+     { \True Hình chiếu song song của điểm ${H}$ lên mặt phẳng $(ACFD)$ theo phương ${BA}$ là trung điểm của ${AC}$ }
+    { Gọi ${G'}$ là hình chiếu song song của ${G}$ lên mặt phẳng $(ABC)$ theo phương ${AD}$. Khi đó: $\overrightarrow{AG'}=2\overrightarrow{HG'}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${D}$ lên mặt phẳng $(ABC)$ theo phương ${FC}$ là điểm ${A}$
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của đoạn thẳng ${BI}$ lên mặt phẳng $(ABC)$ theo phương ${BE}$ là một trung tuyến xuất phát từ đỉnh ${B}$ của tam giác ${ABC}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${H}$ lên mặt phẳng $(ACFD)$ theo phương ${BA}$ là trung điểm của ${AC}$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ ${G'}$ là trọng tâm của tam giác ${ABC}$ nên $AG'=2HG'$.
+
+Suy ra: $\overrightarrow{AG'}=-2\overrightarrow{HG'}$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Xét tính đúng sai của các khẳng định sau:
+
+
+
+\choiceTFt
+{ \True Phương trình ${3^x=243}$ có nghiệm là ${x=5}$ }
+   { \True Phương trình ${6^x=-38}$ vô nghiệm }
+     { \True Phương trình ${4^x=7}$ có nghiệm là $x=\log_4 7$ }
+    { \True Phương trình ${3^{x^2}=243}$ có 2 nghiệm phân biệt }
+\loigiai{ 
+ a) Phương trình ${3^x=243}$ có nghiệm là ${x=5}$ là khẳng định đúng vì $3^x=243\Leftrightarrow 3^x=3^{5}\Leftrightarrow x=5$.\\ 
+b) Phương trình ${6^x=-38}$ có nghiệm là khẳng định đúng.\\ 
+c) Phương trình ${4^x=7}$ có nghiệm là $x=\log_4 7$ là khẳng định đúng.\\ 
+d)  ${3^{x^2}=243}\Leftrightarrow 3^{x^2}=3^{5}\Leftrightarrow x^2=5 \Leftrightarrow x=\pm \sqrt{5}$. Vậy phương trình có nghiệm phân biệt.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho phương trình $5^{2 x^{2} - x + 3}=3125$.
+
+Xét tính đúng-sai của các khẳng định sau:
+\choiceTFt
+{ Biến đổi phương trình ta được phương trình $2 x^{2} - x + 8=0$ }
+   { $x=-16$ là một nghiệm của phương trình đã cho }
+     { \True  Tổng các nghiệm của phương trình đã cho là $\frac{1}{2}$ }
+    { Tích các nghiệm của phương trình đã cho là $0$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ $5^{2 x^{2} - x + 3}=3125 \Rightarrow 5^{2 x^{2} - x + 3} =5^5 \Rightarrow 2 x^{2} - x - 2=0$
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ $5^{2 x^{2} - x + 3}=3125 \Rightarrow 2 x^{2} - x - 2=0 \Rightarrow x=1 - \sqrt{17}, x=1 + \sqrt{17}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ $x_1+x_2=1 - \sqrt{17}+1 + \sqrt{17}=\frac{1}{2}$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ $x_1+x_2=(1 - \sqrt{17}).(1 + \sqrt{17})=-1$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho phương trình $-49^{x}+4.7^x-3=0$ (1).
+
+Xét tính đúng-sai của các khẳng định sau:
+\choiceTFt
+{ \True  Đặt $t=7^x$ thì điều kiện của ${t}$ là $t>0$ }
+   { \True  Đặt $t=7^x$ ta có phương trình $- t^{2} + 4 t - 3=0$ }
+     { $x=3$ là một nghiệm của phương trình (1) }
+    { Tích các nghiệm của phương trình (1) bằng $6$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Đặt $t=7^x$ thì điều kiện của ${t}$ là $t>0$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Đặt $t=7^x$ ta có phương trình $- t^{2} + 4 t - 3=0$.
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ $- t^{2} + 4 t - 3=0\Rightarrow t=3, t=1$.
+
+Với $t=3 \Rightarrow x= \log_{7} \left(3 \right)$.
+
+Với $t=1 \Rightarrow x= \log_{7} \left(1 \right)$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ $x_1.x_2=(3).(1)=3$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Xét tính đúng sai của các khẳng định sau:
+
+
+
+\choiceTFt
+{ \True Phương trình ${\log_3 x=5}$ có nghiệm là $x=243$ }
+   { Phương trình ${\log x=20}$ có nghiệm là $x=e^{20}$ }
+     { \True Phương trình ${\log_3 x=\log_3 80}$ có nghiệm là ${x=80}$ }
+    { Phương trình ${\ln x=14}$ có nghiệm là $x=10^{14}$ }
+\loigiai{ 
+ a) ${\log_3 x=5}\Leftrightarrow x= 3^{5}= 243$.\\ 
+b) $\log x=20 \Leftrightarrow x=10^{20}$.\\ 
+c) $\log_3 x=\log_3 80 \Leftrightarrow x= 80$.\\ 
+d) ${\ln x=14}\Leftrightarrow x=e^{14}$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Xét tính đúng sai của các khẳng định sau:
+
+
+
+\choiceTFt
+{ Bất phương trình $17^{10 - 2 x} \ge 17^{- 5 x - 3}$ có nghiệm là $x \le - \frac{13}{3}$ }
+   { Bất phương trình ${9^x > 28}$ có nghiệm là $x \le \log_9 28$ }
+     { \True  Bất phương trình ${6^x < -13}$ vô nghiệm }
+    { Bất phương trình ${\left(\frac{5}{8}\right)^x < 278}$ có nghiệm là $x < \log_{\frac{5}{8}} 278$ }
+\loigiai{ 
+ a) $17^{10 - 2 x} \ge 17^{- 5 x - 3} \Leftrightarrow 10 - 2 x \ge - 5 x - 3$ $\Leftrightarrow x \ge - \frac{13}{3}$.\\ 
+b) Bất phương trình ${9^x > 28}$ có nghiệm là $x \le \log_9 28$ là khẳng định sai.
+
+${9^x > 28} \Leftrightarrow x > \log_9 28$.\\ 
+c) Bất phương trình ${6^x < -13}$ vô nghiệm là khẳng định đúng vì ${6^x >0}$ và $-13<0$.\\ 
+d) Bất phương trình ${\frac{5}{8}^x < 278}$ có nghiệm là $x < \log_{\frac{5}{8}} 278$ là khẳng định sai.
+
+${\left(\frac{5}{8}\right)^x < 278} \Leftrightarrow x > \log_{\frac{5}{8}} 278$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\log_2 {(2 - 5 x)}$. Xét tính đúng-sai của các khẳng định sau:
+\choiceTFt
+{ \True  Tập xác định của hàm số là $D=(-\infty;\frac{2}{5})$ }
+   { Hàm số đồng biến trên khoảng $(-\infty;\frac{2}{5})$ }
+     { \True  Tập nghiệm của phương trình $\log_2 {(2 - 5 x)}=2$ là $S=\left\{- \frac{2}{5} \right\}$ }
+    { \True  Tập nghiệm của phương trình $\log_2 {(2 - 5 x)}<4$ là $S=(- \frac{14}{5};\frac{2}{5})$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Hàm số xác định khi $2 - 5 x>0 \Rightarrow x<\frac{2}{5}$.
+
+Tập xác định: $D=(-\infty;\frac{2}{5})$.
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ Hàm số nghịch biến trên khoảng $(-\infty;\frac{2}{5})$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ $\log_2 {(2 - 5 x)}=2 \Rightarrow x=- \frac{2}{5}$.
+
+Tập nghiệm: $S=\left\{- \frac{2}{5} \right\}$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ $\log_2 {(2 - 5 x)}<4 \Rightarrow$ $x>- \frac{14}{5}$.
+
+Kết hợp điều kiện ta được tập nghiệm: $S=(- \frac{14}{5};\frac{2}{5})$.
+
+ 
+ }\end{ex}
+\begin{ex}
+ Gọi $x_1,x_2 (x_1<x_2)$ là các nghiệm của phương trình $4^{- 4 x^{2} + 5 x + 1}=4^{x - 1}$. Tính $-3x_1-3x_2$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{-3}
+
+\loigiai{ 
+ $4^{- 4 x^{2} + 5 x + 1}=4^{x - 1}\Rightarrow - 4 x^{2} + 5 x + 1=x - 1 \Rightarrow - 4 x^{2} + 4 x + 2=0$
+
+$\Rightarrow x_1=\frac{1}{2} - \frac{\sqrt{3}}{2}, x_2=\frac{1}{2} + \frac{\sqrt{3}}{2}$.
+
+$-3x_1-3x_2=-3$. 
+ }\end{ex}
+
+\begin{ex}
+ Biết $x=x_0$ là nghiệm của phương trình $\sqrt[4]{ {3}^{5 x} }-3^{2511}=0$. Tính giá trị $\dfrac{x_0}{494}$(kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{4,1}
+
+\loigiai{ 
+ $\sqrt[4]{ {3}^{5 x} }-3^{2511}=0$ $\Leftrightarrow 3^{\frac{5 x}{4}}=3^{2511}$
+
+$ \Leftrightarrow \frac{5 x}{4}=2511 \Rightarrow x=\frac{10044}{5}$.
+
+ $ \Rightarrow \dfrac{x_0}{494}=4,1$. 
+ }\end{ex}
+
+\begin{ex}
+ Biết $x_0$ là nghiệm của phương trình $10 . 4^{x} - 15 . 9^{x}=- 6 . 4^{x} + 15 . 9^{x}$.
+
+ Tính giá trị biểu thức $- 4 x_{0} - 4$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{-0,9}
+
+\loigiai{ 
+ $10 . 4^{x} - 15 . 9^{x}=- 6 . 4^{x} + 15 . 9^{x}\Leftrightarrow 16 . 4^{x}=30 . 9^{x}$ 
+
+ $\Leftrightarrow \left(\frac{4}{9}\right)^x=\frac{15}{8}$$\Leftrightarrow x=\log_{\frac{4}{9}} \left(\frac{15}{8}\right)$.
+
+$\Rightarrow - 4 x_{0} - 4=-0,9$. 
+ }\end{ex}
+
+\begin{ex}
+ Biết $x_0$ là nghiệm của phương trình $4^{x} + 4^{x - 1} + 4^{x + 2}=2^{x} + 2^{x - 3} + 2^{x - 1}$.
+
+ Tính giá trị biểu thức $4 x_{0} - 4$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{-17,6}
+
+\loigiai{ 
+ $4^{x} + 4^{x - 1} + 4^{x + 2}=2^{x} + 2^{x - 3} + 2^{x - 1}\Leftrightarrow 4^x+\frac{1}{4}.4^x+\frac{1}{64}.4^x=2^x+\frac{1}{8}.2^x+\frac{1}{2}.2^x$ 
+
+$\Leftrightarrow \frac{69}{4}.4^x=\frac{13}{8}.2^x \Leftrightarrow \left( 2\right)^x=\frac{13}{138}$$\Leftrightarrow x=\log_{2} \left(\frac{13}{138}\right)$.
+
+$\Rightarrow 4 x_{0} - 4=-17,6$. 
+ }\end{ex}
+
+\begin{ex}
+ Biết $x_0$ là nghiệm của phương trình $\log_5(7 x - 3) - \log_5(3 - 2 x)=2$.
+
+ Tính giá trị biểu thức $3 - 4 x_{0}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{-2,5}
+
+\loigiai{ 
+ Điều kiện: $7 x - 3>0$ và $3 - 2 x>0$.
+
+$\log_5(7 x - 3) - \log_5(3 - 2 x)=2\Leftrightarrow \log_5\frac{7 x - 3}{3 - 2 x}=2\Leftrightarrow \frac{7 x - 3}{3 - 2 x}=5^2$
+
+$\Leftrightarrow 7 x - 3=25(3 - 2 x)\Leftrightarrow x=\frac{26}{19}$.
+
+$\Rightarrow 3 - 4 x_{0}=-2,5$. 
+ }\end{ex}
+
+\begin{ex}
+ Một phòng thí nghiệm nuôi cấy vi khuẩn trong môi trường đặc biệt. Sau ${x}$ ngày số lượng vi khuẩn (tính theo triệu con) được mô hình hóa bởi công thức: $N(x)=2^{5 x^{2} - 3 x + 1}$. Biết rằng khi số lượng vi khuẩn đạt 4 triệu con thì cần tiến hành xử lý môi trường. Hỏi sau ít nhất bao nhiêu ngày kể từ khi bắt đầu nuôi cấy thì phải tiến hành xử lý môi trường?
+
+
+\shortans[4]{1}
+
+\loigiai{ 
+ $2^{5 x^{2} - 3 x + 1}=4 \Rightarrow 2^{5 x^{2} - 3 x + 1} =2^2 \Rightarrow 5 x^{2} - 3 x - 1=0$
+
+$\Rightarrow x=\frac{3}{10} - \frac{\sqrt{29}}{10}<0$ (loại), $x=\frac{3}{10} + \frac{\sqrt{29}}{10} \approx 0,8$.
+
+ Vậy sau ít nhất 1 ngày thì phải tiến hành xử lý môi trường. 
+ }\end{ex}
+
+\begin{ex}
+ Biết rằng khi độ cao tăng lên, áp suất không khí sẽ giảm và công thức tính áp suất dựa trên độ cao là $a=15500(5-\log p)$, trong đó ${a}$ là độ cao so với mực nước biển (tính bằng mét) và ${p}$ là áp suất không khí (tính bằng pascal). Tính áp suất không khí ở một đỉnh núi có độ cao $12399\,\mathrm{m}$ so với mực nước biển (đơn vị kPa, làm tròn đến hàng đơn vị).
+
+
+\shortans[4]{16}
+
+\loigiai{ 
+ $ 12399=15500(5-\log p) \Rightarrow 5-\log p=\dfrac{12399}{15500}=0,8$
+
+$\Rightarrow \log p=4,2$
+
+Suy ra $p=10^{4,2}\approx 15849\,\mathrm{Pa}=15,8\,\mathrm{kPa}$,
+
+Làm tròn đến hàng đơn vị, ta được $16\,\mathrm{kPa}$. 
+ }\end{ex}
+
+\begin{ex}
+ Số các nghiệm nguyên thuộc đoạn ${[-56;82]}$ của bất phương trình $\left(\frac{9}{14}\right)^{7 - 2 x} > \left(\frac{9}{14}\right)^{- 4 x - 4}$ là
+
+
+\shortans[4]{51}
+
+\loigiai{ 
+ $\left(\frac{9}{14}\right)^{7 - 2 x} > \left(\frac{9}{14}\right)^{- 4 x - 4} \Leftrightarrow 7 - 2 x < - 4 x - 4$$\Leftrightarrow x < - \frac{11}{2}$.
+
+Số các nghiệm nguyên thuộc đoạn ${[-56;82]}$ là: 51 
+ }\end{ex}
+
+\begin{ex}
+ Số các giá trị nguyên của ${m}$ để bất phương trình $2^{x^{2}+(- 3 m - 1)x-3} \ge 2^{- 3 x - 4}$ có nghiệm đúng với mọi $x\in \mathbb{R}$.
+
+
+\shortans[4]{2}
+
+\loigiai{ 
+ $2^{x^{2}+(- 3 m - 1)x-3} \ge 2^{- 3 x - 4}$
+
+$\Leftrightarrow  x^{2}+(- 3 m - 1)x-3 \ge - 3 x - 4$
+
+$\Leftrightarrow x^{2}-(3 m - 2)x+1\ge 0$
+
+ Ta có: $x^{2}-(3 m - 2)x+1>0$ có nghiệm đúng với mọi $x\in \mathbb{R}$
+
+$\Leftrightarrow \Delta<0 \Leftrightarrow \left(3 m - 2\right)^{2} - 4 \le 0$
+
+$\Leftrightarrow 9 m^{2} - 12 m \le 0$
+
+$\Leftrightarrow 0 \le m \le \frac{4}{3}$.
+
+ Số các giá trị nguyên của ${m}$ là: 2. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm số nghiệm nguyên thuộc đoạn ${[-49;82]}$ của bất phương trình $\log_2(5 x - 6) \le 2$.
+
+
+\shortans[4]{1}
+
+\loigiai{ 
+ Điều kiện: $5 x - 6>0 \Rightarrow x>\frac{6}{5}$.
+
+$\log_2(5 x - 6)\le 2 \Leftrightarrow 5 x - 6<4\Rightarrow x\le 2$.
+
+Kết hợp điều kiện ta được nghiệm: $\frac{6}{5}<x\le 2$.
+
+Số nghiệm nguyên thuộc đoạn $[-49;82]$ là: ${1}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm số nghiệm nguyên thuộc đoạn ${[-42;44]}$ của bất phương trình $\ln(2 x + 6)>3$.
+
+
+\shortans[4]{37}
+
+\loigiai{ 
+ Điều kiện: $2 x + 6>0 \Rightarrow x>-3$.
+
+$\ln(2 x + 6)>3 \Leftrightarrow 2 x + 6>e^3\Rightarrow x>-3 + \frac{e^{3}}{2}$.
+
+Kết hợp điều kiện ta được nghiệm: $x>-3 + \frac{e^{3}}{2}$.
+
+Số nghiệm nguyên thuộc đoạn $[-42;44]$ là: ${37}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho bất phương trình $\log_2(x - 4)+\log_2(x - 1)>2$. Tìm số nghiệm nguyên thuộc đoạn ${[-56;56]}$ của bất phương trình đã cho.
+\loigiai{ 
+ Điều kiện:
+
+$\left\{ \begin{array}{l} 
+        x - 4>0 \\ 
+        x - 1>0
+        \end{array} \right.$$\Rightarrow \left\{ \begin{array}{l} 
+        x>4 \\ 
+        x>1
+        \end{array} \right. \Rightarrow x>4$.
+
+$\log_2(x - 4)+\log_2(x - 1)>2$.
+
+$\Leftrightarrow \log_2 [(x - 4)(x - 1)]>2$
+
+$\Leftrightarrow \left(x - 4\right) \left(x - 1\right)>4 \Leftrightarrow x^{2} - 5 x>0$
+
+$\Leftrightarrow x<0$ hoặc $x>5$.
+
+Số nghiệm nguyên thuộc đoạn $[-56;56]$ là: ${51}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho bất phương trình $\log_2(x + 2)+\log_2(x + 4)>3$. Tìm số nghiệm nguyên thuộc đoạn ${[-89;89]}$ của bất phương trình đã cho.
+\loigiai{ 
+ Điều kiện:
+
+$\left\{ \begin{array}{l} 
+    x + 2>0 \\ 
+    x + 4>0
+    \end{array} \right.$$\Rightarrow \left\{ \begin{array}{l} 
+    x>-2 \\ 
+    x>-4
+    \end{array} \right. \Rightarrow x>-2$.
+
+$\log_2(x + 2)+\log_2(x + 4)>3$.
+
+$\Leftrightarrow \log_2 [(x + 2)(x + 4)]>3$
+
+$\Leftrightarrow \left(x + 2\right) \left(x + 4\right)>8 \Leftrightarrow x^{2} + 6 x>0$
+
+$\Leftrightarrow x<-6$ hoặc $x>0$.
+
+Số nghiệm nguyên thuộc đoạn $[-89;89]$ là: ${89}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho bất phương trình $\log_4(3 x - 5)-\log_4(2 x - 1)<3$. Tìm số nghiệm nguyên thuộc đoạn ${[-96;96]}$ của bất phương trình đã cho.
+\loigiai{ 
+ Điều kiện:
+
+$\left\{ \begin{array}{l} 
+    3 x - 5>0 \\ 
+    2 x - 1>0
+    \end{array} \right.$$\Rightarrow \left\{ \begin{array}{l} 
+    x>\frac{5}{3} \\ 
+    x>\frac{1}{2}
+    \end{array} \right. \Rightarrow x>\frac{5}{3}$.
+
+$\log_4(3 x - 5)-\log_4(2 x - 1)<3$
+
+ $\Leftrightarrow \log_4 (3 x - 5)<\log_4 [64(2 x - 1)]$
+
+$\Leftrightarrow 3 x - 5<128 x - 64 \Leftrightarrow x>\frac{59}{125}$.
+
+Số nghiệm nguyên thuộc đoạn $[-96;96]$ là: ${95}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho bất phương trình $\log_3(2 x^{2} - x - 1)<2$. Tìm số nghiệm nguyên thuộc đoạn ${[-63;63]}$ của bất phương trình đã cho.
+
+
+\shortans[4]{2}
+
+\loigiai{ 
+ Điều kiện: $2 x^{2} - x - 1>0\Leftrightarrow x<- \frac{1}{2}$ hoặc $x>1$.
+
+$\log_3(2 x^{2} - x - 1)<2 \Leftrightarrow 2 x^{2} - x - 1<9$.
+
+$\Leftrightarrow 2 x^{2} - x - 10<0$
+
+$\Leftrightarrow -2<x<\frac{5}{2}$ .
+
+Kết hợp điều kiện ta được nghiệm: $-2<x<- \frac{1}{2}$ hoặc $1<x<\frac{5}{2}$.
+
+Số nghiệm nguyên thuộc đoạn $[-63;63]$ là: ${2}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho bất phương trình $1+\log_{2}(x+6)>\log_{2}(x^{2} + 3 x - 18)$. Số nghiệm nguyên thuộc khoảng $(-98;98)$ của bất phương trình là
+
+
+\shortans[4]{1}
+
+\loigiai{
+ Điều kiện: $x>3$.
+
+$1+\log_{2}(x+6)>\log_{2}(x^{2} + 3 x - 18)$
+
+$\Leftrightarrow \log_{2}2+\log_{2}(x+6)>\log_{2}(x^{2} + 3 x - 18)$
+
+$\Leftrightarrow \log_{2}[2(x+6)]>\log_{2}((x+6)(x-3))$
+
+Vì $x+6>0$, suy ra:
+
+$2(x+6)>(x+6)(x-3)$
+
+$\Leftrightarrow 2>x-3$
+
+$\Leftrightarrow x<5$.
+
+Kết hợp điều kiện: $x>3$.
+
+$\Rightarrow 3<x<5$.
+
+Các nghiệm nguyên trong khoảng $(-98;98)$ là: 4.
+
+Số nghiệm là: 1. 
+}
+\end{ex}
+\begin{ex}
+ Giải phương trình $\log_{3}(5 x - 6)=7$.
+\loigiai{ 
+ $\log_{3}(5 x - 6)=7 \Rightarrow 5 x - 6=3^7\Rightarrow x= \frac{2193}{5}$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải phương trình $\sqrt[3]{ {6}^{2 x} }-6^{231}=0$.
+\loigiai{ 
+ $\sqrt[3]{ {6}^{2 x} }-6^{231}=0$ $\Leftrightarrow 6^{\frac{2 x}{3}}=6^{231}$
+
+$ \Leftrightarrow \frac{2 x}{3}=231 \Rightarrow x=\frac{693}{2}$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Giải phương trình $10 . 3^{x} - 10 . 9^{x}=- 14 . 3^{x} + 11 . 9^{x}$.
+
+
+\loigiai{ 
+ $10 . 3^{x} - 10 . 9^{x}=- 14 . 3^{x} + 11 . 9^{x}\Leftrightarrow 24 . 3^{x}=21 . 9^{x}$ 
+
+ $\Leftrightarrow \left(\frac{1}{3}\right)^x=\frac{7}{8}$$\Leftrightarrow x=\log_{\frac{1}{3}} \left(\frac{7}{8}\right)$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải phương trình $2^{x} + 2^{x - 1} + 2^{x + 2}=2 . 4^{x} + 4^{x - 2}$.
+\loigiai{ 
+ $2^{x} + 2^{x - 1} + 2^{x + 2}=2 . 4^{x} + 4^{x - 2}\Leftrightarrow 2^x+\frac{1}{2}.2^x+\frac{1}{4}.2^x=4^x+\frac{1}{16}.4^x+1.4^x$ 
+
+$\Leftrightarrow \frac{11}{2}.2^x=\frac{33}{16}.4^x \Leftrightarrow \left( \frac{1}{2}\right)^x=\frac{3}{8}$$\Leftrightarrow x=\log_{\frac{1}{2}} \left(\frac{3}{8}\right)$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải phương trình $2^{x} + 2^{x + 1} + 2^{x + 2}=4^{x} + 4^{x - 2} + 4^{x + 1}$.
+\loigiai{ 
+ $2^{x} + 2^{x + 1} + 2^{x + 2}=4^{x} + 4^{x - 2} + 4^{x + 1}\Leftrightarrow 2^x+2.2^x+\frac{1}{4}.2^x=4^x+\frac{1}{16}.4^x+4.4^x$ 
+
+$\Leftrightarrow 7.2^x=\frac{81}{16}.4^x \Leftrightarrow \left( \frac{1}{2}\right)^x=\frac{81}{112}$$\Leftrightarrow x=\log_{\frac{1}{2}} \left(\frac{81}{112}\right)$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải phương trình $\log_5(9 x - 9) - \log_5(4 x - 5)=3$.
+\loigiai{ 
+ Điều kiện: $9 x - 9>0$ và $4 x - 5>0$.
+
+$\log_5(9 x - 9) - \log_5(4 x - 5)=3\Leftrightarrow \log_5\frac{9 x - 9}{4 x - 5}=3\Leftrightarrow \frac{9 x - 9}{4 x - 5}=5^3$
+
+$\Leftrightarrow 9 x - 9=125(4 x - 5)\Leftrightarrow x=\frac{616}{491}$. 
+ }\end{ex}
+
+\begin{ex}
+ Giải bất phương trình $4^{x^{2} + 9 x - 30} \ge 4^{- 2 x^{2} + 3 x - 6}$.
+\loigiai{ 
+ $4^{x^{2} + 9 x - 30} \ge 4^{- 2 x^{2} + 3 x - 6}$
+
+$\Leftrightarrow x^{2} + 9 x - 30 \ge - 2 x^{2} + 3 x - 6$
+
+$\Leftrightarrow 3 x^{2} + 6 x - 24\ge 0$
+
+$\Leftrightarrow x\le -4$ hoặc $x\ge 2$ 
+ }\end{ex}

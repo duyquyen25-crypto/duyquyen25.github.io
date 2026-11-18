@@ -1,0 +1,710 @@
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ \True Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy }
+   { Phép chiếu song song biến hai đường thẳng song song thành hai đường thẳng song song }
+     { Phép chiếu song song không làm thay đổi tỉ số độ dài của hai đoạn thẳng }
+    { Phép chiếu song song bảo toàn độ dài của đoạn thẳng }
+\loigiai{ 
+ Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây sai? 
+\choice
+{ Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng }
+   { \True Phép chiếu song song bảo toàn góc trong tam giác }
+     { Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy }
+    { Phép chiếu song song biến bảo toàn thứ tự của ba điểm thẳng hàng }
+\loigiai{ 
+ Phép chiếu song song bảo toàn góc trong tam giác là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Hình chiếu song song của một đường tròn là một đường elip hoặc một đường tròn }
+   { \True Hình chiếu song song của một tam giác là một tam giác }
+     { Hình chiếu song song của hình thang là một hình chữ nhật }
+    { Hình chiếu song song của hình tròn luôn là một hình tròn }
+\loigiai{ 
+ Hình chiếu song song của một tam giác là một tam giác là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A'B'C'}$. Hình chiếu song song của điểm ${C'}$ lên mặt phẳng $(ABB'A')$ theo phương ${BC}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A') at (1,4)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (3,3)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (5,4)   node at (C') [above] {$C'$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B')--(A')--(A); 
+    \draw (B')--(C')--(C)--(B) (A')--(C')--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${A'}$ }
+   { Điểm ${B}$ }
+     { \True Điểm ${B'}$ }
+    { Điểm ${A}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${B'}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.DEF}$. Hình chiếu song song của điểm ${D}$ lên mặt phẳng $(BCFE)$ theo phương ${AC}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (1,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (3,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (5,4)   node at (F) [above] {$F$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(E)--(D)--(A); 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${A}$ }
+   { Điểm ${E}$ }
+     { Điểm ${C}$ }
+    { \True Điểm ${F}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${F}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho ${A}$ và ${B}$ là hai biến cố độc lập. Biết $P(A)=0,5$ và $P(B)=0,2$. Tính xác suất của biến cố ${AB}$ (kết quả làm tròn đến hàng phần nghìn).
+ 
+\choice
+{ ${2,4}$ }
+   { \True ${0,1}$ }
+     { ${1,4}$ }
+    { ${0,4}$ }
+\loigiai{ 
+
+ $P{AB}=P(A).P(B)=0,5.0,2=0,1$ .
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho ${A}$ và ${B}$ là hai biến cố độc lập. Biết $P(A)=0,54$ và $P(B)=0,72$. Tính xác suất của biến cố $P\left(\overline{{A}}\,\overline{{B}}\right)$ (kết quả làm tròn đến hàng phần trăm).
+ 
+\choice
+{ ${0,15}$ }
+   { \True ${0,13}$ }
+     { ${0,39}$ }
+    { ${0,33}$ }
+\loigiai{ 
+
+ $P\left(\overline{A}\,\overline{B}\right)=P(\overline{A}).P(\overline{B})=(1-0,54).(1-0,72)=0,46.0,28=0.13$ .
+ 
+ }\end{ex}
+
+\begin{ex}
+ Hai bệnh nhân ${X}$ và ${Y}$ bị nhiễm một loại vi rút. Biết rằng xác suất bị biến chứng nặng của bệnh nhân ${X}$ là ${0,2}$ và của bệnh nhân ${Y}$ là ${0,47}$. Khả năng bị biến chứng nặng của hai bệnh nhân là độc lập. Tính xác suất của biến cố "Cả hai bệnh nhân đều không bị biến chứng nặng" (kết quả làm tròn đến hàng phần trăm).
+ 
+\choice
+{ ${0,11}$ }
+   { ${0,38}$ }
+     { \True ${0,42}$ }
+    { ${0,09}$ }
+\loigiai{ 
+
+ Gọi ${A}$ là biến cố "Bệnh nhân ${X}$ bị biến chứng nặng". Ta có: $P(A)=0,2$ và $P\left(\overline{A}\right)=0,8$.
+
+Gọi ${B}$ là biến cố "Bệnh nhân ${Y}$ bị biến chứng nặng". Ta có: $P(B)=0,47$ và $P\left(\overline{B}\right)=0,53$.
+
+Do $\overline{A}$ và $\overline{B}$ là độc lập nên xác suất để cả hai bệnh nhân đều không bị biến chứng nặng là:
+
+$P\left(\overline{A}\,\overline{B}\right)=P(\overline{A}).P(\overline{B})=0,8.0,53=0,42$ .
+ 
+ }\end{ex}
+
+\begin{ex}
+ Hai bệnh nhân ${X}$ và ${Y}$ bị nhiễm một loại vi rút. Biết rằng xác suất bị biến chứng nặng của bệnh nhân ${X}$ là ${0,63}$ và của bệnh nhân ${Y}$ là ${0,28}$. Khả năng bị biến chứng nặng của hai bệnh nhân là độc lập. Tính xác suất của biến cố "Cả hai bệnh nhân đều bị biến chứng nặng" (kết quả làm tròn đến hàng phần trăm).
+ 
+\choice
+{ ${0,27}$ }
+   { ${0,45}$ }
+     { \True ${0,18}$ }
+    { ${0,10}$ }
+\loigiai{ 
+
+ Gọi ${A}$ là biến cố "Bệnh nhân ${X}$ bị biến chứng nặng". Ta có: $P(A)=0,63$.
+
+Gọi ${B}$ là biến cố "Bệnh nhân ${Y}$ bị biến chứng nặng". Ta có: $P(B)=0,28$.
+
+Do ${A}$ và ${B}$ là độc lập nên xác suất để cả hai bệnh nhân đều bị biến chứng nặng là:
+
+$P(AB)=P(A).P(B)=0,63.0,28=0,18$ .
+ 
+ }\end{ex}
+
+\begin{ex}
+ Hai bệnh nhân ${X}$ và ${Y}$ bị nhiễm một loại vi rút. Biết rằng xác suất bị biến chứng nặng của bệnh nhân ${X}$ là ${0,52}$ và của bệnh nhân ${Y}$ là ${0,17}$. Khả năng bị biến chứng nặng của hai bệnh nhân là độc lập. Tính xác suất của biến cố "Chỉ một trong hai bệnh nhân không bị biến chứng nặng" (kết quả làm tròn đến hàng phần trăm).
+ 
+\choice
+{ \True ${0,51}$ }
+   { ${0,08}$ }
+     { ${0,43}$ }
+    { ${0,09}$ }
+\loigiai{ 
+
+ Gọi ${A}$ là biến cố "Bệnh nhân ${X}$ bị biến chứng nặng". Ta có: $P(A)=0,52$ và $P\left(\overline{A}\right)=0,48$.
+
+Gọi ${B}$ là biến cố "Bệnh nhân ${Y}$ bị biến chứng nặng". Ta có: $P(B)=0,17$ và $P\left(\overline{B}\right)=0,83$.
+
+Do $\overline{A}$ và $\overline{B}$ là độc lập nên xác suất để chỉ một trong hai bệnh nhân không bị biến chứng nặng là:
+
+$P\left(\overline{A}B \cup A\overline{B} \right)=P(\overline{A}).P(B)+P(A).P(\overline{B})=$
+$0,48.0,17+0,52.0,83=0,51$.
+ 
+ }\end{ex}
+
+\begin{ex}
+ Một xạ thủ bắn lần lượt 2 viên đạn vào một bia. Xác suất trúng đích của viên thứ nhất là ${0,55}$ và của viên thứ hai là ${0,44}$. Biết rằng kết quả của các lần bắn là độc lập với nhau. Tính xác suất của biến cố "Cả hai lần bắn đều trúng đích" (kết quả làm tròn đến hàng phần trăm).
+ 
+\choice
+{ \True ${0,24}$ }
+   { ${0,31}$ }
+     { ${0,20}$ }
+    { ${0,25}$ }
+\loigiai{ 
+
+ Gọi ${A}$ là biến cố viên thứ nhất bắn trúng. Ta có: $P(A)=0,55$.
+
+Gọi ${B}$ là biến cố viên thứ hai bắn trúng. Ta có: $P(B)=0,44$.
+
+Do ${A}$ và ${B}$ là độc lập nên xác suất để cả hai lần bắn đều trúng đích là:
+
+$P(AB)=P(A).P(B)=0,55.0,44=0,24$ .
+ 
+ }\end{ex}
+
+\begin{ex}
+ Một xạ thủ bắn lần lượt 2 viên đạn vào một bia. Xác suất trúng đích của viên thứ nhất là ${0,11}$ và của viên thứ hai là ${0,57}$. Biết rằng kết quả của các lần bắn là độc lập với nhau. Tính xác suất của biến cố "Cả hai lần bắn đều không trúng đích" (kết quả làm tròn đến hàng phần trăm).
+ 
+\choice
+{ \True ${0,38}$ }
+   { ${0,05}$ }
+     { ${0,51}$ }
+    { ${0,06}$ }
+\loigiai{ 
+
+ Gọi ${A}$ là biến cố viên thứ nhất bắn trúng. Ta có: $P(A)=0,11$ và $P\left(\overline{A}\right)=0,89$.
+
+Gọi ${B}$ là biến cố viên thứ hai bắn trúng. Ta có: $P(B)=0,57$ và $P\left(\overline{B}\right)=0,43$.
+
+Do $\overline{A}$ và $\overline{B}$ là độc lập nên xác suất để cả hai lần bắn đều không trúng đích là:
+
+$P\left(\overline{A}\,\overline{B}\right)=P(\overline{A}).P(\overline{B})=0,89.0,43=0,38$ .
+ 
+ }\end{ex}
+
+\begin{ex}
+ Một xạ thủ bắn lần lượt 2 viên đạn vào một bia. Xác suất trúng đích của viên thứ nhất là ${0,19}$ và của viên thứ hai là ${0,42}$. Biết rằng kết quả của các lần bắn là độc lập với nhau. Tính xác suất của biến cố "chỉ một lần bắn trúng đích" (kết quả làm tròn đến hàng phần trăm).
+ 
+\choice
+{ ${0,11}$ }
+   { ${0,08}$ }
+     { \True ${0,45}$ }
+    { ${0,34}$ }
+\loigiai{ 
+
+ Gọi ${A}$ là biến cố viên thứ nhất bắn trúng. Ta có: $P(A)=0,19$ và $P\left(\overline{A}\right)=0,81$.
+
+Gọi ${B}$ là biến cố viên thứ hai bắn trúng. Ta có: $P(B)=0,42$ và $P\left(\overline{B}\right)=0,58$.
+
+Do $\overline{A}$ và $\overline{B}$ là độc lập nên xác suất để chỉ một lần bắn trúng đích là:
+
+$P\left(\overline{A}B \cup A\overline{B} \right)=P(\overline{A}).P(B)+P(A).P(\overline{B})$
+$=0,81.0,42+0,19.0,58=0,45$.
+ 
+ }\end{ex}
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A_1B_1C_1}$. Gọi ${P,I}$ lần lượt là trung điểm của ${A_1C_1,BC}$. Gọi ${Q}$ là trọng tâm của tam giác ${A_1BC}$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A_1) at (1,4)   node at (A_1) [above] {$A_1$}; 
+    \coordinate (B_1) at (3,3)   node at (B_1) [above] {$B_1$}; 
+    \coordinate (C_1) at (5,4)   node at (C_1) [above] {$C_1$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B_1)--(A_1)--(A); 
+    \draw (B_1)--(C_1)--(C)--(B) (A_1)--(C_1)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choiceTFt
+{ Hình chiếu song song của điểm ${A_1}$ lên mặt phẳng $(ABC)$ theo phương ${B_1B}$ là điểm ${B}$ }
+   { \True Hình chiếu song song của đoạn thẳng ${BP}$ lên mặt phẳng $(ABC)$ theo phương ${BB_1}$ là một trung tuyến của tam giác ${ABC}$ }
+     { \True Hình chiếu song song của điểm ${I}$ lên mặt phẳng $(ACC_1A_1)$ theo phương ${B_1A_1}$ là trung điểm của ${AC}$ }
+    { Gọi ${Q'}$ là hình chiếu song song của ${Q}$ lên mặt phẳng $(ABC)$ theo phương ${CC_1}$. Khi đó:  $\overrightarrow{QA}+\overrightarrow{QB}+\overrightarrow{QC}=6\overrightarrow{QQ'}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ Hình chiếu song song của điểm ${A_1}$ lên mặt phẳng $(ABC)$ theo phương ${C_1C}$ là điểm ${A}$
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của đoạn thẳng ${BP}$ lên mặt phẳng $(ABC)$ theo phương ${AA_1}$ là một trung tuyến xuất phát từ đỉnh ${B}$ của tam giác ${ABC}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${I}$ lên mặt phẳng $(ACC_1A_1)$ theo phương ${B_1A_1}$ là trung điểm của ${AC}$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ ${Q'}$ là trọng tâm của tam giác ${ABC}$ nên:
+
+Suy ra: $\overrightarrow{QA}+\overrightarrow{QB}+\overrightarrow{QC}=3\overrightarrow{QQ'}$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Hùng và Phúc rủ nhau đi câu cá vào ngày nghỉ cuối tuần. Xác suất câu được cá của Hùng là ${0,83}$ và xác suất câu được cá của Phúc là ${0,61}$. Xét tính đúng-sai của các khẳng định sau:
+\choiceTFt
+{ Xác suất Hùng không câu được cá bằng 0,99 }
+{ \True  Xác suất có đúng 1 người câu được cá bằng 0,43 }
+{ Xác suất để cả 2 người đều không câu được cá bằng 0,29 }
+{ \True  Xác suất có ít nhất 1 người câu được cá bằng 0,93 }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ $P(\overline{A})=1-P(A)=1-0,83=0,17$. 
+
+
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ $P= 0,83(1-0,61)+(1-0,83)0,61=0,43$. 
+
+
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ $P=(1-0,83)(1-0,61)=0,07$. 
+
+
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ $P=1-0,07=0,93$. 
+
+
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Trong giờ học môn giáo dục quốc phòng, các bạn Thảo, Dũng và Lam lần lượt thực hành bắn vào bia. Biết xác suất trúng bia của ba bạn lần lượt là ${0,78};{0,64}$ và ${0,32}$. Xét tính đúng-sai của các khẳng định sau (các kết quả làm tròn đến hàng phần trăm):
+\choiceTFt
+{ \True  Xác suất để bạn Lam bắn không trúng bia là ${0,68}$ }
+   { \True  Xác suất để chỉ bạn Thảo bắn trúng bia là ${0,19}$ }
+     { \True  Xác suất để có đúng hai bạn bắn trúng bia là ${0,47}$ }
+    { Xác suất để ít nhất một người bắn trúng bia là ${0,10}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Xác suất để bạn Lam bắn không trúng bia là: $1-0,32=0,68$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Xác suất để chỉ bạn Thảo bắn trúng bia là: $0,78.0,36.0,68=0,19$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Xác suất để có đúng hai bạn bắn trúng bia là:
+
+ $0,78.0,64.0,68+0,22.0,64.0,32+0,78.0,36.0,32={0,47}$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+  Xác suất để ít nhất một người bắn trúng bia là:$1-0,22.0,36.0,68=0,95$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Trong một cuộc kiểm tra sức khỏe, ba bác sĩ Khoa, Hà và Hùng lần lượt xét nghiệm một bệnh nhân. Biết xác suất chẩn đoán đúng bệnh của ba bác sĩ lần lượt là ${0,64};{0,71}$ và ${0,62}$. Xét tính đúng-sai của các khẳng định sau (các kết quả làm tròn đến hàng phần trăm):
+\choiceTFt
+{ Xác suất để bác sĩ Khoa chẩn đoán không đúng bệnh là ${0,64}$ }
+   { Xác suất để chỉ bác sĩ Khoa chẩn đoán đúng bệnh là ${0,64}$ }
+     { \True  Xác suất để có đúng hai bác sĩ chẩn đoán đúng bệnh là ${0,45}$ }
+    { Xác suất để không có bác sĩ nào chẩn đoán đúng bệnh là ${0,39}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ Xác suất để bác sĩ Khoa chẩn đoán không đúng bệnh là: $1-0,64=0,36$.
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ Xác suất để chỉ bác sĩ Khoa chẩn đoán đúng bệnh là: $0,64.0,29.0,38=0,07$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Xác suất để có đúng hai bác sĩ chẩn đoán đúng bệnh là:
+
+ $0,64.0,71.0,38+0,36.0,71.0,62+0,64.0,29.0,62=0,45$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+  Xác suất để không có bác sĩ nào chẩn đoán đúng bệnh là: $0,36.0,29.0,38=0,04$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Trong kỳ thi học sinh giỏi, các bạn Lan, Minh và Tùng lần lượt làm bài. Biết xác suất mỗi bạn làm đúng phần bài khó nhất lần lượt là ${0,79};{0,72}$ và ${0,76}$. Xét tính đúng-sai của các khẳng định sau (các kết quả làm tròn đến hàng phần trăm):
+\choiceTFt
+{ \True  Xác suất để bạn Minh làm sai là ${0,28}$ }
+   { \True  Xác suất để chỉ bạn Lan làm đúng là ${0,05}$ }
+     { \True  Xác suất để có đúng hai bạn làm đúng là ${0,42}$ }
+    { \True  Xác suất để ít nhất một bạn làm đúng là ${0,99}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Xác suất để bạn Minh làm sai là: $1-0,72=0,28$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Xác suất để chỉ bạn Lan làm đúng là: $0,79.0,28.0,24=0,05$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Xác suất để có đúng hai bạn làm đúng là:
+
+ $0,79.0,72.0,24+0,21.0,72.0,76+0,79.0,28.0,76={0,42}$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+  Xác suất để ít nhất một bạn làm đúng là:$1-0,21.0,28.0,24=0,99$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Ba kỹ sư Hùng, Quân và Vy lần lượt kiểm tra lỗi phần mềm của một ứng dụng mới. Biết xác suất phát hiện đúng lỗi của ba kỹ sư lần lượt là ${0,78};{0,81}$ và ${0,86}$. Xét tính đúng-sai của các khẳng định sau (các kết quả làm tròn đến hàng phần trăm):
+\choiceTFt
+{ Xác suất để kỹ sư Hùng không phát hiện lỗi là ${0,78}$ }
+   { Xác suất để chỉ kỹ sư Hùng phát hiện lỗi là ${0,78}$ }
+     { Xác suất để có đúng hai kỹ sư phát hiện lỗi là ${0,19}$ }
+    { Xác suất để ít nhất một kỹ sư phát hiện lỗi là ${0,35}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ Xác suất để kỹ sư Hùng không phát hiện lỗi là: $1-0,78=0,22$.
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ Xác suất để chỉ kỹ sư Hùng phát hiện lỗi là: $0,78.0,19.0,14=0,02$.
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ Xác suất để có đúng hai kỹ sư phát hiện lỗi là:
+
+ $0,78.0,81.0,14+0,22.0,81.0,86+0,78.0,19.0,86={0,37}$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+  Xác suất để ít nhất một kỹ sư phát hiện lỗi là:$1-0,22.0,19.0,14=0,99$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Ba bệnh nhân Chi, Đạt và Yến lần lượt tiêm vắc xin. Biết xác suất mỗi bạn phản ứng tốt sau tiêm lần lượt là ${0,90};{0,80}$ và ${0,94}$. Xét tính đúng-sai của các khẳng định sau (các kết quả làm tròn đến hàng phần trăm):
+\choiceTFt
+{ \True  Xác suất để bạn Chi không phản ứng tốt là ${0,10}$ }
+   { Xác suất để chỉ bạn Chi phản ứng tốt là ${0,16}$ }
+     { \True  Xác suất để có đúng hai bạn phản ứng tốt là ${0,29}$ }
+    { \True  Xác suất để ít nhất một bạn phản ứng tốt là ${1,00}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Xác suất để bạn Chi không phản ứng tốt là: $1-0,90=0,10$.
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ Xác suất để chỉ bạn Chi phản ứng tốt là: $0,90.0,20.0,06=0,01$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Xác suất để có đúng hai bạn phản ứng tốt là:
+
+ $0,90.0,80.0,06+0,10.0,80.0,94+0,90.0,20.0,94={0,29}$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+  Xác suất để ít nhất một bạn phản ứng tốt là:$1-0,10.0,20.0,06=1,00$.
+
+ 
+ }\end{ex}
+\begin{ex}
+ Một người dùng thử hai phần mềm chống virus. Với phần mềm thứ nhất, xác suất phát hiện virus là ${0,93}$, với phần mềm thứ hai, xác suất phát hiện virus là ${0,77}$. Người dùng sử dụng lần lượt cả hai phần mềm. Tính xác suất người dùng phát hiện được virus ít nhất một lần (kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{0,98}
+
+\loigiai{ 
+ Xác suất phát hiện virus của phần mềm thứ nhất: $p_1=0,93$.
+
+Xác suất phát hiện virus của phần mềm thứ hai: $p_2=0,77$.
+
+Xác suất không phát hiện virus của phần mềm thứ nhất: $1-0,93=0,07$.
+
+Xác suất không phát hiện virus của phần mềm thứ hai: $1-0,77=0,23$.
+
+Vì hai lần sử dụng độc lập, nên xác suất không phát hiện virus cả hai lần là: $0,07.0,23=0,0161$.
+
+Xác suất phát hiện virus ít nhất một lần là: $1-0,07.0,23=0,98$. 
+ }\end{ex}
+
+\begin{ex}
+ Một khách hàng trải nghiệm dịch vụ chăm sóc da. Khi sử dụng mặt nạ dưỡng da, xác suất cải thiện làn da là ${0,80}$ còn khi sử dụng máy xông hơi da mặt, xác suất cải thiện là ${0,77}$. Khách hàng sử dụng cả hai dịch vụ này một lần. Tính xác suất khách hàng cải thiện làn da ít nhất một lần (kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{0,95}
+
+\loigiai{ 
+ Xác suất cải thiện làn da khi sử dụng mặt nạ dưỡng da: $p_1=0,80$.
+
+Xác suất cải thiện làn da khi sử dụng máy xông hơi da mặt: $p_2=0,77$.
+
+Xác suất không cải thiện làn da khi sử dụng mặt nạ dưỡng da: $1-0,80=0,20$.
+
+Xác suất không cải thiện làn da khi sử dụng máy xông hơi da mặt: $1-0,77=0,23$.
+
+Vì hai lần sử dụng độc lập, nên xác suất không cải thiện làn da cả hai lần là: $0,20.0,23=0,0460$.
+
+Xác suất cải thiện làn da ít nhất một lần là: $1-0,20.0,23=0,95$. 
+ }\end{ex}
+
+\begin{ex}
+ Một người lái xe ô tô đi qua hai đoạn đường. Nếu bật hệ thống cảnh báo va chạm, xác suất tránh được tai nạn là ${0,81}$ còn nếu chỉ dùng hệ thống phanh tự động, xác suất tránh được tai nạn là ${0,84}$. Người lái xe sử dụng lần lượt hai hệ thống này trên hai đoạn đường. Tính xác suất người đó tránh được tai nạn ít nhất một lần. (kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{0,97}
+
+\loigiai{ 
+ Xác suất tránh được tai nạn khi bật hệ thống cảnh báo va chạm: $p_1=0,81$.
+
+Xác suất tránh được tai nạn khi chỉ dùng hệ thống phanh tự động: $p_2=0,84$.
+
+Xác suất không tránh được tai nạn khi bật hệ thống cảnh báo va chạm: $1-0,81=0,19$.
+
+Xác suất không tránh được tai nạn khi chỉ dùng hệ thống phanh tự động: $1-0,84=0,16$.
+
+Vì hai lần sử dụng độc lập, nên xác suất không tránh được tai nạn cả hai lần là: $0,19.0,16=0,0304$.
+
+Xác suất tránh được tai nạn ít nhất một lần là: $1-0,19.0,16=0,97$. 
+ }\end{ex}
+
+\begin{ex}
+ Một đề trắc nghiệm có 45 câu hỏi gồm 7 câu mức độ nhận biết, 10 câu mức độ thông hiểu và 28 câu mức độ vận dụng. Xác suất để bạn Thảo làm hết các câu mức độ nhận biết là 0,75; làm hết câu mức độ thông hiểu là 0,77; và làm hết câu mức độ vận dụng cao là 0,57. Tính xác suất để bạn Thảo làm trọn vẹn 45 câu (kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{0,33}
+
+\loigiai{ 
+ Gọi ${A,B,C}$ lần lượt là các biến cố An làm hết các câu mức độ nhận biết, thông hiểu và vận dụng.
+
+Ta có $P(A)=0,75, P(B)=0,77, P(C)=0,57$.
+
+Vì các biến cố độc lập nên
+$P(A\cap B\cap C)=P(A)P(B)P(C)=0,75\cdot 0,77\cdot 0,57=0,33.$ 
+ }\end{ex}
+
+\begin{ex}
+ Một bệnh truyền nhiễm có xác suất lây bệnh là ${0,86}$ nếu tiếp xúc với người bệnh mà không đeo khẩu trang và là ${0,05}$ nếu tiếp xúc với người bệnh mà có đeo khẩu trang. Ông Nam tiếp xúc với người bệnh hai lần, trong đó có một lần không đeo khẩu trang và một lần có đeo khẩu trang. Xác suất ông Nam bị bệnh do lây từ người bệnh đã tiếp xúc là bao nhiêu? (kết quả làm tròn đến hàng phần trăm)
+
+
+\shortans[4]{0,87}
+
+\loigiai{ 
+ Xác suất lây khi không đeo khẩu trang: $p_1=0,86$.
+
+Xác suất lây khi đeo khẩu trang: $p_2=0,05$.
+
+Ông Nam tiếp xúc với người bệnh hai lần: 1 lần không đeo, 1 lần có đeo.
+
+Xác suất không bị lây trong lần không đeo là: $1-0,86=0,14$.
+
+Xác suất không bị lây trong lần có đeo là: $1-0,05=0,95$.
+
+Vì hai lần tiếp xúc độc lập, nên xác suất không bị lây cả hai lần là: $0,14.0,95=0,1330$.
+
+Xác suất bị lây ít nhất một lần là: $1-0,14.0,95=0,87$. 
+ }\end{ex}
+
+\begin{ex}
+ Một trò chơi gồm 10 ô lựa chọn, bề ngoài của chúng giống hệt nhau và chỉ có đúng một ô may mắn. Người chơi thử ngẫu nhiên từng ô (mỗi ô chỉ mở một lần). Tính xác suất để người đó mở được ô may mắn ở lần thứ 2 (kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{0,10}
+
+\loigiai{ 
+ Để trúng ở lần thứ 2 thì người chơi phải:
+
+- Không trúng trong 1 lần đầu.
+
+- Trúng ở lần thứ 2.
+
+Xác suất không trúng ở 1 lần đầu là:
+
+$\dfrac{9}{10}.$
+
+Xác suất trúng ở lần thứ 2 là $\dfrac{1}{9}$.
+
+Theo quy tắc nhân xác suất ta được: $P = \dfrac{1}{10}=0,10$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hai hộp đựng bi, đựng hai loại bi là bi xanh và bi đỏ, tổng số bi của cả hai hộp là 14 bi và hộp thứ nhất đựng nhiều bi hơn hộp thứ hai, đồng thời số bi xanh ở hộp một nhiều hơn số bi xanh ở hộp hai. Lấy ngẫu nhiên từ mỗi hộp một bi. Nếu xác suất để lấy được 2 bi xanh là $\dfrac{35}{48}$ thì xác suất để lấy được 2 bi đỏ là $\dfrac{a}{b}$ với $\dfrac{a}{b}$ là phân số tối giản. Tính $a+b$.
+
+
+\shortans[4]{49}
+
+\loigiai{ 
+ Gọi hộp thứ nhất có $n_1$ bi, trong đó có $x_1$ bi xanh; hộp thứ hai có $n_2$ bi, trong đó có $x_2$ bi xanh.
+
+Ta có $n_1+n_2=14$, $n_1>n_2$, $x_1>x_2$.
+
+Các cặp $(n_1;n_2)$ có thể là: $(8;6)$, $(9;5)$, $(10;4)$, $(11;3)$, $(12;2)$, $(13;1)$.
+
+Xác suất lấy được 2 bi xanh là
+
+$\dfrac{x_1}{n_1}.\dfrac{x_2}{n_2}=\dfrac{35}{48}$.
+
+Thử các cặp $(n_1;n_2)$ ở trên, chỉ có $(n_1;n_2)=(8;6)$ thỏa mãn.
+
+Khi đó
+
+$\dfrac{x_1x_2}{48}=\dfrac{35}{48}$ $\Rightarrow x_1x_2=35$.
+
+Vì $x_1>x_2$ và $1\le x_1\le 7$, $1\le x_2\le 5$ nên $(x_1;x_2)=(7;5)$.
+
+Suy ra số bi đỏ ở hai hộp lần lượt là $8-7=1$ và $6-5=1$.
+
+Xác suất lấy được 2 bi đỏ là
+
+$\dfrac{1}{8}.\dfrac{1}{6}=\dfrac{1}{48}=\dfrac{1}{48}$.
+
+Vậy $a+b=1+48=49$. 
+ }\end{ex}
+
+\begin{ex}
+ Một nhóm học sinh làm thí nghiệm gieo ba loại hạt giống X,Y và Z. Xác suất để ba loại hạt giống X,Y và Z nảy mầm tương ứng là ${x,y}$ và $0,6(x>y)$. Biết rằng xác suất để ít nhất một trong ba hạt giống nảy mầm là ${0,94}$ và xác suất để cả ba hạt giống đều nảy mầm là ${0,18}$. Tính xác suất để chỉ có duy nhất hạt giống $X$ nảy mầm (làm tròn kết quả đến hàng phần trăm).
+\shortans[4]{0,18}
+
+\loigiai{ 
+ Ta có:
+
+$P(XYZ)=0,6xy=0,18$
+
+$\Rightarrow xy=0,30.$
+
+Mặt khác:
+
+$1-(1-x)(1-y)(1-0,6)=0,94$
+
+$\Rightarrow (1-x)(1-y)=0,15.$
+
+$\Rightarrow 1-x-y+xy=0,15.$
+
+$\Rightarrow x+y=1,15.$
+
+Suy ra $x=0,75,y=0,40$.
+
+Xác suất để chỉ có duy nhất hạt giống $X$ nảy mầm là:
+
+$P=X\overline{Y}\overline{Z}=0,75(1-0,40)(1-0,6)=0,18.$
+
+Làm tròn đến hàng phần trăm ta được ${0,18}$. 
+ }\end{ex}
+
+\begin{ex}
+ Người ta làm thí nghiệm kiểm tra khả năng hoạt động thành công của ba mô-đun trí tuệ nhân tạo X,Y và Z. Xác suất để các mô-đun X,Y và Z hoạt động thành công tương ứng là ${x,y}$ và $0,60(x>y)$. Biết rằng xác suất để ít nhất một trong ba mô-đun hoạt động thành công là ${0,92}$ và xác suất để cả ba mô-đun đều hoạt động thành công là ${0,18}$. Tính xác suất để chỉ có duy nhất mô-đun X hoạt động thành công (làm tròn kết quả đến hàng phần trăm).
+\shortans[4]{0,12}
+
+\loigiai{ 
+ Ta có:
+
+$P(XYZ)=0,60xy=0,18$
+
+$\Rightarrow xy=0,30.$
+
+Mặt khác:
+
+$1-(1-x)(1-y)(1-0,60)=0,92$
+
+$\Rightarrow (1-x)(1-y)=0,20.$
+
+$\Rightarrow 1-x-y+xy=0,20.$
+
+$\Rightarrow x+y=1,10.$
+
+Do đó $x,y$ là hai nghiệm của phương trình:
+
+$t^2-1,10t+0,30=0.$
+
+Suy ra $x=0,60,y=0,50$ vì $x>y$.
+
+Xác suất để chỉ có duy nhất mô-đun X hoạt động thành công là:
+
+$P=X\overline{Y}\overline{Z}=0,60(1-0,50)(1-0,60)=0,12.$ 
+ }\end{ex}
+
+\begin{ex}
+Có 2 hộp, hộp I đựng 6 viên bi màu đỏ và 3 viên bi màu xanh, hộp II đựng 5 viên bi màu đỏ và 11 viên bi màu xanh. Gieo một con súc sắc, nếu được mặt 4 chấm thì lấy một viên bi từ hộp I, nếu mặt khác thì lấy một viên bi từ hộp II. Xác suất để lấy được viên bi màu đỏ bằng bao nhiêu (làm tròn kết quả đến hàng phần trăm)?
+\shortans[4]{0,37}
+
+\loigiai{
+Gọi A là biến cố: "Gieo được mặt 4 chấm", khi đó chọn viên bi từ hộp I.
+
+$P(A)=\dfrac{1}{6}$, $P(\overline{A})=\dfrac{5}{6}$.
+
+Xác suất lấy được viên bi màu đỏ từ hộp I là:
+$P(C)=\dfrac{6}{9}=\frac{2}{3}.$ 
+
+Xác suất lấy được viên bi màu đỏ từ hộp II là:
+$P(D)=\dfrac{5}{16}=\frac{5}{16}.$ 
+
+Xác suất lấy được viên bi màu đỏ là:
+
+$P(B)=P(AC\cup \overline{A}D)=P(A)P(C)+P(\overline{A})P(D).$
+$=\dfrac{1}{6}\cdot \frac{2}{3}+\dfrac{5}{6}\cdot \frac{5}{16}=\frac{107}{288}\approx 0,37.$
+}
+\end{ex}

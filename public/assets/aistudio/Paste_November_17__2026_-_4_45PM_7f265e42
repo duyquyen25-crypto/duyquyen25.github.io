@@ -1,0 +1,830 @@
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Phép chiếu song song bảo toàn diện tích }
+   { \True Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy }
+     { Phép chiếu song song biến hai đường thẳng chéo nhau thành hai đường thẳng chéo nhau }
+    { Phép chiếu song song bảo toàn hình dạng của một hình }
+\loigiai{ 
+ Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây sai? 
+\choice
+{ \True Phép chiếu song song bảo toàn diện tích }
+   { Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng }
+     { Phép chiếu song song có thể biến đường tròn thành đường elip }
+    { Phép chiếu song song biến bảo toàn thứ tự của ba điểm thẳng hàng }
+\loigiai{ 
+ Phép chiếu song song bảo toàn diện tích là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Hình chiếu song song của hình chữ nhật luôn giữ nguyên tỉ lệ chiều dài và chiều rộng }
+   { Hình chiếu song song của một đường tròn là một đường elip hoặc một đường tròn }
+     { \True Hình chiếu song song của một đoạn thẳng là một đoạn thẳng hoặc một điểm }
+    { Hình chiếu song song của một tam giác đều là một tam giác cân }
+\loigiai{ 
+ Hình chiếu song song của một đoạn thẳng là một đoạn thẳng hoặc một điểm là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A_1B_1C_1}$. Hình chiếu song song của điểm ${A_1}$ lên mặt phẳng $(BCC_1B_1)$ theo phương ${AB}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A_1) at (1,4)   node at (A_1) [above] {$A_1$}; 
+    \coordinate (B_1) at (3,3)   node at (B_1) [above] {$B_1$}; 
+    \coordinate (C_1) at (5,4)   node at (C_1) [above] {$C_1$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B_1)--(A_1)--(A); 
+    \draw (B_1)--(C_1)--(C)--(B) (A_1)--(C_1)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ \True Điểm ${B_1}$ }
+   { Điểm ${A}$ }
+     { Điểm ${B}$ }
+    { Điểm ${C}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${B_1}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.DEF}$. Hình chiếu song song của điểm ${D}$ lên mặt phẳng $(BCFE)$ theo phương ${AC}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (1,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (3,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (5,4)   node at (F) [above] {$F$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(E)--(D)--(A); 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ \True Điểm ${F}$ }
+   { Điểm ${B}$ }
+     { Điểm ${E}$ }
+    { Điểm ${C}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${F}$. 
+ }\end{ex}
+
+\begin{ex}
+ Trong các hàm số sau, hàm số nào làm hàm số mũ? 
+\choice
+{ $y=\log_3 x$ }
+   { $y=x^e$ }
+     { \True $y=e^x$ }
+    { $y=x^{3e}$ }
+\loigiai{ 
+ $y=e^x$ là hàm số mũ. 
+ }\end{ex}
+
+\begin{ex}
+ Trong các hàm số sau, hàm số nào làm hàm số logarit? 
+\choice
+{ $y=e^{-4x}$ }
+   { $y=\sqrt[4]{x}$ }
+     { $y=3 x^{2} - 1$ }
+    { \True $y=\ln x$ }
+\loigiai{ 
+ $y=\ln x$ là hàm số logarit. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm tập xác định của hàm số $\displaystyle y=\log_{8}(5 x - 5)$.
+ 
+\choice
+{ $\displaystyle D=\left(-\infty;1\right)$ }
+   { \True $\displaystyle D= \left( 1;+\infty \right)$ }
+     { $\displaystyle D=\mathbb{R} \backslash \left\{1\right\}$ }
+    { $\displaystyle D=\mathbb{R} \backslash \left\{-1\right\}$ }
+\loigiai{ 
+
+ Điều kiện xác định: $\displaystyle 5 x - 5> 0 \Leftrightarrow x > 1$.
+
+Tập xác định: $D= \left( 1;+\infty \right)$. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm tập xác định của hàm số $y=\log_{2}(- x^{2} + 13 x - 30)$.
+ 
+\choice
+{ $\displaystyle D=(-\infty;3) \cup (10;+\infty)$ }
+   { $\displaystyle D=[3;10]$ }
+     { $\displaystyle D=(-\infty;3] \cup [10;+\infty)$ }
+    { \True $\displaystyle D=(3;10)$ }
+\loigiai{ 
+
+ Điều kiện xác định: $\displaystyle - x^{2} + 13 x - 30>0 \Leftrightarrow 3<x<10$.
+
+Tập xác định: $\displaystyle D=(3;10)$. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm các giá trị của m để hàm số $y=\ln \left[ 7x^2 + (m - 5)x + (- m - 5) \right]$ xác định với mọi $x\in \mathbb{R}$.
+\choice
+{ $\forall m \in \mathbb{R}$ }
+   { \True không tồn tại $m$ }
+     { không tồn tại $m$ }
+    { $\forall m \in \mathbb{R}$ }
+\loigiai{ 
+
+ Ta có: $y=\ln \left[ 7x^2 + (m - 5)x + (- m - 5) \right]$ xác định khi $7x^2 + (m - 5)x + (- m - 5)>0$.
+
+$\Delta =\left(m - 5\right)^{2}-4.7.(- m - 5)=m^{2} + 18 m + 165$.
+
+$7x^2 + (m - 5)x + (- m - 5)>0$ với mọi $x\in \mathbb{R}$ khi và chỉ khi $\Delta <0$
+
+$\Rightarrow m^{2} + 18 m + 165 <0 \Rightarrow$ không tồn tại $m$. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm các giá trị của m để hàm số $y=e^{ \frac{ 20 } { \sqrt{ 2x^2 + (m + 3)x + (- 2 m - 5)} } }$ xác định với mọi $x\in \mathbb{R}$.
+\choice
+{ $m \le -11 - 6 \sqrt{2}$ hoặc  $m\ge -11 + 6 \sqrt{2}$ }
+   { $m < -11 - 6 \sqrt{2}$ hoặc $m > -11 + 6 \sqrt{2}$ }
+     { \True $-11 - 6 \sqrt{2} < m <-11 + 6 \sqrt{2}$ }
+    { $-11 - 6 \sqrt{2} \le m \le -11 + 6 \sqrt{2}$ }
+\loigiai{ 
+
+ Ta có: $y=e^{ \frac{ 20 } { \sqrt{ 2x^2 + (m + 3)x + (- 2 m - 5)} } }$ xác định khi $2x^2 + (m + 3)x + (- 2 m - 5)>0$.
+
+$\Delta =\left(m + 3\right)^{2}-4.2.(- 2 m - 5)=m^{2} + 22 m + 49$.
+
+$2x^2 + (m + 3)x + (- 2 m - 5)>0$ với mọi $x\in \mathbb{R}$ khi và chỉ khi $\Delta <0$
+
+$\Rightarrow m^{2} + 22 m + 49 <0 \Rightarrow$ $-11 - 6 \sqrt{2} < m <-11 + 6 \sqrt{2}$. 
+ }\end{ex}
+
+\begin{ex}
+ Đồ thị như hình vẽ dưới đây là của hàm số nào trong các hàm số sau?
+\begin{center}
+\begin{tikzpicture}[yscale=.7,>=stealth] 
+            \draw[->] (-2.5,0) -- (2.5,0) node[below] {$x$}; 
+            \draw[->] (0,-1) -- (0,4) node[left] {$y$}; 
+            \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+            \draw (0,1) node[right]{$1$}; 
+            \draw (1,0) node[below]{$1$}; 
+            \draw (0,0.3333333333333333) node[left]{\footnotesize$\frac{1}{3}$}; 
+            \tkzDefPoints{1/0.3333333333333333/A} 
+            \tkzDrawPoints[fill=black](A) 
+            \draw [dashed] (0,0.3333333333333333)--(1,0.3333333333333333)--(1,0); 
+            \begin{scope}
+             \clip (-2,-0.5) rectangle (2,4);
+            \draw[color=blue,very thick,smooth,samples=200, domain=-2.01:2] plot (\x,{(3)^(-\x)}); 
+            \end{scope}
+            \end{tikzpicture} 
+
+\end{center}
+
+\choice
+{ $y=3^x$ }
+   { $y=\sqrt{3}^x$ }
+     { $y=x^3$ }
+    { \True $y=\left(\frac{1}{3}\right)^x$ }
+\loigiai{ 
+
+ Đồ thị có hình dáng đồ thị của hàm số mũ, đi qua điểm $(1,1/3)$ nên đây là đồ thị hàm số $y=\left(\frac{1}{3}\right)^x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đồ thị như hình vẽ dưới đây là của hàm số nào trong các hàm số sau?
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+            \draw[->] (-2.5,0) -- (2.5,0) node[below] {$x$}; 
+            \draw[->] (0,-1) -- (0,3) node[left] {$y$}; 
+            \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+            \draw (0,1) node[above left]{$1$}; 
+            \draw (1,0) node[below]{$1$}; 
+            \draw (0,2) node[left]{\footnotesize$2$}; 
+            \tkzDefPoints{1/2/A} 
+            \tkzDrawPoints[fill=black](A) 
+            \draw [dashed] (0,2)--(1,2)--(1,0); 
+            \begin{scope}
+             \clip (-2,-0.5) rectangle (2,3);
+            \draw[color=blue,very thick,smooth,samples=200, domain=-2:2.01] plot (\x,{(2)^(\x)}); 
+            \end{scope}
+            \end{tikzpicture} 
+
+\end{center}
+
+\choice
+{ $y=x^2$ }
+   { $y=\left(\frac{1}{2}\right)^x$ }
+     { \True $y=2^x$ }
+    { $y=\sqrt{2}^x$ }
+\loigiai{ 
+
+ Đồ thị có hình dáng đồ thị của hàm số mũ, đi qua điểm $(1,4)$ nên đây là đồ thị hàm số $y=2^x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đồ thị như hình vẽ dưới đây là của hàm số nào trong các hàm số sau?
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+            \draw[->] (-2.5,0) -- (2.5,0) node[below] {$x$}; 
+            \draw[->] (0,-1) -- (0,7) node[left] {$y$}; 
+            \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+            \draw (0,1) node[right]{$1$}; 
+            \draw (1,0) node[below]{$1$}; 
+            \draw (0,0.16666666666666666) node[left]{\footnotesize$\frac{1}{6}$}; 
+            \tkzDefPoints{1/0.16666666666666666/A} 
+            \tkzDrawPoints[fill=black](A) 
+            \draw [dashed] (0,0.16666666666666666)--(1,0.16666666666666666)--(1,0); 
+            \begin{scope}
+             \clip (-2,-0.5) rectangle (2,7);
+            \draw[color=blue,very thick,smooth,samples=200, domain=-2.01:2] plot (\x,{(6)^(-\x)}); 
+            \end{scope}
+            \end{tikzpicture} 
+
+\end{center}
+
+\choice
+{ \True $y=\left(\frac{1}{6}\right)^x$ }
+   { $y=x^6$ }
+     { $y=\sqrt{6}^x$ }
+    { $y=6^x$ }
+\loigiai{ 
+
+ Đồ thị có hình dáng đồ thị của hàm số mũ, đi qua điểm $(1,1/6)$ nên đây là đồ thị hàm số $y=\left(\frac{1}{6}\right)^x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đồ thị như hình vẽ dưới đây là của hàm số nào trong các hàm số sau?
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+            \draw[->] (-1,0) -- (6.5,0) node[below] {$x$}; 
+            \draw[->] (0,-2) -- (0,2) node[left] {$y$}; 
+            \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+            \draw (0,1) node[left]{$1$}; 
+            \draw (1,0) node[below]{$1$}; 
+            \draw (0.16666666666666666,0) node[below]{$\frac{1}{6}$}; 
+            \draw[fill=black] (1,6) circle (1pt);
+            \draw [dashed] (0,1)--(0.16666666666666666,1)--(0.16666666666666666,0); 
+            \begin{scope}
+             \clip (-1,-2) rectangle (6.5,2);
+            \draw[color=blue,thick,smooth, samples = 200, domain=0.001:6.5] plot (\x,{(ln(\x)/ln(0.16666666666666666)}); 
+            \end{scope}
+            \end{tikzpicture} 
+
+\end{center}
+
+\choice
+{ $y={\sqrt{6}}^x$ }
+   { $y=6^x$ }
+     { $y=\log_6 x$ }
+    { \True $y=\log_{\frac{1}{6}} x$ }
+\loigiai{ 
+
+ Đồ thị có hình dáng đồ thị của hàm số logarit, đi qua điểm $(1/6,1)$ nên đây là đồ thị hàm số $y=\log_{\frac{1}{6}} x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đồ thị như hình vẽ dưới đây là của hàm số nào trong các hàm số sau?
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+            \draw[->] (-1,0) -- (3.5,0) node[below] {$x$}; 
+            \draw[->] (0,-1.5) -- (0,2.5) node[left] {$y$}; 
+            \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+            \draw (0,1) node[left]{$1$}; 
+            \draw (1,0) node[below]{$1$}; 
+            \draw (3,0) node[below]{$3$}; 
+            \draw[fill=black] (3, 1) circle (1pt);
+            \draw [dashed] (0,1)--(3,1)--(3,0); 
+            \begin{scope}
+             \clip (-1,-1.5) rectangle (3.5,2.5);
+            \draw[color=blue,thick,smooth, samples = 200, domain=0.001:3.5] plot (\x,{(ln(\x)/ln(3)}); 
+            \end{scope}
+            \end{tikzpicture} 
+
+\end{center}
+
+\choice
+{ \True $y=\log_3 x$ }
+   { $y=\log_{\frac{1}{3}} x$ }
+     { $y=\sqrt{3}^x$ }
+    { $y=3^x$ }
+\loigiai{ 
+
+ Đồ thị có hình dáng đồ thị của hàm số logarit, đi qua điểm $(3,1)$ nên đây là đồ thị hàm số $y=\log_3 x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đồ thị như hình vẽ dưới đây là của hàm số nào trong các hàm số sau?
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+        \draw[->] (-1,0) -- (2.5,0) node[below] {$x$}; 
+        \draw[->] (0,-2) -- (0,2) node[left] {$y$}; 
+        \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+        \draw (0,1) node[left]{$1$}; 
+        \draw (1,0) node[below]{$1$}; 
+        \draw (0.5,0) node[below]{$\frac{1}{2}$}; 
+        \draw[fill=black] (1,2) circle (1pt);
+        \draw [dashed] (0,1)--(0.5,1)--(0.5,0); 
+        \begin{scope}
+         \clip (-1,-2) rectangle (2.5,2);
+        \draw[color=blue,thick,smooth, samples = 200, domain=0.001:2.5] plot (\x,{(ln(\x)/ln(0.5)}); 
+        \end{scope}
+        \end{tikzpicture} 
+
+\end{center}
+
+\choice
+{ $y={\sqrt{2}}^x$ }
+   { $y=2^x$ }
+     { $y=\log_2 x$ }
+    { \True $y=\log_{\frac{1}{2}} x$ }
+\loigiai{ 
+
+ Đồ thị có hình dáng đồ thị của hàm số logarit, đi qua điểm $(1/2,1)$ nên đây là đồ thị hàm số $y=\log_{\frac{1}{2}} x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đồ thị như hình vẽ dưới đây là của hàm số nào trong các hàm số sau?
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+            \draw[->] (-2.5,0) -- (1.8,0) node[below] {$x$}; 
+            \draw[->] (0,-1) -- (0,4.873) node[left] {$y$}; 
+            \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+            \draw (0,1) node[above left]{$1$}; 
+            \draw (1,0) node[below]{$1$}; 
+            \draw (0,3.873) node[left]{\footnotesize $\sqrt{15}$}; 
+            \draw[fill=black] (1,3.873) circle (1pt);
+            \draw [dashed] (0,3.873)--(1,3.873)--(1,0); 
+            \begin{scope}
+             \clip (-2,-0.5) rectangle (2,16);
+            \draw[color=blue,very thick,smooth,samples=200, domain=-2:1.31] plot (\x,{(3.873)^(\x)}); 
+            \end{scope}
+            \end{tikzpicture} 
+
+\end{center}
+
+\choice
+{ $y={15}^x$ }
+   { $y=\left( \frac{1}{15} \right)^x$ }
+     { $y=x^{15}$ }
+    { \True $y=\sqrt{15}^x$ }
+\loigiai{ 
+
+ Đồ thị có hình dáng đồ thị của hàm số mũ, đi qua điểm $(1,\sqrt{15})$ nên đây là đồ thị hàm số $y=\sqrt{15}^x$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\pi^x$. Tìm khẳng định đúng trong các khẳng định sau.
+\choice
+{ Hàm số nghịch biến trên ${\mathbb{R} }$ }
+   { Hàm số chỉ đồng biến trên khoảng $(0; +\infty)$ }
+     { Hàm số nghịch biến trên khoảng $(-\infty; 10)$ }
+    { \True Hàm số đồng biến trên $ { \mathbb{R} }$ }
+\loigiai{ 
+
+ Hàm số $y=\pi^x$ có cơ số $\pi>1$ nên hàm số đồng biến trên ${\mathbb{R} }$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\log_{41} x$. Tìm khẳng định đúng trong các khẳng định sau.
+\choice
+{ Hàm số nghịch biến trên khoảng $(-6;+\infty)$ }
+   { Hàm số nghịch biến trên ${\mathbb{R} }$ }
+     { \True Hàm số đồng biến trên $(0; +\infty)$ }
+    { Hàm số đồng biến trên khoảng $(-6;+\infty)$ }
+\loigiai{ 
+
+ Hàm số $y=\log_{41} x$ có cơ số $41>1$ nên hàm số đồng biến trên $(0; +\infty)$. 
+ }\end{ex}
+
+\begin{ex}
+ Các nhà tâm lí học sử dụng mô hình hàm số mũ để mô phỏng quá trình học tập của một học sinh là $f(t)=c(1-e^{-kt})$, trong đó ${c}$ là tổng số đơn vị kiến thức học sinh phải học, ${k}$ (kiến thức/ngày) là tốc độ tiếp thu của học sinh, ${t}$ (ngày) là thời gian học và $f(t)$ là số đơn vị kiến thức học sinh đã học được. Giả sử bạn Vinh phải tiếp thu 15 đơn vị kiến thức mới. Biết rằng tốc độ tiếp thu của bạn Vinh là $k=0,1$. Hỏi bạn Vinh sẽ nhớ được (khoảng) bao nhiêu đơn vị kiến thức mới sau 9 ngày? 
+\choice
+{ ${5}$ }
+   { ${11}$ }
+     { ${4}$ }
+    { \True ${9}$ }
+\loigiai{ 
+ $f(t)=c(1-e^{-kt})$.
+
+Thay $c=15$, $k=0,1$ và $t=9$ ta thu được:
+
+$f(9)=15(1-e^{-0,1\cdot 9})\approx 8,9$ (đơn vị).
+
+Làm tròn đến hàng đơn vị, ta được $f(9)\approx 9$.
+
+Vậy bạn Vinh sẽ nhớ được khoảng 9 đơn vị kiến thức mới sau 9 ngày. 
+ }\end{ex}
+
+\begin{ex}
+ Trong một nghiên cứu, một nhóm học sinh được cho xem cùng một danh sách các đối tượng và được kiểm tra lại xem họ còn nhớ bao nhiêu phần trăm danh sách đó sau mỗi tháng. Giả sử sau ${t}$ tháng, khả năng nhớ trung bình của nhóm học sinh đó được tính theo công thức
+
+$M(t)=84-25\ln(t+5)$ (đơn vị: $\%$).
+
+Hãy tính khả năng nhớ trung bình của nhóm học sinh đó sau 7 tháng (kết quả làm tròn đến hàng phần mười). 
+\choice
+{ ${54,3}$ }
+   { \True ${21,9}$ }
+     { ${11,5}$ }
+    { ${56,6}$ }
+\loigiai{ 
+ Theo công thức ta có:
+
+$M(t)=84-25\ln(t+5)$.
+
+Với $t=7$ ta được:
+
+$M(7)=84-25\ln(7+5) \approx 21,9$ ($\%$).
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Trong Vật lí, sự phân rã của các chất phóng xạ được cho bởi công thức: $m(t)=m_0\left(\dfrac{1}{2}\right)^{\frac{t}{T}}$;
+
+trong đó $m_0$ là khối lượng chất phóng xạ ban đầu (tại thời điểm $t=0$), $m(t)$ là khối lượng chất phóng xạ tại thời điểm ${t}$ và ${T}$ là chu kì bán rã.
+
+Một chất phóng xạ X có chu kì bán rã là 30 ngày. Giả sử lúc đầu có 93 gam X. Tính khối lượng X còn lại sau 138 ngày theo đơn vị gam (làm tròn kết quả đến hàng phần mười). 
+\choice
+{ ${35,2}$ }
+   { \True ${3,8}$ }
+     { ${11,1}$ }
+    { ${40,4}$ }
+\loigiai{ 
+ Với $m_0=93$ (gam), $T=30$ (ngày) và $t=138$ (ngày), ta được:
+
+$m(138)=93\left(\dfrac{1}{2}\right)^{\frac{138}{30}}\approx 3,8$ (gam).
+
+ 
+ }\end{ex}
+\begin{ex}
+ Cho hình lăng trụ ${ABC.DEF}$. Gọi ${G,H}$ lần lượt là trung điểm của ${DF,BC}$. Gọi ${P}$ là trọng tâm của tam giác ${DBC}$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (1,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (3,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (5,4)   node at (F) [above] {$F$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(E)--(D)--(A); 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choiceTFt
+{ \True Hình chiếu song song của điểm ${E}$ lên mặt phẳng $(ABC)$ theo phương ${AD}$ là điểm ${B}$ }
+   { Hình chiếu song song của đoạn thẳng ${BG}$ lên mặt phẳng $(ABC)$ theo phương ${AD}$ là đoạn thẳng ${BH}$ }
+     { Hình chiếu song song của điểm ${G}$ lên mặt phẳng $(BCFE)$ theo phương ${ED}$ là trung điểm của ${BC}$ }
+    { \True Gọi ${P'}$ là hình chiếu song song của ${P}$ lên mặt phẳng $(ABC)$ theo phương ${BE}$. Khi đó: $\overrightarrow{AP'}=\frac{2}{3}\overrightarrow{AH}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${E}$ lên mặt phẳng $(ABC)$ theo phương ${AD}$ là điểm ${B}$
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ Hình chiếu song song của đoạn thẳng ${BG}$ lên mặt phẳng $(ABC)$ theo phương ${BE}$ là một trung tuyến xuất phát từ đỉnh ${B}$ của tam giác ${ABC}$.
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ Hình chiếu song song của điểm ${G}$ lên mặt phẳng $(BCFE)$ theo phương ${ED}$ là trung điểm của ${EF}$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ ${P'}$ là trọng tâm của tam giác ${ABC}$ nên $AP'=\frac{2}{3}AH$.
+
+Suy ra: $\overrightarrow{AP'}=\frac{2}{3}\overrightarrow{AH}$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=8^{x}$. Xét tính đúng sai của các khẳng định sau
+
+
+
+\choiceTFt
+{ Hàm số đã cho có tập xác định là $(0;+\infty)$ }
+   { Hàm số đã cho nghịch biến trên $\mathbb{R}$ }
+     { Đồ thị hàm số đã cho luôn nằm bên trái trục tung }
+    { \True Hàm số liên tục trên $\mathbb{R}$ }
+\loigiai{ 
+ a) Hàm số đã cho có tập xác định là $(0;+\infty)$ là khẳng định sai. Hàm số đã cho có tập giá trị là $\mathbb{R}$.\\ 
+b) Vì ${8}>1$ nên hàm số đã cho đồng biến trên $\mathbb{R}$.\\ 
+c) Đồ thị hàm số đã cho luôn nằm phía dưới trục hoành là khẳng định sai.\\ 
+d) Hàm số liên tục trên $\mathbb{R}$ là khẳng định đúng.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\left(\frac{4}{5}\right)^{x}$. Xét tính đúng sai của các khẳng định sau
+
+
+
+\choiceTFt
+{ Hàm số đã cho đồng biến trên $\mathbb{R}$ }
+   { Hàm số đã cho không liên tục trên $\mathbb{R}$ }
+     { \True Đồ thị hàm số đã cho luôn nằm phía trên trục hoành }
+    { Hàm số đã cho có tập xác định là $(0;+\infty)$ }
+\loigiai{ 
+ a) Vì $0<{\frac{4}{5}}<1$ nên hàm số đã cho nghịch biến trên $\mathbb{R}$.\\ 
+b) Hàm số đã cho không liên tục trên $\mathbb{R}$ là khẳng định sai.\\ 
+c) Đồ thị hàm số đã cho luôn nằm phía trên trục hoành là khẳng định đúng.\\ 
+d) Hàm số đã cho có tập xác định là $(0;+\infty)$ là khẳng định sai. Hàm số đã cho có tập giá trị là $\mathbb{R}$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\log_{6} x$. Xét tính đúng sai của các khẳng định sau
+
+
+
+\choiceTFt
+{ Trên khoảng $(5;+\infty)$ thì hàm số đã cho nghịch biến }
+   { Đồ thị hàm số đã cho đi qua điểm ${(3;216)}$ }
+     { \True Hàm số liên tục trên khoảng $(7;+\infty)$ }
+    { Hàm số đã cho có tập giá trị là $(1; +\infty)$ }
+\loigiai{ 
+ a) Trên khoảng $(5;+\infty)$ thì hàm số đã cho nghịch biến là khẳng định sai.Trên khoảng $(5;+\infty)$ thì hàm số đã cho đồng biến.\\ 
+b) Đồ thị hàm số đi qua điểm ${(3;216)}$ là khẳng định sai.\\ 
+c) Hàm số liên tục trên khoảng $(7;+\infty)$ là khẳng định đúng.\\ 
+d) Hàm số đã cho có tập giá trị là $(1; +\infty)$ là khẳng định sai. Hàm số đã cho có tập giá trị là $\mathbb{R}$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\log_{\frac{5}{11}} x$. Xét tính đúng sai của các khẳng định sau
+
+
+
+\choiceTFt
+{ \True Hàm số đã cho có tập giá trị là $\mathbb{R}$ }
+   { Đồ thị hàm số đã cho đi qua điểm ${(1;\frac{5}{11})}$ }
+     { Trên khoảng $(10;+\infty)$ thì hàm số đã cho đồng biến }
+    { Hàm số liên tục trên khoảng $(-\infty;7)$ }
+\loigiai{ 
+ a) Hàm số đã cho có tập giá trị là $\mathbb{R}$ là khẳng định đúng\\ 
+b) Đồ thị hàm số đi qua điểm ${(1;\frac{5}{11})}$ là khẳng định sai.\\ 
+c) Trên khoảng $(10;+\infty)$ thì hàm số đã cho đồng biến là khẳng định sai.Trên khoảng $(10;+\infty)$ thì hàm số đã cho nghịch biến.\\ 
+d) Hàm số liên tục trên khoảng $(-\infty;7)$ là khẳng định sai. Hàm số đã cho liên tục trên $(0;+\infty)$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho đồ thị hàm số $y=a^x$ với $a>0$ có đồ thị như hình vẽ. Xét tính đúng sai của các khẳng định sau
+
+
+
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+        \draw[->] (-2.5,0) -- (2.5,0) node[below] {$x$}; 
+        \draw[->] (0,-1) -- (0,7) node[left] {$y$}; 
+        \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+        \draw (0,1) node[above left]{$1$}; 
+        \draw (1,0) node[below]{$1$}; 
+        \draw (0,6) node[left]{\footnotesize$6$}; 
+        \tkzDefPoints{1/6/A} 
+        \tkzDrawPoints[fill=black](A) 
+        \draw [dashed] (0,6)--(1,6)--(1,0); 
+        \begin{scope}
+         \clip (-2,-0.5) rectangle (2,7);
+        \draw[color=blue,very thick,smooth,samples=200, domain=-2:2.01] plot (\x,{(6)^(\x)}); 
+        \end{scope}
+        \end{tikzpicture} 
+
+\end{center}
+
+\choiceTFt
+{ Hàm số đã cho có tập xác định là $(0;+\infty)$ }
+   { \True Hàm số liên tục trên $\mathbb{R}$ }
+     { Đồ thị hàm số đã cho đi qua điểm ${(36;2)}$ }
+    { Hàm số đã cho nghịch biến trên $\mathbb{R}$ }
+\loigiai{ 
+ a) Hàm số đã cho có tập xác định là $(0;+\infty)$ là khẳng định sai. Hàm số đã cho có tập giá trị là $\mathbb{R}$.\\ 
+b) Hàm số liên tục trên $\mathbb{R}$ là khẳng định đúng.\\ 
+c) Dựa vào đồ thị ta có $\displaystyle a=6 \Rightarrow y=6^x$ nên đồ thị hàm số đi qua điểm ${(36;2)}$ là khẳng định sai.\\ 
+d) Vì ${6}>1$ nên hàm số đã cho đồng biến trên $\mathbb{R}$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho đồ thị hàm số $y=a^x$ với $a>0$ có đồ thị như hình vẽ. Xét tính đúng sai của các khẳng định sau
+
+
+
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+        \draw[->] (-2.5,0) -- (2.5,0) node[below] {$x$}; 
+        \draw[->] (0,-1) -- (0,6) node[left] {$y$}; 
+        \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+        \draw (0,1) node[right]{$1$}; 
+        \draw (1,0) node[below]{$1$}; 
+        \draw (0,0.2) node[left]{\footnotesize$\frac{1}{5}$}; 
+        \tkzDefPoints{1/0.2/A} 
+        \tkzDrawPoints[fill=black](A) 
+        \draw [dashed] (0,0.2)--(1,0.2)--(1,0); 
+        \begin{scope}
+         \clip (-2,-0.5) rectangle (2,6);
+        \draw[color=blue,very thick,smooth,samples=200, domain=-2.01:2] plot (\x,{(5)^(-\x)}); 
+        \end{scope}
+        \end{tikzpicture} 
+
+\end{center}
+
+\choiceTFt
+{ Hàm số đã cho có tập xác định là $\mathbb{R}$ }
+   { Đồ thị hàm số đã cho đi qua điểm ${(1;\frac{1}{5})}$ }
+     { Hàm số chỉ liên tục trên khoảng $(-\infty;10)$ }
+    { Trên khoảng $(3;+\infty)$ thì hàm số đã cho đồng biến }
+\loigiai{ 
+ a) Hàm số đã cho có tập xác định là $\mathbb{R}$ là khẳng định sai. Hàm số đã cho tập xác định là $(0;+\infty)$.\\ 
+b) Dựa vào đồ thị ta có $\displaystyle a=\frac{1}{5} \Rightarrow y=\left(\frac{1}{5}\right)^x$ nên đồ thị hàm số đi qua điểm ${(1;\frac{1}{5})}$ là khẳng định sai.\\ 
+c) Hàm số chỉ liên tục trên khoảng $(-\infty;10)$ là khẳng định sai. Hàm số đã cho liên tục trên $(0;+\infty)$.\\ 
+d) Trên khoảng $(3;+\infty)$ thì hàm số đã cho đồng biến là khẳng định sai.Trên khoảng $(3;+\infty)$ thì hàm số đã cho nghịch biến.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho đồ thị hàm số $y=\log_a x$ với $a>0,a \ne 1$ có đồ thị như hình vẽ. Xét tính đúng sai của các khẳng định sau
+
+
+
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+            \draw[->] (-1,0) -- (2.5,0) node[below] {$x$}; 
+            \draw[->] (0,-1.5) -- (0,2.5) node[left] {$y$}; 
+            \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+            \draw (0,1) node[left]{$1$}; 
+            \draw (1,0) node[below]{$1$}; 
+            \draw (2,0) node[below]{$2$}; 
+            \draw[fill=black] (2, 1) circle (1pt);
+            \draw [dashed] (0,1)--(2,1)--(2,0); 
+            \begin{scope}
+             \clip (-1,-1.5) rectangle (2.5,2.5);
+            \draw[color=blue,thick,smooth, samples = 200, domain=0.001:2.5] plot (\x,{(ln(\x)/ln(2)}); 
+            \end{scope}
+            \end{tikzpicture} 
+
+\end{center}
+
+\choiceTFt
+{ Hàm số liên tục trên khoảng $(-\infty;7)$ }
+   { \True Đồ thị hàm số đã cho đi qua điểm ${(4;2)}$ }
+     { \True Trên khoảng $(3;+\infty)$ thì hàm số đã cho đồng biến }
+    { Hàm số đã cho có tập giá trị là $(7; +\infty)$ }
+\loigiai{ 
+ a) Hàm số liên tục trên khoảng $(-\infty;7)$ là khẳng định sai. Hàm số đã cho liên tục trên $(0;+\infty)$.\\ 
+b) Dựa vào đồ thị ta có $\displaystyle a=2\Rightarrow y=\log_2 x$ nên đồ thị hàm số đi qua điểm ${(4;2)}$ là khẳng định đúng.\\ 
+c) Trên khoảng $(3;+\infty)$ thì hàm số đã cho đồng biến là khẳng định đúng.\\ 
+d) Hàm số đã cho có tập giá trị là $(7; +\infty)$ là khẳng định sai. Hàm số đã cho có tập giá trị là $\mathbb{R}$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho đồ thị hàm số $y=\log_a x$ với $a>0,a \ne 1$ có đồ thị như hình vẽ. Xét tính đúng sai của các khẳng định sau
+
+
+
+\begin{center}
+\begin{tikzpicture}[>=stealth] 
+        \draw[->] (-1,0) -- (2.5,0) node[below] {$x$}; 
+        \draw[->] (0,-2) -- (0,2) node[left] {$y$}; 
+        \draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);
+        \draw (0,1) node[left]{$1$}; 
+        \draw (1,0) node[below]{$1$}; 
+        \draw (0.5,0) node[below]{$\frac{1}{2}$}; 
+        \draw[fill=black] (1,2) circle (1pt);
+        \draw [dashed] (0,1)--(0.5,1)--(0.5,0); 
+        \begin{scope}
+         \clip (-1,-2) rectangle (2.5,2);
+        \draw[color=blue,thick,smooth, samples = 200, domain=0.001:2.5] plot (\x,{(ln(\x)/ln(0.5)}); 
+        \end{scope}
+        \end{tikzpicture} 
+
+\end{center}
+
+\choiceTFt
+{ Hàm số liên tục trên khoảng $(-2; +\infty)$ }
+   { \True Đồ thị hàm số đã cho đi qua điểm ${(2;1)}$ }
+     { \True Hàm số đã cho có tập xác định là $(0;+\infty)$ }
+    { Trên khoảng $(9;+\infty)$ thì hàm số đã cho đồng biến }
+\loigiai{ 
+ a) Hàm số liên tục trên khoảng $(-2; +\infty)$ là khẳng định sai. Hàm số đã cho liên tục trên $(0;+\infty)$.\\ 
+b) Dựa vào đồ thị ta có $\displaystyle a=\frac{1}{2}\Rightarrow y=\log_{\frac{1}{2}} x$ nên đồ thị hàm số đi qua điểm ${(2;1)}$ là khẳng định đúng.\\ 
+c) Hàm số đã cho có tập xác định là $(0;+\infty)$ là khẳng định đúng\\ 
+d) Trên khoảng $(9;+\infty)$ thì hàm số đã cho đồng biến là khẳng định sai.Trên khoảng $(9;+\infty)$ thì hàm số đã cho nghịch biến.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Xét tính đúng-sai của các khẳng định sau. 
+\choiceTFt
+{ \True  Hàm số $y=\pi^x$ là hàm số mũ }
+   { Tập xác định của hàm số $y={\sqrt 7}^x$ là $D=(0;+\infty)$ }
+     { \True  Hàm số $y=\log x$ đồng biến trên $(0;+\infty)$ }
+    { \True  Hàm số $y=\log (3 x^{2} - 36 x + 33)$ có tập xác định là $D=(-\infty;1)\cup (11;+\infty)$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Hàm số $\pi^x$ là hàm số mũ.
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ Tập xác định của hàm số $y={\sqrt 7}^x$ là $D=\mathbb{R}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Hàm số $y=\log x$ đồng biến trên $(0;+\infty)$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ Điều kiện xác định: $3 x^{2} - 36 x + 33>0 \Leftrightarrow x<1$ hoặc $x>11$.
+
+Tập xác định: $D=(-\infty;1)\cup (11;+\infty)$.
+
+ 
+ }\end{ex}
+\begin{ex}
+ Ta coi năm lấy làm mốc để tính dân số của một vùng (hoặc một quốc gia) là năm 0. Khi đó, dân số của vùng (hoặc quốc gia) đó ở năm thứ ${t}$ là hàm số theo biến ${t}$ được cho bởi công thức $S=A\cdot e^{rt}$. Trong đó ${A}$ là dân số của vùng (hoặc quốc gia) đó ở năm 0 và ${r}$ là tỉ lệ tăng dân số hằng năm.
+
+Biết rằng dân số khu vực X năm 2021 ước tính là 105 triệu người và tỉ lệ tăng dân số $0,93\%$/năm. Giả sử tỉ lệ tăng dân số hằng năm là như nhau tính từ năm 2021, dân số khu vực X năm 2034 là bao nhiêu triệu người(làm tròn kết quả đến hàng đơn vị).
+
+
+\shortans[4]{118}
+
+\loigiai{ 
+ $S = A\cdot e^{rt}$.
+
+$A = 105$ (triệu người),  $r = 0,93\% = 0,93\cdot 10^{-2}$.
+
+Khoảng thời gian từ năm 2021 đến năm 2034 là: $t = 2034-2021 = 13$ (năm).
+
+Dân số năm 2034 được ước tính bởi:
+
+$S(13) = 105\cdot e^{0,93\cdot 10^{-2}\cdot 13} \approx 118,5$ (triệu người).
+
+Làm tròn đến hàng đơn vị, ta được dân số khu vực X năm 2034 xấp xỉ 118 triệu người.
+
+Vậy đáp án cần tìm là 118 (triệu người). 
+ }\end{ex}
+
+\begin{ex}
+ Số các giá trị nguyên của ${m}$ để hàm số $y=\log_8\left[x^{2}-(- 4 m - 6)x+1\right]$ xác định với mọi $x\in \mathbb{R}$.
+
+
+\shortans[4]{0}
+
+\loigiai{ 
+  Ta có: $x^{2}-(- 4 m - 6)x+1>0$ có nghiệm đúng với mọi $x\in \mathbb{R}$
+
+$\Leftrightarrow \Delta<0 \Leftrightarrow \left(- 4 m - 6\right)^{2} - 4<0$
+
+$\Leftrightarrow 16 m^{2} + 48 m + 32<0$
+
+$\Leftrightarrow -2<m<-1$.
+
+ Số các giá trị nguyên của ${m}$ là: 0. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm số giá trị nguyên của tham số ${m}$ để hàm số $y=\dfrac{4 x + 4}{\sqrt{\log_{2}(x^2-2mx+48)}}$ có tập xác định là $\mathbb{R}$.
+
+
+\shortans[4]{13}
+
+\loigiai{ 
+ Hàm xác định khi:
+
+$\log_{2}(x^2-2mx+48)>0 \Leftrightarrow x^2-2mx+48>1$ .
+
+Yêu cầu bài toán dẫn tới:
+
+$x^2-2mx+47>0,\forall x$.
+
+$\Leftrightarrow \Delta<0 \Leftrightarrow m^2-47<0$.
+
+$\Leftrightarrow -\sqrt{47}<m<\sqrt{47}$.
+
+Vậy có ${13}$ giá trị nguyên của ${m}$ thoả yêu cầu. 
+ }\end{ex}

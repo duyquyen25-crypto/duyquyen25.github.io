@@ -118,6 +118,136 @@ import {
   G11_B3_TF_LIST,
   G11_B3_SA_LIST,
 } from '../engine/grade11Lesson3Templates';
+import {
+  G11_B4_MC_LIST,
+  G11_B4_TF_LIST,
+  G11_B4_SA_LIST,
+} from '../engine/grade11Lesson4Templates';
+import {
+  G11_C1_END_TF_LIST,
+  G11_C1_END_SA_LIST,
+} from '../engine/grade11Chapter1EndTemplates';
+import {
+  G11_B5_MC_LIST,
+  G11_B5_TF_LIST,
+  G11_B5_SA_LIST,
+} from '../engine/grade11Lesson5Templates';
+import {
+  G11_B6_MC_LIST,
+  G11_B6_TF_LIST,
+  G11_B6_SA_LIST,
+} from '../engine/grade11Lesson6Templates';
+import {
+  G11_B7_MC_LIST,
+  G11_B7_TF_LIST,
+  G11_B7_SA_LIST,
+} from '../engine/grade11Lesson7Templates';
+import {
+  G11_B10_MC_LIST,
+  G11_B10_TF_LIST,
+  G11_B10_ES_LIST,
+} from '../engine/grade11Lesson10Templates';
+import {
+  G11_B11_MC_LIST,
+  G11_B11_TF_LIST,
+} from '../engine/grade11Lesson11Templates';
+import {
+  G11_B12_MC_LIST,
+  G11_B12_TF_LIST,
+  G11_B12_SA_LIST,
+} from '../engine/grade11Lesson12Templates';
+import {
+  G11_B13_MC_LIST,
+  G11_B13_TF_LIST,
+  G11_B13_SA_LIST,
+} from '../engine/grade11Lesson13Templates';
+import {
+  G11_B14_MC_LIST,
+  G11_B14_TF_LIST,
+} from '../engine/grade11Lesson14Templates';
+import {
+  G11_B15_MC_LIST,
+  G11_B15_TF_LIST,
+  G11_B15_SA_LIST,
+} from '../engine/grade11Lesson15Templates';
+import {
+  G11_B16_MC_LIST,
+  G11_B16_TF_LIST,
+  G11_B16_SA_LIST,
+} from '../engine/grade11Lesson16Templates';
+import {
+  G11_B17_MC_LIST,
+  G11_B17_TF_LIST,
+  G11_B17_SA_LIST,
+} from '../engine/grade11Lesson17Templates';
+import {
+  G11_B18_MC_LIST,
+  G11_B18_TF_LIST,
+  G11_B18_SA_LIST,
+} from '../engine/grade11Lesson18Templates';
+import {
+  G11_B19_MC_LIST,
+  G11_B19_TF_LIST,
+  G11_B19_SA_LIST,
+} from '../engine/grade11Lesson19Templates';
+import {
+  G11_B20_MC_LIST,
+  G11_B20_TF_LIST,
+  G11_B20_SA_LIST,
+} from '../engine/grade11Lesson20Templates';
+import {
+  G11_B21_MC_LIST,
+  G11_B21_TF_LIST,
+  G11_B21_SA_LIST,
+  G11_B21_ES_LIST,
+} from '../engine/grade11Lesson21Templates';
+import {
+  G11_C6_END_MC_LIST,
+  G11_C6_END_TF_LIST,
+  G11_C6_END_SA_LIST,
+} from '../engine/grade11Chapter6EndTemplates';
+import {
+  G11_B22_MC_LIST,
+  G11_B22_TF_LIST,
+} from '../engine/grade11Lesson22Templates';
+import {
+  G11_B23_MC_LIST,
+  G11_B23_TF_LIST,
+  G11_B23_SA_LIST,
+} from '../engine/grade11Lesson23Templates';
+import {
+  G11_B24_MC_LIST,
+  G11_B24_TF_LIST,
+  G11_B24_SA_LIST,
+} from '../engine/grade11Lesson24Templates';
+import {
+  G11_B25_MC_LIST,
+  G11_B25_TF_LIST,
+  G11_B25_SA_LIST,
+} from '../engine/grade11Lesson25Templates';
+import {
+  G11_B26_MC_LIST,
+  G11_B26_TF_LIST,
+  G11_B26_SA_LIST,
+} from '../engine/grade11Lesson26Templates';
+import {
+  G11_B27_MC_LIST,
+  G11_B27_TF_LIST,
+  G11_B27_SA_LIST,
+} from '../engine/grade11Lesson27Templates';
+import {
+  G11_C7_END_MC_LIST,
+  G11_C7_END_TF_LIST,
+} from '../engine/grade11Chapter7EndTemplates';
+import {
+  G11_B28_MC_LIST,
+  G11_B28_TF_LIST,
+} from '../engine/grade11Lesson28Templates';
+import {
+  G11_B29_MC_LIST,
+  G11_B29_TF_LIST,
+  G11_B29_SA_LIST,
+} from '../engine/grade11Lesson29Templates';
 import { generateValidInstance } from '../engine/templateRunner';
 import { createSeededRng } from '../engine/mathUtils';
 
@@ -591,9 +721,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 4. Phương trình lượng giác cơ bản',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [TEMPLATE_LIBRARY.t11_trig_eq_roots_sa],
+              MC: [...G11_B4_MC_LIST],
+              TF: [...G11_B4_TF_LIST],
+              SA: [TEMPLATE_LIBRARY.t11_trig_eq_roots_sa, ...G11_B4_SA_LIST],
               ES: [],
             },
           },
@@ -601,7 +731,12 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             id: 'l11_c1_bt',
             name: 'Bài tập cuối chương I',
             type: 'lesson',
-            mathTypes: { MC: [], TF: [], SA: [], ES: [] },
+            mathTypes: {
+              MC: [],
+              TF: [...G11_C1_END_TF_LIST],
+              SA: [...G11_C1_END_SA_LIST],
+              ES: [],
+            },
           },
         ],
       },
@@ -615,9 +750,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 5. Dãy số',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b5_sequence_term_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_b5_sequence_term_mc, ...G11_B5_MC_LIST],
+              TF: [...G11_B5_TF_LIST],
+              SA: [...G11_B5_SA_LIST],
               ES: [],
             },
           },
@@ -626,9 +761,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 6. Cấp số cộng',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_arith_seq_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_arith_seq_mc, ...G11_B6_MC_LIST],
+              TF: [...G11_B6_TF_LIST],
+              SA: [...G11_B6_SA_LIST],
               ES: [],
             },
           },
@@ -637,9 +772,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 7. Cấp số nhân',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [],
+              MC: [...G11_B7_MC_LIST],
+              TF: [...G11_B7_TF_LIST],
+              SA: [...G11_B7_SA_LIST],
               ES: [TEMPLATE_LIBRARY.t11_geom_seq_es],
             },
           },
@@ -696,10 +831,10 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 10. Đường thẳng và mặt phẳng trong không gian',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b10_line_plane_space_mc],
-              TF: [],
+              MC: [TEMPLATE_LIBRARY.t11_b10_line_plane_space_mc, ...G11_B10_MC_LIST],
+              TF: [...G11_B10_TF_LIST],
               SA: [],
-              ES: [],
+              ES: [...G11_B10_ES_LIST],
             },
           },
           {
@@ -707,8 +842,8 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 11. Hai đường thẳng song song',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b11_two_parallel_lines_mc],
-              TF: [],
+              MC: [TEMPLATE_LIBRARY.t11_b11_two_parallel_lines_mc, ...G11_B11_MC_LIST],
+              TF: [...G11_B11_TF_LIST],
               SA: [],
               ES: [],
             },
@@ -718,9 +853,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 12. Đường thẳng và mặt phẳng song song',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b12_line_parallel_plane_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_b12_line_parallel_plane_mc, ...G11_B12_MC_LIST],
+              TF: [...G11_B12_TF_LIST],
+              SA: [...G11_B12_SA_LIST],
               ES: [],
             },
           },
@@ -729,9 +864,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 13. Hai mặt phẳng song song',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [TEMPLATE_LIBRARY.t11_b13_two_parallel_planes_sa],
+              MC: [...G11_B13_MC_LIST],
+              TF: [...G11_B13_TF_LIST],
+              SA: [TEMPLATE_LIBRARY.t11_b13_two_parallel_planes_sa, ...G11_B13_SA_LIST],
               ES: [],
             },
           },
@@ -740,8 +875,8 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 14. Phép chiếu song song',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b14_parallel_projection_mc],
-              TF: [],
+              MC: [TEMPLATE_LIBRARY.t11_b14_parallel_projection_mc, ...G11_B14_MC_LIST],
+              TF: [...G11_B14_TF_LIST],
               SA: [],
               ES: [],
             },
@@ -764,9 +899,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 15. Giới hạn của dãy số',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b15_seq_limit_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_b15_seq_limit_mc, ...G11_B15_MC_LIST],
+              TF: [...G11_B15_TF_LIST],
+              SA: [...G11_B15_SA_LIST],
               ES: [],
             },
           },
@@ -775,9 +910,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 16. Giới hạn của hàm số',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_limit_zero_over_zero_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_limit_zero_over_zero_mc, ...G11_B16_MC_LIST],
+              TF: [...G11_B16_TF_LIST],
+              SA: [...G11_B16_SA_LIST],
               ES: [],
             },
           },
@@ -786,9 +921,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 17. Hàm số liên tục',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [TEMPLATE_LIBRARY.t11_b17_continuity_sa],
+              MC: [...G11_B17_MC_LIST],
+              TF: [...G11_B17_TF_LIST],
+              SA: [TEMPLATE_LIBRARY.t11_b17_continuity_sa, ...G11_B17_SA_LIST],
               ES: [],
             },
           },
@@ -810,9 +945,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 18. Luỹ thừa với số mũ thực',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b18_real_exponent_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_b18_real_exponent_mc, ...G11_B18_MC_LIST],
+              TF: [...G11_B18_TF_LIST],
+              SA: [...G11_B18_SA_LIST],
               ES: [],
             },
           },
@@ -821,9 +956,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 19. Lôgarit',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b19_logarithm_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_b19_logarithm_mc, ...G11_B19_MC_LIST],
+              TF: [...G11_B19_TF_LIST],
+              SA: [...G11_B19_SA_LIST],
               ES: [],
             },
           },
@@ -832,9 +967,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 20. Hàm số mũ và hàm số lôgarit',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b20_exp_log_func_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_b20_exp_log_func_mc, ...G11_B20_MC_LIST],
+              TF: [...G11_B20_TF_LIST],
+              SA: [...G11_B20_SA_LIST],
               ES: [],
             },
           },
@@ -843,17 +978,22 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 21. Phương trình, bất phương trình mũ và lôgarit',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [TEMPLATE_LIBRARY.t11_log_eq_sa],
-              ES: [],
+              MC: [...G11_B21_MC_LIST],
+              TF: [...G11_B21_TF_LIST],
+              SA: [TEMPLATE_LIBRARY.t11_log_eq_sa, ...G11_B21_SA_LIST],
+              ES: [...G11_B21_ES_LIST],
             },
           },
           {
             id: 'l11_c6_bt',
             name: 'Bài tập cuối chương VI',
             type: 'lesson',
-            mathTypes: { MC: [], TF: [], SA: [], ES: [] },
+            mathTypes: {
+              MC: [...G11_C6_END_MC_LIST],
+              TF: [...G11_C6_END_TF_LIST],
+              SA: [...G11_C6_END_SA_LIST],
+              ES: [],
+            },
           },
         ],
       },
@@ -867,8 +1007,8 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 22. Hai đường thẳng vuông góc',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b22_two_perp_lines_mc],
-              TF: [],
+              MC: [TEMPLATE_LIBRARY.t11_b22_two_perp_lines_mc, ...G11_B22_MC_LIST],
+              TF: [...G11_B22_TF_LIST],
               SA: [],
               ES: [],
             },
@@ -878,9 +1018,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 23. Đường thẳng vuông góc với mặt phẳng',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b23_line_perp_plane_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_b23_line_perp_plane_mc, ...G11_B23_MC_LIST],
+              TF: [...G11_B23_TF_LIST],
+              SA: [...G11_B23_SA_LIST],
               ES: [],
             },
           },
@@ -889,9 +1029,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 24. Phép chiếu vuông góc. Góc giữa đường thẳng và mặt phẳng',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [TEMPLATE_LIBRARY.t11_b24_angle_line_plane_sa],
+              MC: [...G11_B24_MC_LIST],
+              TF: [...G11_B24_TF_LIST],
+              SA: [TEMPLATE_LIBRARY.t11_b24_angle_line_plane_sa, ...G11_B24_SA_LIST],
               ES: [],
             },
           },
@@ -900,9 +1040,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 25. Hai mặt phẳng vuông góc',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [TEMPLATE_LIBRARY.t11_b25_two_perp_planes_sa],
+              MC: [...G11_B25_MC_LIST],
+              TF: [...G11_B25_TF_LIST],
+              SA: [TEMPLATE_LIBRARY.t11_b25_two_perp_planes_sa, ...G11_B25_SA_LIST],
               ES: [],
             },
           },
@@ -911,9 +1051,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 26. Khoảng cách',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [TEMPLATE_LIBRARY.t11_b26_distance_space_sa],
+              MC: [...G11_B26_MC_LIST],
+              TF: [...G11_B26_TF_LIST],
+              SA: [TEMPLATE_LIBRARY.t11_b26_distance_space_sa, ...G11_B26_SA_LIST],
               ES: [],
             },
           },
@@ -922,9 +1062,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 27. Thể tích',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [TEMPLATE_LIBRARY.t11_b27_volume_space_sa],
+              MC: [...G11_B27_MC_LIST],
+              TF: [...G11_B27_TF_LIST],
+              SA: [TEMPLATE_LIBRARY.t11_b27_volume_space_sa, ...G11_B27_SA_LIST],
               ES: [],
             },
           },
@@ -932,7 +1072,12 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             id: 'l11_c7_bt',
             name: 'Bài tập cuối chương VII',
             type: 'lesson',
-            mathTypes: { MC: [], TF: [], SA: [], ES: [] },
+            mathTypes: {
+              MC: [...G11_C7_END_MC_LIST],
+              TF: [...G11_C7_END_TF_LIST],
+              SA: [],
+              ES: [],
+            },
           },
         ],
       },
@@ -946,8 +1091,8 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 28. Biến cố hợp, biến cố giao, biến cố độc lập',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b28_events_ops_mc],
-              TF: [],
+              MC: [TEMPLATE_LIBRARY.t11_b28_events_ops_mc, ...G11_B28_MC_LIST],
+              TF: [...G11_B28_TF_LIST],
               SA: [],
               ES: [],
             },
@@ -957,9 +1102,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 29. Công thức cộng xác suất',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b29_prob_addition_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t11_b29_prob_addition_mc, ...G11_B29_MC_LIST],
+              TF: [...G11_B29_TF_LIST],
+              SA: [...G11_B29_SA_LIST],
               ES: [],
             },
           },

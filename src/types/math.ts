@@ -128,8 +128,17 @@ export interface GeometryFigureDiagram {
     | 'l17_earth_tangent_orbit_3d'
     | 'l11_b1_unit_circle_point'
     | 'l11_b1_unit_circle_axes'
-    | 'l11_b1_unit_circle_quad_sym';
+    | 'l11_b1_unit_circle_quad_sym'
+    | 'l11_b10_tetra_3d'
+    | 'l11_b10_para_pyramid_3d'
+    | 'l11_b10_quad_pyramid_3d'
+    | 'l11_b13_prism_3d'
+    | 'l11_b15_nested_squares'
+    | 'l11_b15_nested_triangles'
+    | 'l11_b15_nested_circles'
+    | 'l11_b20_exp_log_plot';
   params: Record<string, number>;
+  labels?: Record<string, string>;
 }
 
 export interface FrequencyTableDiagram {

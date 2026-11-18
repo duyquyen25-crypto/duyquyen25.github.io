@@ -1,0 +1,772 @@
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Phép chiếu song song biến hai đường thẳng song song thành hai đường thẳng song song }
+   { Phép chiếu song song không làm thay đổi tỉ số độ dài của hai đoạn thẳng }
+     { Phép chiếu song song bảo toàn độ dài của đoạn thẳng }
+    { \True Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy }
+\loigiai{ 
+ Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây sai? 
+\choice
+{ Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy }
+   { Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng }
+     { \True Phép chiếu song song bảo toàn độ dài của đoạn thẳng }
+    { Hình chiếu song song của hai đường thẳng song song là hai đường thẳng song song hoặc trùng nhau }
+\loigiai{ 
+ Phép chiếu song song bảo toàn độ dài của đoạn thẳng là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Hình chiếu song song của hình thoi luôn cho một hình thoi }
+   { \True Hình chiếu song song của một đoạn thẳng là một đoạn thẳng hoặc một điểm }
+     { Hình chiếu song song của một đoạn thẳng là một đoạn thẳng }
+    { Hình chiếu song song của hình chữ nhật luôn giữ nguyên tỉ lệ chiều dài và chiều rộng }
+\loigiai{ 
+ Hình chiếu song song của một đoạn thẳng là một đoạn thẳng hoặc một điểm là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A_1B_1C_1}$. Hình chiếu song song của điểm ${C_1}$ lên mặt phẳng $(ABC)$ theo phương ${B_1B}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A_1) at (1,4)   node at (A_1) [above] {$A_1$}; 
+    \coordinate (B_1) at (3,3)   node at (B_1) [above] {$B_1$}; 
+    \coordinate (C_1) at (5,4)   node at (C_1) [above] {$C_1$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B_1)--(A_1)--(A); 
+    \draw (B_1)--(C_1)--(C)--(B) (A_1)--(C_1)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ \True Điểm ${C}$ }
+   { Điểm ${C_1}$ }
+     { Điểm ${B}$ }
+    { Điểm ${A_1}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${C}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.DEF}$. Hình chiếu song song của điểm ${B}$ lên mặt phẳng $(DFF)$ theo phương ${FC}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (1,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (3,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (5,4)   node at (F) [above] {$F$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(E)--(D)--(A); 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ \True Điểm ${E}$ }
+   { Điểm ${F}$ }
+     { Điểm ${D}$ }
+    { Điểm ${B}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${E}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hai dãy số $(u_n)$ và $(v_n)$ có $\lim u_n =1$ và $\lim v_n =3$. Tính giới hạn $\lim (u_n-v_n)$.\\ 
+\choice
+{ \True ${ -2 }$ }
+   { $ {3 }$ }
+     { $ {2 }$ }
+    { $ { 4}$ }
+\loigiai{ 
+  
+ }\end{ex}
+
+\begin{ex}
+ Cho hai dãy số $(u_n)$ và $(v_n)$ có $\lim u_n =1$ và $\lim v_n =-3$. Tính giới hạn $\lim (- u_{n} + 2 v_{n} + 7)$.\\ 
+\choice
+{ $ { 2}$ }
+   { $ {12 }$ }
+     { $ {-11 }$ }
+    { \True ${ 0 }$ }
+\loigiai{ 
+  $\lim (- u_{n} + 2 v_{n} + 7)=-1.1+2.(-3)+7=0$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hai dãy số $(u_n)$ và $(v_n)$ có $\lim u_n =4$ và $\lim v_n =-3$. Tính giới hạn $\lim (- \frac{1 - 2 u_{n}}{2 v_{n}})$.\\ 
+\choice
+{ \True ${ - \frac{7}{6} }$ }
+   { $ {- \frac{47}{6} }$ }
+     { $ {- \frac{7}{8} }$ }
+    { $ { - \frac{4}{3}}$ }
+\loigiai{ 
+  $\lim (- \frac{1 - 2 u_{n}}{2 v_{n}})=\dfrac{-2.4+1}{6 }=- \frac{7}{6}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính giới hạn $\lim\frac{- 9 n^{2} - 5 n - 4}{8 n^{2} + 5 n + 1}$.\\ 
+\choice
+{ $ {-2}$ }
+   { $ { -4}$ }
+     { \True ${ - \frac{9}{8}}$ }
+    { $ {-9}$ }
+\loigiai{ 
+  
+ }\end{ex}
+
+\begin{ex}
+ Tính giới hạn $\lim\frac{2 n + 1}{- 4 n^{3} - 7 n^{2} - 7 n + 8}$.\\ 
+\choice
+{ $ {-4}$ }
+   { $ { \frac{1}{8}}$ }
+     { \True ${0}$ }
+    { $ {\frac{1}{4}}$ }
+\loigiai{ 
+  
+ }\end{ex}
+
+\begin{ex}
+ Tính giới hạn $\lim\frac{\sqrt{5 n^{2} + 2 n + 2}}{2 - 4 n}$.\\ 
+\choice
+{ $ { 1}$ }
+   { $ {\frac{\sqrt{6}}{2} }$ }
+     { \True ${- \frac{\sqrt{5}}{4}}$ }
+    { $ {- \frac{5}{4} }$ }
+\loigiai{ 
+  
+ }\end{ex}
+
+\begin{ex}
+ Tính giới hạn $\lim\frac{- 6 \cdot 3^{n} - 5 \cdot 6^{n}}{8 - 3 \cdot 6^{n}}$. \\ 
+\choice
+{ $ {- \frac{8}{5} }$ }
+   { $ { -8}$ }
+     { $ {- \frac{3}{4} }$ }
+    { \True ${\frac{5}{3}}$ }
+\loigiai{ 
+  
+ }\end{ex}
+
+\begin{ex}
+ Tính tổng của cấp số nhân lùi vô hạn $S=1- \frac{1}{6} + \frac{1}{36}+...+\left(- \frac{1}{6}\right)^n+...$.\\ 
+\choice
+{ $ {7 }$ }
+   { \True ${ \frac{6}{7} }$ }
+     { $ {\frac{6}{5} }$ }
+    { $ { -5}$ }
+\loigiai{ 
+  
+ }\end{ex}
+
+\begin{ex}
+ Tính tổng của cấp số nhân lùi vô hạn $S=-3- \dfrac{3}{5}+...-3\left(\dfrac{1}{5}\right)^{n-1}+...$\\ 
+\choice
+{ \True ${- \dfrac{15}{4}}$ }
+   { ${- \dfrac{3}{4}}$ }
+     { ${-15}$ }
+    { ${\dfrac{1}{4}}$ }
+\loigiai{ 
+ Cấp số nhân có $u_1=-3$, công bội $q=\dfrac{u_2}{u_1}=\dfrac{1}{5}$ thỏa mãn $|q|<1$.
+
+$S=\dfrac{u_1}{1-q}=\dfrac{-3}{1-\left(\dfrac{1}{5}\right)}=- \dfrac{15}{4}$. 
+ }\end{ex}
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A'B'C'}$. Gọi ${I,P}$ lần lượt là trung điểm của ${A'C',BC}$. Gọi ${G}$ là trọng tâm của tam giác ${A'BC}$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A') at (1,4)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (3,3)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (5,4)   node at (C') [above] {$C'$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B')--(A')--(A); 
+    \draw (B')--(C')--(C)--(B) (A')--(C')--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choiceTFt
+{ Hình chiếu song song của điểm ${B'}$ lên mặt phẳng $(ABC)$ theo phương ${C'C}$ là điểm ${C}$ }
+   { Hình chiếu song song của đoạn thẳng ${BI}$ lên mặt phẳng $(ABC)$ theo phương ${AA'}$ là đoạn thẳng ${BP}$ }
+     { \True Hình chiếu song song của điểm ${I}$ lên mặt phẳng $(BCC'B')$ theo phương ${B'A'}$ là trung điểm của ${B'C'}$ }
+    { Gọi ${G'}$ là hình chiếu song song của ${G}$ lên mặt phẳng $(ABC)$ theo phương ${CC'}$. Khi đó: $\overrightarrow{AG'}=2\overrightarrow{PG'}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ Hình chiếu song song của điểm ${B'}$ lên mặt phẳng $(ABC)$ theo phương ${AA'}$ là điểm ${B}$
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ Hình chiếu song song của đoạn thẳng ${BI}$ lên mặt phẳng $(ABC)$ theo phương ${BB'}$ là một trung tuyến xuất phát từ đỉnh ${B}$ của tam giác ${ABC}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${I}$ lên mặt phẳng $(BCC'B')$ theo phương ${BA}$ là trung điểm của ${B'C'}$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ ${G'}$ là trọng tâm của tam giác ${ABC}$ nên $AG'=2PG'$.
+
+Suy ra: $\overrightarrow{AG'}=-2\overrightarrow{PG'}$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hay dãy số $(u_n)$ và $(v_n)$ có $u_n=3 n^{2} - 3 n - 3,v_n=2 n^{2} + 8 n + 2$. Xét tính đúng-sai của các khẳng định sau. 
+\choiceTFt
+{ $\lim \dfrac{u_n}{v_n}=- \frac{3}{2}$ }
+   { \True  $\lim \dfrac{u_n}{(v_n)^2}=0$ }
+     { $\lim \dfrac{u_n}{v_n+n^{2}}=2$ }
+    { Với $m=-1$ thì $\lim \dfrac{u_n+mn^2+5}{v_n+2}=- \frac{1}{2}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+  $\lim \dfrac{u_n}{v_n}=\lim \dfrac{3 n^{2} - 3 n - 3}{2 n^{2} + 8 n + 2}
+=\lim \dfrac{3 - \frac{3}{n} - \frac{3}{n^{2}}}{2 + \frac{8}{n} + \frac{2}{n^{2}}}=\frac{3}{2}$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ $\lim \dfrac{u_n}{(v_n)^2}=\lim \dfrac{3 n^{2} - 3 n - 3}{\left(2 n^{2} + 8 n + 2\right)^{2}}$
+$=\lim \dfrac{n^{2} \left(3 - \frac{3}{n} - \frac{3}{n^{2}}\right)}{n^{2} \left(2 + \frac{8}{n} + \frac{2}{n^{2}}\right)^{2}}$
+$=\lim \dfrac{3 - \frac{3}{n} - \frac{3}{n^{2}}}{\left(2 + \frac{8}{n} + \frac{2}{n^{2}}\right)^{2}}=0$.
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ $\lim \dfrac{u_n}{v_n+n^{2}}=\lim \dfrac{3 n^{2} - 3 n - 3}{2 n^{2} + 8 n + 2+n^{2}}$
+ $=\lim \dfrac{3 n^{2} - 3 n - 3}{3 n^{2} + 8 n + 2}$
+$=\lim \dfrac{3 - \frac{3}{n} - \frac{3}{n^{2}}}{3 + \frac{8}{n} + \frac{2}{n^{2}}}=1$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ $\lim \dfrac{u_n+mn^2+5}{v_n+2}=- \frac{1}{2}$
+$\Rightarrow \lim \dfrac{3 n^{2} - 3 n - 3+mn^2+5}{2 n^{2} + 8 n + 2+2}=- \frac{1}{2}$
+$\Rightarrow \dfrac{3+m}{2}=- \frac{1}{2}$
+$\Rightarrow m=-4$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Xét tính đúng-sai của các khẳng định sau. 
+\choiceTFt
+{ \True  $\lim \left(- \frac{62}{n^{5}}\right)=0$ }
+   { \True  $\lim \left(- \frac{6}{7}\right)^n=0$ }
+     { $\lim \dfrac{n - 8}{n^{2} - 2 n + 2}=-4$ }
+    { $\lim \frac{2^{n} + 2 \cdot 5^{n}}{4^{n} + 3 \cdot 5^{n}}=\frac{8}{3}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ $\lim \left(- \frac{62}{n^{5}}\right)=\lim \left(-62.\frac{1}{n^{5}}\right)=0$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ $\lim \left(- \frac{6}{7}\right)^n=0$ vì $-1<- \frac{6}{7}<1$.
+
+c) Khẳng định đã cho là khẳng định sai.
+
+  $\lim \dfrac{n - 8}{n^{2} - 2 n + 2}
+=\lim \dfrac{\frac{1}{n} - \frac{8}{n^{2}}}{1 - \frac{2}{n} + \frac{2}{n^{2}}}=0$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ $\lim \frac{2^{n} + 2 \cdot 5^{n}}{4^{n} + 3 \cdot 5^{n}}=\lim \dfrac{2+\left(\frac{2}{5}\right)^n}{3+\left(\frac{4}{5}\right)^n}=\frac{2}{3}$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Xét tính đúng-sai của các khẳng định sau:
+\choiceTFt
+{ $\lim (5 \pi)^n=0$ }
+   { \True  $\lim (- 4 n^{3} + n^{2} - 3 n - 4)=-\infty$ }
+     { \True  $\lim \dfrac{\sqrt{n^{2} + 2 n + 1}} {5 n - 2}=\frac{1}{5}$ }
+    { \True  $\lim \dfrac{-2-1+0+...+n - 3}{1-2-5+...+4 - 3 n }=- \frac{1}{3}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ $\lim (5 \pi)^n=+\infty$ vì $5 \pi>1$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Vì $\lim n^3=+\infty$ và $\lim (-4 + \frac{1}{n} - \frac{3}{n^{2}} - \frac{4}{n^{3}})=-4<0$ nên
+
+$\lim (- 4 n^{3} + n^{2} - 3 n - 4)=\lim n^3(-4 + \frac{1}{n} - \frac{3}{n^{2}} - \frac{4}{n^{3}})= +\infty$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ $\lim \dfrac{\sqrt{n^{2} + 2 n + 1}} {5 n - 2}=\lim \dfrac{\sqrt{1 + \frac{2}{n} + \frac{1}{n^{2}}}} {5 - \frac{2}{n}} =\frac{1}{5}$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ $-2,-1,0,...,n - 3$ lập thành cấp số cộng có $u_1=-2,d=1$.
+
+$1,-2,-5,...,4 - 3 n$ lập thành cấp số cộng có $v_1=1,d=-3$.
+
+$\lim \dfrac{-2-1+0+...+n - 3}{1-2-5+...+4 - 3 n}$
+$=\lim \dfrac{\frac{n \left(n - 5\right)}{2}}{\frac{n \left(5 - 3 n\right)}{2}}=\lim \dfrac{n - 5}{5 - 3 n}=- \frac{1}{3}$
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Xét tính đúng-sai của các khẳng định sau:
+\choiceTFt
+{ $\lim\left(\frac{9}{17}\right)^n=\frac{9}{17}$ }
+   { $\lim (2 n^{3} - 4 n^{2} - n + 2)=0.529411764705882$ }
+     { $\lim \dfrac{\sqrt{4 n^{2} + 8 n + 4}} {- n - 5}=- \sqrt{6}$ }
+    { \True  $\lim \dfrac{2+8+...+2 \cdot 4^{n - 1}}{3+15+75+...+3 \cdot 5^{n - 1} }=0$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ $\lim (\frac{9}{17})^n=0$ vì $-1<\frac{9}{17}<1$.
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ $\lim (2 n^{3} - 4 n^{2} - n + 2)=\lim n^3(2 - \frac{4}{n} - \frac{1}{n^{2}} + \frac{2}{n^{3}})= +\infty$ vì $\lim n^3=+\infty$ và $\lim (2 - \frac{4}{n} - \frac{1}{n^{2}} + \frac{2}{n^{3}})=2>0$.
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ $\lim \dfrac{\sqrt{4 n^{2} + 8 n + 4}} {- n - 5}=\lim \dfrac{\sqrt{4 + \frac{8}{n} + \frac{4}{n^{2}}}} {-1 - \frac{5}{n}} =-2$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ $2,8,...,2 \cdot 4^{n - 1}$ lập thành cấp số nhân có $u_1=2,q=4$.
+
+$3,15,...,3 \cdot 5^{n - 1}$ lập thành cấp số nhân có $v_1=3,q=5$.
+
+$\lim \dfrac{2+8+...+2 \cdot 4^{n - 1}}{3+15+...+3 \cdot 5^{n - 1}}$
+$=\lim \dfrac{\frac{2 \cdot 4^{n}}{3} - \frac{2}{3}}{\frac{3 \cdot 5^{n}}{4} - \frac{3}{4}}=0$.
+
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Xét tính đúng-sai của các khẳng định sau:
+\choiceTFt
+{ \True  $\lim (-62)=-62$ }
+   { \True  $\lim \frac{- n - 4}{4 n - 5}=- \frac{1}{4}$ }
+     { \True  $\lim \frac{\left(2 - 4 n^{2}\right)^{3}}{- 4 n^{6} - 3 n^{4} - 4 n^{3} + 1}=16$ }
+    { \True  $S=-2- \frac{6}{7}- \frac{18}{49}+...-2\left(\frac{3}{7}\right)^{n-1}+...=- \frac{7}{2}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ $\lim (-62)=-62$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ $\lim \frac{- n - 4}{4 n - 5}=\lim \frac{-1 - \frac{4}{n}}{4 - \frac{5}{n}}= - \frac{1}{4}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ $\lim \frac{\left(2 - 4 n^{2}\right)^{3}}{- 4 n^{6} - 3 n^{4} - 4 n^{3} + 1}=\lim \dfrac{\left(2 - 4 n^{2}\right)^{3}}{-4 - \frac{3}{n^{2}} - \frac{4}{n^{3}} + \frac{1}{n^{6}}}= 16$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ $-2, - \frac{6}{7}, - \frac{18}{49},...$ lập thành cấp số nhân với $u_1=-2,q=\frac{3}{7}$.
+
+$S=-2- \frac{6}{7}- \frac{18}{49}+...-2\left(\frac{3}{7}\right)^{n-1}+...=\dfrac{-2}{1-\frac{3}{7}}=- \frac{7}{2}$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+   Có ${2,5}$ kg chất phóng xạ độc hại. Biết rằng, cứ sau một khoảng thời gian $T={21000}$ năm thì một nửa số chất phóng xạ này bị phân rã thành chất khác không độc hại đối với sức khoẻ của con người (${T}$ được gọi là chu kì bán rã). Biết rằng chất phóng xạ này sẽ không độc hại nữa nếu khối lượng chất phóng xạ còn lại bé hơn $10^{-7}$ gam. Gọi ${u_n}$ là khối lượng chất phóng xạ còn lại sau chu kì thứ ${n}$ Xét tính đúng-sai của các khẳng định sau:
+\choiceTFt
+{ \True  $u_2=1,3$ }
+   { \True $u_n=2,5.\left(\frac{1}{2}\right)^{n-1}$, với $n \in \mathbb{N}$ }
+     { $\lim (u_n-5)=5$ }
+    { \True  Sau ít nhất ${36}$ chu kì khối lượng chất phóng xạ đã cho ban đầu không còn độc hại đối với con người }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ $u_2=\frac{1}{2}u_1=\frac{1}{2}.2,5=1,3$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ $u_n$ là cấp số nhân với $u_1=2,5, q=\frac{1}{2}$.
+
+Do đó: $u_n=2,5.\left(\frac{1}{2}\right)^{n-1}$, với $n \in \mathbb{N}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ $\lim (u_n-5)=0-5=-5$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+  Để chất phóng xạ bé hơn $10^{-7}$ gam thì:
+
+$2,5.10^3.\left(\frac{1}{2}\right)^{n-1} < 10^{-7}$
+
+$\Rightarrow \left(\frac{1}{2}\right)^{n-1}<\dfrac{10^{-10}}{2,5}$
+
+$\Rightarrow n-1>34,54 \Rightarrow n>35,54$.
+
+Do đó: sau ít nhất ${36}$ chu kì khối lượng chất phóng xạ đã cho ban đầu không còn độc hại đối với con người.
+
+ 
+ }\end{ex}
+\begin{ex}
+ Tính $\lim \frac{3 n^{4} + 4 n^{3} + 4 n - 3}{\left(3 n^{2} + 1\right)^{2}}$ (kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{0,33}
+
+\loigiai{ 
+ $\lim \frac{3 n^{4} + 4 n^{3} + 4 n - 3}{\left(3 n^{2} + 1\right)^{2}}=\lim \dfrac{3 + \frac{4}{n} + \frac{4}{n^{3}} - \frac{3}{n^{4}} }{\left(3 + \frac{1}{n^{2}}\right)^{2} }= \frac{1}{3}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính $\lim \dfrac{-3-5-7+...+(- 2 n - 1)}{3+7+11+...+(4 n - 1)}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{-0,5}
+
+\loigiai{ 
+ $-3,-5,-7,...,- 2 n - 1$ lập thành cấp số cộng có $u_1=-3,d=-2$.
+
+$3,7,11,...,4 n - 1$ lập thành cấp số cộng có $v_1=3,d=4$.
+
+$\lim \dfrac{-3-5-7+...- 2 n - 1}{3+7+11+...+4 n - 1}$
+$=\lim \dfrac{\frac{n \left(- 2 n - 4\right)}{2}}{\frac{n \left(4 n + 2\right)}{2}}=\lim \dfrac{- 2 n - 4}{4 n + 2}=- \frac{1}{2}$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính $\lim \dfrac{-5-20+...+(- 5 \cdot 4^{n - 1})}{-4-16-64+...+(- 4 \cdot 4^{n - 1})}$(kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{1,3}
+
+\loigiai{ 
+ $-5,-20,...,- 5 \cdot 4^{n - 1}$ lập thành cấp số nhân có $u_1=-5,q=4$.
+
+$-4,-16,...,- 4 \cdot 4^{n - 1}$ lập thành cấp số nhân có $v_1=-4,q=4$.
+
+$\lim \dfrac{-5+-20+...+- 5 \cdot 4^{n - 1}}{-4+-16+...+- 4 \cdot 4^{n - 1}}$
+$=\lim \dfrac{\frac{5}{3} - \frac{5 \cdot 4^{n}}{3}}{\frac{4}{3} - \frac{4 \cdot 4^{n}}{3}}=\frac{5}{4}$.
+ 
+ }\end{ex}
+
+\begin{ex}
+ Tính tổng của cấp số nhân lùi vô hạn $S=3+1+...+3\left(\frac{1}{3}\right)^n+..$. (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{4,5}
+
+\loigiai{ 
+ Ta có: $u_1=3,q=\frac{1}{3}\Rightarrow S=\dfrac{3}{1-\frac{1}{3}}=\frac{9}{2}=4,5$. 
+ }\end{ex}
+
+\begin{ex}
+ Từ hình vuông đầu tiên có cạnh bằng ${2 \sqrt{2}}$, nối các trung điểm của bốn cạnh để tạo hình vuông tiếp theo. Tính tổng diện tích ${T}$ của các hình vuông khi cho số hình vuông tăng lên vô hạn.
+\begin{center}
+ \begin{tikzpicture}
+            \def\a{3}
+            \def\b{0.5}
+            \def\levels{10}
+            \coordinate (A0) at (0, \a);
+            \coordinate (B0) at (\a, 2*\a);
+            \coordinate (C0) at (2*\a, \a);
+            \coordinate (D0) at (\a, 0);
+            \foreach \i in {1,...,\levels} {
+                \coordinate (A\i) at ($(A\the\numexpr\i-1\relax)!\b!(B\the\numexpr\i-1\relax)$);
+                \coordinate (B\i) at ($(B\the\numexpr\i-1\relax)!\b!(C\the\numexpr\i-1\relax)$);
+                \coordinate (C\i) at ($(C\the\numexpr\i-1\relax)!\b!(D\the\numexpr\i-1\relax)$);
+                \coordinate (D\i) at ($(D\the\numexpr\i-1\relax)!\b!(A\the\numexpr\i-1\relax)$);
+                \draw  (A\i) -- (B\i) -- (C\i) -- (D\i) -- cycle;
+            }
+        \end{tikzpicture}
+\end{center}
+
+
+\shortans[4]{16}
+
+\loigiai{ 
+ Diện tích hình vuông đầu tiên: $S_1 = 8$.
+
+Cạnh hình vuông thứ 2 là: $2\Rightarrow S_2 = 4$.
+
+Cạnh hình vuông thứ 3 là: $\sqrt{2}\Rightarrow S_2 = 2$.
+
+Cạnh hình vuông thứ n là: $2 \sqrt{2}\left(\frac{\sqrt{2}}{2}\right)^{n-1}\Rightarrow S_n = 8 \left(\frac{\sqrt{2}}{2}\right)^{2 n - 2}$.
+
+ $S_n$ là cấp số nhân lùi vô hạn với $u_1=8,q=\frac{1}{2}$.
+
+$T=8+4+2+ \cdots+ 8 \left(\frac{\sqrt{2}}{2}\right)^{2 n - 2}=\dfrac{8}{1-\frac{1}{2}}=16$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình vuông $C_1$ có cạnh bằng ${2}$. Người ta chia mỗi cạnh thành ${4}$ phần bằng nhau và nối các điểm chia để tạo hình vuông ${C_2}$. Tiếp tục quá trình này, tính tổng diện tích của các hình vuông (kết quả làm tròn đến hàng phần mười).
+\begin{center}
+ \begin{tikzpicture}
+            \def\a{3}
+            \def\b{0.25}
+            \def\levels{10}
+            \coordinate (A0) at (0, 0);
+            \coordinate (B0) at (\a, 0);
+            \coordinate (C0) at (\a, \a);
+            \coordinate (D0) at (0, \a);
+            \foreach \i in {1,...,\levels} {
+                \coordinate (A\i) at ($(A\the\numexpr\i-1\relax)!\b!(B\the\numexpr\i-1\relax)$);
+                \coordinate (B\i) at ($(B\the\numexpr\i-1\relax)!\b!(C\the\numexpr\i-1\relax)$);
+                \coordinate (C\i) at ($(C\the\numexpr\i-1\relax)!\b!(D\the\numexpr\i-1\relax)$);
+                \coordinate (D\i) at ($(D\the\numexpr\i-1\relax)!\b!(A\the\numexpr\i-1\relax)$);
+                \draw  (A\i) -- (B\i) -- (C\i) -- (D\i) -- cycle;
+            }
+        \end{tikzpicture}
+\end{center}
+
+
+\shortans[4]{10,7}
+
+\loigiai{ 
+   Gọi hình vuông $C_1$ có cạnh $a_1 = 2$ và có diện tích là $S_1 = a_1^2$.
+
+            Cạnh của hình vuông $C_2$ là
+
+            $ a_2 = \sqrt{\left( \dfrac{3}{4} a_1 \right)^2 + \left( \dfrac{1}{4} a_1 \right)^2} = \dfrac{a_1 \sqrt{10}}{4}.$
+
+            Diện tích của hình vuông $C_2$ là
+
+            $S_2 = \dfrac{5}{8} a_1^2 = \dfrac{5}{8} S_1.$
+
+            Cạnh của hình vuông $C_3$ là
+
+            $a_3 = \sqrt{\left( \dfrac{3}{4} a_2 \right)^2 + \left( \dfrac{1}{4} a_2 \right)^2} = \dfrac{a_2 \sqrt{10}}{4} = a_1 \left( \dfrac{\sqrt{10}}{4} \right)^2.$
+
+            Diện tích của hình vuông $C_3$ là
+
+            $S_3 = \left( \dfrac{5}{8} \right)^2 a_1^2 = \left( \dfrac{5}{8} \right)^2 S_1.$
+
+            Dãy các hình vuông $C_1$, $C_2$, $C_3$, $\ldots$ , $C_n$, $\ldots$ có các diện tích lần lượt là $S_1$, $S_2$, $S_3$, $\ldots$ , $S_n$, $\ldots$ tạo thành một cấp số nhân lùi vô hạn với số hạng đầu là $u_1 = S_1 = 4$ và công bội $q = \dfrac{5}{8}$.
+
+
+            Vậy tổng diện tích của các hình vuông là
+
+            $S = S_1 + S_2 + S_3 + \cdots + S_n + \cdots = \dfrac{u_1}{1 - q} = \dfrac{16}{1 - \dfrac{5}{8}} = 10,7$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho tam giác đều ${ABC}$ có cạnh bằng ${\sqrt{14}}$. Nối các trung điểm $A_1$, $B_1$, $C_1$ của ${BC}$, ${CA}$, ${AB}$ được tam giác đều ${A_1B_1C_1}$. Tiếp tục nối các trung điểm $A_2$, $B_2$, $C_2$ của các cạnh $B_1C_1, C_1A_1, A_1B_1$ ta được tam giác đều $A_2B_2C_2$. Tiếp tục nối các trung điểm đến vô hạn. Gọi $S_n$ là diện tích tam giác $A_nB_nC_n$. Tính $S_1+S_2+\cdots+S_n+\cdots$ (kết quả làm tròn đến hàng phần trăm).
+\begin{center}
+   \begin{tikzpicture}
+            \def\a{4}
+            \newcommand{\drawtriangle}[3]{
+                \draw (#1) -- (#2) -- (#3) -- cycle;
+            }
+            \newcommand{\midpoint}[3]{
+                \coordinate (#3) at ($(#1)!0.5!(#2)$);
+            }
+            \newcommand{\equilateraltriangle}[3]{
+                \coordinate (#3) at (0, 0);
+                \coordinate (#3-1) at (#1, 0); t
+                \coordinate (#3-2) at ($(#3-1)!1!(#3)$);
+                \coordinate (#3-3) at (rotate around={60:(#3-1)});
+                \draw (#3-1) -- (#3-2) -- (#3-3) -- cycle;
+            }
+            \coordinate (A) at (\a/2, {\a*sqrt(3)/2});
+            \coordinate (B) at (0, 0);
+            \coordinate (C) at (\a, 0);
+            \drawtriangle{A}{B}{C};
+            \node at (A) [above] {\scriptsize $A$};
+            \node at (B) [left] {\scriptsize $B$};
+            \node at (C) [right] {\scriptsize $C$};
+            \midpoint{B}{C}{A1}
+            \midpoint{C}{A}{B1}
+            \midpoint{A}{B}{C1}
+            \fill[gray!20] (A1) -- (B1) -- (C1) -- cycle;
+            \drawtriangle{A1}{B1}{C1};
+            \node at (A1) [below] {\scriptsize $A_1$};
+            \node at (B1) [right] {\scriptsize $B_1$};
+            \node at (C1) [left] {\scriptsize $C_1$};
+            \midpoint{B1}{C1}{A2}
+            \midpoint{C1}{A1}{B2}
+            \midpoint{A1}{B1}{C2}
+            \fill[gray!35] (A2) -- (B2) -- (C2) -- cycle;
+            \drawtriangle{A2}{B2}{C2};
+            \node at (A2) [above] {\scriptsize $A_2$};
+            \node at (B2) [left] {\scriptsize $B_2$};
+            \node at (C2) [right] {\scriptsize $C_2$};
+            \midpoint{B2}{C2}{A3}
+            \midpoint{C2}{A2}{B3}
+            \midpoint{A2}{B2}{C3}
+            \fill[gray!50] (A3) -- (B3) -- (C3) -- cycle;
+            \drawtriangle{A3}{B3}{C3};
+            \node at (A3) [below] {\scriptsize $A_3$};
+            \node at (B3) [right] {\scriptsize $B_3$};
+            \node at (C3) [left] {\scriptsize $C_3$};
+        \end{tikzpicture}
+\end{center}
+
+
+\shortans[4]{2,02}
+
+\loigiai{ 
+  Diện tích tam giác ${ABC}$ là $S_0 = \frac{7 \sqrt{3}}{2}$.
+
+$S_1 = \dfrac{1}{4} S_0$, $S_2 = \dfrac{1}{4} S_1$, $S_3 = \dfrac{1}{4} S_2$, $\ldots $
+
+Do đó, $(S_n)$ là một cấp số nhân với công bội $q = \dfrac{1}{4}$.
+
+Tổng diện tích các tam giác đều $A_n B_n C_n$ là tổng của một cấp số nhân lùi vô hạn với công bội $q = \dfrac{1}{4}$.
+
+Do đó, tổng diện tích là
+
+$S = S_1 + S_2 + S_3 + \cdots + S_n + \cdots = \dfrac{S_1}{1 - q} = \dfrac{\frac{7 \sqrt{3}}{8}}{1 - \dfrac{1}{4}}=2,02$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho tam giác đều ${ABC}$ có cạnh bằng ${\sqrt{7}}$. Nối các trung điểm $A_1$, $B_1$, $C_1$ của ${BC}$, ${CA}$, ${AB}$ được tam giác đều ${A_1B_1C_1}$. Tiếp tục nối các trung điểm $A_2$, $B_2$, $C_2$ của các cạnh $B_1C_1, C_1A_1,A_1B_1$ ta được tam giác đều $A_2B_2C_2$. Tiếp tục nối các trung điểm đến vô hạn.  Tính tổng các độ dài $l = A A_1 + A_1 A_2 + A_2 A_3 + \cdots + A_{n-1} A_n + \cdots$ (kết quả làm tròn đến hàng phần trăm).
+\begin{center}
+   \begin{tikzpicture}
+            \def\a{4}
+            \newcommand{\drawtriangle}[3]{
+                \draw (#1) -- (#2) -- (#3) -- cycle;
+            }
+            \newcommand{\midpoint}[3]{
+                \coordinate (#3) at ($(#1)!0.5!(#2)$);
+            }
+            \newcommand{\equilateraltriangle}[3]{
+                \coordinate (#3) at (0, 0);
+                \coordinate (#3-1) at (#1, 0); t
+                \coordinate (#3-2) at ($(#3-1)!1!(#3)$);
+                \coordinate (#3-3) at (rotate around={60:(#3-1)});
+                \draw (#3-1) -- (#3-2) -- (#3-3) -- cycle;
+            }
+            \coordinate (A) at (\a/2, {\a*sqrt(3)/2});
+            \coordinate (B) at (0, 0);
+            \coordinate (C) at (\a, 0);
+            \drawtriangle{A}{B}{C};
+            \node at (A) [above] {\scriptsize $A$};
+            \node at (B) [left] {\scriptsize $B$};
+            \node at (C) [right] {\scriptsize $C$};
+            \midpoint{B}{C}{A1}
+            \midpoint{C}{A}{B1}
+            \midpoint{A}{B}{C1}
+            \fill[gray!20] (A1) -- (B1) -- (C1) -- cycle;
+            \drawtriangle{A1}{B1}{C1};
+            \node at (A1) [below] {\scriptsize $A_1$};
+            \node at (B1) [right] {\scriptsize $B_1$};
+            \node at (C1) [left] {\scriptsize $C_1$};
+            \midpoint{B1}{C1}{A2}
+            \midpoint{C1}{A1}{B2}
+            \midpoint{A1}{B1}{C2}
+            \fill[gray!35] (A2) -- (B2) -- (C2) -- cycle;
+            \drawtriangle{A2}{B2}{C2};
+            \node at (A2) [above] {\scriptsize $A_2$};
+            \node at (B2) [left] {\scriptsize $B_2$};
+            \node at (C2) [right] {\scriptsize $C_2$};
+            \midpoint{B2}{C2}{A3}
+            \midpoint{C2}{A2}{B3}
+            \midpoint{A2}{B2}{C3}
+            \fill[gray!50] (A3) -- (B3) -- (C3) -- cycle;
+            \drawtriangle{A3}{B3}{C3};
+            \node at (A3) [below] {\scriptsize $A_3$};
+            \node at (B3) [right] {\scriptsize $B_3$};
+            \node at (C3) [left] {\scriptsize $C_3$};
+        \end{tikzpicture}
+\end{center}
+
+
+\shortans[4]{4,58}
+
+\loigiai{ 
+  Đặt $u_1 = A A_1$, $u_2 = A_1 A_2$, $u_3 = A_2 A_3$,$\ldots$, $u_n = A_{n-1} A_n$.
+
+$u_1 = \frac{\sqrt{21}}{2}$, $u_2 =\dfrac{1}{2} u_1=\frac{\sqrt{21}}{4}$, $u_3 =\dfrac{1}{2} u_2=\frac{\sqrt{21}}{8}$,$\ldots$, $u_n = \dfrac{1}{2} u_{n-1}$,$\ldots$
+
+Do đó, $(u_n)$ là một cấp số nhân lùi vô hạn với công bội $q = \dfrac{1}{2}$.
+
+$l = \dfrac{u_1}{1 - q} = \dfrac{\frac{\sqrt{21}}{2}}{1 -\frac{1}{2}} = 4,58.$
+  
+ }\end{ex}
+
+\begin{ex}
+   Từ tờ giấy, cắt một hình tròn bán kính $R=10$ cm. Tiếp theo, cắt hai hình tròn bán kính $\dfrac{R}{2}$ chồng lên hình tròn đầu tiên. Tiếp tục cắt bốn hình tròn bán kính $\dfrac{R}{4}$ và chồng lên các hình trước, tiếp tục quá trình này mãi mãi. Tính tổng diện tích của các hình tròn  (kết quả làm tròn đến hàng đơn vị).
+\begin{center}
+ \begin{tikzpicture}
+            \begin{scope}
+                \fill[blue!30] (0,0) circle(1.5);
+                \draw (0,0) circle(1.5);
+                \node at (0,-1.9) {a)};
+            \end{scope}
+            \begin{scope}[xshift=4cm]
+                \fill[blue!30] (0,0) circle(1.5);
+                \foreach \x in {-0.75, 0.75} {
+                    \fill[yellow!30] (\x,0) circle(0.75);
+                    \draw (\x,0) circle(0.75);
+                }
+                \draw (0,0) circle(1.5);
+                \node at (0,-1.9) {b)};
+            \end{scope}
+            \begin{scope}[xshift=8cm]
+                \fill[blue!30] (0,0) circle(1.5);
+                \foreach \x in {-0.75, 0.75} {
+                    \fill[yellow!30] (\x,0) circle(0.75);
+                    \draw (\x,0) circle(0.75);
+                }
+                \foreach \x in {-1.125, -0.375, 0.375, 1.125} {
+                    \fill[green!30] (\x,0) circle(0.375);
+                    \draw (\x,0) circle(0.375);
+                }
+                \draw (0,0) circle(1.5);
+                \node at (0,-1.9) {c)};
+            \end{scope}
+        \end{tikzpicture}
+\end{center}
+\shortans[4]{628}
+
+\loigiai{ 
+ Gọi $u_1$ là diện tích của hình tròn đầu tiên, ta có $u_1 = \pi R^2$.
+
+Gọi $u_2$ là tổng diện tích của 2 hình tròn cắt lần thứ hai:
+
+ $u_2 = 2 \pi \left( \dfrac{R}{2}\right)^2 = \pi R^2 \cdot \frac{1}{2}$.
+
+Gọi $u_3$ là tổng diện tích của 4 hình tròn cắt lần thứ ba:
+
+$u_3 = 4 \pi \left( \dfrac{R}{4} \right)^2 = \pi R^2 \cdot \dfrac{1}{4}$.
+
+$u_n$ là tổng diện tích của $2^{n-1}$ hình tròn cắt lần thứ $n$:
+
+$u_n = 2^{n-1} \pi \left( \dfrac{R}{2^{n-1}} \right)^2 = \pi R^2 \cdot \dfrac{1}{2^{n-1}}$.
+
+Vậy tổng diện tích của các hình tròn là:
+
+$S = \pi R^2 + \pi R^2 \cdot \dfrac{1}{2} + \pi R^2 \cdot \dfrac{1}{4} + \cdots = \dfrac{\pi R^2}{1 - \dfrac{1}{2}} = 2 \pi R^2 = 2 \pi \cdot 10^2 \approx 628$. 
+ }\end{ex}

@@ -1,0 +1,1153 @@
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Phép chiếu song song không làm thay đổi tỉ số độ dài của hai đoạn thẳng }
+   { Phép chiếu song song biến hai đường thẳng song song thành hai đường thẳng song song }
+     { Phép chiếu song song biến hai đường thẳng song song thành hai đường thẳng trùng nhau }
+    { \True Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng }
+\loigiai{ 
+ Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây sai? 
+\choice
+{ \True Phép chiếu song song biến hai đường thẳng song song thành hai đường thẳng song song }
+   { Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng }
+     { Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy }
+    { Phép chiếu song song có thể biến đường tròn thành đường elip }
+\loigiai{ 
+ Phép chiếu song song biến hai đường thẳng song song thành hai đường thẳng song song là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ \True Hình chiếu song song của một tam giác là một tam giác }
+   { Hình chiếu song song của hình thoi luôn cho một hình thoi }
+     { Hình chiếu song song của tam giác đều thành một tam giác đều }
+    { Hình chiếu song song của hình chữ nhật luôn giữ nguyên tỉ lệ chiều dài và chiều rộng }
+\loigiai{ 
+ Hình chiếu song song của một tam giác là một tam giác là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.DEF}$. Hình chiếu song song của điểm ${D}$ lên mặt phẳng $(ABC)$ theo phương ${FC}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (1,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (3,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (5,4)   node at (F) [above] {$F$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(E)--(D)--(A); 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${B}$ }
+   { \True Điểm ${A}$ }
+     { Điểm ${C}$ }
+    { Điểm ${F}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${A}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A'B'C'}$. Hình chiếu song song của điểm ${C'}$ lên mặt phẳng $(ABB'A')$ theo phương ${AC}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A') at (1,4)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (3,3)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (5,4)   node at (C') [above] {$C'$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B')--(A')--(A); 
+    \draw (B')--(C')--(C)--(B) (A')--(C')--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${C}$ }
+   { Điểm ${B'}$ }
+     { Điểm ${B}$ }
+    { \True Điểm ${A'}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${A'}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp có diện tích đáy bằng ${11}$ và chiều cao bằng ${3}$. Tính thể tích ${V}$ của khối chóp đã cho.\\ 
+\choice
+{ ${V=\frac{14}{3}}$ }
+   { \True ${V=11}$ }
+     { ${V=33}$ }
+    { ${V=\frac{33}{2}}$ }
+\loigiai{ 
+ $V=\dfrac{1}{3}.11.3=11$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp có đáy là tam giác đều cạnh bằng ${7}$ và chiều cao bằng ${2}$. Tính thể tích $V$ của khối chóp đã cho.\\ 
+\choice
+{ \True ${V=\frac{49}{6}\sqrt 3}$ }
+   { ${V=\frac{49}{3}\sqrt 3}$ }
+     { ${V=\frac{49}{4}\sqrt 3}$ }
+    { ${V=\frac{49}{2}\sqrt 3}$ }
+\loigiai{ 
+ $V=\dfrac{1}{3}.7^2\frac{\sqrt{3}}{4}.2=\frac{49}{6}\sqrt 3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông tại $A$, ${AB=3a}$ và ${AC=10a}$, $SA\bot(ABC), SA=7a$. Tính thể tích $V$ của khối chóp đã cho.\\ 
+\choice
+{ $\displaystyle {V=\frac{105}{2}a^3}$ }
+   { $\displaystyle {V=210a^3}$ }
+     { \True $\displaystyle {V=35a^3}$ }
+    { $\displaystyle {V=105a^3}$ }
+\loigiai{ 
+ $V=\dfrac{1}{3}.\dfrac{1}{2}.3a.10a.7a=35a^3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông cân tại ${A}$ với $BC=\sqrt{10} a$. Biết $SA\bot (ABC)$ và $SA=\sqrt{3} a$. Thể tích ${V}$ của khối chóp ${S.ABC}$ là 
+\choice
+{ $V=\frac{5 \sqrt{3} a^{3}}{4}$ }
+   { $V=5 \sqrt{3} a^{3}$ }
+     { \True $V=\frac{5 \sqrt{3} a^{3}}{6}$ }
+    { $V=\frac{5 \sqrt{3} a^{3}}{2}$ }
+\loigiai{ 
+ $S_{ABC}=\dfrac{1}{4}BC^2=\frac{5 a^{2}}{2}$.
+
+ $V=\dfrac{1}{3}.{S_{ABC}}.SA=\dfrac{1}{3}.\frac{5 a^{2}}{2}.\sqrt{3} a={\frac{5 \sqrt{3} a^{3}}{6}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông cân tại ${B}$ và $AB=3 a$. Tam giác ${SAB}$ đều nằm trong mặt phẳng vuông góc với đáy. Thể tích ${V}$ của khối chóp ${S.ABC}$ là 
+\choice
+{ $V=\frac{27 \sqrt{3} a^{3}}{4}$ }
+   { $V=\frac{27 \sqrt{2} a^{3}}{4}$ }
+     { $V=\frac{9 \sqrt{2} a^{3}}{4}$ }
+    { \True $V=\frac{9 \sqrt{3} a^{3}}{4}$ }
+\loigiai{ 
+ $S_{ABC}=\dfrac{1}{2}.AB.BC=\dfrac{1}{2}.3 a.3 a=\frac{9 a^{2}}{2}$.
+
+Gọi ${M}$ là trung điểm của ${AB}$. Khi đó: $SM\bot (ABC)$.
+
+ $SM=\dfrac{3 \sqrt{3} a}{2}={\frac{3 \sqrt{3} a}{2}}$.
+
+ $V=\dfrac{1}{3}.{S_{ABC}}.SM={\frac{9 \sqrt{3} a^{3}}{4}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều và $AB=\sqrt{5} a$. Tam giác ${SAB}$ đều nằm trong mặt phẳng vuông góc với đáy. Thể tích ${V}$ của khối chóp ${S.ABC}$ là 
+\choice
+{ \True $V=\frac{5 \sqrt{5} a^{3}}{8}$ }
+   { $V=\frac{15 \sqrt{5} a^{3}}{8}$ }
+     { $V=\frac{5 \sqrt{30} a^{3}}{8}$ }
+    { $V=\frac{5 \sqrt{30} a^{3}}{24}$ }
+\loigiai{ 
+ $S_{ABC}=\dfrac{AB^2\sqrt 3}{4}=\frac{5 \sqrt{3} a^{2}}{4}$.
+
+Gọi ${M}$ là trung điểm của ${AB}$. Khi đó: $SM\bot (ABC)$.
+
+ $SM=\dfrac{\sqrt{15} a}{2}={\frac{\sqrt{15} a}{2}}$.
+
+ $V=\dfrac{1}{3}.{S_{ABC}}.SM={\frac{5 \sqrt{5} a^{3}}{8}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông và $AB=a$. Biết $SA\bot (ABCD)$ và $SA=\sqrt{2} a$. Thể tích ${V}$ của khối chóp ${S.ABCD}$ là 
+\choice
+{ $V=\sqrt{2} a^{3}$ }
+   { \True $V=\frac{\sqrt{2} a^{3}}{3}$ }
+     { $V=\frac{\sqrt{2} a^{3}}{2}$ }
+    { $V=2 \sqrt{2} a^{3}$ }
+\loigiai{ 
+ $S_{ABCD}=AB^2=a^{2}$.
+
+ $V=\dfrac{1}{3}.{S_{ABCD}}.SA=\dfrac{1}{3}.a^{2}.\sqrt{2} a={\frac{\sqrt{2} a^{3}}{3}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là chữ nhật với $AB=\sqrt{10} a, AD=a$. Biết $SA\bot (ABCD)$ và $SA=2 a$. Thể tích ${V}$ của khối chóp ${S.ABCD}$ là 
+\choice
+{ $V=\sqrt{10} a^{3}$ }
+   { \True $V=\frac{2 \sqrt{10} a^{3}}{3}$ }
+     { $V=4 \sqrt{10} a^{3}$ }
+    { $V=2 \sqrt{10} a^{3}$ }
+\loigiai{ 
+ $S_{ABCD}=AB.AD=\sqrt{10} a^{2}$.
+
+ $V=\dfrac{1}{3}.{S_{ABCD}}.SA=\dfrac{1}{3}.\sqrt{10} a^{2}.2 a={\frac{2 \sqrt{10} a^{3}}{3}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là chữ nhật với $AB=2 \sqrt{2} a, AD=\sqrt{3} a$. Biết $SA\bot (ABCD)$ và $SB=4 \sqrt{a^{2}}$. Thể tích ${V}$ của khối chóp ${S.ABCD}$ là 
+\choice
+{ \True $V=\frac{8 \sqrt{3} a^{3}}{3}$ }
+   { $V=16 \sqrt{3} a^{3}$ }
+     { $V=8 \sqrt{3} a^{3}$ }
+    { $V=4 \sqrt{3} a^{3}$ }
+\loigiai{ 
+ $SA=\sqrt{SB^2-AB^2}=2 \sqrt{2} a$.
+
+$S_{ABCD}=AB.AD=2 \sqrt{6} a^{2}$.
+
+ $V=\dfrac{1}{3}.{S_{ABCD}}.SA=\dfrac{1}{3}.2 \sqrt{6} a^{2}.2 \sqrt{2} a={\frac{8 \sqrt{3} a^{3}}{3}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều cạnh bằng ${1a}$, $SA\bot(ABC)$. Góc giữa cạnh ${SC}$ và đáy bằng $60^\circ$. Tính thể tích $V$ của khối chóp đã cho.\\ 
+\choice
+{ $\displaystyle {V=\frac{3}{8}a^3}$ }
+   { $\displaystyle {V=\frac{3}{4}a^3}$ }
+     { $\displaystyle {V=\frac{1}{8}a^3}$ }
+    { \True $\displaystyle {V=\frac{1}{4}a^3}$ }
+\loigiai{ 
+ $SA=SC.\tan 60^\circ =\sqrt{3}a.$
+
+$V=\dfrac{1}{3}.\frac{\sqrt{3}}{4}a^2.\sqrt{3}a=\frac{1}{4}a^3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SD\bot (ABCD), DA=4a,DB=\sqrt{65}a$. Góc giữa hai đường thẳng ${SC}$ và ${AB}$ bằng ${45^\circ}$. Tính thể tích của khối chóp ${S.ABCD}$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (D) at (0,0)   node at (D) [left] {$D$};
+\coordinate (A) at (-1,-1) node at (A) [left] {$A$};
+\coordinate (B) at (3,-1)  node at (B) [right] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (A)--(D)--(C) (S)--(D); 
+\draw (A)--(B)--(C) (S)--(A) (S)--(B) (S)--(C); 
+\end{tikzpicture}
+
+\choice
+{ $\frac{98}{3}a^3$ }
+   { \True $\frac{196}{3}a^3$ }
+     { $196a^3$ }
+    { $98a^3$ }
+\loigiai{ 
+ Ta có: $AB=\sqrt{DB^2- DA^2}=\sqrt{65a^2-16a^2}=7a$.
+
+ Góc  $({SC,AB})=({SC,DC})=\widehat{SCD}=45^\circ$.
+
+$SD=DC.\tan 45^\circ=7a$.
+
+ Thể tích của khối chóp đã cho là:
+
+$V=\dfrac{1}{3}.DA.AB.SD=\dfrac{1}{3}4a.7a.7a=\frac{196}{3}a^3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho khối lăng trụ có diện tích đáy bằng ${8}$ và chiều cao bằng ${10}$. Tính thể tích ${V}$ của khối lăng trụ đã cho.\\ 
+\choice
+{ $\displaystyle {V=\frac{80}{3}}$ }
+   { \True $\displaystyle {V=80}$ }
+     { $\displaystyle {V=6}$ }
+    { $\displaystyle {V=40}$ }
+\loigiai{ 
+ $V=8.10=80$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ có đáy là tam giác đều cạnh bằng ${2}$ và chiều cao bằng ${9}$. Tính thể tích $V$ của khối lăng trụ đã cho.\\ 
+\choice
+{ $\displaystyle {V=3\sqrt{3}}$ }
+   { \True $\displaystyle {V=9 \sqrt{3}}$ }
+     { $\displaystyle {V=6\sqrt{3}}$ }
+    { $\displaystyle {V=\frac{9}{2}\sqrt{3}}$ }
+\loigiai{ 
+ $V=2^2\frac{\sqrt{3}}{4}.9=9 \sqrt{3}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.A'B'C'}$ có đáy là tam giác vuông tại $A$, $AB=6a, AC=5a, AA'=5a$. Tính thể tích $V$ của khối lăng trụ đã cho.\\ 
+\choice
+{ ${V=150a^3}$ }
+   { \True ${V=75a^3}$ }
+     { ${V=25a^3}$ }
+    { ${V=\frac{75}{2}a^3}$ }
+\loigiai{ 
+ $V=\dfrac{1}{2}.6a.5a.5a=75a^3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng có đáy là hình vuông cạnh bằng ${6a}$ và chiều cao bằng ${10a}$. Tính thể tích $V$ của khối lăng trụ đã cho.\\ 
+\choice
+{ \True ${V=360a^3}$ }
+   { ${V=361a^3}$ }
+     { ${V=120a^3}$ }
+    { ${V=180a^3}$ }
+\loigiai{ 
+ $V=6^2a.10a=360a^3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho khối lập phương có cạnh bằng ${\sqrt{77}}a$. Thể tích ${V}$ của khối lập phương đã cho bằng\\ 
+\choice
+{ $\displaystyle {V=77}a^3$ }
+   { $\displaystyle {V=2 \sqrt{77}}a^3$ }
+     { $\displaystyle {V=\frac{77}{2}}a^3$ }
+    { \True $\displaystyle {V=77 \sqrt{77}}a^3$ }
+\loigiai{ 
+ $V=\sqrt{77}^3a^3=77 \sqrt{77}a^3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho khối hộp chữ nhật ${ABCD.A'B'C'D'}$ có $C'D'=a, B'C'=4a,CC'=6a$. Thể tích ${V}$ của khối hộp chữ nhật đã cho bằng\\ 
+\choice
+{ $\displaystyle {V=8}a^3$ }
+   { \True $\displaystyle {V=24}a^3$ }
+     { $\displaystyle {V=4}a^3$ }
+    { $\displaystyle {V=12}a^3$ }
+\loigiai{ 
+ $V=1.4.6a^3=24a^3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đều ${ABCD.A_1B_1C_1D_1}$. Khẳng định nào sau đây đúng\\ 
+\choice
+{ Các mặt bên có diện tích bằng mặt đáy }
+   { Các cạnh bên có độ dài bằng cạnh đáy }
+    { ${ABCD}$ là hình thang }
+    { \True Các mặt bên vuông góc với các mặt đáy }
+\loigiai{ 
+ Các mặt bên vuông góc với các mặt đáy là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp đều ${S.ABC}$, điểm ${G}$ là trọng tâm của tam giác ${ABC}$. Tìm mệnh đề đúng trong các mệnh đề sau? 
+\choice
+{ $SG \subset (ABC)$ }
+   { $SA=SB=SC=SG$ }
+     { $SA\bot(ABC)$ }
+    { \True $GA=GB=GC$ }
+\loigiai{ 
+ $GA=GB=GC$ là khẳng định đúng. 
+ }\end{ex}
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A_1B_1C_1}$. Gọi ${I,H}$ lần lượt là trung điểm của ${A_1C_1,BC}$. Gọi ${M}$ là trọng tâm của tam giác ${A_1BC}$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A_1) at (1,4)   node at (A_1) [above] {$A_1$}; 
+    \coordinate (B_1) at (3,3)   node at (B_1) [above] {$B_1$}; 
+    \coordinate (C_1) at (5,4)   node at (C_1) [above] {$C_1$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B_1)--(A_1)--(A); 
+    \draw (B_1)--(C_1)--(C)--(B) (A_1)--(C_1)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choiceTFt
+{ Hình chiếu song song của điểm ${B_1}$ lên mặt phẳng $(ABC)$ theo phương ${AA_1}$ là điểm ${C}$ }
+   { \True Hình chiếu song song của đoạn thẳng ${BI}$ lên mặt phẳng $(ABC)$ theo phương ${BB_1}$ là một trung tuyến của tam giác ${ABC}$ }
+     { \True Hình chiếu song song của điểm ${I}$ lên mặt phẳng $(ABB_1A_1)$ theo phương ${B_1C_1}$ là trung điểm của ${A_1B_1}$ }
+    { \True Gọi ${M'}$ là hình chiếu song song của ${M}$ lên mặt phẳng $(ABC)$ theo phương ${AA_1}$. Khi đó: $\overrightarrow{AM'}=-2\overrightarrow{HM'}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ Hình chiếu song song của điểm ${B_1}$ lên mặt phẳng $(ABC)$ theo phương ${AA_1}$ là điểm ${B}$
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của đoạn thẳng ${BI}$ lên mặt phẳng $(ABC)$ theo phương ${BB_1}$ là một trung tuyến xuất phát từ đỉnh ${B}$ của tam giác ${ABC}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${I}$ lên mặt phẳng $(ABB_1A_1)$ theo phương ${BC}$ là trung điểm của ${A_1B_1}$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ ${M'}$ là trọng tâm của tam giác ${ABC}$ nên $AM'=2HM'$.
+
+Suy ra: $\overrightarrow{AM'}=-2\overrightarrow{HM'}$.
+
+ 
+ }\end{ex}
+\begin{ex}
+ Một miếng pho mát có dạng khối lăng trụ đứng với chiều cao ${10\,\text{cm}}$ và đáy là tam giác vuông cân có cạnh góc vuông bằng ${10\,\text{cm}}$. Tính khối lượng của miếng pho mát theo đơn vị gam, biết khối lượng riêng của loại pho mát đó là ${2.5\,\text{g/cm}^3}$ (kết quả làm tròn đến hàng đơn vị).
+\begin{center}
+\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
+	%======================
+	% Các đỉnh của đáy dưới
+	%======================
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (5,0);
+	\coordinate (C) at (0,5);	
+	%======================
+	% Vector chiều cao lăng trụ
+	%======================
+	\coordinate (v) at (3,2);	
+	%======================
+	% Các đỉnh của đáy trên
+	%======================
+	\coordinate (A') at ($(A)+(v)$);
+	\coordinate (B') at ($(B)+(v)$);
+	\coordinate (C') at ($(C)+(v)$);	
+	%======================
+	% Tô màu các mặt
+	%======================
+	\fill[yellow!60] (A) -- (B) -- (B') -- (A') -- cycle;      % mặt bên 1
+	\fill[yellow!45] (A) -- (C) -- (C') -- (A') -- cycle;      % mặt bên 2
+	\fill[yellow!30] (A') -- (B') -- (C') -- cycle;            % mặt trên
+	\fill[yellow!20] (A) -- (B) -- (C) -- cycle;               % mặt đáy	
+	%======================
+	% Các lỗ trên phomat
+	%======================
+	\fill[orange!60] (1.2,1.1) circle (0.28);
+	\fill[orange!60] (2.0,0.8) circle (0.22);
+	\fill[orange!60] ($(A')!0.35!(B')+(0,0.2)$) circle (0.25);
+	\fill[orange!60] ($(A')!0.45!(C')$) circle (0.2);
+	\fill[orange!60] ($(A)!0.45!(C)+(0.4,0.3)$) circle (0.18);	
+	%======================
+	% Nét vẽ các cạnh
+	%======================
+	\draw[thick] (A) -- (B) -- (B') -- (A') -- cycle;
+	\draw[thick] (A) -- (C) -- (C') -- (A') -- cycle;
+	\draw[thick] (B') -- (C') -- cycle;
+	\draw[thick] (B) -- (C);	
+	%======================
+	% Kí hiệu vuông góc ở đáy
+	%======================
+	\draw ($(A)+(0.35,0)$) -- ++(0,0.35) -- ++(-0.35,0);	
+	%======================
+	% Ghi kích thước minh họa
+	%======================
+	\draw[<->] ($(A)+(0,-0.8)$) -- ($(B)+(0,-0.8)$);
+	\node at ($(A)!0.5!(B)+(0,-1.2)$) {$10\,\mathrm{cm}$};
+	\draw[<->] ($(A)+(-0.8,0)$) -- ($(C)+(-0.8,0)$);
+	\node[rotate=90] at ($(A)!0.5!(C)+(-1.2,0)$) {$10\,\mathrm{cm}$};
+\end{tikzpicture}
+
+\end{center}
+\shortans[4]{1250}
+
+\loigiai{ 
+ Diện tích đáy: $S_{\text{đáy}}=\dfrac{1}{2}\cdot 10\cdot 10=50.0\,\text{cm}^2$.
+
+Thể tích: $V=S_{\text{đáy}}\cdot h=50.0\cdot 10=500.0\,\text{cm}^3$.
+
+Khối lượng: $m=\rho V=2.5\cdot 500.0=1250\,\text{g}$. 
+ }\end{ex}
+
+\begin{ex}
+ Một miếng pho mát có dạng khối lăng trụ đứng với chiều cao ${17\,\text{cm}}$ và đáy là tam giác đều có cạnh bằng ${11\,\text{cm}}$. Tính khối lượng của miếng pho mát theo đơn vị gam, biết khối lượng riêng của loại pho mát đó là ${2.5\,\text{g/cm}^3}$ (kết quả làm tròn đến hàng đơn vị).
+\begin{center}
+ \begin{tikzpicture}[scale=0.9, line join=round, line cap=round]
+	%======================
+	% Đáy dưới: tam giác đều
+	%======================
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (6,0);
+	\coordinate (C) at (3,{3*sqrt(3)});
+	%======================
+	% Vector chiều cao lăng trụ
+	%======================
+	\coordinate (v) at (2.2,2.8);
+	%======================
+	% Đáy trên
+	%======================
+	\coordinate (A') at ($(A)+(v)$);
+	\coordinate (B') at ($(B)+(v)$);
+	\coordinate (C') at ($(C)+(v)$);
+	%======================
+	% Tô màu các mặt
+	%======================
+	\fill[yellow!25] (A) -- (B) -- (C) -- cycle;      % đáy dưới
+	\fill[yellow!35] (A') -- (B') -- (C') -- cycle;   % đáy trên
+	\fill[yellow!50] (A) -- (B) -- (B') -- (A') -- cycle; % mặt bên 1
+	\fill[yellow!45] (B) -- (C) -- (C') -- (B') -- cycle; % mặt bên 2
+	\fill[yellow!40] (C) -- (A) -- (A') -- (C') -- cycle; % mặt bên 3
+	%======================
+	% Các lỗ trên bánh phomat
+	%======================
+	\fill[orange!70] ($(A)!0.35!(B)+(0,0.5)$) circle (0.28);
+	\fill[orange!70] ($(A)!0.65!(B)+(0,0.35)$) circle (0.22);
+	\fill[orange!70] ($(B)!0.45!(C)+(-0.15,-0.1)$) circle (0.25);
+	\fill[orange!70] ($(C)!0.5!(A)+(0.25,-0.15)$) circle (0.2);
+	\fill[orange!70] ($(A')!0.45!(B')+(0,0.15)$) circle (0.22);
+	\fill[orange!70] ($(B')!0.5!(C')+(-0.1,0)$) circle (0.18);
+	%======================
+	% Vẽ các cạnh
+	%======================
+	\draw[thick] (A) -- (B) -- (C) -- cycle;
+	\draw[thick, dashed] (A) -- (A') (A')--(C') (A')--(B');
+	\draw[thick] (B) -- (B') (B')--(C');
+	\draw[thick] (C) -- (C');
+	%======================
+	% Ghi nhãn đỉnh
+	%======================
+%	\node[below left] at (A) {$A$};
+%	\node[below right] at (B) {$B$};
+%	\node[above] at (C) {$C$};	
+%	\node[above left] at (A') {$A'$};
+%	\node[above right] at (B') {$B'$};
+%	\node[above] at (C') {$C'$};
+	%======================
+	% Ghi kích thước minh họa
+	%======================
+	\draw[<->] ($(A)+(0,-0.8)$) -- ($(B)+(0,-0.8)$);
+	\node at ($(A)!0.5!(B)+(0,-1.2)$) {$11$};
+	\draw[<->] ($(B)+(0.7,0.2)$) -- ($(B')+(0.7,0.2)$);
+	\node[right] at ($(B)!0.5!(B')+(0.8,0)$) {$17$};
+\end{tikzpicture}
+ 
+\end{center}
+\shortans[4]{2227}
+
+\loigiai{ 
+ Diện tích đáy: $S_{\text{đáy}}=\dfrac{\sqrt{3}}{4}\cdot 11^2=52.39\,\text{cm}^2$.
+
+Thể tích: $V=S_{\text{đáy}}\cdot h=52.3945369289585\cdot 17=\frac{178141425558459}{200000000000}\,\text{cm}^3$.
+
+Khối lượng: $m=\rho V=2.5\cdot \frac{178141425558459}{200000000000}=2227\,\text{g}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là chữ nhật với $AB=\sqrt{2}, AD=2$. Biết $SA\bot (ABCD)$ và $SB=\sqrt{11}$. Tính thể tích của khối chóp ${S.ABCD}$ (kết quả làm tròn đến hàng phần mười)
+
+
+\shortans[4]{2,8}
+
+\loigiai{ 
+ $SA=\sqrt{SB^2-AB^2}=3$.
+
+$S_{ABCD}=AB.AD=2 \sqrt{2}$.
+
+ $V=\dfrac{1}{3}.{S_{ABCD}}.SA=\dfrac{1}{3}.2 \sqrt{2}.3={2 \sqrt{2}}$=2,8. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều cạnh bằng ${4}$, $SA\bot(ABC)$. Góc giữa cạnh ${SB}$ và đáy bằng $45^\circ$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{5,3}
+
+\loigiai{ 
+ $SA=SB.\tan 45^\circ =4.$
+
+$V=\dfrac{1}{3}.4 \sqrt{3}.4=\frac{16}{3}=5,3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều, $SA\bot(ABC)$ và ${SA=\sqrt{3}}$. Góc giữa cạnh ${SC}$ và đáy bằng $60^\circ$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{0,3}
+
+\loigiai{ 
+ Góc giữa cạnh ${SC}$ và đáy là $\widehat{SCA}=60^\circ$.
+
+$\tan 60^\circ=\dfrac{SA}{CA}=\dfrac{\sqrt{3}}{CA}\Rightarrow CA=\dfrac{\sqrt{3}}{\tan 60^\circ}=1.$
+
+$S_{ABC}=\dfrac{1^2\sqrt3}{4}=\frac{\sqrt{3}}{4}.$
+
+$V=\dfrac{1}{3}S_{ABC}\cdot SA=\dfrac{1}{3}\cdot \frac{\sqrt{3}}{4}\cdot \sqrt{3}=\frac{1}{4}\approx 0,3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SA\bot(ABCD)$, góc giữa cạnh ${SC}$ và đáy bằng $60^\circ$, biết ${SC= 10}$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{36,1}
+
+\loigiai{ 
+ Góc giữa ${SC}$ và đáy là $\widehat{SCA}=60^\circ$.
+
+$SA=SC\sin 60^\circ=10\sin 60^\circ=5 \sqrt{3}.$
+
+$AC=SC\cos 60^\circ=10\cos 60^\circ=5$.
+
+$AB=\dfrac{AC}{\sqrt 2}=\frac{5 \sqrt{2}}{2}.$
+
+$S_{ABCD}=AB^2=\frac{25}{2}.$
+
+$V=\dfrac{1}{3}S_{ABCD}\cdot SA=\dfrac{1}{3}\cdot \frac{25}{2}\cdot 5 \sqrt{3}=\frac{125 \sqrt{3}}{6}\approx 36,1$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp đều ${S.ABC}$ có ${AB=7}$. Góc giữa cạnh ${SC}$ và đáy bằng $60^\circ$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{49,5}
+
+\loigiai{ 
+ Vì $ABC$ là tam giác đều cạnh ${7}$, $G$ là trọng tâm nên ${GC=\dfrac{7\sqrt3}{3}=\frac{7 \sqrt{3}}{3}}$.
+
+Góc giữa ${SC}$ và đáy là $\widehat{SCG}=60^\circ$.
+
+$\tan 60^\circ=\dfrac{SG}{GC}\Rightarrow SG=GC\tan 60^\circ=\frac{7 \sqrt{3}}{3}\tan 60^\circ=7.$
+
+$S_{ABC}=\dfrac{7^2\sqrt3}{4}=\frac{49 \sqrt{3}}{4}.$
+
+$V=\dfrac{1}{3}S_{ABC}\cdot SG=\dfrac{1}{3}\cdot \frac{49 \sqrt{3}}{4}\cdot 7=\frac{343 \sqrt{3}}{12}\approx 49,5$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp đều ${S.ABC}$ có góc giữa cạnh ${SC}$ và đáy bằng $30^\circ$, biết ${SC= 5}$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{20,3}
+
+\loigiai{ 
+ $SG\bot(ABC)$ với $G$ là trọng tâm tam giác ${ABC}$.
+
+Góc giữa ${SC}$ và đáy là $\widehat{SCG}=30^\circ$.
+
+Xét tam giác vuông ${S G C}$, có:
+$GC=SC\cos 30^\circ=5\cos 30^\circ=\frac{5 \sqrt{3}}{2}.$
+
+$SG=SC\sin 30^\circ=5\sin 30^\circ=\frac{5}{2}.$
+
+$GC=\dfrac{AB\sqrt3}{3}\Rightarrow$$AB=\sqrt3\,GC=\sqrt3\cdot \frac{5 \sqrt{3}}{2}=\frac{15}{2}.$
+
+$S_{ABC}=\dfrac{AB^2\sqrt3}{4}=\frac{225 \sqrt{3}}{16}.$
+
+$V=\dfrac{1}{3}S_{ABC}\cdot SG=\dfrac{1}{3}\cdot \frac{225 \sqrt{3}}{16}\cdot \frac{5}{2}=\frac{375 \sqrt{3}}{32}\approx 20,3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp đều ${S.ABC}$ có tất cả các cạnh đều bằng ${8}$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{60,3}
+
+\loigiai{ 
+ Gọi ${M}$ là trung điểm của ${BC}$ thì
+
+${AM}=\dfrac{AB\sqrt{3}}{2}=\dfrac{8\sqrt{3}}{2}.$
+
+Gọi ${O}$ là trọng tâm tam giác ${ABC}$ nên
+
+${AO}=\dfrac{2}{3}{AM}=\dfrac{2}{3}\cdot \dfrac{8\sqrt{3}}{2}=\frac{8 \sqrt{3}}{3}.$
+
+Xét tam giác vuông ${SAO}$ tại ${O}$:
+
+${SO}=\sqrt{SA^2-AO^2}=\sqrt{8^2-(\frac{8 \sqrt{3}}{3})^2}=\frac{8 \sqrt{6}}{3}.$
+
+$S_{ABC}=\dfrac{AB^2\sqrt{3}}{4}=\dfrac{8^2\sqrt{3}}{4}=16 \sqrt{3}.$
+
+$V=\dfrac{1}{3}S_{ABC}\cdot SO=\dfrac{1}{3}\cdot 16 \sqrt{3}\cdot \frac{8 \sqrt{6}}{3}=\frac{128 \sqrt{2}}{3}\approx 60,3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SA\bot(ABCD)$, góc giữa cạnh ${SC}$ và mặt phẳng ${(SAD)}$ bằng $30^\circ$, biết ${SC=8}$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{30,2}
+
+\loigiai{ 
+ Góc giữa ${SC}$ và $(SAD)$ là $\widehat{CSD}=30^\circ$.
+
+Xét tam giác ${SCD}$ vuông tại ${D}$:
+
+$CD=SC\sin 30^\circ=8\sin 30^\circ=4.$
+
+$SD=SC\cos 30^\circ=8\cos 30^\circ=4 \sqrt{3}.$
+
+$AB=CD=4$.
+
+$SA=\sqrt{SD^2-AD^2}=\sqrt{4 \sqrt{3}^2-4^2}=4 \sqrt{2}.$
+
+$S_{ABCD}=AB^2=16.$
+
+$V=\dfrac{1}{3}S_{ABCD}\cdot SA=\dfrac{1}{3}\cdot 16\cdot 4 \sqrt{2}=\frac{64 \sqrt{2}}{3}\approx 30,2$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SA\bot(ABCD)$, góc giữa cạnh ${SB}$ và mặt phẳng ${(SAC)}$ bằng $30^\circ$, biết ${SB=2}$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{0,9}
+
+\loigiai{ 
+ Gọi ${H}$ là trung điểm của ${AC}$.
+
+Góc giữa ${SB}$ và $(SAC)$ là $\widehat{BSH}=30^\circ$.
+
+Xét tam giác vuông ${SBH}$ tại ${H}$:
+
+$BH=SB\sin 30^\circ=2\sin 30^\circ=1.$
+
+$SH=SB\cos 30^\circ=2\cos 30^\circ=\sqrt{3}.$
+
+Vì $BH=\dfrac{AB}{\sqrt 2}$ nên
+
+$AB=BH\sqrt 2=1\sqrt 2=\sqrt{2}.$
+
+$AH=\dfrac{AC}{2}=\dfrac{AB\sqrt 2}{2}=\dfrac{AB}{\sqrt 2}=1.$
+
+$SA=\sqrt{SH^2-AH^2}=\sqrt{\sqrt{3}^2-1^2}=\sqrt{2}.$
+
+$S_{ABCD}=AB^2=2.$
+
+$V=\dfrac{1}{3}S_{ABCD}\cdot SA=\dfrac{1}{3}\cdot 2\cdot \sqrt{2}=\frac{2 \sqrt{2}}{3}\approx 0,9$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, ${SA}\bot(ABCD)$, góc giữa cạnh ${SD}$ và mặt phẳng $(ABCD)$ bằng $45^\circ$, biết ${AC=8}$, ${SD=10}$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{62,4}
+
+\loigiai{ 
+ Vì thế góc giữa ${SD}$ và $(ABCD)$ là $\widehat{SDA}=45^\circ$.
+
+Xét tam giác vuông ${SAD}$ tại ${A}$:
+
+$SA=SD\sin 45^\circ=10\sin 45^\circ=5 \sqrt{2}.$
+
+$AD=SD\cos 45^\circ=10\cos 45^\circ=5 \sqrt{2}.$
+
+$AB=\sqrt{AC^2-AD^2}=\sqrt{8^2-(5 \sqrt{2})^2}=\sqrt{14}.$
+
+$S_{ABCD}=AB\cdot AD=\sqrt{14}\cdot 5 \sqrt{2}=10 \sqrt{7}.$
+
+$V=\dfrac{1}{3}S_{ABCD}\cdot SA=\dfrac{1}{3}\cdot 10 \sqrt{7}\cdot 5 \sqrt{2}=\frac{50 \sqrt{14}}{3}\approx 62,4$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, ${SA}\bot(ABCD)$, góc giữa cạnh ${SC}$ và mặt phẳng $(ABCD)$ bằng $60^\circ$, biết ${AB=2}$, ${SC=10}$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{26,5}
+
+\loigiai{ 
+ Do ${SA}\bot(ABCD)$ nên hình chiếu vuông góc của ${SC}$ lên mặt phẳng $(ABCD)$ là ${AC}$.
+
+Vì thế góc giữa ${SC}$ và $(ABCD)$ là $\widehat{SCA}=60^\circ$.
+
+Xét tam giác vuông ${SAC}$ tại ${A}$:
+
+${SA}=SC\sin 60^\circ=10\sin 60^\circ=5 \sqrt{3}.$
+
+${AC}=SC\cos 60^\circ=10\cos 60^\circ=5.$
+
+Vì ${ABCD}$ là hình chữ nhật nên
+
+${AC}^2={AB}^2+{BC}^2$.
+
+Suy ra
+
+${BC}=\sqrt{AC^2-AB^2}=\sqrt{(5)^2-2^2}=\sqrt{21}.$
+
+$S_{ABCD}=AB\cdot BC=2\cdot \sqrt{21}=2 \sqrt{21}.$
+
+$V=\dfrac{1}{3}S_{ABCD}\cdot SA=\dfrac{1}{3}\cdot 2 \sqrt{21}\cdot 5 \sqrt{3}=10 \sqrt{7}\approx 26,5$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp tứ giác đều ${S.ABCD}$, ${{AB=4}}$, góc giữa cạnh bên và mặt phẳng $(ABCD)$ bằng $45^\circ$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{15,1}
+
+\loigiai{ 
+ Gọi ${O}$ là tâm hình vuông ${ABCD}$.
+
+Góc giữa ${SD}$ và $(ABCD)$ là $\widehat{SDO}=45^\circ$.
+
+${AC}=AB\sqrt{2}=4\sqrt{2}$ nên
+
+${OA}=\dfrac{AC}{2}=\dfrac{4\sqrt{2}}{2}=2 \sqrt{2}.$
+
+Xét tam giác vuông ${SDO}$ vuông tại ${O}$:
+
+${SO}={DO}\tan 45^\circ=2 \sqrt{2}\tan 45^\circ=2 \sqrt{2}.$
+
+$S_{ABCD}=AB^2=4^2=16.$
+
+$V=\dfrac{1}{3}S_{ABCD}\cdot SO=\dfrac{1}{3}\cdot 16\cdot 2 \sqrt{2}=\frac{32 \sqrt{2}}{3}\approx 15,1$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp tứ giác đều ${S.ABCD}$ có góc giữa cạnh bên ${SA}$ và mặt phẳng $(ABCD)$ bằng $60^\circ$, ${SA=7}$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{49,5}
+
+\loigiai{ 
+ Gọi ${O}$ là tâm hình vuông ${ABCD}$.
+
+Góc giữa cạnh bên ${SA}$ và $(ABCD)$ là $\widehat{SAO}=60^\circ$.
+
+Xét tam giác vuông ${SAO}$ vuông tại ${O}$:
+
+${SO}=SA\sin 60^\circ=7\sin 60^\circ=\frac{7 \sqrt{3}}{2}.$
+
+${AO}=SA\cos 60^\circ=7\cos 60^\circ=\frac{7}{2}.$
+
+${AO}=\dfrac{AB\sqrt{2}}{2}$.
+
+${AB}=AO\sqrt{2}=\frac{7}{2}\sqrt{2}=\frac{7 \sqrt{2}}{2}.$
+
+$S_{ABCD}=AB^2=\frac{49}{2}.$
+
+$V=\dfrac{1}{3}S_{ABCD}\cdot SO=\dfrac{1}{3}\cdot \frac{49}{2}\cdot \frac{7 \sqrt{3}}{2}=\frac{343 \sqrt{3}}{12}\approx 49,5$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp tứ giác đều ${S.ABCD}$ có  tất cả các cạnh đều bằng ${6}$. Tính thể tích của khối chóp đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{50,9}
+
+\loigiai{ 
+ Gọi ${O}$ là tâm hình vuông ${ABCD}$  $\Rightarrow {OA}=\dfrac{AC}{2}$.
+
+Mà ${AC}=AB\sqrt{2}=6\sqrt{2}$ nên
+
+${OA}=\dfrac{AC}{2}=\dfrac{6\sqrt{2}}{2}=3 \sqrt{2}.$
+
+Xét tam giác vuông ${SAO}$ tại ${O}$:
+
+${SO}=\sqrt{SA^2-OA^2}=\sqrt{6^2-(3 \sqrt{2})^2}=3 \sqrt{2}.$
+
+$S_{ABCD}=AB^2=6^2=36.$
+
+$V=\dfrac{1}{3}S_{ABCD}\cdot SO=\dfrac{1}{3}\cdot 36\cdot 3 \sqrt{2}=36 \sqrt{2}\approx 50,9$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy ${ABCD}$ là hình thang vuông tại ${A}$ và ${D}$, $SA\bot \left( ABCD \right)$. Biết $AB=5$, $AD=6$, $DC=4$, góc giữa ${SC}$ và mặt phẳng $\left( ABCD \right)$ bằng $60^\circ$. Tính thể tích khối chóp ${S.ABCD}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{112,4}
+
+\loigiai{ 
+ Góc giữa SC và $(ABCD)$ là $\widehat{SCA}=60^\circ$.
+
+$AC=\sqrt{6^2+4^2}=2 \sqrt{13}$.
+
+$SA=AC\tan 60^\circ=2 \sqrt{13}\cdot \sqrt{3}$.
+
+$S_{ABCD}=\dfrac{(5+4)\cdot 6}{2}=27$.
+
+$V=\dfrac{1}{3}S_{ABCD}\cdot SA\approx 112,4$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp cụt đều ${ABC.A'B'C'}$ có cạnh đáy lớn ${ABC}$ bằng 4, cạnh đáy nhỏ ${A'B'C'}$ bằng 3, chiều cao bằng 2. Tính thể tích khối chóp cụt đã cho (kết quả làm tròn đến hàng đơn vị).
+
+
+\shortans[4]{11}
+
+\loigiai{ 
+ Diện tích đáy lớn là
+
+$S_1=\dfrac{4^2\sqrt{3}}{4}=4 \sqrt{3}$.
+
+Diện tích đáy nhỏ là
+
+$S_2=\dfrac{3^2\sqrt{3}}{4}=\frac{9 \sqrt{3}}{4}$.
+
+Ta có công thức tính thể tích hình chóp cụt đều là
+
+$V=\dfrac{1}{3}h\left(S_1+S_2+\sqrt{S_1S_2}\right)$.
+
+Suy ra
+
+$V=\dfrac{1}{3}\cdot 2\cdot \left(4 \sqrt{3}+\frac{9 \sqrt{3}}{4}+\sqrt{4 \sqrt{3}\cdot \frac{9 \sqrt{3}}{4}}\right)=\frac{37 \sqrt{3}}{6}\approx 11$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp cụt đều có hai đáy là các hình vuông, cạnh đáy lớn bằng 5, cạnh đáy nhỏ bằng 2, chiều cao bằng 9. Tính thể tích khối chóp cụt đã cho (kết quả làm tròn đến hàng đơn vị).
+
+
+\shortans[4]{117}
+
+\loigiai{ 
+ Diện tích đáy lớn là
+
+$S_1=5^2=25$.
+
+Diện tích đáy nhỏ là
+
+$S_2=2^2=4$.
+
+Công thức thể tích hình chóp cụt đều:
+
+$V=\dfrac{1}{3}h\left(S_1+S_2+\sqrt{S_1S_2}\right)$.
+
+Suy ra
+
+$V=\dfrac{1}{3}\cdot 9\cdot \left(25+4+\sqrt{25\cdot 4}\right)=117\approx 117$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp cụt đều có hai đáy là các hình lục giác đều, cạnh đáy lớn bằng 7, cạnh đáy nhỏ bằng 6, chiều cao bằng 7. Tính thể tích khối chóp cụt đã cho (kết quả làm tròn đến hàng đơn vị).
+
+
+\shortans[4]{770}
+
+\loigiai{ 
+ Diện tích đáy lớn là
+
+$S_1=\dfrac{3\sqrt{3}}{2}\cdot 7^2=\frac{147 \sqrt{3}}{2}$.
+
+Diện tích đáy nhỏ là
+
+$S_2=\dfrac{3\sqrt{3}}{2}\cdot 6^2=54 \sqrt{3}$.
+
+Công thức thể tích hình chóp cụt đều:
+
+$V=\dfrac{1}{3}h\left(S_1+S_2+\sqrt{S_1S_2}\right)$.
+
+Suy ra
+
+$V=\dfrac{1}{3}\cdot 7\cdot \left(\frac{147 \sqrt{3}}{2}+54 \sqrt{3}+\sqrt{\frac{147 \sqrt{3}}{2}\cdot 54 \sqrt{3}}\right)=\frac{889 \sqrt{3}}{2}\approx 770$. 
+ }\end{ex}
+
+\begin{ex}
+ Cắt khối chóp tam giác đều ${S.ABC}$ có cạnh đáy bằng 6 và chiều cao bằng 5 bởi một mặt phẳng song song với đáy và đi qua trung điểm các cạnh bên. Tính thể tích khối chóp cụt đều được tạo thành (kết quả làm tròn đến hàng đơn vị).
+
+
+\shortans[4]{23}
+
+\loigiai{ 
+ Diện tích đáy của khối chóp là
+
+$S_{ABC}=\dfrac{6^2\sqrt{3}}{4}=9 \sqrt{3}$.
+
+Thể tích khối chóp ${S.ABC}$ là
+
+$V_{S.ABC}=\dfrac{1}{3}S_{ABC}\cdot h=\dfrac{1}{3}\cdot 9 \sqrt{3}\cdot 5=15 \sqrt{3}$.
+
+Mặt phẳng cắt song song với đáy và đi qua trung điểm các cạnh bên nên khối chóp nhỏ ở phía trên đồng dạng với khối chóp ban đầu với tỉ số đồng dạng bằng $\dfrac{1}{2}$.
+
+Do đó thể tích khối chóp nhỏ bằng
+
+$V_{\text{nhỏ}}=\left(\dfrac{1}{2}\right)^3V_{S.ABC}=\dfrac{1}{8}\cdot 15 \sqrt{3}=\frac{15 \sqrt{3}}{8}$.
+
+Vậy thể tích khối chóp cụt đều là
+
+$V=V_{S.ABC}-V_{\text{nhỏ}}=15 \sqrt{3}-\frac{15 \sqrt{3}}{8}=\frac{105 \sqrt{3}}{8}=23$. 
+ }\end{ex}
+
+\begin{ex}
+ Một dụng cụ đong gạo có dạng một hình chóp cụt tứ giác đều (trên là đáy lớn ${ABCD}$, dưới là đáy nhỏ $A_1B_1C_1D_1$). Biết $AB=6$, $A_1B_1=3$. Hiện trong dụng cụ có gạo. Khi chiều cao lớp gạo bằng một nửa chiều cao của dụng cụ thì lượng gạo nặng 38 kg. Hỏi dụng cụ này có thể đong tối đa bao nhiêu kg gạo?
+\begin{center}
+ \begin{tikzpicture}[line cap=round, line join=round, thick]	
+	% Định nghĩa tọa độ mặt phẳng đáy trên (ABCD)
+	\coordinate (A) at (0, 3);
+	\coordinate (B) at (8, 3);
+	\coordinate (C) at (10, 5);
+	\coordinate (D) at (3, 5);
+	
+	% Định nghĩa tọa độ mặt phẳng đáy dưới (A1B1C1D1)
+	\coordinate (A1) at (2.5, 0);
+	\coordinate (B1) at (6.5, 0);
+	\coordinate (C1) at (7.5, 1);
+	\coordinate (D1) at (4, 1);
+	
+	% Định nghĩa tọa độ mặt cắt ở giữa
+	% Sử dụng tỷ lệ 0.55 (hơi lệch xuống dưới một chút) để khớp hoàn toàn với góc nhìn trong ảnh
+	\def\ratio{0.55}
+	\coordinate (Ma) at ($(A)!\ratio!(A1)$);
+	\coordinate (Mb) at ($(B)!\ratio!(B1)$);
+	\coordinate (Mc) at ($(C)!\ratio!(C1)$);
+	\coordinate (Md) at ($(D)!\ratio!(D1)$);
+	
+	% 1. Đổ màu mặt cắt (vẽ trước để các nét đứt/liền nổi lên trên)
+	\fill[gray!30] (Ma) -- (Mb) -- (Mc) -- (Md) -- cycle;
+	
+	% 2. Vẽ các đường khuất (nét đứt)
+	\draw[dashed] (D) -- (D1);
+	\draw[dashed] (A1) -- (D1) -- (C1);
+	\draw[dashed] (Ma) -- (Md) -- (Mc);
+	
+	% 3. Vẽ các đường thấy (nét liền)
+	% Mặt trên
+	\draw (A) -- (B) -- (C) -- (D) -- cycle;
+	% Các cạnh bên
+	\draw (A) -- (A1);
+	\draw (B) -- (B1);
+	\draw (C) -- (C1);
+	% Mặt dưới (phần nhìn thấy)
+	\draw (A1) -- (B1) -- (C1);
+	% Mặt cắt (phần nhìn thấy)
+	\draw (Ma) -- (Mb) -- (Mc);
+	
+	% 4. Đánh dấu các đỉnh
+	\node[left] at (A) {\Large $A$};
+	\node[above left] at (B) {\Large $B$};
+	\node[right] at (C) {\Large $C$};
+	\node[above left] at (D) {\Large $D$};
+	
+	\node[below] at (A1) {\Large $A_1$};
+	\node[below] at (B1) {\Large $B_1$};
+	\node[right] at (C1) {\Large $C_1$};
+	\node[left] at (D1) {\Large $D_1$};	
+\end{tikzpicture}
+ 
+\end{center}
+
+
+\shortans[4]{112}
+
+\loigiai{ 
+ Diện tích đáy nhỏ là $S_1=3^2=9$, diện tích đáy lớn là $S_2=6^2=36$.
+
+Khi chiều cao lớp gạo bằng một nửa chiều cao của dụng cụ thì cạnh thiết diện song song với đáy là
+
+$a'=\dfrac{3+6}{2}=\frac{9}{2}.$ 
+
+Do đó diện tích thiết diện này là
+
+$S'=\frac{9}{2}^2=\frac{81}{4}.$
+
+Gọi V là thể tích toàn bộ dụng cụ, $V_1$ là thể tích phần gạo khi chiều cao bằng một nửa chiều cao của dụng cụ.
+
+$\dfrac{V_1}{V}=\dfrac{S_1+S'+\sqrt{S_1S'}}{2\left(S_1+S_2+\sqrt{S_1S_2}\right)}=\dfrac{9+20.25+13}{2\left(9+36+18\right)}=\dfrac{19}{56}.$ 
+
+Khối lượng gạo tỉ lệ với thể tích nên:
+$\dfrac{38}{M}=\dfrac{19}{56}.$ 
+
+$M=38\cdot \dfrac{56}{19}=112\text{ (kg)}.$ 
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Một người cần sơn các mặt của một cái bục (trừ đáy lớn) để đặt một bức tượng. Bục có dạng hình chóp cụt tứ giác đều có cạnh đáy lớn 1,5 m, cạnh bên và cạnh đáy nhỏ bằng lần lượt 1,5 m và 1,12 m. Tính tổng diện tích cần sơn (theo đơn vị $m^2$) (kết quả được làm tròn đến hàng phần trăm).
+\shortans[4]{9,05}
+
+\loigiai{ \begin{center}
+ \begin{tikzpicture}[line join = round, line cap=round,>=stealth,font=\footnotesize,scale=1]
+				\draw 
+				(0,0) coordinate (A)
+				(5,0) coordinate (D)
+				(1.2,0) coordinate (H)
+				(1.2,3.5) coordinate (M)
+				(4.3,3.5) coordinate (Q)
+				(1.6,1.4) coordinate (B)
+				(6.6,1.4) coordinate (C)
+				(2.4,4.9) coordinate (N)
+				(5.5,4.9) coordinate (P);
+				\draw (A)--(D)--(C)--(P)--(Q)--(D)(Q)--(M)--(N)--(P)(M)--(H)--(A)--cycle ;
+				\draw[dashed] (B)--(A)(C)--(B)--(N) ;
+				\foreach \p/\r in {A/-120,B/50,C/-40,D/0,M/120,H/-90,N/120,P/0,Q/0}
+				\filldraw [blue] (\p) circle (1.2pt) node[shift={(\r:3mm)}]{$\p$};
+			\end{tikzpicture}
+\end{center}
+ Đáy nhỏ là hình vuông cạnh $1,12\,\text{m}$ nên có diện tích:
+
+$S_{\text{đáy nhỏ}}=1,12^2=1,2544\,\text{m}^2$.
+
+Mỗi mặt bên là một hình thang cân có hai đáy là $1,5\,\text{m}$ và $1,12\,\text{m}$, cạnh bên $1,5\,\text{m}$.
+
+Chiều cao của hình thang là:
+
+$h=\sqrt{1,5^2-\left(\dfrac{1,5-1,12}{2}\right)^2}\approx 1,4879\,\text{m}$.
+
+Diện tích xung quanh của hình chóp cụt là:
+
+$S_{xq}=2(1,5+1,12)\cdot h\approx 7,7967\,\text{m}^2.$
+
+Tổng diện tích cần sơn là:
+$S=S_{xq}+S_{\text{đáy nhỏ}}\approx 7,7967+1,2544=9,05\,\text{m}^2$.
+
+Vậy diện tích cần sơn là $9,05\,\text{m}^2$. 
+ }\end{ex}
+
+\begin{ex}
+ Người ta xây dựng một chân tháp bằng bê tông có dạng khối chóp cụt tứ giác đều. Cạnh đáy dưới dài 8 m, cạnh đáy trên dài 6 m, cạnh bên dài 3 m. Biết rằng chân tháp được làm bằng bê tông tươi với giá tiền 1370000 đồng/$m^3$. Tính số tiền để mua bê tông tươi làm chân tháp theo đơn vị triệu đồng (làm tròn đến hàng đơn vị).
+
+
+\shortans[4]{179}
+
+\loigiai{ 
+ Gọi ${h}$ là chiều cao khối chóp cụt.
+
+Ta có khoảng cách giữa hai đỉnh tương ứng trên hai đáy theo phương ngang là:
+
+$d=\dfrac{8-6}{\sqrt{2}}=\sqrt{2}.$
+
+Theo định lý Pi-ta-go:
+$h=\sqrt{3^2-d^2}=\sqrt{7}\, (\text{m}).$
+
+Thể tích khối chóp cụt tứ giác đều:
+
+$V=\dfrac{h}{3}\left(8^2+6^2+8\cdot 6\right)=130,524\, (\text{m}^3).$
+
+Số tiền mua bê tông:
+
+$T=130,524\cdot 1370000=178,82$ (triệu đồng).
+
+Làm tròn đến hàng phần chục được 179 triệu đồng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.A'B'C'}$ có đáy là tam giác vuông tại ${B}$, $AB=\sqrt{5}$, $AC=\sqrt{6}$. Góc giữa đường thẳng ${A'C}$ và $(ABC)$ bằng $30^\circ$. Tính thể tích khối lăng trụ đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{1,6}
+
+\loigiai{ 
+ Ta có $BC=\sqrt{AC^2-AB^2}=\sqrt{\sqrt{6}^2-\sqrt{5}^2}=1$. 
+
+Diện tích đáy: $S_{ABC}=\frac{1}{2}\cdot AB\cdot BC=\frac{1}{2}\cdot \sqrt{5}\cdot 1=\frac{\sqrt{5}}{2}$. 
+
+Gọi $AA'=h$. Khi đó trong tam giác vuông ${A'AC}$: 
+
+$\tan 30^\circ=\dfrac{h}{AC} \Rightarrow h=\sqrt{6}\tan 30^\circ=\sqrt{2}$. 
+
+Thể tích: $V=S_{ABC}\cdot h=\frac{\sqrt{5}}{2}\cdot \sqrt{2}=\frac{\sqrt{10}}{2}=1,6$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.A'B'C'}$ có đáy là tam giác vuông tại ${A}$, $AB=\sqrt{3}$, $BC=\sqrt{5}$. Góc giữa đường thẳng ${A'C}$ và $(ABC)$ bằng $60^\circ$. Tính thể tích khối lăng trụ đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{3}
+
+\loigiai{ 
+ Ta có $AC=\sqrt{BC^2-AB^2}=\sqrt{\sqrt{5}^2-\sqrt{3}^2}=\sqrt{2}$. 
+
+Diện tích đáy: $S_{ABC}=\frac{1}{2}\cdot AB\cdot AC=\frac{1}{2}\cdot \sqrt{3}\cdot \sqrt{2}=\frac{\sqrt{6}}{2}$. 
+
+Gọi $AA'=h$. Khi đó trong tam giác vuông ${A'AC}$: 
+
+$\tan 60^\circ=\dfrac{h}{AC} \Rightarrow h=\sqrt{2}\tan 60^\circ=\sqrt{6}$. 
+
+Thể tích: $V=S_{ABC}\cdot h=\frac{\sqrt{6}}{2}\cdot \sqrt{6}=3=3$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.A'B'C'}$ có đáy là tam giác vuông cân tại ${A}$, $BC=\sqrt{6}$. Góc giữa đường thẳng ${A'B}$ và $(ABC)$ bằng $45^\circ$. Tính thể tích khối lăng trụ đã cho (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{2,6}
+
+\loigiai{ 
+ Vì tam giác $ABC$ vuông cân tại A nên $AB=AC=\frac{\sqrt{2}}{2}\cdot \sqrt{6}=\sqrt{3}$. 
+
+$S_{ABC}=\frac{1}{2}\cdot AB\cdot AC=\frac{1}{2}\cdot \sqrt{3}\cdot \sqrt{3}=\frac{3}{2}$. 
+
+Gọi $AA'=h$. Khi đó trong tam giác vuông ${A'AB}$: 
+
+$\tan 45^\circ=\dfrac{h}{AB} \Rightarrow h=\sqrt{3}\tan 45^\circ=\sqrt{3}$. 
+
+Thể tích: $V=S_{ABC}\cdot h=\frac{3}{2}\cdot \sqrt{3}=\frac{3 \sqrt{3}}{2}=2,6$.
+
+ 
+ }\end{ex}

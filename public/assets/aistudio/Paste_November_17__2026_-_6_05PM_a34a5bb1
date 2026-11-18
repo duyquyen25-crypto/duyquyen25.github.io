@@ -1,0 +1,1142 @@
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Phép chiếu song song bảo toàn độ dài của đoạn thẳng }
+   { \True Phép chiếu song song có thể biến đường tròn thành đường elip }
+     { Phép chiếu song song biến hai đường thẳng chéo nhau thành hai đường thẳng chéo nhau }
+    { Phép chiếu song song bảo toàn góc trong tam giác }
+\loigiai{ 
+ Phép chiếu song song có thể biến đường tròn thành đường elip là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây sai? 
+\choice
+{ Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng }
+   { Hình chiếu song song của hai đường thẳng song song là hai đường thẳng song song hoặc trùng nhau }
+     { \True Phép chiếu song song có thể biến đường tròn thành một điểm }
+    { Phép chiếu song song biến ba đường thẳng đồng quy thành 3 đường thẳng đồng quy }
+\loigiai{ 
+ Phép chiếu song song có thể biến đường tròn thành một điểm là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Hình chiếu song song của hình thoi luôn cho một hình thoi }
+   { Hình chiếu song song của một tam giác đều là một tam giác cân }
+     { Hình chiếu song song của hình thang là một hình chữ nhật }
+    { \True Hình chiếu song song của một đường tròn là một đường elip, hoặc một đường tròn hoặc một đoạn thẳngHình chiếu song song của một tam giác đều là một tam giác }
+\loigiai{ 
+ Hình chiếu song song của một đường tròn là một đường elip, hoặc một đường tròn hoặc một đoạn thẳngHình chiếu song song của một tam giác đều là một tam giác là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A'B'C'}$. Hình chiếu song song của điểm ${A}$ lên mặt phẳng $(A'C'C')$ theo phương ${C'C}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A') at (1,4)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (3,3)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (5,4)   node at (C') [above] {$C'$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B')--(A')--(A); 
+    \draw (B')--(C')--(C)--(B) (A')--(C')--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ \True Điểm ${A'}$ }
+   { Điểm ${C}$ }
+     { Điểm ${B}$ }
+    { Điểm ${B'}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${A'}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.DEF}$. Hình chiếu song song của điểm ${D}$ lên mặt phẳng $(ABC)$ theo phương ${BE}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (1,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (3,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (5,4)   node at (F) [above] {$F$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(E)--(D)--(A); 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${D}$ }
+   { \True Điểm ${A}$ }
+     { Điểm ${F}$ }
+    { Điểm ${E}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${A}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SA\bot (ABCD)$. Biết $AB=8a,AD=14a$. Tính khoảng cách từ điểm ${B}$ đến mặt phẳng $(SAD)$?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ ${\sqrt{22}a}$ }
+   { \True ${8a}$ }
+     { ${2 \sqrt{65}a}$ }
+    { ${14a}$ }
+\loigiai{ 
+  Vì $BA \bot AD, BA\bot SA \Rightarrow BA \bot (SAB)$. Vậy $d(B,(SAD))=BA=8a$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SA\bot (ABCD)$. Biết $AB=8a,AD=11a$. Gọi ${M}$ là điểm thuộc cạnh ${SC}$ sao cho $S{M}=4MC$. Tính khoảng cách từ điểm ${M}$ đến mặt phẳng $(SAB)$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ ${\frac{32}{5}a}$ }
+   { \True ${\frac{44}{5}a}$ }
+     { ${32a}$ }
+    { ${10a}$ }
+\loigiai{ 
+  Vì $CB \bot AB, CB\bot SA \Rightarrow CB \bot (SAB)$. Suy ra $d(C,(SAB))=CB=11a$.
+
+$\dfrac{ d(M,(SAB)) } { d(C,(SAB)) } = \dfrac{SM} {SC} = \frac{4}{5}$$\Rightarrow d(M,(SAB) = \frac{4}{5} d(C,(SAB)) = \frac{4}{5} 11a=\frac{44}{5}a$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SD\bot (ABCD)$. Biết $DA=8a,DC=14a, SD=6a$. Tính khoảng cách từ điểm ${D}$ đến mặt phẳng $(SBC)$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (D) at (0,0)   node at (D) [left] {$D$};
+\coordinate (A) at (-1,-1) node at (A) [left] {$A$};
+\coordinate (B) at (3,-1)  node at (B) [right] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (A)--(D)--(C) (S)--(D); 
+\draw (A)--(B)--(C) (S)--(A) (S)--(B) (S)--(C); 
+\end{tikzpicture}
+
+\choice
+{ ${\frac{42}{5}}a$ }
+   { ${2}a$ }
+     { ${\frac{7}{5}}a$ }
+    { \True ${\frac{21 \sqrt{58}}{29}}a$ }
+\loigiai{ 
+  Vì $BC \bot DC, BC\bot SD \Rightarrow BC \bot (SDC)$. Kẻ $DH \bot SC$. Ta có: $DH \bot BC \Rightarrow DH \bot (SBC)$.
+
+$\Rightarrow d(D, (SBC))=DH=\dfrac{SD.DC} {\sqrt{SD^2 + DC^2 } }$$=\dfrac{6a.14a} {\sqrt{ 36a^2 + 196a^2 } } =\frac{21 \sqrt{58}}{29}a$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.A'B'C'}$ có đáy là tam giác vuông tại ${C}, C'A'=5a, B'A'=\sqrt{61}a,$
+
+$BB'=5a$. Khoảng cách từ điểm ${A}$ đến mặt phẳng ${(BCC'B')}$ bằng\\ 
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (B) at (0,0)   node at (B) [left] {$B$}; 
+    \coordinate (C) at (2,-1) node at (C) [below] {$C$}; 
+    \coordinate (A) at (4,0)  node at (A) [below] {$A$}; 
+    \coordinate (B') at (0,4)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (2,3)   node at (C') [above] {$C'$}; 
+    \coordinate (A') at (4,4)   node at (A') [above] {$A'$};
+    \draw [dashed] (B)--(A); 
+    \draw (B)--(C)--(C')--(B')--(B); 
+    \draw (C')--(A')--(A)--(C) (B')--(A')--(A); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\choice
+{ ${2 + \sqrt{61}}a$ }
+   { \True ${5}a$ }
+    { ${1 + \sqrt{61}}a$ }
+    { ${\sqrt{61}}a$ }
+\loigiai{ 
+ Ta có $AC\bot BC,AC\bot BB' \Rightarrow AC\bot {(BCC'B')}$.
+
+Do đó: $d\left(A,(BCC'B')\right)=AC=5a$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.A'B'C'}$ có đáy là tam giác đều, $AC=6a,BB'=3 \sqrt{2}a$. Khoảng cách từ điểm ${A'}$ đến mặt phẳng ${(C'AB)}$ bằng\\ 
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (C) at (0,0)   node at (C) [left] {$C$}; 
+    \coordinate (A) at (2,-1) node at (A) [below] {$A$}; 
+    \coordinate (B) at (4,0)  node at (B) [below] {$B$}; 
+    \coordinate (C') at (0,4)   node at (C') [above] {$C'$}; 
+    \coordinate (A') at (2,3)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (4,4)   node at (B') [above] {$B'$};
+    \draw [dashed] (C)--(B); 
+    \draw (C)--(A)--(A')--(C')--(C); 
+    \draw (A')--(B')--(B)--(A) (C')--(B')--(B); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\choice
+{ ${6}a$ }
+   { \True ${\frac{3 \sqrt{30}}{5}}a$ }
+    { ${2 \sqrt{3}}a$ }
+    { ${3 \sqrt{2}}a$ }
+\loigiai{ 
+ ${CA'}$ cắt $(C'AB)$ tại trung điểm nên $d\left(A',(C'AB)\right)=d\left(C,(C'AB)\right)$.
+
+Gọi ${M}$ là trung điểm cạnh ${AB}\Rightarrow AB\bot (C'CM), CM=3 \sqrt{3}a$.
+
+Kẻ $CH\bot C'M \Rightarrow CH\bot {(C'AB)}$.
+
+Do đó: $d\left(C,(C'AB)\right)=CH=\dfrac{C'C.CM} {C'M}=\dfrac{3 \sqrt{2}a.3 \sqrt{3}a} {\sqrt{18a^2+27a^2}}$$=\frac{3 \sqrt{30}}{5}a.$ 
+ }\end{ex}
+
+\begin{ex}
+  Cho hình lập phương ${ABCD.EFGH}$ có cạnh bằng ${\sqrt{15}a}$. Khoảng cách giữa hai đường thẳng ${BF}$ và ${AD}$ bằng\\ 
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (2,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (3,0)   node at (D) [right] {$D$};
+\coordinate (E) at (0,2)   node at (E) [left] {$E$};
+\coordinate (F) at (-1,1) node at (F) [left] {$F$};
+\coordinate (G) at (2,1)  node at (G) [right] {$G$};
+\coordinate (H) at (3,2)   node at (H) [right] {$H$};
+\draw [dashed] (B)--(A)--(D) (E)--(A);
+\draw (E)--(F)--(G)--(H)--(E) (F)--(B) (G)--(C) (H)--(D);
+\draw (B)--(C)--(D);
+\end{scriptsize}
+\end{tikzpicture}
+
+\choice
+{ ${\sqrt{30}a}$ }
+   { \True ${\sqrt{15}a}$ }
+    { ${15a}$ }
+    { ${2 \sqrt{15}a}$ }
+\loigiai{ 
+ Ta có: $AB\bot BF, AB \bot AD \Rightarrow d(BF,AD)=AB=\sqrt{15}$. 
+ }\end{ex}
+
+\begin{ex}
+  Cho hình lập phương ${ABCD.A'B'C'D'}$ có cạnh bằng ${5 \sqrt{3}a}$. Khoảng cách giữa hai đường thẳng ${A'B}$ và ${AD}$ bằng\\ 
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (2,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (3,0)   node at (D) [right] {$D$};
+\coordinate (A') at (0,2)   node at (A') [left] {$A'$};
+\coordinate (B') at (-1,1) node at (B') [left] {$B'$};
+\coordinate (C') at (2,1)  node at (C') [right] {$C'$};
+\coordinate (D') at (3,2)   node at (D') [right] {$D'$};
+\draw [dashed] (B)--(A)--(D) (A')--(A);
+\draw (A')--(B')--(C')--(D')--(A') (B')--(B) (C')--(C) (D')--(D);
+\draw (B)--(C)--(D);
+\end{scriptsize}
+\end{tikzpicture}
+
+\choice
+{ \True ${\frac{5 \sqrt{6}}{2}a}$ }
+   { ${75a}$ }
+    { ${5 \sqrt{6}a}$ }
+    { ${10 \sqrt{3}a}$ }
+\loigiai{ 
+ Ta có: $AD//(A'BCD'),A'B \subset (A'BCD') \Rightarrow d(A'B,AD)=d\left(AD,(A'BCD'))\right)=d(A,((A'BCD'))$.
+
+Kẻ $AI\bot A'B$ với $I$ là trung điểm của ${AB'}$ $\Rightarrow  AI \bot (A'BCD') \Rightarrow d(A'B,BC)=AI=\dfrac{AB'}{2}=\frac{5 \sqrt{6}}{2}a$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.DABC}$ có đáy là hình chữ nhật, $SD\bot (ABCD), DA=4a, DC=6a,SD=\sqrt{51}a$. Tính khoảng cách giữa các đường thẳng ${SD}$ và ${AB}$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (D) at (0,0)   node at (D) [left] {$D$};
+\coordinate (A) at (-1,-1) node at (A) [left] {$A$};
+\coordinate (B) at (3,-1)  node at (B) [right] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (A)--(D)--(C) (S)--(D); 
+\draw (A)--(B)--(C) (S)--(A) (S)--(B) (S)--(C); 
+\end{tikzpicture}
+
+\choice
+{ ${2 \sqrt{13}a}$ }
+   { \True ${4a}$ }
+     { ${10a}$ }
+    { ${6a}$ }
+\loigiai{ 
+ Ta có: $DA\bot AB, DA\bot SD \Rightarrow d(SD,AB)=DA=4a$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SA\bot (ABCD), AB=8a, AD=11a,SA=\sqrt{34}a$. Tính khoảng cách giữa các đường thẳng ${SB}$ và ${AD}$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ ${\frac{11 \sqrt{5270}}{155}a}$ }
+   { ${\sqrt{185}a}$ }
+     { ${11a}$ }
+    { \True ${\frac{8 \sqrt{17}}{7}a}$ }
+\loigiai{ 
+ $AD // (SBC), SB \subset (SBC) \Rightarrow d(SB,AD)=d(AD,(SBC))=d(A,(SBC)$.
+
+Kẻ $AH\bot SB\Rightarrow AH\bot (SBC)\Rightarrow d(A,(SBC))=AH=\dfrac{\sqrt{34}a.8a}{\sqrt{34a^2+64a^2} }=\frac{8 \sqrt{17}}{7}a$. 
+ }\end{ex}
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A_1B_1C_1}$. Gọi ${H,Q}$ lần lượt là trung điểm của ${A_1C_1,BC}$. Gọi ${I}$ là trọng tâm của tam giác ${A_1BC}$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A_1) at (1,4)   node at (A_1) [above] {$A_1$}; 
+    \coordinate (B_1) at (3,3)   node at (B_1) [above] {$B_1$}; 
+    \coordinate (C_1) at (5,4)   node at (C_1) [above] {$C_1$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B_1)--(A_1)--(A); 
+    \draw (B_1)--(C_1)--(C)--(B) (A_1)--(C_1)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choiceTFt
+{ Hình chiếu song song của điểm ${A_1}$ lên mặt phẳng $(ABC)$ theo phương ${B_1B}$ là điểm ${B}$ }
+   { \True Hình chiếu song song của đoạn thẳng ${BH}$ lên mặt phẳng $(ABC)$ theo phương ${AA_1}$ là một trung tuyến của tam giác ${ABC}$ }
+     { \True Hình chiếu song song của điểm ${H}$ lên mặt phẳng $(BCC_1B_1)$ theo phương ${B_1A_1}$ là trung điểm của ${B_1C_1}$ }
+    { \True Gọi ${I'}$ là hình chiếu song song của ${I}$ lên mặt phẳng $(ABC)$ theo phương ${CC_1}$. Khi đó: $\overrightarrow{AI'}=-2\overrightarrow{QI'}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ Hình chiếu song song của điểm ${A_1}$ lên mặt phẳng $(ABC)$ theo phương ${B_1B}$ là điểm ${A}$
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của đoạn thẳng ${BH}$ lên mặt phẳng $(ABC)$ theo phương ${AA_1}$ là một trung tuyến xuất phát từ đỉnh ${B}$ của tam giác ${ABC}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${H}$ lên mặt phẳng $(BCC_1B_1)$ theo phương ${B_1A_1}$ là trung điểm của ${B_1C_1}$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ ${I'}$ là trọng tâm của tam giác ${ABC}$ nên $AI'=2QI'$.
+
+Suy ra: $\overrightarrow{AI'}=-2\overrightarrow{QI'}$.
+
+ 
+ }\end{ex}
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.DEF}$ có $DE=6, EF=4, AC=3$. Tính khoảng cách giữa ${AD}$ và ${BC}$(kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{2,67}
+
+\loigiai{\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (0,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (2,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (4,4)   node at (F) [above] {$F$};
+    \coordinate (H) at ($(B)!0.4!(C)$) node at (H) [right] {$H$};
+    \draw [dashed] (A)--(C)  (A)--(H) ; 
+    \draw (A)--(B)--(E)--(D)--(A); 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center} 
+ Kẻ $AH\bot BC$. Ta có: $AD\bot AH$ nên $d(AD,BC)=AH$.
+
+Xét tam giác ${ABC}$ có $p=\dfrac{6+3+4}{2}=\frac{13}{2}$.
+
+$S_{ABC}=\sqrt{\frac{13}{2}(\frac{13}{2}-6)(\frac{13}{2}-3)(\frac{13}{2}-4)}={\frac{\sqrt{455}}{4}}$.
+
+$AH=\dfrac{2S_{ABC}}{BC}=\dfrac{2.\frac{\sqrt{455}}{4}}{4}={\frac{\sqrt{455}}{8}}=2,67$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông cân, cạnh góc vuông bằng ${2 \sqrt{2}}$. Biết thể tích khối chóp đã cho bằng ${6}$. Tính khoảng cách từ điểm ${S}$ đến mặt phẳng $(ABC)$ (kết quả làm tròn đến hàng phần trăm).
+\shortans[4]{4,5}
+
+\loigiai{ 
+ Diện tích tam giác ${ABC}$ là: $S=\frac{1}{2}.2 \sqrt{2}^2=4$.
+
+$d(S,(ABC))=\dfrac{3V_{S.ABC}}{S_{ABC}}=\dfrac{18}{4}=4,5$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều, $AB={\sqrt{10}}$. Biết thể tích khối chóp đã cho bằng ${6}$. Tính khoảng cách từ điểm ${S}$ đến mặt phẳng $(ABC)$ (kết quả làm tròn đến hàng phần trăm).
+\shortans[4]{4,16}
+
+\loigiai{ 
+ Diện tích tam giác ${ABC}$ là: $S=\sqrt{10}^2.\frac{\sqrt{3}}{4}=\frac{5 \sqrt{3}}{2}$.
+
+$d(S,(ABC))=\dfrac{3V_{S.ABC}}{S_{ABC}}=\dfrac{18}{\frac{5 \sqrt{3}}{2}}=4,16$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông cạnh bằng ${2}$. Tam giác ${SCD}$ vuông tại ${D}$ và $SD=2 \sqrt{2}$. Biết thể tích khối chóp ${S.ABCD}$ bằng ${3}$. Tính khoảng cách từ điểm ${A}$ đến mặt phẳng $(SCD)$ (kết quả làm tròn đến hàng phần trăm).
+\shortans[4]{1,59}
+
+\loigiai{ 
+ Diện tích tam giác ${SCD}$ là: $S=\frac{1}{2}.2.2 \sqrt{2}=2 \sqrt{2}$.
+
+$d(A,(SCD))=\dfrac{3V_{S.ACD}}{S_{SCD}}=\dfrac{3V_{S.ABCD}}{2S_{SCD}}=\dfrac{9}{22 \sqrt{2}}=1,59$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều có cạnh bằng ${\sqrt{6}}$, $SA\bot (ABC),SA=3$. Tính khoảng cách từ điểm ${A}$ đến mặt phẳng $(SBC)$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{1,7}
+
+\loigiai{ \begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (1,-2) node at (B) [left] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\coordinate (M) at ($(B)!0.5!(C)$) node at (M) [right] {$M$};
+\coordinate (H) at ($(S)!0.5!(M)$) node at (H) [right] {$H$};
+\draw [dashed] (A)--(C) (A)--(M) (A)--(H); 
+\draw (A)--(B) (B)--(C) (S)--(A) (S)--(B) (S)--(C) (S)--(M); 
+\end{tikzpicture}
+
+\end{center}
+ Gọi ${M}$ là trung điểm của ${BC}$. Ta có $AM=\frac{3 \sqrt{2}}{2}$.
+
+Ta có: $BC\bot (SAM)$. Dựng $AH\bot SM$. Suy ra $AH\bot (SBC)$.
+
+$d(A,(SBC))=AH=\dfrac{SA.AM}{\sqrt{SA^2+AM^2}}=\dfrac{3.\frac{3 \sqrt{2}}{2} }{\sqrt{9+\frac{9}{2}}}$$={\sqrt{3}}=1,7$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông tại ${A}$, ${AB=\sqrt{3}, AC=\sqrt{5}}$, $SA\bot (ABC),SA=3$. Tính khoảng cách từ điểm ${A}$ đến mặt phẳng $(SBC)$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{1,2}
+
+\loigiai{ \begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (1,-2) node at (B) [left] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\coordinate (M) at ($(B)!0.5!(C)$) node at (M) [right] {$M$};
+\coordinate (H) at ($(S)!0.5!(M)$) node at (H) [right] {$H$};
+\draw [dashed] (A)--(C) (A)--(M) (A)--(H); 
+\draw (A)--(B) (B)--(C) (S)--(A) (S)--(B) (S)--(C) (S)--(M); 
+\end{tikzpicture}
+
+\end{center}
+ Dựng $AM\bot BC$. Ta có $AM=\dfrac{AB.AC} {\sqrt{AB^2+AC^2}}=$$\dfrac{\sqrt{3}.\sqrt{5}} {\sqrt{3+5}}={\frac{\sqrt{30}}{4}}$.
+
+Ta có: $BC\bot (SAM)$. Dựng $AH\bot SM$. Suy ra $AH\bot (SBC)$.
+
+$d(A,(SBC))=AH=\dfrac{SA.AM}{\sqrt{SA^2+AM^2}}=\dfrac{3.\frac{\sqrt{30}}{4} }{\sqrt{9+\frac{15}{8}}}$$={\frac{3 \sqrt{145}}{29}}=1,2$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông cân tại ${A}$, ${BC=4}$, $SA\bot (ABC),SA=2$. Tính khoảng cách từ điểm ${A}$ đến mặt phẳng $(SBC)$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{1,4}
+
+\loigiai{ \begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (1,-2) node at (B) [left] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\coordinate (M) at ($(B)!0.5!(C)$) node at (M) [right] {$M$};
+\coordinate (H) at ($(S)!0.5!(M)$) node at (H) [right] {$H$};
+\draw [dashed] (A)--(C) (A)--(M) (A)--(H); 
+\draw (A)--(B) (B)--(C) (S)--(A) (S)--(B) (S)--(C) (S)--(M); 
+\end{tikzpicture}
+
+\end{center}
+ Ta có: $AB^2+AC^2=BC^2\Rightarrow 2AB^2=BC^2 \Rightarrow AB=AC=\dfrac{BC}{\sqrt{2}}=2 \sqrt{2}$.
+
+Dựng $AM\bot BC$. Ta có $AM=\dfrac{AB.AC} {\sqrt{AB^2+AC^2}}=$$\dfrac{2 \sqrt{2}.2 \sqrt{2}} {\sqrt{8+8}}={2}$.
+
+Ta có: $BC\bot (SAM)$. Dựng $AH\bot SM$. Suy ra $AH\bot (SBC)$.
+
+$d(A,(SBC))=AH=\dfrac{SA.AM}{\sqrt{SA^2+AM^2}}=\dfrac{2.2 }{\sqrt{4+4}}$$={\sqrt{2}}=1,4$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều có cạnh bằng ${\sqrt{6}}$, $SA\bot (ABC),SA=1$. Gọi ${G}$ là trọng tâm của tam giác ${ABC}$. Tính khoảng cách từ điểm ${G}$ đến mặt phẳng $(SBC)$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{0,3}
+
+\loigiai{ \begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (1,-2) node at (B) [left] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\coordinate (M) at ($(B)!0.5!(C)$) node at (M) [right] {$M$};
+\coordinate (H) at ($(S)!0.5!(M)$) node at (H) [right] {$H$};
+\coordinate (G) at ($(A)!0.6!(M)$) node at (G) [below] {$G$};
+\draw [dashed] (A)--(C) (A)--(M) (A)--(H); 
+\draw (A)--(B) (B)--(C) (S)--(A) (S)--(B) (S)--(C) (S)--(M); 
+\end{tikzpicture}
+
+\end{center}
+ Gọi ${M}$ là trung điểm của ${BC}$. Ta có $AM=\frac{3 \sqrt{2}}{2}$.
+
+Ta có: $BC\bot (SAM)$. Dựng $AH\bot SM$. Suy ra $AH\bot (SBC)$.
+
+$d(A,(SBC))=AH=\dfrac{SA.AM}{\sqrt{SA^2+AM^2}}=\dfrac{1.\frac{3 \sqrt{2}}{2} }{\sqrt{1+\frac{9}{2}}}$$={\frac{3 \sqrt{11}}{11}}$.
+
+$\dfrac{d(G,(SBC))}{d(A,(SBC))}=\dfrac{MG}{MA}=\dfrac{1}{3}$.
+
+Suy ra: $d(G,(SBC))=\dfrac{1}{3}d(A,(SBC))=\dfrac{1}{3}{\frac{3 \sqrt{11}}{11}}=\frac{\sqrt{11}}{11}=0,3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều có cạnh bằng ${\sqrt{2}}$, $SA\bot (ABC),SA=\sqrt{7}$. Gọi ${N}$ là điểm thuộc đoạn ${AB}$ sao cho $AN=2NB$. Tính khoảng cách từ điểm ${N}$ đến mặt phẳng $(SBC)$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{0,4}
+
+\loigiai{ \begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (1,-2) node at (B) [left] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\coordinate (M) at ($(B)!0.5!(C)$) node at (M) [right] {$M$};
+\coordinate (H) at ($(S)!0.5!(M)$) node at (H) [right] {$H$};
+\coordinate (G) at ($(A)!0.6!(M)$) node at (G) [below] {$G$};
+\draw [dashed] (A)--(C) (A)--(M) (A)--(H); 
+\draw (A)--(B) (B)--(C) (S)--(A) (S)--(B) (S)--(C) (S)--(M); 
+\end{tikzpicture}
+
+\end{center}
+ Gọi ${M}$ là trung điểm của ${BC}$. Ta có $AM=\frac{\sqrt{6}}{2}$.
+
+Ta có: $BC\bot (SAM)$. Dựng $AH\bot SM$. Suy ra $AH\bot (SBC)$.
+
+$d(A,(SBC))=AH=\dfrac{SA.AM}{\sqrt{SA^2+AM^2}}=\dfrac{\sqrt{7}.\frac{\sqrt{6}}{2} }{\sqrt{7+\frac{3}{2}}}$$={\frac{\sqrt{357}}{17}}$.
+
+$\dfrac{d(N,(SBC))}{d(A,(SBC))}=\dfrac{BN}{BA}=\dfrac{1}{3}$.
+
+Suy ra: $d(N,(SBC))=\dfrac{1}{3}d(A,(SBC))=\dfrac{1}{3}{\frac{\sqrt{357}}{17}}=\frac{\sqrt{357}}{51}=0,4$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông cạnh bằng ${2 \sqrt{2}}$, $SA\bot (ABCD), SA=\sqrt{3}$. Tính khoảng cách từ điểm ${A}$ đến mặt phẳng $(SCD)$ (kết quả làm tròn đến hàng phần mười).
+\shortans[oly]{1,5}
+
+\loigiai{\begin{center}
+\begin{tikzpicture}[scale=0.6]
+		\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+		\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+		\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+		\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+		\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+		\coordinate (H) at ($(S)!0.6!(D)$) node at (H) [right] {$H$};
+		\draw [dashed] (B)--(A)--(D) (S)--(A) (A)--(H); 
+		\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+		\end{tikzpicture}
+
+\end{center} 
+ $CD\bot AD,CD\bot SA\Rightarrow CD\bot (SAD)$.
+
+Dựng $AH \bot SD$. Suy ra $AH \bot CD$. Do đó $AH\bot (SCD)$.
+
+$d(A,(SCD))=AH=\dfrac{SA.AD}{\sqrt{SA^2+AD^2}}$$=\dfrac{\sqrt{3}.2 \sqrt{2} }{\sqrt{3+8}}$$=\frac{2 \sqrt{66}}{11}=1,5$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông và ${SA}$ vuông góc đáy, $SA=7, AB=2$. Tính khoảng cách từ điểm ${C}$ đến mặt phẳng $(SBD)$ (kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{1,39}
+
+\loigiai{ 
+ Gọi $O=AC\cap BD \Rightarrow AO=\dfrac{AC}{2}=\sqrt{2}$.
+
+Vì ${AC}$ cắt mặt phẳng $(SBD)$ tại trung điểm ${O}$ nên $d(C,(SBD))=d(A,(SBD))$.Kẻ $AH \bot SO $. Vì $BD \bot (SAC) \Rightarrow BD \bot AH \Rightarrow AH \bot (SBD)$.
+
+Do đó: $d(A,(SBD)=AH=\dfrac{SA.AO}{\sqrt{SA^2+AO^2}}=\dfrac{7.\sqrt{2}}{\sqrt{49+2}}=1,39$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $AB=\sqrt{3},AD=1$, $SA\bot (ABCD), SA=\sqrt{2}$. Tính khoảng cách từ điểm ${A}$ đến mặt phẳng $(SCD)$ (kết quả làm tròn đến hàng phần mười).
+\shortans[oly]{0,8}
+
+\loigiai{\begin{center}
+\begin{tikzpicture}[scale=0.6]
+	\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+	\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+	\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+	\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+	\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+	\coordinate (H) at ($(S)!0.6!(D)$) node at (H) [right] {$H$};
+	\draw [dashed] (B)--(A)--(D) (S)--(A) (A)--(H); 
+	\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+	\end{tikzpicture}
+
+\end{center} 
+ $CD\bot AD,CD\bot SA\Rightarrow CD\bot (SAD)$.
+
+Dựng $AH \bot SD$. Suy ra $AH \bot CD$. Do đó $AH\bot (SCD)$.
+
+$d(A,(SCD))=AH=\dfrac{SA.AD}{\sqrt{SA^2+AD^2}}$$=\dfrac{\sqrt{2}.1 }{\sqrt{2+1}}$$=\frac{\sqrt{6}}{3}=0,8$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông cạnh bằng ${3}$, $SA\bot (ABCD), SA=\sqrt{2}$. Gọi ${I}$ là điểm thuộc cạnh ${AD}$ sao cho $AI=3AD$. Tính khoảng cách từ điểm ${I}$ đến mặt phẳng $(SBC)$ (kết quả làm tròn đến hàng phần mười).
+\shortans[oly]{1,3}
+
+\loigiai{\begin{center}
+\begin{tikzpicture}[scale=0.6]
+		\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+		\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+		\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+		\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+		\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+		\coordinate (H) at ($(S)!0.6!(B)$) node at (H) [left] {$H$};
+		\draw [dashed] (B)--(A)--(D) (S)--(A) (A)--(H); 
+		\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+		\end{tikzpicture}
+
+\end{center} 
+ Do ${I}$ thuộc cạnh $AB$ nên ${AI//(SBC)}$.Suy ra $d(I,(SBC))=d(A,(SBC))$.
+
+$BC\bot AB,BC\bot SA\Rightarrow BC\bot (SAB)$.
+
+Dựng $AH \bot SB$. Suy ra $AH \bot BC$. Do đó $AH\bot (SBC)$.
+
+$d(I,(SBC))=d(A,(SBC))=AH=\dfrac{SA.AB}{\sqrt{SA^2+AB^2}}$$=\dfrac{\sqrt{2}.3 }{\sqrt{2+9}}$$=\frac{3 \sqrt{22}}{11}=1,3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.A_1B_1C_1}$ có đáy là tam giác vuông tại ${B}$ và có độ dài các cạnh $B_1C_1=2, A_1B_1=\sqrt{2},CC_1=1$. Gọi ${M,P}$ lần lượt là trung điểm của ${BC}$ và ${BB_1}$. Tính khoảng cách từ điểm ${B_1}$ đến mặt phẳng ${(AMP)}$(kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{0,4}
+
+\loigiai{\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A_1) at (0,4)   node at (A_1) [above] {$A_1$}; 
+    \coordinate (B_1) at (2,3)   node at (B_1) [above] {$B_1$}; 
+    \coordinate (C_1) at (4,4)   node at (C_1) [above] {$C_1$};
+    \coordinate (M) at ($(B)!0.5!(C)$) node at (M) [below] {$M$};
+    \coordinate (P) at ($(B_1)!0.5!(B)$) node at (P) [above right] {$P$};
+    \coordinate (I) at ($(A)!0.5!(M)$) node at (I) [below] {$I$};
+    \coordinate (H) at ($(P)!0.5!(I)$) node at (H) [left] {$H$};
+    \draw [dashed] (A)--(C) (A)--(M)  (B)--(I) (B)--(H) (P)--(I); 
+    \draw (A)--(B)--(B_1)--(A_1)--(A) (A)--(P) (M)--(P) ; 
+    \draw (B_1)--(C_1)--(C)--(B) (A_1)--(C_1)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center} 
+ Do ${BB_1}$ cắt mặt phẳng ${(AMP)}$ tại trung điểm ${P}$ nên $d(B_1,(AMP))=d(B,(AMP))$.
+
+Kẻ $BI\bot AM, BH \bot PI$. Chứng minh được $BH\bot (AMP)$,
+
+Suy ra $d(B,(AMP))=BH$.
+
+$BM=\dfrac{BC}{2}=1, BP=\dfrac{BB_1}{2}=0.5$.
+
+$BI=\dfrac{BA.BM}{\sqrt{BA^2+BM^2}}=\dfrac{\sqrt{2}.1 }{\sqrt{2+1}}=\frac{\sqrt{6}}{3}$.
+
+$BH=\dfrac{BP.BI}{\sqrt{BP^2+BI^2}}=\dfrac{0.5.\frac{\sqrt{6}}{3}}{\sqrt{\frac{1}{4}+\frac{2}{3}}}$$=\frac{\sqrt{22}}{11}=0,4$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.DEF}$ có đáy là tam giác vuông tại ${B}$ và có độ dài các cạnh $EF=4, AB=\sqrt{2},BE=\sqrt{7}$. Gọi ${N}$ là trung điểm của ${BC}$. Tính khoảng cách giữa ${AN}$ và ${EC}$(kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{0,87}
+
+\loigiai{\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (D) at (0,4)   node at (D) [above] {$D$}; 
+    \coordinate (E) at (2,3)   node at (E) [above] {$E$}; 
+    \coordinate (F) at (4,4)   node at (F) [above] {$F$};
+    \coordinate (N) at ($(B)!0.5!(C)$) node at (N) [below] {$N$};
+    \coordinate (P) at ($(E)!0.5!(B)$) node at (P) [above right] {$P$};
+    \coordinate (I) at ($(A)!0.5!(N)$) node at (I) [below] {$I$};
+    \coordinate (H) at ($(P)!0.5!(I)$) node at (H) [left] {$H$};
+    \draw [dashed] (A)--(C) (A)--(N)  (B)--(I) (B)--(H) (P)--(I); 
+    \draw (A)--(B)--(E)--(D)--(A) (A)--(P) (N)--(P) (E)--(C) ; 
+    \draw (E)--(F)--(C)--(B) (D)--(F)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center} 
+ Gọi ${P}$ là trung điểm của $BE$. Ta có: $NP//EC\Rightarrow EC//(ANP)$.
+
+Do đó: $d(AN,EC)=d((ANP),EC)=d(E,(ANP))=d(B,(ANP))$.
+
+Kẻ $BI\bot AN, BH \bot PI$. Chứng minh được $BH\bot (ANP)$,
+
+Suy ra $d(B,(ANP))=BH$.
+
+$BN=\dfrac{BC}{2}=2, BP=\dfrac{BE}{2}=\frac{\sqrt{7}}{2}$.
+
+$BI=\dfrac{BA.BN}{\sqrt{BA^2+BN^2}}=\dfrac{\sqrt{2}.2 }{\sqrt{2+4}}=\frac{2 \sqrt{3}}{3}$.
+
+$BH=\dfrac{BP.BI}{\sqrt{BP^2+BI^2}}=\dfrac{\frac{\sqrt{7}}{2}.\frac{2 \sqrt{3}}{3}}{\sqrt{\frac{7}{4}+\frac{4}{3}}}$$=\frac{2 \sqrt{259}}{37}=0,87$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy ${ABCD}$ là hình thoi với $\widehat{ABC}=60^\circ$ và $AB=2$. Biết rằng hình chiếu vuông góc của ${S}$ trên mặt phẳng $(ABCD)$ là trọng tâm ${H}$ của tam giác ${ABC}$ và $SH=\sqrt{3}$. Khoảng cách giữa hai đường thẳng ${AC}$ và ${SD}$ bằng bao nhiêu (không làm tròn kết quả các phép tính trung gian, chỉ làm tròn kết quả cuối cùng đến hàng phần trăm)?
+\begin{center}
+\begin{tikzpicture}[line join=round, line cap=round,thick]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (2,-2);
+	\coordinate (D) at (5,0);
+	\coordinate (C) at ($(B)+(D)-(A)$);
+	\coordinate (O) at ($(A)!0.5!(C)$);
+	\coordinate (H) at ($(B)!0.67!(O)$);	
+	\coordinate (S) at ($(H)+(0,6)$);
+	\coordinate (K) at ($(S)!0.6!(D)$);
+	\draw (S)--(A) (S)--(B) (S)--(C) (A)--(B) (B)--(C);
+	\draw[dashed,thin](A)--(C) (A)--(D) (C)--(D) (S)--(D) (S)--(H) (B)--(D) (O)--(K);
+	\foreach \i/\g in {S/90,A/180,B/-90,C/-90,D/0,O/-90, H/-90, K/180}{\draw[fill=white](\i) circle (1.5pt) ($(\i)+(\g:3mm)$) node[scale=1]{$\i$};}
+    \end{tikzpicture}
+\end{center}
+
+
+\shortans[4]{1,04}
+
+\loigiai{ 
+ $AC\bot BD, AC\bot SH \Rightarrow AC \bot (SBD)$.
+
+Kẻ $OK\bot SD \Rightarrow OK \bot AC \Rightarrow d(AC,SD)=OK$.
+
+$SH=sqrt(3),OD=OB=\dfrac{2\sqrt{3}}{2}=\sqrt{3}$.
+
+$HD=OD+OH=\sqrt{3}+\frac{1}{3}\sqrt{3}=\frac{4 \sqrt{3}}{3}$.
+
+$SD=\sqrt{SH^2+HD^2}=\sqrt{3+\frac{16}{3}}=\frac{5 \sqrt{3}}{3}$.
+
+$\sin \widehat{SDH}=\dfrac{OK}{OD}=\dfrac{SH}{HD}$
+
+ $\Rightarrow OK= \dfrac{SH.OD}{SD}$  $=\dfrac{\sqrt{3}.\sqrt{3}}{\frac{5 \sqrt{3}}{3}}=\frac{3 \sqrt{3}}{5}=1,04$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông cạnh bằng ${4}$, tam giác ${SAB}$ vuông cân tại ${S}$ và nằm trong mặt phẳng vuông góc với $(ABCD)$. Tính khoảng cách giữa hai đường thẳng ${BC}$ và ${SA}$ (kết quả làm tròn đến hàng phần mười).
+\begin{center}
+\begin{tikzpicture}
+				\coordinate (A) at (0,0);
+				\coordinate (B) at (-2,-2);
+				\coordinate (C) at (4,-2);
+				\coordinate (D) at (6,0);
+				\coordinate (H) at ($(A)!1/2!(B)$);
+				\coordinate (S) at ($(H)+(0,5)$);
+				\coordinate (I) at ($(A)!1/3!(S)$);
+				
+				\draw (S)--(B)--(C)--(D)--(S)--(C);
+				\draw [dashed] (S)--(A)--(B) (A)--(D) (S)--(H)--(I);
+				\foreach \x/\g in{A/60,B/-90,C/-90,D/0,H/-90,I/60,S/90}
+				\fill[black](\x) circle (2pt)
+				($(\x)+(\g:5mm)$) node{\small $\x$};
+		\end{tikzpicture}
+\end{center}
+
+
+\shortans[4]{1,4}
+
+\loigiai{ 
+ Gọi ${H}$ là trung điểm của ${AB}\Rightarrow SH \bot (ABCD)$.
+
+Kẻ $HI\bot SA \Rightarrow BC \bot HI$.
+
+Tam giác ${SAB}$ vuông cân nên $SH=HA=\dfrac{AB}{2}=2$.
+
+$SA=SH\sqrt {2}= 2\sqrt {2}=2 \sqrt{2}$.
+
+$d(BC,SA)=2HI=SA=2 \sqrt{2}=1,4$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy ${ABCD}$ là hình vuông với $AB=9$. Biết rằng hình chiếu vuông góc của ${S}$ trên mặt phẳng $(ABCD)$ là trọng tâm ${H}$ của tam giác ${ABC}$ và $SH=8\sqrt{2}$. Khoảng cách giữa hai đường thẳng ${AC}$ và ${SD}$ bằng bao nhiêu? (Không làm tròn các bước trung gian, chỉ làm tròn kết quả cuối cùng đến hàng phần mười)
+\begin{center}
+\begin{tikzpicture}[line join=round, line cap=round, thick, scale=1]
+	% Định nghĩa màu sắc
+	\colorlet{myblue}{blue!60!black}	
+	% Định nghĩa các điểm cơ sở của hình bình hành ABCD
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (6,0);
+	\coordinate (D) at (-2,-2.2);
+	\coordinate (C) at (4,-2.2);	
+	% Yêu cầu 1: E thuộc đường thẳng AB kéo dài và EA = AB
+	% A là trung điểm của EB, nên ta tịnh tiến từ A ngược hướng B một đoạn bằng AB
+	\coordinate (E) at (-6,0);	
+	% Điểm O là giao điểm của AC và BD
+	\coordinate (O) at (intersection of A--C and B--D);	
+	% Yêu cầu 2: H thuộc đoạn BO sao cho HB = 2HO
+	% Tức là độ dài HO = 1/3 BO, H xích gần về phía O
+	\coordinate (H) at ($(O)!1/3!(B)$);	
+	% Điểm S nằm trên đường thẳng đứng đi qua H
+	\coordinate (S) at ($(H)+(0, 6.5)$);	
+	% Điểm K nằm trên đoạn SA
+	\coordinate (K) at ($(S)!0.55!(A)$);	
+	% --- VẼ CÁC ĐƯỜNG ĐỨT NÉT (Nét khuất) ---
+	\draw[dashed, myblue] (E) -- (B); % Chứa EA và AB
+	\draw[dashed, myblue] (A) -- (D);
+	\draw[dashed, myblue] (S) -- (A);
+	\draw[dashed, myblue] (A) -- (C);
+	\draw[dashed, myblue] (B) -- (D);
+	\draw[dashed, myblue] (S) -- (H);
+	\draw[dashed, myblue] (K) -- (H);	
+	% --- VẼ CÁC ĐƯỜNG LIỀN NÉT (Nét thấy) ---
+	\draw[myblue] (S) -- (E);
+	\draw[myblue] (S) -- (B);
+	\draw[myblue] (S) -- (C);
+	\draw[myblue] (S) -- (D);
+	\draw[myblue] (E) -- (D) -- (C) -- (B);	
+	% --- VẼ CÁC ĐIỂM (Chấm đỏ) ---
+	\foreach \p in {S, E, D, C, B, A, K, O, H} {
+		\fill[red] (\p) circle (1.5pt);
+	}	
+	% --- CHÈN NHÃN TÊN ĐIỂM ---
+	\node[above] at (S) {$S$};
+	\node[left] at (E) {$E$};
+	\node[below left, xshift=2pt] at (D) {$D$};
+	\node[below right, xshift=-2pt] at (C) {$C$};
+	\node[right] at (B) {$B$};
+	\node[below, yshift=-2pt, xshift=2pt] at (A) {$A$};
+	\node[left, xshift=-2pt, yshift=2pt] at (K) {$K$};
+	\node[below, yshift=-2pt, xshift=-2pt] at (O) {$O$};
+	\node[below right, xshift=-2pt, yshift=-1pt] at (H) {$H$};	
+\end{tikzpicture}
+\end{center}
+\shortans[4]{5,1}
+
+\loigiai{ 
+ Gọi $O=AC\cap DB$. Dựng hình bình hành ACDE.
+
+Vì H là trọng tâm tam giác ABC nên $\dfrac{BH}{BO}=\dfrac{2}{3} \Rightarrow \dfrac{DH}{DB}=\dfrac{2}{3}$.
+
+Vì $AC\parallel DE$ nên $AC\parallel (SDE)$. Do đó $d(AC,SD)=d(AC,(SDE))=d(O,(SDE))$.
+
+Trong tam giác SHD, kẻ $HK\perp SD$ tại K.
+
+Ta có $DE\perp SH$, $DE\perp DB \Rightarrow DE\perp (SDH) \Rightarrow DE\perp HK$. Mà $HK\perp SD \Rightarrow HK\perp (SDE)$ nên $d(H,(SDE))=HK$.
+
+$\dfrac{1}{HK^2}=\dfrac{1}{SH^2}+\dfrac{1}{DH^2}$.
+
+Với $SH=8\sqrt{2}, \; DH=\dfrac{2}{3}\cdot 9\sqrt{2}=6\sqrt{2}$.
+
+Suy ra $HK=\dfrac{24\sqrt{2}}{5}$.
+
+Do đó $d(H,(SDE))=\dfrac{24\sqrt{2}}{5}$.
+
+Mặt khác $\dfrac{d(H,(SDE))}{d(O,(SDE))}=\dfrac{HD}{OD}=\dfrac{\frac{2}{3}DB}{\frac{1}{2}DB}=\dfrac{4}{3}$.
+
+Suy ra $d(O,(SDE))=\dfrac{3}{4}\cdot \dfrac{24\sqrt{2}}{5}=\dfrac{18\sqrt{2}}{5}$.
+
+Vậy $d(AC,SD)=\dfrac{18\sqrt{2}}{5}\approx 5,1$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình thoi tâm ${O}$ cạnh $\sqrt{5}$, $AC=4$, $SO=4$ và $SO\perp (ABCD)$. Gọi ${M}$ là trung điểm của ${SC}$. Tính khoảng cách giữa hai đường thẳng ${SA}$ và ${BM}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{1,7}
+
+\loigiai{\begin{center}
+ \begin{tikzpicture}[line join=round, line cap=round, thick]
+	% Định nghĩa màu xanh giống trong hình
+	\colorlet{myblue}{blue!70!black}
+	
+	% --- Tọa độ các đỉnh ---
+	% Đáy ABCD là hình bình hành
+	\coordinate (B) at (0,0);
+	\coordinate (C) at (6,0);
+	\coordinate (A) at (2,2.5);
+	\coordinate (D) at (8,2.5);
+	
+	% O là giao điểm của AC và BD
+	\coordinate (O) at ($(A)!0.5!(C)$);
+	
+	% S là đỉnh chóp, SO thẳng đứng
+	\coordinate (S) at ($(O)+(0,6.5)$);
+	
+	% M là trung điểm của SC
+	\coordinate (M) at ($(S)!0.5!(C)$);
+	
+	% N là trung điểm của OC
+	\coordinate (N) at ($(O)!0.5!(C)$);
+	
+	% --- Vẽ các đường nét đứt ---
+	\draw[myblue, dashed]
+	(A) -- (B)
+	(A) -- (D)
+	(A) -- (S)
+	(A) -- (C)
+	(B) -- (D)
+	(S) -- (O)
+	(M) -- (O)
+	(M) -- (N);
+	
+	% --- Vẽ các đường nét liền ---
+	\draw[myblue]
+	(S) -- (B)
+	(S) -- (C)
+	(S) -- (D)
+	(B) -- (C)
+	(C) -- (D)
+	(M) -- (B)
+	(M) -- (D);
+	
+	% --- Vẽ các điểm tròn đỏ ---
+	\foreach \p in {S, A, B, C, D, O, M, N} {
+		\fill[red] (\p) circle (1.5pt);
+	}
+	
+	% --- Ghi chú các đỉnh ---
+	% Sử dụng boldsymbol để chữ in đậm nghiêng giống ảnh mẫu
+	\node[above]      at (S) {$\boldsymbol{S}$};
+	\node[left]       at (A) {$\boldsymbol{A}$};
+	\node[below left] at (B) {$\boldsymbol{B}$};
+	\node[below]      at (C) {$\boldsymbol{C}$};
+	\node[right]      at (D) {$\boldsymbol{D}$};
+	\node[below]      at (O) {$\boldsymbol{O}$};
+	\node[right]      at (M) {$\boldsymbol{M}$};
+	\node[below left] at (N) {$\boldsymbol{N}$};
+	
+	\end{tikzpicture}
+\end{center} 
+ $d(SA,BM)=d\left(S,(OBM)\right)=d\left(C,(OBM)\right)=\frac{3V_{C.OMB}}{S_{OMB}}.$ 
+
+$OC=\dfrac{AC}{2}=2$ nên
+$OB=\sqrt{BC^2-OC^2}=\sqrt{(\sqrt{5})^2-(2)^2}=1.$ 
+
+$S_{OBC}=\frac12\,OB\cdot OC=\frac12\cdot 1\cdot 2=1.$ 
+
+Gọi Nlà trung điểm của ${OC}$. Khi đó $MN\parallel SO$ nên $MN\perp (OBC)$ và
+$MN=\frac{SO}2=\frac{4}2=2.$ 
+
+$V_{M.OBC}=\frac{1}{3} MN\cdot S_{OBC}=\frac13\cdot 2\cdot 1=\frac{2}{3}.$ 
+
+$SA=\sqrt{SO^2+OA^2}=\sqrt{(4)^2+(2)^2}=2 \sqrt{5}.$ 
+
+Vì $OM\parallel SA$ và $OM=\dfrac{SA}2$ nên
+$OM=\sqrt{5}.$
+
+Tam giác OMB vuông tại O, do đó
+$S_{OMB}=\frac12\,OB\cdot OM=\frac12\cdot 1\cdot \sqrt{5}=\frac{\sqrt{5}}{2}.$ 
+
+$d(SA,BM)=\frac{3V_{C.OMB}}{S_{OMB}}=\frac{8 \sqrt{21}}{21}\approx 1,7.$ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật ${ABCD}$ có $AD=2AB$, $SA\bot \left( ABCD \right)$, $SC=2 \sqrt{5}$ và góc giữa ${SC}$ và $(ABCD)$ bằng ${60}^\circ$, ${M}$ là trung điểm của cạnh ${BC}$. Tính khoảng cách giữa hai đường thẳng ${AM}$ và ${SD}$ (kết quả làm tròn đến hàng phần mười).
+\begin{center}
+ \begin{tikzpicture}[line join=round, line cap=round,thick,scale=0.6]
+	% Các điểm cơ sở
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (-2,-3);
+	\coordinate (D) at (7,0);
+	\coordinate (C) at ($(B)+(D)-(A)$);
+	\coordinate (S) at ($(A)+(0,5)$);
+	% 1) Trung điểm M của cạnh BC
+	\coordinate (M) at ($(B)!0.5!(C)$);
+	% 3) Điểm N sao cho AN//MD, AN=MD (Tứ giác ANDM là hình bình hành nên vecto AN = vecto MD)
+	\coordinate (N) at ($(A)+(D)-(M)$);
+	% 6) H là trung điểm của SN 
+	\coordinate (H) at ($(S)!0.5!(N)$);
+	% Vẽ các nét liền: bổ sung thêm ND (4) và SN (5)
+	\draw (S)--(B) (S)--(C) (S)--(D) (B)--(C)--(D) (N)--(D) (S)--(N);
+	% Vẽ các nét đứt: bổ sung thêm AM, MD (2); AN (4) và AH (7)
+	\draw[dashed,thin] (S)--(A) (A)--(B) (A)--(D) (A)--(M) (M)--(D) (A)--(N) (A)--(H);
+	\foreach \i/\g in {S/90,A/180,B/-90,C/-90,D/0,M/-90,N/45,H/45}{
+		\draw[fill=white] (\i) circle (1.5pt) ($(\i)+(\g:3mm)$) node[scale=1]{$\i$};}
+\end{tikzpicture}
+\end{center}
+\shortans[4]{1,3}
+
+\loigiai{ 
+ $\left( \widehat{SC,(ABCD)} \right)=\left( \widehat{SC,AC} \right)=\widehat{SCA}=60^\circ.$ 
+
+Xét tam giác SAC vuông tại A, ta được
+$AC=SC.\cos 60^\circ=2 \sqrt{5}\cos 60^\circ=\sqrt{5},$
+
+$SA=SC.\sin 60^\circ=2 \sqrt{5}\sin 60^\circ=\sqrt{15}.$ 
+
+Vì đáy là hình chữ nhật và $AD=2AB$ nên
+
+$AC^2=AB^2+AD^2=AB^2+4AB^2=5AB^2.$ 
+
+Mặt khác $AC=\sqrt{5}\Rightarrow AC^2=5$, do đó
+
+$5AB^2=5\Rightarrow AB=1.$ 
+
+Dựng hình bình hành AMDN và dựng $AH\bot SN$ tại H.
+
+$AM\parallel DN\Rightarrow AM\parallel \left( SDN \right).$
+$d\left( AM,SD \right)=d\left( AM,\left( SDN \right) \right)=d\left( A,\left( SDN \right) \right).$
+
+Lại có $M$ là trung điểm của $BC$ nên $MB=MC=1$, suy ra
+
+$MD=\sqrt{AB^2+MB^2}=\sqrt{1^2+1^2}=\sqrt{2}.$ 
+
+Vì AMDN là hình bình hành nên $AN=MD=\sqrt{2}$.
+
+Mặt khác, $AM\bot MD$ nên AMDN là hình chữ nhật.
+
+Suy ra $DN\bot AN$.
+Lại do $DN\parallel AM$ mà $AM\subset (ABCD)$ nên $DN\bot SA$.
+Vậy $DN\bot \left( SAN \right)$.
+Suy ra $DN\bot AH$.
+Kết hợp với $AH\bot SN$ nên $AH\bot \left( SDN \right)$.
+
+$d\left( A,\left( SDN \right) \right)=AH.$ 
+
+$\frac{1}{AH^2}=\frac{1}{AS^2}+\frac{1}{AN^2}=\frac{1}{15}+\frac{1}{2}=\frac{17}{30}.$
+
+$AH=\frac{\sqrt{510}}{17}\approx 1,3.$ 
+
+Vậy khoảng cách giữa hai đường thẳng AM và SD là $1,3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình hộp chữ nhật ${ABCD.A'B'C'D'}$ có đáy ${ABCD}$ là hình vuông cạnh ${6}$, $AA'=2 \sqrt{3}$. Tính khoảng cách giữa hai đường thẳng ${BD}$ và ${CD'}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{2,7}
+
+\loigiai{ \begin{center}
+ \begin{tikzpicture}[x=(0:1cm), y=(40:0.6cm), z=(90:1cm), line join=round, line cap=round, thick]
+	
+	% Định nghĩa màu xanh giống trong hình
+	\colorlet{myblue}{blue!70!black}
+	
+	% --- Tọa độ các đỉnh ---
+	% Đáy dưới (A'B'C'D')
+	\coordinate (D') at (0,0,0);
+	\coordinate (A') at (5,0,0);
+	\coordinate (C') at (0,4,0);
+	\coordinate (B') at (5,4,0);
+	
+	% Đáy trên (ABCD)
+	\coordinate (D)  at (0,0,4.5);
+	\coordinate (A)  at (5,0,4.5);
+	\coordinate (C)  at (0,4,4.5);
+	\coordinate (B)  at (5,4,4.5);
+	
+	% Tâm của hai đáy
+	\coordinate (O)  at ($(A)!0.5!(C)$);
+	\coordinate (O') at ($(A')!0.5!(C')$);
+	
+	% Điểm H: Hình chiếu của C' lên CO'
+	% Tỷ lệ t = 4c^2 / (a^2 + b^2 + 4c^2) = 4(4.5^2) / (5^2 + 4^2 + 4*4.5^2) = 81/122
+	\coordinate (H) at ($(C)!81/122!(O')$);
+	
+	% --- Vẽ các đường nét đứt ---
+	\draw[myblue, dashed]
+	(C') -- (C)    % Cạnh bên ẩn
+	(C') -- (D')   % Cạnh đáy ẩn
+	(C') -- (B')   % Cạnh đáy ẩn
+	(C') -- (A')   % Đường chéo đáy dưới
+	(D') -- (B')   % Đường chéo đáy dưới
+	(C)  -- (D')   % Đường chéo mặt bên CD'
+	(C)  -- (B')   % Đường chéo mặt bên CB'
+	(O)  -- (O')   % Trục OO'
+	(C)  -- (O')   % Đường thẳng CO'
+	(C') -- (H);   % Đường vuông góc C'H
+	
+	% --- Vẽ các đường nét liền ---
+	\draw[myblue]
+	(D) -- (A) -- (B) -- (C) -- cycle % Đáy trên
+	(D') -- (A') -- (B')              % Các cạnh đáy dưới thấy được
+	(D) -- (D')                       % Các cạnh bên thấy được
+	(A) -- (A')
+	(B) -- (B')
+	(A) -- (C)                        % Đường chéo đáy trên
+	(B) -- (D);                       % Đường chéo đáy trên
+	
+	% --- Vẽ ký hiệu góc vuông tại H ---
+	\coordinate (v1) at ($(H)!2.5mm!(C')$);
+	\coordinate (v2) at ($(H)!2.5mm!(O')$);
+	\coordinate (v3) at ($(v1)+(v2)-(H)$);
+	\draw[myblue] (v1) -- (v3) -- (v2);
+	
+	% --- Vẽ các điểm tròn đỏ ---
+	\foreach \p in {A,B,C,D,A',B',C',D',O,O',H} {
+		\fill[red] (\p) circle (1.5pt);
+	}
+	
+	% --- Ghi chú các đỉnh ---
+	\node[left]        at (D)  {$D$};
+	\node[above left]  at (C)  {$C$};
+	\node[above right] at (B)  {$B$};
+	\node[below right] at (A)  {$A$};
+	\node[below left]  at (D') {$D'$};
+	\node[below right] at (A') {$A'$};
+	\node[below right] at (B') {$B'$};
+	\node[below]       at (C') {$C'$};
+	\node[above]       at (O)  {$O$};
+	\node[below]       at (O') {$O'$};
+	\node[right, xshift=2pt] at (H) {$H$};
+	
+	\end{tikzpicture}
+\end{center}
+ Vì $CD'\parallel AB'$ nên $CD'\parallel (BDA')$.
+
+Do đó
+$d(BD,CD')=d\left(CD',(BDA')\right)=d\left(C,(BDA')\right)=d\left(A,(BDA')\right).$
+
+Vì ${A.BDA'}$ là tam diện vuông tại A, đặt $h=d\left(A,(BDA')\right)$.
+
+Khi đó
+$\frac1{h^2}=\frac1{AB^2}+\frac1{AD^2}+\frac1{AA'^2}=\frac1{(6)^2}+\frac1{(6)^2}+\frac1{(2 \sqrt{3})^2}=\frac{5}{36}.$ 
+
+Suy ra: $h=\frac{6 \sqrt{5}}{5}\approx 2,7.$ 
+
+ 
+ }\end{ex}

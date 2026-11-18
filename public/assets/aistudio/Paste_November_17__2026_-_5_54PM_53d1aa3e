@@ -1,0 +1,816 @@
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ \True Hình chiếu song song của hai đường thẳng song song là hai đường thẳng song song hoặc trùng nhau }
+   { Phép chiếu song song biến hai đường thẳng song song thành hai đường thẳng song song }
+     { Phép chiếu song song bảo toàn diện tích }
+    { Phép chiếu song song bảo toàn hình dạng của một hình }
+\loigiai{ 
+ Hình chiếu song song của hai đường thẳng song song là hai đường thẳng song song hoặc trùng nhau là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây sai? 
+\choice
+{ Hình chiếu song song của hai đường thẳng song song là hai đường thẳng song song hoặc trùng nhau }
+   { \True Phép chiếu song song bảo toàn hình dạng của một hình }
+     { Phép chiếu song song biến bảo toàn thứ tự của ba điểm thẳng hàng }
+    { Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng }
+\loigiai{ 
+ Phép chiếu song song bảo toàn hình dạng của một hình là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ \True Hình chiếu song song của hình vuông là một hình bình hành }
+   { Hình chiếu song song của hình thang là một hình chữ nhật }
+     { Hình chiếu song song của hình vuông luôn là một hình vuông }
+    { Hình chiếu song song của một đoạn thẳng là một đoạn thẳng }
+\loigiai{ 
+ Hình chiếu song song của hình vuông là một hình bình hành là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A_1B_1C_1}$. Hình chiếu song song của điểm ${C}$ lên mặt phẳng $(A_1C_1C_1)$ theo phương ${BB_1}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A_1) at (1,4)   node at (A_1) [above] {$A_1$}; 
+    \coordinate (B_1) at (3,3)   node at (B_1) [above] {$B_1$}; 
+    \coordinate (C_1) at (5,4)   node at (C_1) [above] {$C_1$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B_1)--(A_1)--(A); 
+    \draw (B_1)--(C_1)--(C)--(B) (A_1)--(C_1)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${B_1}$ }
+   { \True Điểm ${C_1}$ }
+     { Điểm ${A}$ }
+    { Điểm ${C}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${C_1}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A_1B_1C_1}$. Hình chiếu song song của điểm ${C}$ lên mặt phẳng $(A_1C_1C_1)$ theo phương ${AA_1}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A_1) at (1,4)   node at (A_1) [above] {$A_1$}; 
+    \coordinate (B_1) at (3,3)   node at (B_1) [above] {$B_1$}; 
+    \coordinate (C_1) at (5,4)   node at (C_1) [above] {$C_1$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B_1)--(A_1)--(A); 
+    \draw (B_1)--(C_1)--(C)--(B) (A_1)--(C_1)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ \True Điểm ${C_1}$ }
+   { Điểm ${B}$ }
+     { Điểm ${B_1}$ }
+    { Điểm ${A}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${C_1}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SA\bot (ABCD)$, $AB=2 a, SD=\sqrt{7} a, SA=\sqrt{3} a$. Tính số đo góc phẳng nhị diện ${[A,CD,S]}$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ \True ${40,89^\circ}$ }
+{ ${51,49^\circ}$ }
+{ ${56,59^\circ}$ }
+{ ${44,99^\circ}$ }
+\loigiai{ 
+ Ta có: $AD \bot CD, CD \bot SA \Rightarrow CD \bot SD$.
+
+Do đó ${[A,CD,S]}=\widehat{SDA}$.
+
+$\displaystyle \sin \widehat{SDA}=\dfrac{SA}{SD}=\dfrac{\sqrt{3} a}{\sqrt{7} a}=\frac{\sqrt{21}}{7}$.
+
+Suy ra $\widehat{SDA}=40,89^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SA\bot (ABCD)$, $AB=4 a, SD=\sqrt{67} a, SA=\sqrt{3} a$. Tính số đo góc phẳng nhị diện ${[A,CD,S]}$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ ${13,42^\circ}$ }
+   { \True ${12,22^\circ}$ }
+     { ${29,02^\circ}$ }
+    { ${24,32^\circ}$ }
+\loigiai{ 
+ Ta có: $AD \bot CD, CD \bot SA \Rightarrow CD \bot SD$. Do đó ${[A,CD,S]} =\widehat{SDA}$.
+
+$\displaystyle \sin \widehat{SDA}=\dfrac{SA} {SD}= \dfrac{\sqrt{3} a} {\sqrt{67} a}=\frac{\sqrt{201}}{67}$.
+Suy ra $\widehat{SDA} = 12,22^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SA\bot (ABCD)$, $AB=a, AD=4 a, SA=\sqrt{2} a$. Tính số đo góc phẳng nhị diện ${[A,BD,S]}$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ \True ${55,55^\circ}$ }
+   { ${75,45^\circ}$ }
+     { ${68,25^\circ}$ }
+    { ${62,85^\circ}$ }
+\loigiai{ 
+ Dựng $AH \bot BD,BD \bot SA \Rightarrow SH \bot BD$. Do đó ${[A,BD,S]} =\widehat{SHA}$.
+
+$\displaystyle AH= \dfrac{AB.AD} {\sqrt{AB^2 + AD^2}}= \frac{4 \sqrt{17}}{17}a$.
+
+$\displaystyle \tan \widehat{SHA}=\dfrac{SA} {AH}= \dfrac{\sqrt{2} a} {\frac{4 \sqrt{17} a}{17}}=\frac{\sqrt{34}}{4}$.
+Suy ra $\widehat{SHA} = 55,55^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho ${c,\Delta,b}$ là các đường thẳng. Hãy chọn mệnh đề đúng trong các mệnh đề sau đây? 
+\choice
+{ Cho $c\bot \Delta$. Mọi mặt phẳng chứa $\Delta$ đều vuông góc với ${c}$ }
+   { Nếu $c\bot \Delta$ và mặt phẳng $\left( \alpha  \right)$ chứa ${c}$, mặt phẳng $\left( \beta  \right)$ chứa ${\Delta}$ thì $\left( \alpha  \right)\bot \left( \beta  \right)$ }
+     { \True Cho $c\bot \Delta,c\subset \left( \alpha  \right)$. Mọi mặt phẳng $\left( \beta  \right)$ chứa ${\Delta}$ và vuông góc với ${c}$ thì $\left( \beta  \right)\bot \left( \alpha  \right)$ }
+    { Cho ${c,\Delta}$. Mọi mặt phẳng $\left( \alpha  \right)$ chứa ${b}$ trong đó $b\bot c,b\bot \Delta$ thì đều vuông góc với mặt phẳng $\left( c,\Delta \right)$ }
+\loigiai{ 
+ Cho $c\bot \Delta,c\subset \left( \alpha  \right)$. Mọi mặt phẳng $\left( \beta  \right)$ chứa ${\Delta}$ và vuông góc với ${c}$ thì $\left( \beta  \right)\bot \left( \alpha  \right)$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Hãy chọn mệnh đề đúng trong các mệnh đề sau đây? 
+\choice
+{ Hai mặt phẳng $(\gamma)$ và $(P)$ cùng vuông góc với mặt phẳng $(\beta)$ thì $(\gamma)$ và $(P)$ cắt nhau }
+   { Hai đường thẳng ${l,\Delta}$ phân biệt cùng vuông góc với đường thẳng ${d}$ thì ${l}$ song song ${\Delta}$ }
+     { Hai mặt phẳng $(\gamma)$ và $(P)$ cùng vuông góc với mặt phẳng $(\beta)$ thì $(\gamma)$ và $(P)$ song song }
+    { \True Một mặt phẳng $(\gamma)$ và một đường thẳng ${l}$ không thuộc $(\gamma)$ cùng vuông góc với đường thẳng ${\Delta}$ thì $(\gamma)$ song song với ${l}$ }
+\loigiai{ 
+ Một mặt phẳng $(\gamma)$ và một đường thẳng ${l}$ không thuộc $(\gamma)$ cùng vuông góc với đường thẳng ${\Delta}$ thì $(\gamma)$ song song với ${l}$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho các đường thẳng ${b,c,l}$ và các mặt phẳng $(Q), (\alpha), (\gamma)$ phân biệt. Hãy chọn mệnh đề đúng trong các mệnh đề sau đây? 
+\choice
+{ \True Nếu $(Q)//(\alpha),(Q)\bot(\gamma)$ thì $(\alpha) \bot (\gamma)$ }
+   { Nếu $b\subset(Q), c\subset (\alpha)$ và $b\bot c$ thì $(Q)\bot (\alpha)$ }
+     { Nếu $b\bot c$ và $c \subset (Q)$ thì $b \bot (Q)$ }
+    { Nếu $b// (Q),b \bot (\alpha)$ thì $(Q) \bot (\alpha)$ }
+\loigiai{ 
+ Nếu $(Q)//(\alpha),(Q)\bot(\gamma)$ thì $(\alpha) \bot (\gamma)$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SB\bot (ABCD)$. Tìm góc giữa mặt phẳng $(SCD)$ và mặt phẳng ${(ABCD)}$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (-1,-1) node at (C) [left] {$C$};
+\coordinate (D) at (3,-1)  node at (D) [right] {$D$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B)--(A) (S)--(B); 
+\draw (C)--(D)--(A) (S)--(C) (S)--(D) (S)--(A); 
+\end{tikzpicture}
+
+\choice
+{ $\widehat{BDC}$ }
+   { $\widehat{SCA}$ }
+     { $\widehat{SDA}$ }
+    { \True $\widehat{SCB}$ }
+\loigiai{ 
+ Ta có: $(SCD)\cap (ABCD)=CD$.
+
+$CD\bot BC\subset(ABCD)$
+
+Lại có $CD\bot SB \Rightarrow CD \bot SC\subset (SCD)$.
+
+Suy ra góc $\bigg( (SCD), (ABCD) \bigg)= (SC,BC)=$ $\widehat{SCB}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật tâm ${O}$, $SB\bot (ABCD)$. Gọi ${I}$ là hình chiếu vuông góc của điểm ${B}$ trên đường thẳng ${CA}$. Tìm góc giữa mặt phẳng $(SCA)$ và mặt phẳng ${(ABCD)}$.\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (-1,-1) node at (C) [left] {$C$};
+\coordinate (D) at (3,-1)  node at (D) [right] {$D$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B)--(A) (S)--(B); 
+\draw (C)--(D)--(A) (S)--(C) (S)--(D) (S)--(A); 
+\end{tikzpicture}
+
+\choice
+{ $\widehat{SCB}$ }
+   { $\widehat{SOB}$ }
+     { $\widehat{SAB}$ }
+    { \True $\widehat{SIB}$ }
+\loigiai{ 
+ Ta có: $(SCA) \cap (ABCD)=CA$.
+
+$CA\bot BI \subset(ABCD)$
+
+Lại có $CA\bot SB \Rightarrow CA \bot SI\subset (SCA)$.
+
+Suy ra góc $\bigg( (SCA), (ABCD) \bigg)= (SI,BI)=$ $\widehat{SIB}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều có $SB\bot (ABC), BC=a,SB=5 \sqrt{2}a$. Tính góc giữa hai mặt phẳng $(SCA)$ và $(ABC)$.\\ 
+\begin{tikzpicture}
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (1,-2) node at (C) [left] {$C$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A) ; 
+\draw (B)--(C) (C)--(A) (S)--(B) (S)--(C) (S)--(A); 
+\end{tikzpicture}
+
+\choice
+{ \True $83,02^\circ$ }
+   { $93,02^\circ$ }
+     { $85,32^\circ$ }
+    { $101,52^\circ$ }
+\loigiai{ 
+ Gọi M là trung điểm của ${CA}, BM=\frac{\sqrt{3}}{2}a$.
+
+Góc giữa $(SCA)$ và ${(ABC)}$ là $\widehat{SBM}$.
+
+$\tan \widehat{SMB}=\dfrac{SB}{BM}=\dfrac{5 \sqrt{2}a}{\frac{\sqrt{3}}{2}a}=\frac{10 \sqrt{6}}{3}\Rightarrow \widehat{SBM}=83,02^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông tại ${B}, SA\bot (ABC), AC=2 \sqrt{5}a,BC=2a,SA=3 \sqrt{11}a$. Tính góc giữa hai mặt phẳng $(SBC)$ và $(ABC)$.\\ 
+\begin{tikzpicture}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (1,-2) node at (B) [left] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (A)--(C) ; 
+\draw (A)--(B) (B)--(C) (S)--(A) (S)--(B) (S)--(C); 
+\end{tikzpicture}
+
+\choice
+{ $72,30^\circ$ }
+   { $81,00^\circ$ }
+     { \True $68,10^\circ$ }
+    { $85,10^\circ$ }
+\loigiai{ 
+ $(SBC)\cap (ABC)=BC, AB\bot BC,SB\bot BC$.
+
+Góc giữa $(SBC)$ và ${(ABC)}$ là $\widehat{SBA}$.
+
+$AB=\sqrt{AC^2-BC^2}=16a$.
+
+$\tan \widehat{SBA}=\dfrac{SA}{AB}=\dfrac{3 \sqrt{11}a}{4a}=\frac{3 \sqrt{11}}{4}\Rightarrow \widehat{SBA}=68,10^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SB\bot (ABCD)$. Gọi ${M,F}$ lần lượt là trung điểm của các cạnh ${BC}$ và ${BA}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (-1,-1) node at (C) [left] {$C$};
+\coordinate (D) at (3,-1)  node at (D) [right] {$D$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B)--(A) (S)--(B); 
+\draw (C)--(D)--(A) (S)--(C) (S)--(D) (S)--(A); 
+\end{tikzpicture}
+
+\choice
+{ \True $(SBC)\bot (BCDA)$ }
+   { $(SBD)\bot (SBA)$ }
+     { $(SFC)\bot (SCA)$ }
+    { $(SBC)\bot (SBD)$ }
+\loigiai{ 
+  Vì $SB \bot (ABCD), SB\subset (SBC) \Rightarrow (SBC) \bot (ABCD)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SC\bot (ABCD)$. Gọi ${E,N}$ lần lượt là trung điểm của các cạnh ${CD}$ và ${DA}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (D) at (-1,-1) node at (D) [left] {$D$};
+\coordinate (A) at (3,-1)  node at (A) [right] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (D)--(C)--(B) (S)--(C); 
+\draw (D)--(A)--(B) (S)--(D) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+
+\choice
+{ $(SCD)\bot (SEN)$ }
+   { $(SCA)\bot (SCB)$ }
+     { \True $(SCA)\bot (CDAB)$ }
+    { $(SBE)\bot (SEN)$ }
+\loigiai{ 
+  Vì $SC \bot (ABCD), SC\subset (SCA) \Rightarrow (SCA) \bot (ABCD)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SC\bot (ABCD)$. Gọi ${E,N}$ lần lượt là trung điểm của các cạnh ${CD}$ và ${DA}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (D) at (-1,-1) node at (D) [left] {$D$};
+\coordinate (A) at (3,-1)  node at (A) [right] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (D)--(C)--(B) (S)--(C); 
+\draw (D)--(A)--(B) (S)--(D) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+
+\choice
+{ \True $(SCD)\bot (SDA)$ }
+   { $(SDB)\bot (SEN)$ }
+     { $(SCD)\bot (SCA)$ }
+    { $(SDA)\bot (SEN)$ }
+\loigiai{ 
+  Vì $DA \bot CD, DA \bot SC \Rightarrow DA \bot (SCD)$ và $DA \subset (SDA)$ nên $(SCD)\bot (SDA)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SA\bot (ABCD)$. Gọi ${M,N}$ lần lượt là trung điểm của các cạnh ${AB}$ và ${BC}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ $(SAD)\bot (SMN)$ }
+   { \True $(SAB)\bot (SBC)$ }
+     { $(SBD)\bot (SMN)$ }
+    { $(SAC)\bot (SAD)$ }
+\loigiai{ 
+  Vì $BC \bot AB, BC \bot SA \Rightarrow BC \bot (SAB)$ và $BC \subset (SBC)$ nên $(SAB)\bot (SBC)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông tại ${A}$, $SA\bot (ABC)$. Gọi ${Q}$ là trung điểm của cạnh ${AB}$. Gọi ${P}$ là hình chiếu vuông góc của ${A}$ trên đường thẳng ${BC}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (1,-2) node at (B) [left] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (A)--(C) ; 
+\draw (A)--(B) (B)--(C) (S)--(A) (S)--(B) (S)--(C); 
+\end{tikzpicture}
+
+\choice
+{ $(SAB)\bot (SCP)$ }
+   { $(SAP)\bot (SAC)$ }
+     { \True $(SBC)\bot (SAP)$ }
+    { $(SPQ)\bot (SAB)$ }
+\loigiai{ 
+ $BC \bot AP,BC \bot SA \Rightarrow BC \bot (SAP)$. Mà $BC \subset (SBC) \Rightarrow (SBC) \bot (SAP)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABC.A'B'C'}$ có đáy là tam giác vuông tại ${B}$. Tìm khẳng định đúng trong các khẳng định sau? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A') at (0,4)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (2,3)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (4,4)   node at (C') [above] {$C'$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B')--(A')--(A); 
+    \draw (B')--(C')--(C)--(B) (A')--(C')--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ $(ABB')\bot (AB'C)$ }
+   { $(ABC)\bot (A'B'C')$ }
+     { \True $(ABB')\bot (ABC)$ }
+    { $(C'AB)\bot (ABC)$ }
+\loigiai{ 
+ $(ABB')\bot (ABC)$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đứng ${ABCD.A'B'C'D'}$ có đáy là hình chữ nhật. Tìm khẳng định đúng trong các khẳng định sau? 
+\begin{center}
+\begin{tikzpicture}[scale=0.6] 
+\begin{scriptsize}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (A') at (0,2)   node at (A') [left] {$A'$};
+\coordinate (B') at (-1,1) node at (B') [left] {$B'$};
+\coordinate (C') at (3,1)  node at (C') [right] {$C'$};
+\coordinate (D') at (4,2)   node at (D') [right] {$D'$};
+\draw [dashed] (B)--(A)--(D) (A')--(A);
+\draw (A')--(B')--(C')--(D')--(A') (B')--(B) (C')--(C) (D')--(D);
+\draw (B)--(C)--(D);
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+\choice
+{ $(B'AC)\bot (ABCD)$ }
+   { $(B'BD)\bot (A'AB)$ }
+     { $(A'BD)\bot (ABCD)$ }
+    { \True $(C'AC)\bot (ABCD)$ }
+\loigiai{ 
+ $(C'AC)\bot (ABCD)$ là khẳng định đúng. 
+ }\end{ex}
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A'B'C'}$. Gọi ${I,Q}$ lần lượt là trung điểm của ${A'C',BC}$. Gọi ${H}$ là trọng tâm của tam giác ${A'BC}$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A') at (1,4)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (3,3)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (5,4)   node at (C') [above] {$C'$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B')--(A')--(A); 
+    \draw (B')--(C')--(C)--(B) (A')--(C')--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choiceTFt
+{ \True Hình chiếu song song của điểm ${A'}$ lên mặt phẳng $(ABC)$ theo phương ${B'B}$ là điểm ${A}$ }
+   { Hình chiếu song song của đoạn thẳng ${BI}$ lên mặt phẳng $(ABC)$ theo phương ${BB'}$ là đoạn thẳng ${BQ}$ }
+     { \True Hình chiếu song song của điểm ${I}$ lên mặt phẳng $(ABB'A')$ theo phương ${BC}$ là trung điểm của ${A'B'}$ }
+    { \True Gọi ${H'}$ là hình chiếu song song của ${H}$ lên mặt phẳng $(ABC)$ theo phương ${BB'}$. Khi đó: $\overrightarrow{AH'}=-\frac{2}{3}\overrightarrow{QA}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${A'}$ lên mặt phẳng $(ABC)$ theo phương ${C'C}$ là điểm ${A}$
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ Hình chiếu song song của đoạn thẳng ${BI}$ lên mặt phẳng $(ABC)$ theo phương ${BB'}$ là một trung tuyến xuất phát từ đỉnh ${B}$ của tam giác ${ABC}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${I}$ lên mặt phẳng $(ABB'A')$ theo phương ${B'C'}$ là trung điểm của ${A'B'}$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ ${H'}$ là trọng tâm của tam giác ${ABC}$ nên $AH'=\frac{2}{3}AQ$.
+
+Suy ra: $\overrightarrow{AH'}=-\frac{2}{3}\overrightarrow{QA}$.
+
+ 
+ }\end{ex}
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều cạnh bằng ${2}$, $SA\bot (ABC)$. Đường thẳng ${SB}$ tạo với đáy một góc $60^\circ$. Tính số đo góc phẳng nhị diện ${[A,BC,S]}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{63,4}
+
+\loigiai{ 
+ Do đó góc giữa ${SB}$ và đáy là $\widehat{SBA}=60^\circ$.
+
+$\tan \widehat{SBA}=\dfrac{SA}{AB}$.
+
+Suy ra $SA=AB.\tan 60^\circ=2.\tan 60^\circ$.
+
+Gọi H là trung điểm của ${BC}\Rightarrow AH\bot BC$.
+
+$BC\bot (SAH)$, suy ra $SH\bot BC$.
+
+Vậy góc phẳng nhị diện ${[A,BC,S]}$ là $\widehat{AHS}$.
+
+Ta có $ AH=\dfrac{2\sqrt{3}}{2}=\sqrt{3}$.
+
+$\tan \widehat{AHS}=\dfrac{SA}{AH}=\dfrac{2\tan 60^\circ}{\dfrac{2\sqrt{3}}{2}}=\dfrac{2\tan 60^\circ}{\sqrt{3}}=2$.
+
+Suy ra $\widehat{AHS}\approx 63,4^\circ$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông cân tại $A$, ${BC}=5$, $SA\bot (ABC)$. Đường thẳng ${SB}$ tạo với đáy một góc $45^\circ$. Tính số đo góc phẳng nhị diện ${[A,BC,S]}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{54,7}
+
+\loigiai{ 
+ Góc giữa $SB$ và đáy là $\widehat{SBA}=45^\circ$.
+
+Tam giác ABC vuông cân tại A, $BC=5$ nên $AB=\dfrac{5}{\sqrt{2}}=\frac{5 \sqrt{2}}{2}$.
+
+$\tan \widehat{SBA}=\dfrac{SA}{AB}$.
+
+Suy ra $SA=AB.\tan 45^\circ=\frac{5 \sqrt{2}}{2}$.
+
+Gọi H là trung điểm của BC $\Rightarrow AH\bot BC$.
+
+$BC\bot (SAH)$, suy ra $SH\bot BC$.
+
+Vậy góc phẳng nhị diện ${[A,BC,S]}$ là $\widehat{AHS}$.
+
+Ta có $AH=\dfrac{BC}{2}=\frac{5}{2}$.
+
+$\tan \widehat{AHS}=\dfrac{SA}{AH}=\sqrt{2}$.
+
+Suy ra $\widehat{AHS}\approx 54,7^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông tại ${A}$, $AB=3, AC=3, SA\bot (ABC)$. Đường thẳng ${SC}$ tạo với đáy một góc $45^\circ$. Tính số đo góc phẳng nhị diện ${[A,BC,S]}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{54,7}
+
+\loigiai{ 
+ Do đó góc giữa $SC$ và đáy là $\widehat{SCA}=45^\circ$.
+
+$\tan \widehat{SCA}=\dfrac{SA}{AC}$.
+
+Suy ra $SA=AC.\tan 45^\circ=3.\tan 45^\circ=3$.
+
+Dựng $AH\bot BC$.
+
+Vì $SA\bot (ABC)$ nên $SA\bot BC$.
+
+Suy ra $BC\bot (SAH)$ nên $SH\bot BC$.
+
+Vậy góc phẳng nhị diện ${[A,BC,S]}$ là $\widehat{AHS}$.
+
+$AH=\dfrac{AB.AC}{BC}=\dfrac{3.3}{\sqrt{3^2+3^2}}=\frac{3 \sqrt{2}}{2}$.
+
+$\tan \widehat{AHS}=\dfrac{SA}{AH}=\sqrt{2}$.
+
+Suy ra $\widehat{AHS}\approx 54,7^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông tại ${A}$, $AB=2, BC=4, SA\bot (ABC)$. Đường thẳng ${SC}$ tạo với đáy một góc $30^\circ$. Tính số đo góc phẳng nhị diện ${{[A,BC,S]}}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{49,1}
+
+\loigiai{ 
+ $AC=\sqrt{BC^2-AB^2}=\sqrt{4^2-2^2}=2 \sqrt{3}$.
+
+Góc giữa SC và đáy là $\widehat{SCA}=30^\circ$.
+
+$\tan \widehat{SCA}=\dfrac{SA}{AC}$.
+
+$SA=AC.\tan 30^\circ=2$.
+
+Dựng $AH\bot BC$.
+
+Vì $SA\bot (ABC)$ nên $SA\bot BC$.
+
+Suy ra $BC\bot (SAH)$ nên $SH\bot BC$.
+
+Vậy góc phẳng nhị diện ${{[A,BC,S]}}$ là $\widehat{AHS}$.
+
+$AH=\dfrac{AB.AC}{BC}=\dfrac{2.2 \sqrt{3}}{4}=\sqrt{3}$.
+
+$\tan \widehat{AHS}=\dfrac{SA}{AH}=\frac{2 \sqrt{3}}{3}$.
+
+Suy ra $\widehat{AHS}\approx 49,1^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông cân tại ${B}$, $AC=3, SA\bot (ABC)$. Đường thẳng ${SC}$ tạo với đáy một góc $60^\circ$. Tính số đo góc phẳng nhị diện ${{[A,BC,S]}}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{67,8}
+
+\loigiai{ 
+ $BC=AB=\dfrac{3}{\sqrt{2}}=\frac{3 \sqrt{2}}{2}$.
+
+Góc giữa SC và đáy là $\widehat{SCA}=60^\circ$.
+
+$\tan \widehat{SCA}=\dfrac{SA}{BC}$.
+
+$SA=BC.\tan 60^\circ=3 \sqrt{3}$.
+
+Vì $AB\bot BC$ và $SA\bot (ABC)$ nên $SA\bot BC$.
+
+Suy ra $BC\bot (SAB)$, do đó $SB\bot BC$.
+
+Vậy góc phẳng nhị diện ${[A,BC,S]}$ là $\widehat{ABS}$.
+
+$\tan \widehat{ABS}=\dfrac{SA}{AB}=\sqrt{6}$.
+
+Suy ra $\widehat{ABS}\approx 67,8^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông tại ${C}$, $AB=6, BC=4, SA\bot (ABC)$. Đường thẳng ${SB}$ tạo với đáy một góc $30^\circ$. Tính số đo góc phẳng nhị diện ${[A,BC,S]}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{37,8}
+
+\loigiai{ 
+ $AC=\sqrt{AB^2-BC^2}=\sqrt{6^2-4^2}=2 \sqrt{5}$.
+
+Góc giữa SB và đáy là $\widehat{SBA}=30^\circ$.
+
+$\tan \widehat{SBA}=\dfrac{SA}{AB}$.
+
+$SA=AB.\tan 30^\circ=2 \sqrt{3}$.
+
+Vì $AC\bot BC$ và $SA\bot (ABC)$ nên $SA\bot BC$.
+
+Suy ra $BC\bot (SAC)$, do đó $SC\bot BC$.
+
+Vậy góc phẳng nhị diện ${[A,BC,S]}$ là $\widehat{ACS}$.
+
+$\tan \widehat{ACS}=\dfrac{SA}{AC}=\frac{\sqrt{15}}{5}$.
+
+Suy ra $\widehat{ACS}\approx 37,8^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $AB=3, SA\bot (ABCD)$. Cạnh bên ${SC}$ tạo với đáy một góc $60^\circ$. Tính số đo góc phẳng nhị diện ${[A,BC,S]}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{67,8}
+
+\loigiai{ 
+ $AC=3 \sqrt{2}$.
+
+Góc giữa SC và đáy là $\widehat{SCA}=60^\circ$.
+
+$SA=AC.\tan 60^\circ=3 \sqrt{6}$.
+
+$BC\bot AB, BC\bot (SAB)$, do đó $BC\bot SB$.
+
+Vậy góc phẳng nhị diện ${[A,BC,S]}$ là $\widehat{SBA}$.
+
+$\tan \widehat{SBA}=\dfrac{SA}{AB}=\sqrt{6}$.
+
+Suy ra $\widehat{SBA}\approx 67,8^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $AB=4, SA\bot (ABCD)$. Cạnh bên ${SC}$ tạo với đáy một góc $45^\circ$. Tính số đo góc phẳng nhị diện ${[A,BD,S]}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{63,4}
+
+\loigiai{ 
+ $AC=4 \sqrt{2}$.
+
+Góc giữa SC và đáy là $\widehat{SCA}=45^\circ$.
+
+$SA=AC.\tan 45^\circ=4 \sqrt{2}$.
+
+Gọi O là trung điểm của AC
+
+$BD\bot AO, BD\bot SA$, do đó $BD\bot SO$.
+
+Vậy góc phẳng nhị diện ${[A,BD,S]}$ là $\widehat{SOA}$.
+
+$\tan \widehat{SOA}=\dfrac{SA}{AO}=2$.
+
+Suy ra $\widehat{SOA}\approx 63,4^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $AB=5, BC=4, SA\bot (ABCD)$. Cạnh bên ${SC}$ tạo với đáy một góc $30^\circ$. Tính số đo góc phẳng nhị diện ${[A,BC,S]}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{36,5}
+
+\loigiai{ 
+ $AC=\sqrt{41}$.
+
+Góc giữa SC và đáy là $\widehat{SCA}=30^\circ$.
+
+$SA=AC\cdot\tan 30^\circ=\frac{\sqrt{123}}{3}$.
+
+Vậy góc phẳng nhị diện ${[A,BC,S]}$ là $\widehat{ABS}$.
+
+$\tan \widehat{ABS}=\dfrac{SA}{AB}=\frac{\sqrt{123}}{15}$.
+
+Suy ra $\widehat{ABS}\approx 36,5^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $AB=2, BC=4, SA\bot (ABCD)$. Cạnh bên ${SC}$ tạo với đáy một góc $30^\circ$. Tính số đo góc phẳng nhị diện ${[A,BD,S]}$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{55,3}
+
+\loigiai{ 
+ $AC=BD=2 \sqrt{5}$.
+
+Góc giữa SC và đáy là $\widehat{SCA}=30^\circ$.
+
+$SA=AC\cdot\tan 30^\circ=\frac{2 \sqrt{15}}{3}$.
+
+Gọi H là hình chiếu của A lên BD
+
+$AH=\dfrac{AB\cdot BC}{BD}=\frac{4 \sqrt{5}}{5}$.
+
+Ta có $AH\bot BD$ và $SA\bot BD$, do đó $BD\bot (SAH)$.
+
+Vậy góc phẳng nhị diện ${[A,BD,S]}$ là $\widehat{AHS}$.
+
+$\tan \widehat{AHS}=\dfrac{SA}{AH}=\dfrac{\frac{2 \sqrt{15}}{3}}{\frac{4 \sqrt{5}}{5}}$.
+
+Suy ra $\widehat{AHS}\approx 55,3^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $AB=2, SA=7, SA\bot (ABCD)$. Tính số đo góc phẳng nhị diện ${[B,SC,D]}$ (kết quả làm tròn đến hàng đơn vị).
+
+
+\shortans[4]{94}
+
+\loigiai{ 
+ $BD=2 \sqrt{2}$.
+
+$SB=\sqrt{SA^2+AB^2}=\sqrt{53}$.
+
+$SC=\sqrt{SB^2+BC^2}=\sqrt{57}$.
+
+Gọi I là hình chiếu của B lên SC
+
+$BI=\dfrac{SB\cdot BC}{SC}=\dfrac{\sqrt{53}\cdot 2}{\sqrt{57}}$.
+
+Ta có $BI\bot SC$ và $DI\bot SC$, do đó góc phẳng nhị diện ${[B,SC,D]}$ là $\widehat{BID}$.
+
+$\cos \widehat{BID}=\dfrac{BI^2+DI^2-BD^2}{2.BI.BD}=- \frac{4}{53}$.
+
+Suy ra $\widehat{BID}\approx 94^\circ$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ đều ${ABC.A'B'C'}$ có cạnh đáy bằng ${4a}$, cạnh bên bằng ${a}$. Tính số đo của góc nhị diện ${[A,B'C',A']}$ (kết quả làm tròn đến hàng phần mười, đơn vị độ).
+\shortans[4]{23,4}
+
+\loigiai{ 
+ Gọi M là trung điểm của ${B'C'}$. 
+
+Ta có $AM \perp B'C'$và $A'M \perp B'C'$.
+
+Do đó góc phẳng của nhị diện ${[A,B'C',A']}$ là $\widehat{AMA'}$.
+
+Đặt cạnh đáy $s=4a$, cạnh bên $h=a$.
+
+$A'M=\dfrac{\sqrt3}{2}s.$ 
+
+$AB'^2=s^2+h^2.$ 
+
+$AM^2=AB'^2-\left(\dfrac{s}{2}\right)^2=h^2+\dfrac{3s^2}{4}.$ 
+
+Lại có $AA'=h$.
+
+$\cos \widehat{AMA'}=\dfrac{AM^2+A'M^2-AA'^2}{2AM\cdot A'M}=\dfrac{s}{\sqrt{s^2+3h^2}}.$ 
+
+Thay $s=4$ và $h=1$:
+$\cos \widehat{AMA'}=\dfrac{4}{\sqrt{16+3\cdot 1}}\approx 0.9177.$ 
+
+$\widehat{AMA'}\approx 23,4^\circ.$ 
+ }\end{ex}

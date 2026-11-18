@@ -1,0 +1,871 @@
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Phép chiếu song song bảo toàn hình dạng của một hình }
+   { \True Phép chiếu song song biến bảo toàn thứ tự của ba điểm thẳng hàng }
+     { Phép chiếu song song biến hai đường thẳng song song thành hai đường thẳng song song }
+    { Phép chiếu song song bảo toàn tính vuông góc }
+\loigiai{ 
+ Phép chiếu song song biến bảo toàn thứ tự của ba điểm thẳng hàng là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây sai? 
+\choice
+{ Phép chiếu song song biến ba điểm thẳng hàng thành ba điểm thẳng hàng }
+   { Phép chiếu song song biến bảo toàn thứ tự của ba điểm thẳng hàng }
+     { Phép chiếu song song có thể biến đường tròn thành đường elip }
+    { \True Phép chiếu song song bảo toàn hình dạng của một hình }
+\loigiai{ 
+ Phép chiếu song song bảo toàn hình dạng của một hình là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Khẳng định nào sau đây đúng? 
+\choice
+{ Hình chiếu song song của hình vuông luôn là một hình vuông }
+   { Hình chiếu song song của tam giác đều thành một tam giác đều }
+     { \True Hình chiếu song song của một đường tròn là một đường elip, hoặc một đường tròn hoặc một đoạn thẳngHình chiếu song song của một tam giác đều là một tam giác }
+    { Hình chiếu song song của một đường tròn là một đường elip hoặc một đường tròn }
+\loigiai{ 
+ Hình chiếu song song của một đường tròn là một đường elip, hoặc một đường tròn hoặc một đoạn thẳngHình chiếu song song của một tam giác đều là một tam giác là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A_1B_1C_1}$. Hình chiếu song song của điểm ${C_1}$ lên mặt phẳng $(ABB_1A_1)$ theo phương ${AC}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A_1) at (1,4)   node at (A_1) [above] {$A_1$}; 
+    \coordinate (B_1) at (3,3)   node at (B_1) [above] {$B_1$}; 
+    \coordinate (C_1) at (5,4)   node at (C_1) [above] {$C_1$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B_1)--(A_1)--(A); 
+    \draw (B_1)--(C_1)--(C)--(B) (A_1)--(C_1)--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${A}$ }
+   { Điểm ${B_1}$ }
+     { Điểm ${B}$ }
+    { \True Điểm ${A_1}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${A_1}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A'B'C'}$. Hình chiếu song song của điểm ${C'}$ lên mặt phẳng $(ABB'A')$ theo phương ${AC}$ là điểm nào? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A') at (1,4)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (3,3)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (5,4)   node at (C') [above] {$C'$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B')--(A')--(A); 
+    \draw (B')--(C')--(C)--(B) (A')--(C')--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choice
+{ Điểm ${C'}$ }
+   { Điểm ${C}$ }
+     { \True Điểm ${A'}$ }
+    { Điểm ${B'}$ }
+\loigiai{ 
+ Hình chiếu là điểm ${A'}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho đường thẳng ${c}$ vuông góc với mặt phẳng $(\beta)$, đường thẳng ${d}$ nằm trong mặt phẳng $(\beta)$. Tìm khẳng định đúng? 
+\choice
+{ $c//d$ }
+   { ${c,d}$ chéo nhau }
+     { \True $c\bot d$ }
+    { $c \subset (\beta)$ }
+\loigiai{ 
+ $c\bot d$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hai đường thẳng phân biệt ${a}$ và ${d}$ , cùng vuông góc với mặt phẳng $(\alpha)$. Tìm khẳng định đúng? 
+\choice
+{ \True $a//d$ }
+   { ${a}$ cắt ${d}$ }
+     { $a\bot d$ }
+    { $d \subset (\alpha)$ }
+\loigiai{ 
+ $a//d$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Tìm khẳng định đúng trong các khẳng định sau 
+\choice
+{ Hai mặt phẳng phân biệt cùng vuông góc với một mặt phẳng thì cắt nhau }
+   { Hai đường thẳng phân biệt cùng vuông góc với một đường thẳng thì song song với nhau }
+     { Hai đường thẳng phân biệt cùng vuông góc với một đường thẳng thì song song với nhau }
+    { \True Hai đường thẳng phân biệt cùng vuông góc với một mặt phẳng thì song song với nhau }
+\loigiai{ 
+ Hai đường thẳng phân biệt cùng vuông góc với một mặt phẳng thì song song với nhau là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hai đường thẳng phân biệt ${c, d}$ và mặt phẳng $Q$ trong đó $c \bot (Q)$. Tìm khẳng định đúng trong các khẳng định sau: 
+\choice
+{ Nếu $d \subset (Q)$ thì $d // c$ }
+   { \True Nếu $d // (Q)$ thì $c \bot d$ }
+     { Nếu ${c}$ và ${d}$ chéo nhau thì $c \bot d$ }
+    { Nếu $c \bot d$ thì $d // (Q)$ }
+\loigiai{ 
+ Nếu $d // (Q)$ thì $c \bot d$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.CDAB}$ có đáy là hình vuông, $SC\bot (CDAB)$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (D) at (-1,-1) node at (D) [left] {$D$};
+\coordinate (A) at (3,-1)  node at (A) [right] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (D)--(C)--(B) (S)--(C); 
+\draw (D)--(A)--(B) (S)--(D) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+
+\choice
+{ $DB\bot (SCB)$ }
+   { $DB\bot (SDA)$ }
+     { \True ${DA \bot (SCD)}$ }
+    { $SC\bot (SDB)$ }
+\loigiai{ 
+ Ta có: ${DA\bot CD}$ và ${DA\bot SC}$ (Do $SC\bot (ABCD))$ nên $DA\bot (SCD)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SB\bot (ABCD)$. Gọi ${M}$ là hình chiếu vuông góc của ${B}$ trên đường thẳng ${CA}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (-1,-1) node at (C) [left] {$C$};
+\coordinate (D) at (3,-1)  node at (D) [right] {$D$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B)--(A) (S)--(B); 
+\draw (C)--(D)--(A) (S)--(C) (S)--(D) (S)--(A); 
+\end{tikzpicture}
+
+\choice
+{ $CD\bot (SDA)$ }
+   { $SB\bot (SCA)$ }
+     { $CA\bot (SCD)$ }
+    { \True ${CA \bot (SBM)}$ }
+\loigiai{ 
+ Ta có: ${CA\bot BM}$ và ${CA\bot SB}$ (Do $SB\bot (BCDA))$ nên $CA\bot (SBM)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.CDAB}$ có đáy là hình thoi, $SC\bot (CDAB)$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (D) at (-1,-1) node at (D) [left] {$D$};
+\coordinate (A) at (3,-1)  node at (A) [right] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (D)--(C)--(B) (S)--(C); 
+\draw (D)--(A)--(B) (S)--(D) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+
+\choice
+{ $DB\bot (SDA)$ }
+   { $SC\bot (SDA)$ }
+     { \True ${DB \bot (SCA)}$ }
+    { $DA\bot (SCA)$ }
+\loigiai{ 
+ Ta có: ${DB\bot CA}$ và ${DB\bot SC}$ (Do $SC\bot (CDAB))$ nên $DB\bot (SCA)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.CAB}$ có đáy là tam giác vuông tại ${C}$, $SC\bot (CAB)$. Gọi ${E}$ là hình chiếu vuông góc của ${C}$ trên đường thẳng ${AB}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (A) at (1,-2) node at (A) [left] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B) ; 
+\draw (C)--(A) (A)--(B) (S)--(C) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+
+\choice
+{ \True ${AB \bot (SCE)}$ }
+   { $CB\bot (SCE)$ }
+     { $CA\bot (SAB)$ }
+    { $SC\bot (SEA)$ }
+\loigiai{ 
+ Ta có: ${CE\bot AB}$ và ${CE\bot SC}$ (Do $SC\bot (ABC))$ nên $CE\bot (SAB)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.BCA}$ có đáy là tam giác đều, $SB\bot (BCA)$. Gọi ${N, P,Q}$ lần lượt là trung điểm của ${CA, BA, BC}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (1,-2) node at (C) [left] {$C$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A) ; 
+\draw (B)--(C) (C)--(A) (S)--(B) (S)--(C) (S)--(A); 
+\end{tikzpicture}
+
+\choice
+{ $BA\bot (SBC)$ }
+   { $BN\bot (SCA)$ }
+     { $BC\bot (SBA)$ }
+    { \True ${CP \bot (SBA)}$ }
+\loigiai{ 
+ Ta có: ${CP\bot BA}$ và ${CP\bot SB}$ (Do $SB\bot (ABC))$ nên $CP\bot (SBA)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.CAB}$ có đáy là tam giác đều, $SC\bot (CAB)$. Gọi ${M, N,P}$ lần lượt là trung điểm của ${AB, CB, CA}$. Gọi ${G}$ là hình chiếu vuông góc của ${A}$ trên đường thẳng ${SB}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (A) at (1,-2) node at (A) [left] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B) ; 
+\draw (C)--(A) (A)--(B) (S)--(C) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+
+\choice
+{ $SB\bot (SCA)$ }
+   { $CB\bot (SCA)$ }
+     { \True ${SB \bot (GAN)}$ }
+    { $CA\bot (SBP)$ }
+\loigiai{ 
+
+ \begin{center}
+ \begin{tikzpicture}
+			\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+			\coordinate (A) at (1,-2) node at (A) [left] {$A$};
+			\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+			\coordinate (N) at (2,0)   node at (N) [below right] {$N$};
+			\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+			\coordinate (G) at (1.5,2.5)   node at (G) [above] {$G$};
+			\draw [dashed] (C)--(B) ; 
+			\draw (C)--(A) (A)--(B) (S)--(C) (S)--(A) (S)--(B); 
+			\draw (A)--(G); 
+			\draw [dashed] (A)--(N) (G)--(N) ; 
+			\end{tikzpicture}
+ \end{center}
+  Ta có: ${AN\bot CB}$ và ${AN\bot SC}$ (Do $SC\bot (CAB)$ nên $AN\bot (SCB)$.
+
+Suy ra $SB\bot AN\subset (GAN)$. Theo giả thiết ta có: $SB \bot AG \subset (GAN)$. Vậy $SB\bot (GAN)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lập phương ${ABCD.EFGH}$. Khẳng định nào sau đây đúng? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (2,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (3,0)   node at (D) [right] {$D$};
+\coordinate (E) at (0,2)   node at (E) [left] {$E$};
+\coordinate (F) at (-1,1) node at (F) [left] {$F$};
+\coordinate (G) at (2,1)  node at (G) [right] {$G$};
+\coordinate (H) at (3,2)   node at (H) [right] {$H$};
+\draw [dashed] (B)--(A)--(D) (E)--(A);
+\draw (E)--(F)--(G)--(H)--(E) (F)--(B) (G)--(C) (H)--(D);
+\draw (B)--(C)--(D);
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+\choice
+{ \True $CG\bot CD$ }
+   { $BH\bot BD$ }
+     { $FG\bot AD$ }
+    { $AE\bot FC$ }
+\loigiai{ 
+ $CG\bot CD$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình lập phương ${ABCD.A_1B_1C_1D_1}$. Khẳng định nào sau đây đúng? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (2,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (3,0)   node at (D) [right] {$D$};
+\coordinate (A_1) at (0,2)   node at (A_1) [left] {$A_1$};
+\coordinate (B_1) at (-1,1) node at (B_1) [left] {$B_1$};
+\coordinate (C_1) at (2,1)  node at (C_1) [right] {$C_1$};
+\coordinate (D_1) at (3,2)   node at (D_1) [right] {$D_1$};
+\draw [dashed] (B)--(A)--(D) (A_1)--(A);
+\draw (A_1)--(B_1)--(C_1)--(D_1)--(A_1) (B_1)--(B) (C_1)--(C) (D_1)--(D);
+\draw (B)--(C)--(D);
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+\choice
+{ $BD\bot A_1D_1$ }
+   { \True $BC_1\bot A_1B_1$ }
+     { $B_1C\bot B_1D_1$ }
+    { $B_1C_1\bot AD$ }
+\loigiai{ 
+ $BC_1\bot A_1B_1$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình hộp đứng ${ABCD.A'B'C'D'}$ có đáy là hình chữ nhật. Khẳng định nào sau đây đúng? 
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (A') at (0,2)   node at (A') [left] {$A'$};
+\coordinate (B') at (-1,1) node at (B') [left] {$B'$};
+\coordinate (C') at (3,1)  node at (C') [right] {$C'$};
+\coordinate (D') at (4,2)   node at (D') [right] {$D'$};
+\draw [dashed] (B)--(A)--(D) (A')--(A);
+\draw (A')--(B')--(C')--(D')--(A') (B')--(B) (C')--(C) (D')--(D);
+\draw (B)--(C)--(D);
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+\choice
+{ $B'D'\bot AC$ }
+   { $DA'\bot A'B$ }
+     { \True $BC'\bot C'D'$ }
+    { $AA'\bot CC'$ }
+\loigiai{ 
+ $BC'\bot C'D'$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.CAB}$ có đáy là tam giác đều, $SC\bot (CAB)$. Gọi ${M, N,P}$ lần lượt là trung điểm của ${AB, CB, CA}$. Gọi ${G}$ là hình chiếu vuông góc của ${C}$ trên đường thẳng ${SM}$. Tìm khẳng định đúng?\\ 
+\begin{tikzpicture}
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (A) at (1,-2) node at (A) [left] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B) ; 
+\draw (C)--(A) (A)--(B) (S)--(C) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+
+\choice
+{ \True $CG \bot SB$ }
+   { $SN\bot CA$ }
+     { $SN\bot AB$ }
+    { $SP\bot CB$ }
+\loigiai{ 
+
+ \begin{center}
+ \begin{tikzpicture}
+			\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+			\coordinate (A) at (1,-2) node at (A) [left] {$A$};
+			\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+			\coordinate (M) at (2.5,-1)   node at (M) [below right] {$M$};
+			\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+			\coordinate (G) at (1.25,1.5)   node at (G) [above right] {$G$};
+			\draw [dashed] (C)--(B) ; 
+			\draw (C)--(A) (A)--(B) (S)--(C) (S)--(A) (S)--(B); 
+			\draw (S)--(M); 
+			\draw [dashed] (C)--(M) (C)--(G) ; 
+			\end{tikzpicture}
+ \end{center}
+  Ta có: ${AB\bot CM}$ và ${AB\bot SC}$ (Do $SC\bot (CAB)$ nên $AB\bot (SCM)$.
+
+Suy ra $CG\bot AB\subset (SAB)$. Theo giả thiết ta có: $CG \bot SM \subset (SAB)$. 
+
+Suy ra $CG\bot (SAB)$. Vì $SB\subset (SAB)$ nên $CG\bot SB$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SA\bot (ABCD)$. Gọi ${P,H}$ lần lượt là trung điểm của ${CD}, {AB}$. Tìm hình chiếu của điểm ${P}$ trên mặt phẳng $(SAB)$?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ Điểm ${S}$ }
+   { \True Điểm ${H}$ }
+     { Điểm ${A}$ }
+    { Điểm ${B}$ }
+\loigiai{ 
+ $PH\bot AB,PH\bot SA \Rightarrow PH\bot (SAD)$. Do đó hình chiếu của điểm ${P}$ trên mặt phẳng $(SAB)$ là điểm ${H}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SB\bot (ABCD)$. Gọi ${H}$ là trung điểm của ${BC}$. Tìm hình chiếu của điểm ${A}$ trên mặt phẳng $(SBC)$?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (-1,-1) node at (C) [left] {$C$};
+\coordinate (D) at (3,-1)  node at (D) [right] {$D$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B)--(A) (S)--(B); 
+\draw (C)--(D)--(A) (S)--(C) (S)--(D) (S)--(A); 
+\end{tikzpicture}
+
+\choice
+{ Điểm ${H}$ }
+   { \True Điểm ${B}$ }
+     { Điểm ${S}$ }
+    { Điểm ${C}$ }
+\loigiai{ 
+ $AB\bot BC,AB\bot SB \Rightarrow AB\bot (SBC)$. Do đó hình chiếu của điểm ${A}$ trên mặt phẳng $(SBC)$ là điểm ${B}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác vuông tại ${A}$, $SC\bot (ABC)$. Gọi ${M}$ là hình chiếu vuông góc của điểm ${A}$ trên đường thẳng ${CB}$.Gọi ${F}$ là trung điểm của cạnh ${CA}$. Tìm hình chiếu của điểm ${A}$ trên mặt phẳng $(SCB)$?\\ 
+\begin{tikzpicture}
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (A) at (1,-2) node at (A) [left] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B) ; 
+\draw (C)--(A) (A)--(B) (S)--(C) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+
+\choice
+{ Điểm ${F}$ }
+   { Điểm ${C}$ }
+     { \True Điểm ${M}$ }
+    { Điểm ${B}$ }
+\loigiai{ 
+ $AM\bot CB,AM\bot SC \Rightarrow AM\bot (SCB)$. Do đó hình chiếu của điểm ${A}$ trên mặt phẳng $(SCB)$ là điểm ${M}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABC}$ có đáy là tam giác đều, $SA\bot (ABC)$. Gọi ${I,Q}$ lần lượt là trung điểm của các cạnh ${AB}$ và ${AC}$.Tìm hình chiếu của điểm ${C}$ trên mặt phẳng $(SAB)$?\\ 
+\begin{tikzpicture}
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (1,-2) node at (B) [left] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (A)--(C) ; 
+\draw (A)--(B) (B)--(C) (S)--(A) (S)--(B) (S)--(C); 
+\end{tikzpicture}
+
+\choice
+{ Điểm ${Q}$ }
+   { Điểm ${S}$ }
+     { Điểm ${A}$ }
+    { \True Điểm ${I}$ }
+\loigiai{ 
+ $CI\bot AB,CI\bot SA \Rightarrow CI\bot (SAB)$. Do đó hình chiếu của điểm ${C}$ trên mặt phẳng $(SAB)$ là điểm ${I}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông tâm ${O}$, $SA\bot (ABCD)$. Gọi ${I}$ là hình chiếu của ${A}$ trên đường thẳng $S{D}$. Gọi ${H}$ là trung điểm của đoạn thẳng ${CI}$. Tìm hình chiếu của điểm ${O}$ trên mặt phẳng $(SCD)$?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ Điểm ${I}$ }
+   { Điểm ${C}$ }
+     { Điểm ${S}$ }
+    { \True Điểm ${H}$ }
+\loigiai{ 
+ Ta có: $AI\bot SO$ (theo giả thiết). Do $CD\bot AD,CD\bot SA \Rightarrow CD\bot (SAD) \Rightarrow CD \bot AI$.
+
+Suy ra $AI \bot (SCD)$. Vì $OH$ song song với $AI$ nên $OH \bot (SCD)$. Do đó hình chiếu của điểm ${O}$ trên mặt phẳng $(SCD)$ là điểm ${H}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là chữ nhật, $SA\bot (ABCD)$. Gọi ${E}$ là trung điểm của ${CD}$. Gọi ${N,K}$ lần lượt là hình chiếu của điểm ${A}$ trên các đường thẳng $S{D}$ và $S{E}$. Tìm hình chiếu của điểm ${A}$ trên mặt phẳng $(SCD)$?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ Điểm ${C}$ }
+   { \True Điểm ${N}$ }
+     { Điểm ${S}$ }
+    { Điểm ${D}$ }
+\loigiai{ 
+ Ta có: $AN\bot SD$ (theo giả thiết). Do $CD\bot AD,CD\bot SA \Rightarrow CD\bot (SAD) \Rightarrow CD \bot AN$.
+
+Suy ra $AN \bot (SCD)$. Do đó hình chiếu của điểm ${A}$ trên mặt phẳng $(SCD)$ là điểm ${N}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SA\bot (ABCD)$. Gọi ${E}$ là trung điểm của ${AB}$. Tìm hình chiếu của đường thẳng ${SC}$ trên mặt phẳng $(ABCD)$?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+
+\choice
+{ \True ${AC}$ }
+   { ${SA}$ }
+     { ${BC}$ }
+    { ${EC}$ }
+\loigiai{ 
+ Điểm ${S}$ có hình chiếu trên $(ABCD)$ là điểm ${A}$. Điểm ${C}$ có hình chiếu trên $(ABCD)$ là điểm ${C}$.
+
+Do đó hình chiếu của đường thẳng ${SC}$ trên mặt phẳng $(ABCD)$ là ${AC}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SC\bot (ABCD)$. Gọi ${E}$ là trung điểm của ${CD}$. Tìm hình chiếu của đường thẳng ${CA}$ trên mặt phẳng $(SCD)$?\\ 
+\begin{tikzpicture}[scale=0.6]
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (D) at (-1,-1) node at (D) [left] {$D$};
+\coordinate (A) at (3,-1)  node at (A) [right] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (D)--(C)--(B) (S)--(C); 
+\draw (D)--(A)--(B) (S)--(D) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+
+\choice
+{ ${EA}$ }
+   { ${SE}$ }
+     { ${DA}$ }
+    { \True ${CD}$ }
+\loigiai{ 
+ Điểm ${C}$ có hình chiếu trên $(ABCD)$ là điểm ${C}$. Vì ${AD}\bot CD,{AD}\bot SC \Rightarrow {AD}\bot (SCD)$.
+
+Nên điểm ${A}$ có hình chiếu trên $(SCD)$ là điểm ${D}$. Do đó hình chiếu của đường thẳng ${CA}$ trên mặt phẳng $(SCD)$ là ${CD}$. 
+ }\end{ex}
+\begin{ex}
+ Cho hình lăng trụ ${ABC.A'B'C'}$. Gọi ${M,G}$ lần lượt là trung điểm của ${A'C',BC}$. Gọi ${H}$ là trọng tâm của tam giác ${A'BC}$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7] 
+\begin{scriptsize} 
+    \coordinate (A) at (0,0)   node at (A) [left] {$A$}; 
+    \coordinate (B) at (2,-1) node at (B) [below] {$B$}; 
+    \coordinate (C) at (4,0)  node at (C) [below] {$C$}; 
+    \coordinate (A') at (1,4)   node at (A') [above] {$A'$}; 
+    \coordinate (B') at (3,3)   node at (B') [above] {$B'$}; 
+    \coordinate (C') at (5,4)   node at (C') [above] {$C'$};
+    \draw [dashed] (A)--(C); 
+    \draw (A)--(B)--(B')--(A')--(A); 
+    \draw (B')--(C')--(C)--(B) (A')--(C')--(C); 
+\end{scriptsize} 
+\end{tikzpicture} 
+
+\end{center}
+\choiceTFt
+{ \True Hình chiếu song song của điểm ${A'}$ lên mặt phẳng $(ABC)$ theo phương ${C'C}$ là điểm ${A}$ }
+   { \True Hình chiếu song song của đoạn thẳng ${BM}$ lên mặt phẳng $(ABC)$ theo phương ${AA'}$ là một trung tuyến của tam giác ${ABC}$ }
+     { Hình chiếu song song của điểm ${M}$ lên mặt phẳng $(ABB'A')$ theo phương ${BC}$ là trung điểm của ${AB}$ }
+    { Gọi ${H'}$ là hình chiếu song song của ${H}$ lên mặt phẳng $(ABC)$ theo phương ${AA'}$. Khi đó: $\overrightarrow{AH'}=2\overrightarrow{GH'}$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của điểm ${A'}$ lên mặt phẳng $(ABC)$ theo phương ${C'C}$ là điểm ${A}$
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu song song của đoạn thẳng ${BM}$ lên mặt phẳng $(ABC)$ theo phương ${AA'}$ là một trung tuyến xuất phát từ đỉnh ${B}$ của tam giác ${ABC}$.
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ Hình chiếu song song của điểm ${M}$ lên mặt phẳng $(ABB'A')$ theo phương ${B'C'}$ là trung điểm của ${A'B'}$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ ${H'}$ là trọng tâm của tam giác ${ABC}$ nên $AH'=2GH'$.
+
+Suy ra: $\overrightarrow{AH'}=-2\overrightarrow{GH'}$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SA\bot (ABCD)$. Xét tính đúng sai của các khẳng định sau?
+
+
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (B) at (-1,-1) node at (B) [left] {$B$};
+\coordinate (C) at (3,-1)  node at (C) [right] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (B)--(A)--(D) (S)--(A); 
+\draw (B)--(C)--(D) (S)--(B) (S)--(C) (S)--(D); 
+\end{tikzpicture}
+\end{center}
+\choiceTF
+{ \True Hai đường thẳng ${CD}$ và ${SD}$ vuông góc nhau }
+   { Hai đường thẳng ${SA}$ và ${BD}$ không vuông góc }
+     { Hai đường thẳng ${SA}$ và ${BC}$ không vuông góc }
+    { Hai đường thẳng ${BD}$ và ${SC}$ không vuông góc }
+\loigiai{ 
+ a) Do $CD\bot AD$ và $CD\bot SA$ nên $CD\bot (SAD) \Rightarrow CD \bot SD$.\\ 
+b) Do $SA\bot (ABCD)$ và $BD\subset (ABCD)$ nên ${SA} \bot {BD}$.\\ 
+c) Do $SA\bot (ABCD)$ và $BC\subset (ABCD)$ nên ${SA} \bot {BC}$.\\ 
+d) Do $BD \bot AC$ và $BD\bot SA$ nên ${BD} \bot (SAC) \Rightarrow BD \bot SC$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình chữ nhật, $SB\bot (ABCD)$. Xét tính đúng sai của các khẳng định sau?
+
+
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (-1,-1) node at (C) [left] {$C$};
+\coordinate (D) at (3,-1)  node at (D) [right] {$D$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B)--(A) (S)--(B); 
+\draw (C)--(D)--(A) (S)--(C) (S)--(D) (S)--(A); 
+\end{tikzpicture}
+\end{center}
+\choiceTF
+{ Hai đường thẳng ${SB}$ và ${CA}$ không vuông góc }
+   { \True Hai đường thẳng ${SB}$ và ${CD}$ vuông góc nhau }
+     { Hai đường thẳng ${DA}$ và ${SA}$ không vuông góc }
+    { Hai đường thẳng ${CA}$ và ${SD}$ vuông góc nhau }
+\loigiai{ 
+ a) Do $SB\bot (ABCD)$ và $CA\subset (ABCD)$ nên ${SB} \bot {CA}$.\\ 
+b) Do $SB\bot (ABCD)$ và $CD\subset (ABCD)$ nên ${SB} \bot {CD}$.\\ 
+c) Do $DA\bot BA$ và $DA\bot SB$ nên $DA\bot (SBA) \Rightarrow DA \bot SA$.\\ 
+d) Do $CA \bot BD$ nên nếu $CA\bot SD$ thì ${CA} \bot (SBD)$ suy ra $CA \bot BD$(vô lí). Do đó hai đường thẳng ${CA}$ và ${SD}$ không vuông góc.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.CDAB}$ có đáy là hình vuông, $SC\bot (CDAB)$. Xét tính đúng sai của các khẳng định sau?
+
+
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\coordinate (C) at (0,0)   node at (C) [left] {$C$};
+\coordinate (D) at (-1,-1) node at (D) [left] {$D$};
+\coordinate (A) at (3,-1)  node at (A) [right] {$A$};
+\coordinate (B) at (4,0)   node at (B) [right] {$B$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (D)--(C)--(B) (S)--(C); 
+\draw (D)--(A)--(B) (S)--(D) (S)--(A) (S)--(B); 
+\end{tikzpicture}
+\end{center}
+\choiceTF
+{ Đường thẳng ${DA}$ vuông góc với mặt phẳng ${(SCA)}$ }
+   { \True Đường thẳng ${DB}$ vuông góc với mặt phẳng ${(SCA)}$ }
+     { \True Đường thẳng ${AB}$ vuông góc với mặt phẳng ${(SCB)}$ }
+    { \True Đường thẳng ${SC}$ không vuông góc với mặt phẳng ${(SAB)}$ }
+\loigiai{ 
+ a) Do ${DC}$ không vuông góc với ${CA}$ nên ${DA}$ không vuông góc với mặt phẳng ${(SCA)}$.\\ 
+b) Do $DB\bot CA$ và $DB\bot SC$ nên ${DB} \bot (SCA)$.\\ 
+c) Do $AB\bot CB$ và $AB\bot SC$ nên $AB\bot (SCB)$.\\ 
+d) Nếu $SC\bot {(SAB)}$ thì ${SC} \bot {SB}$ (vô lí). Do đó ${SC}$ không vuông góc với mặt phẳng ${(SAB)}$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SB\bot (ABCD)$. Xét tính đúng sai của các khẳng định sau?
+
+
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (-1,-1) node at (C) [left] {$C$};
+\coordinate (D) at (3,-1)  node at (D) [right] {$D$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B)--(A) (S)--(B); 
+\draw (C)--(D)--(A) (S)--(C) (S)--(D) (S)--(A); 
+\end{tikzpicture}
+\end{center}
+\choiceTF
+{ \True Đường thẳng ${CD}$ không vuông góc với mặt phẳng ${(SBD)}$ }
+   { \True Đường thẳng ${SB}$ không vuông góc với mặt phẳng ${(SDA)}$ }
+     { \True Đường thẳng ${CA}$ không vuông góc với mặt phẳng ${(SBC)}$ }
+    { Đường thẳng ${DA}$ không vuông góc với mặt phẳng ${(SBA)}$ }
+\loigiai{ 
+ a) Do ${CB}$ không vuông góc với ${BD}$ nên ${CD}$ không vuông góc với mặt phẳng ${(SBD)}$.\\ 
+b) Nếu $SB\bot {(SDA)}$ thì ${SB} \bot {SA}$ (vô lí). Do đó ${SB}$ không vuông góc với mặt phẳng ${(SDA)}$.\\ 
+c) Nếu $CA\bot {(SBC)}$ thì ${CA} \bot {BC}$ (vô lí). Do đó ${CA}$ không vuông góc với mặt phẳng ${(SBD)}$.\\ 
+d) Do $DA\bot BA$ và $DA\bot SB$ nên $DA\bot (SBA)$.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông, $SB\bot (ABCD)$. Xét tính đúng sai của các khẳng định sau?
+
+
+
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (-1,-1) node at (C) [left] {$C$};
+\coordinate (D) at (3,-1)  node at (D) [right] {$D$};
+\coordinate (A) at (4,0)   node at (A) [right] {$A$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (C)--(B)--(A) (S)--(B); 
+\draw (C)--(D)--(A) (S)--(C) (S)--(D) (S)--(A); 
+\end{tikzpicture}
+\end{center}
+\choiceTF
+{ \True Vì $DA\bot BA$ và $DA\bot SB$ (do $SB\bot (ABCD))$ nên $DA\bot (SBA)$ }
+   { \True Vì $CA\bot BD$ và $CA\bot SB$ (do $SB\bot (ABCD))$ nên $CA\bot (SBD)$ }
+     { Vì ${CD}$ không vuông góc với ${CA}$ nên ${CD}$ vuông góc với ${(SCA)}$ }
+    { \True Vì ${BD}$ không vuông góc với ${DA}$ nên ${BD}$ không vuông góc với ${(SDA)}$ }
+\loigiai{ 
+ a) Vì $DA\bot BA$ và $DA\bot SB$ (do $SB\bot (ABCD))$ nên $DA\bot (SBA)$ là lập luận đúng.\\ 
+b) Vì $CA\bot BD$ và $CA\bot SB$ (do $SB\bot (ABCD))$ nên $CA\bot (SBD)$ là lập luận đúng.\\ 
+c) ì ${CD}$ không vuông góc với ${CA}$ nên ${CD}$ vuông góc với ${(SCA)}$ là lập luận sai.\\ 
+d) Vì ${BD}$ không vuông góc với ${DA}$ nên ${BD}$ không vuông góc với ${(SDA)}$ là lập luận đúng.\\ 
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.DABC}$ có $SD\bot (DABC)$, đáy là hình vuông tâm ${O}$, $DA=3 a,SD=2 a$. Xét tính đúng-sai của các khẳng định sau (kết quả làm tròn đến hàng phần mười):
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+\coordinate (D) at (0,0)   node at (D) [left] {$D$};
+\coordinate (A) at (-1,-1) node at (A) [left] {$A$};
+\coordinate (B) at (3,-1)  node at (B) [right] {$B$};
+\coordinate (C) at (4,0)   node at (C) [right] {$C$};
+\coordinate (S) at (0,4)   node at (S) [above] {$S$};
+\draw [dashed] (A)--(D)--(C) (S)--(D); 
+\draw (A)--(B)--(C) (S)--(A) (S)--(B) (S)--(C); 
+\end{tikzpicture}
+
+\end{center}
+\choiceTFt
+{ \True  Hình chiếu của đường thẳng ${DB}$ trên mặt phẳng $(SDA)$ là đường thẳng ${DA}$ }
+   { Hai đường thẳng ${DC}$ và ${SA}$ không vuông góc nhau }
+     { ${DB}\bot (SAB)$ }
+    { Gọi ${I}$ là hình chiếu vuông góc của ${D}$ trên ${SC}$. Góc giữa hai đường thẳng ${DB}$ và ${IB}$ bằng $26,1^\circ$ }
+\loigiai{ 
+ 
+
+ a) Khẳng định đã cho là khẳng định đúng.
+
+ Hình chiếu của đường thẳng ${DB}$ trên mặt phẳng $(SDA)$ là đường thẳng ${DA}$.
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ $DC\bot DA, DC\bot SD \Rightarrow DC\bot (SDA) \Rightarrow DC\bot SA.$
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ Nếu $DB\bot (SAB)\Rightarrow DB \bot AB$ (vô lí).
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ $DI\bot SC, DI\bot BC$ (do $BC \bot (SDC)$) suy ra $DI\bot IB$.
+
+$DB=3 \sqrt{2} a$.
+
+$DI=\dfrac{SD.DC}{\sqrt{SD^2+DC^2}} = \dfrac{2 a.3 a}{\sqrt{4 a^{2}+9 a^{2} }}=\frac{6 \sqrt{13} a}{13}$.
+
+$\sin \widehat{DBI}=\dfrac{DI}{DB}=\frac{\sqrt{26}}{13}$$\Rightarrow \widehat{DBI}=23,1^\circ$.
+
+ 
+ }\end{ex}
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông cạnh bằng ${2}$, các cạnh bên đều bằng ${6}$. Tính diện tích hình chiếu vuông góc của tam giác ${SAB}$ trên mặt phẳng $(ABCD)$.
+
+
+\shortans[4]{1}
+
+\loigiai{ \begin{center}
+\begin{tikzpicture}[line join=round, line cap=round,thick,scale=0.6]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,-2);
+\coordinate (D) at (5,0);
+\coordinate (C) at ($(B)+(D)-(A)$);
+\coordinate (O) at ($(A)!0.5!(C)$);
+\coordinate (S) at ($(O)+(0,7)$);
+\draw(S)--(A) (S)--(B) (S)--(C) (A)--(B) (B)--(C);
+\draw[dashed,thin](A)--(C) (A)--(D) (C)--(D) (S)--(D) (S)--(O) (B)--(D);
+\pic[draw,thin,angle radius=2mm] {right angle = S--O--D};
+\pic[draw,thin,angle radius=2mm] {right angle = S--O--A};
+\foreach \i/\g in {S/90,A/180,B/-90,C/-90,D/0,O/-90}{\draw[fill=white](\i) circle (1.5pt) ($(\i)+(\g:3mm)$) node[scale=1]{$\i$};}
+\end{tikzpicture}
+\end{center}
+ Gọi $O=AC \cap BD$. Khi đó $SO \bot (ABCD)$.
+
+Hình chiếu của tam giác ${SAB}$ trên mặt phẳng (ABCD) là tam giác ${OAB}$.
+
+${OAB}$ làm tam giác vuông cân tại ${O}$ nên:
+
+$S_{OAB}=\dfrac{AB^2}{4}=1$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình vuông cạnh bằng ${2 \sqrt{5}}$, các cạnh bên đều bằng ${5}$. Gọi ${O}$ là giao điểm của ${AC}$ và ${BD}$. Tính diện tích hình chiếu vuông góc của tam giác ${OBC}$ trên mặt phẳng $(SBC)$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{2,5}
+
+\loigiai{ \begin{center}
+\begin{tikzpicture}[line join=round, line cap=round,thick,scale=0.6]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,-2);
+\coordinate (D) at (5,0);
+\coordinate (C) at ($(B)+(D)-(A)$);
+\coordinate (O) at ($(A)!0.5!(C)$);
+\coordinate (S) at ($(O)+(0,7)$);
+\draw(S)--(A) (S)--(B) (S)--(C) (A)--(B) (B)--(C);
+\draw[dashed,thin](A)--(C) (A)--(D) (C)--(D) (S)--(D) (S)--(O) (B)--(D);
+\pic[draw,thin,angle radius=2mm] {right angle = S--O--D};
+\pic[draw,thin,angle radius=2mm] {right angle = S--O--A};
+\foreach \i/\g in {S/90,A/180,B/-90,C/-90,D/0,O/-90}{\draw[fill=white](\i) circle (1.5pt) ($(\i)+(\g:3mm)$) node[scale=1]{$\i$};}
+\end{tikzpicture}
+\end{center}
+ Ta có: $SO \bot (ABCD)$.
+
+Gọi ${M}$ là trung điểm của ${BC}$. Kẻ $OH \bot SM \Rightarrow OH \bot (SBC)$.
+
+Hình chiếu của tam giác ${OBC}$ trên mặt phẳng (SBC) là tam giác ${HBC}$.
+
+$OM=\sqrt{5}, SM=\sqrt{SB^2-MB^2}=2 \sqrt{5}$.
+
+$\cos \widehat{OMH}=\dfrac{HM}{OM}=\dfrac{OM}{SM}$$\Rightarrow HM=\dfrac{OM^2}{SM}=\frac{\sqrt{5}}{2}$.
+
+$S_{HBC}=\frac{1}{2}.BC.HM=\frac{1}{2}.2 \sqrt{5}.\frac{\sqrt{5}}{2}=2,5$. 
+ }\end{ex}

@@ -26,7 +26,7 @@ import { AnalyticsReportView } from './components/AnalyticsReportView';
 type AppTab = 'bank' | 'matrix' | 'grading' | 'analytics';
 
 const STORAGE_KEYS = {
-  TREE: 'edumath2018_tree_v26',
+  TREE: 'edumath2018_tree_v53',
   EXAMS: 'edumath2018_exams_v27',
   STUDENTS: 'edumath2018_students_v3',
   SUBMISSIONS: 'edumath2018_submissions_v27',

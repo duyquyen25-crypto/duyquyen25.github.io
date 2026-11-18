@@ -3163,6 +3163,485 @@ const GeometryFigureView: React.FC<{ diagram: GeometryFigureDiagram; compact?: b
     );
   }
 
+  if (figureType === 'l11_b10_tetra_3d') {
+    const lbl = diagram.labels || {};
+    const w = compact ? 235 : 265;
+    const h = compact ? 172 : 192;
+    const vL = { x: 46, y: h - 54 };
+    const vF = { x: 102, y: h - 20 };
+    const vR = { x: w - 42, y: h - 54 };
+    const apex = { x: 106, y: 24 };
+    const showCentroid = (params.showCentroid ?? 0) === 1;
+    const midEdge = params.midEdge ?? 0; // 0: none, 1: vF-vR, 2: vL-vF, 3: vL-vR
+    const showMedians = (params.showMedians ?? 0) === 1;
+    const midFR = { x: (vF.x + vR.x) / 2, y: (vF.y + vR.y) / 2 };
+    const midLF = { x: (vL.x + vF.x) / 2, y: (vL.y + vF.y) / 2 };
+    const midLR = { x: (vL.x + vR.x) / 2, y: (vL.y + vR.y) / 2 };
+    const cent = { x: (vL.x + vF.x + vR.x) / 3, y: (vL.y + vF.y + vR.y) / 3 };
+    const activeMid = midEdge === 1 ? midFR : midEdge === 2 ? midLF : midEdge === 3 ? midLR : null;
+
+    return (
+      <div className={`flex justify-center ${compact ? 'my-2' : 'my-3'}`}>
+        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="bg-white border border-slate-200 rounded select-none">
+          <line x1={vL.x} y1={vL.y} x2={vR.x} y2={vR.y} stroke="#64748b" strokeWidth="1.25" strokeDasharray="4 3" />
+          {showMedians && (
+            <>
+              <line x1={vL.x} y1={vL.y} x2={midFR.x} y2={midFR.y} stroke="#0284c7" strokeWidth="1.1" strokeDasharray="3.5 3" />
+              <line x1={vR.x} y1={vR.y} x2={midLF.x} y2={midLF.y} stroke="#0284c7" strokeWidth="1.1" strokeDasharray="3.5 3" />
+              <line x1={apex.x} y1={apex.y} x2={cent.x} y2={cent.y} stroke="#dc2626" strokeWidth="1.2" strokeDasharray="3.5 3" />
+            </>
+          )}
+          <polyline points={`${vL.x},${vL.y} ${vF.x},${vF.y} ${vR.x},${vR.y}`} fill="none" stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vL.x} y2={vL.y} stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vF.x} y2={vF.y} stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vR.x} y2={vR.y} stroke="#0f172a" strokeWidth="1.5" />
+          {[apex, vL, vF, vR].map((p, idx) => (
+            <circle key={idx} cx={p.x} cy={p.y} r="2.4" fill="#0f172a" />
+          ))}
+          {activeMid && lbl.mid && (
+            <g>
+              <circle cx={activeMid.x} cy={activeMid.y} r="2.6" fill="#0284c7" />
+              <text
+                x={activeMid.x + (midEdge === 1 ? 8 : midEdge === 2 ? -10 : 0)}
+                y={activeMid.y + (midEdge === 3 ? -6 : 13)}
+                textAnchor="middle"
+                fontSize="10.5"
+                fontStyle="italic"
+                fontWeight="600"
+                fill="#0284c7"
+              >
+                {lbl.mid}
+              </text>
+            </g>
+          )}
+          {showMedians && (
+            <>
+              <circle cx={midFR.x} cy={midFR.y} r="2.4" fill="#0284c7" />
+              <circle cx={midLF.x} cy={midLF.y} r="2.4" fill="#0284c7" />
+              <text x={midFR.x + 8} y={midFR.y + 12} fontSize="10.5" fontStyle="italic" fill="#0284c7">{lbl.m1 || 'E'}</text>
+              <text x={midLF.x - 10} y={midLF.y + 12} fontSize="10.5" fontStyle="italic" fill="#0284c7">{lbl.m2 || 'Q'}</text>
+            </>
+          )}
+          {(showCentroid || showMedians) && (
+            <g>
+              <circle cx={cent.x} cy={cent.y} r="2.6" fill="#dc2626" />
+              <text x={cent.x + 6} y={cent.y - 4} fontSize="10.5" fontStyle="italic" fontWeight="600" fill="#dc2626">
+                {lbl.cent || 'G'}
+              </text>
+            </g>
+          )}
+          <text x={apex.x} y={apex.y - 7} textAnchor="middle" fontSize="11.5" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.apex || 'S'}</text>
+          <text x={vL.x - 9} y={vL.y + 4} textAnchor="end" fontSize="11.5" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vL || 'A'}</text>
+          <text x={vF.x} y={vF.y + 14} textAnchor="middle" fontSize="11.5" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vF || 'C'}</text>
+          <text x={vR.x + 9} y={vR.y + 4} textAnchor="start" fontSize="11.5" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vR || 'D'}</text>
+        </svg>
+      </div>
+    );
+  }
+
+  if (figureType === 'l11_b10_para_pyramid_3d') {
+    const lbl = diagram.labels || {};
+    const w = compact ? 245 : 275;
+    const h = compact ? 176 : 196;
+    const vBL = { x: 64, y: h - 74 };
+    const vBR = { x: w - 38, y: h - 74 };
+    const vFR = { x: w - 74, y: h - 22 };
+    const vFL = { x: 28, y: h - 22 };
+    const apex = { x: 96, y: 24 };
+    const center = { x: (vBL.x + vFR.x) / 2, y: (vBL.y + vFR.y) / 2 };
+    const showDiags = (params.showDiags ?? 0) === 1;
+    const showSecant = (params.showSecant ?? 0) === 1;
+    const tE = params.tE ?? 0.5;
+    const E = { x: apex.x + (vBR.x - apex.x) * tE, y: apex.y + (vBR.y - apex.y) * tE };
+    const H = { x: (vBL.x + vFL.x) / 2, y: (vBL.y + vFL.y) / 2 };
+
+    return (
+      <div className={`flex justify-center ${compact ? 'my-2' : 'my-3'}`}>
+        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="bg-white border border-slate-200 rounded select-none">
+          <line x1={apex.x} y1={apex.y} x2={vBL.x} y2={vBL.y} stroke="#64748b" strokeWidth="1.2" strokeDasharray="4 3" />
+          <line x1={vBL.x} y1={vBL.y} x2={vBR.x} y2={vBR.y} stroke="#64748b" strokeWidth="1.2" strokeDasharray="4 3" />
+          <line x1={vBL.x} y1={vBL.y} x2={vFL.x} y2={vFL.y} stroke="#64748b" strokeWidth="1.2" strokeDasharray="4 3" />
+          {showDiags && (
+            <>
+              <line x1={vBL.x} y1={vBL.y} x2={vFR.x} y2={vFR.y} stroke="#0284c7" strokeWidth="1.1" strokeDasharray="3.5 3" />
+              <line x1={vBR.x} y1={vBR.y} x2={vFL.x} y2={vFL.y} stroke="#0284c7" strokeWidth="1.1" strokeDasharray="3.5 3" />
+              <line x1={apex.x} y1={apex.y} x2={center.x} y2={center.y} stroke="#64748b" strokeWidth="1" strokeDasharray="3 3" />
+              <circle cx={center.x} cy={center.y} r="2.5" fill="#0284c7" />
+              {lbl.center && (
+                <text x={center.x} y={center.y - 6} textAnchor="middle" fontSize="10.5" fontStyle="italic" fontWeight="600" fill="#0284c7">
+                  {lbl.center}
+                </text>
+              )}
+            </>
+          )}
+          {showSecant && (
+            <>
+              <line x1={vFR.x} y1={vFR.y} x2={E.x} y2={E.y} stroke="#0284c7" strokeWidth="1.35" />
+              <line x1={vFR.x} y1={vFR.y} x2={H.x} y2={H.y} stroke="#0284c7" strokeWidth="1.1" strokeDasharray="3.5 3" />
+              <line x1={E.x} y1={E.y} x2={H.x} y2={H.y} stroke="#dc2626" strokeWidth="1.2" strokeDasharray="3.5 3" />
+              <circle cx={E.x} cy={E.y} r="2.6" fill="#0284c7" />
+              <circle cx={H.x} cy={H.y} r="2.6" fill="#dc2626" />
+              <text x={E.x + 8} y={E.y - 3} fontSize="10.5" fontStyle="italic" fontWeight="600" fill="#0284c7">{lbl.ptE || 'E'}</text>
+              <text x={H.x - 10} y={H.y - 2} textAnchor="end" fontSize="10.5" fontStyle="italic" fontWeight="600" fill="#dc2626">{lbl.ptH || 'H'}</text>
+            </>
+          )}
+          <polyline points={`${vFL.x},${vFL.y} ${vFR.x},${vFR.y} ${vBR.x},${vBR.y}`} fill="none" stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vFL.x} y2={vFL.y} stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vFR.x} y2={vFR.y} stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vBR.x} y2={vBR.y} stroke="#0f172a" strokeWidth="1.5" />
+          {[apex, vBL, vBR, vFR, vFL].map((p, idx) => (
+            <circle key={idx} cx={p.x} cy={p.y} r="2.3" fill="#0f172a" />
+          ))}
+          <text x={apex.x} y={apex.y - 7} textAnchor="middle" fontSize="11.5" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.apex || 'S'}</text>
+          <text x={vBL.x - 9} y={vBL.y - 3} textAnchor="end" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vBL || 'A'}</text>
+          <text x={vBR.x + 8} y={vBR.y + 4} textAnchor="start" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vBR || 'B'}</text>
+          <text x={vFR.x + 6} y={vFR.y + 13} textAnchor="start" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vFR || 'C'}</text>
+          <text x={vFL.x - 7} y={vFL.y + 11} textAnchor="end" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vFL || 'D'}</text>
+        </svg>
+      </div>
+    );
+  }
+
+  if (figureType === 'l11_b10_quad_pyramid_3d') {
+    const lbl = diagram.labels || {};
+    const w = compact ? 245 : 275;
+    const h = compact ? 176 : 196;
+    const isTrap = (params.isTrapezoid ?? 0) === 1;
+    const vBL = isTrap ? { x: 28, y: h - 72 } : { x: 40, y: h - 68 };
+    const vBR = isTrap ? { x: w - 28, y: h - 72 } : { x: w - 42, y: h - 68 };
+    const vFL = isTrap ? { x: 80, y: h - 20 } : { x: 86, y: h - 18 };
+    const vFR = isTrap ? { x: w - 80, y: h - 20 } : { x: w - 68, y: h - 30 };
+    const apex = isTrap ? { x: 102, y: 22 } : { x: 144, y: 22 };
+    const showDiags = (params.showDiags ?? 0) === 1;
+    // Intersection of vBL--vFR and vBR--vFL
+    const a1 = vFR.y - vBL.y, b1 = vBL.x - vFR.x, c1 = a1 * vBL.x + b1 * vBL.y;
+    const a2 = vFL.y - vBR.y, b2 = vBR.x - vFL.x, c2 = a2 * vBR.x + b2 * vFL.y;
+    const det = a1 * b2 - a2 * b1;
+    const center = det !== 0
+      ? { x: (b2 * c1 - b1 * c2) / det, y: (a1 * c2 - a2 * c1) / det }
+      : { x: (vBL.x + vFR.x) / 2, y: (vBL.y + vFR.y) / 2 };
+
+    return (
+      <div className={`flex justify-center ${compact ? 'my-2' : 'my-3'}`}>
+        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="bg-white border border-slate-200 rounded select-none">
+          <line x1={vBL.x} y1={vBL.y} x2={vBR.x} y2={vBR.y} stroke="#64748b" strokeWidth="1.25" strokeDasharray="4 3" />
+          {showDiags && (
+            <>
+              <line x1={vBL.x} y1={vBL.y} x2={vFR.x} y2={vFR.y} stroke="#0284c7" strokeWidth="1.1" strokeDasharray="3.5 3" />
+              <line x1={vBR.x} y1={vBR.y} x2={vFL.x} y2={vFL.y} stroke="#0284c7" strokeWidth="1.1" strokeDasharray="3.5 3" />
+              <line x1={apex.x} y1={apex.y} x2={center.x} y2={center.y} stroke="#64748b" strokeWidth="1" strokeDasharray="3 3" />
+              <circle cx={center.x} cy={center.y} r="2.5" fill="#0284c7" />
+              {lbl.center && (
+                <text x={center.x + 8} y={center.y - 4} fontSize="10.5" fontStyle="italic" fontWeight="600" fill="#0284c7">
+                  {lbl.center}
+                </text>
+              )}
+            </>
+          )}
+          <polyline points={`${vBL.x},${vBL.y} ${vFL.x},${vFL.y} ${vFR.x},${vFR.y} ${vBR.x},${vBR.y}`} fill="none" stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vBL.x} y2={vBL.y} stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vFL.x} y2={vFL.y} stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vFR.x} y2={vFR.y} stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={apex.x} y1={apex.y} x2={vBR.x} y2={vBR.y} stroke="#0f172a" strokeWidth="1.5" />
+          {[apex, vBL, vBR, vFR, vFL].map((p, idx) => (
+            <circle key={idx} cx={p.x} cy={p.y} r="2.3" fill="#0f172a" />
+          ))}
+          <text x={apex.x + 6} y={apex.y - 5} fontSize="11.5" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.apex || 'S'}</text>
+          <text x={vBL.x - 8} y={vBL.y - 2} textAnchor="end" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vBL || 'A'}</text>
+          <text x={vBR.x + 8} y={vBR.y + 4} textAnchor="start" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vBR || 'B'}</text>
+          <text x={vFR.x + 8} y={vFR.y + 10} textAnchor="start" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vFR || 'C'}</text>
+          <text x={vFL.x - 9} y={vFL.y + 9} textAnchor="end" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">{lbl.vFL || 'D'}</text>
+        </svg>
+      </div>
+    );
+  }
+
+  if (figureType === 'l11_b13_prism_3d') {
+    const lbl = diagram.labels || {};
+    const w = compact ? 235 : 265;
+    const h = compact ? 176 : 196;
+    const vL = { x: 40, y: h - 42 };
+    const vF = { x: 108, y: h - 18 };
+    const vR = { x: w - 60, y: h - 42 };
+    const dx = 26;
+    const tL = { x: vL.x + dx, y: 30 };
+    const tF = { x: vF.x + dx, y: 54 };
+    const tR = { x: vR.x + dx, y: 30 };
+
+    const renderVertexLbl = (pt: { x: number; y: number }, ox: number, oy: number, raw: string) => {
+      const idx = raw.indexOf('_');
+      const base = idx >= 0 ? raw.slice(0, idx) : raw;
+      const sub = idx >= 0 ? raw.slice(idx + 1) : '';
+      return (
+        <text x={pt.x + ox} y={pt.y + oy} textAnchor="middle" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">
+          {base}
+          {sub ? <tspan dy="2.5" fontSize="7.5" fontStyle="normal">{sub}</tspan> : null}
+        </text>
+      );
+    };
+
+    return (
+      <div className={`flex justify-center ${compact ? 'my-2' : 'my-3'}`}>
+        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="bg-white border border-slate-200 rounded select-none">
+          <polygon points={`${tL.x},${tL.y} ${tF.x},${tF.y} ${tR.x},${tR.y}`} fill="#e0f2fe" fillOpacity="0.28" stroke="none" />
+          <line x1={vL.x} y1={vL.y} x2={vR.x} y2={vR.y} stroke="#64748b" strokeWidth="1.25" strokeDasharray="4 3" />
+          <polyline points={`${vL.x},${vL.y} ${vF.x},${vF.y} ${vR.x},${vR.y}`} fill="none" stroke="#0f172a" strokeWidth="1.5" />
+          <polygon points={`${tL.x},${tL.y} ${tF.x},${tF.y} ${tR.x},${tR.y}`} fill="none" stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={vL.x} y1={vL.y} x2={tL.x} y2={tL.y} stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={vF.x} y1={vF.y} x2={tF.x} y2={tF.y} stroke="#0f172a" strokeWidth="1.5" />
+          <line x1={vR.x} y1={vR.y} x2={tR.x} y2={tR.y} stroke="#0f172a" strokeWidth="1.5" />
+          {[vL, vF, vR, tL, tF, tR].map((p, i) => (
+            <circle key={i} cx={p.x} cy={p.y} r="2.2" fill="#0f172a" />
+          ))}
+          {renderVertexLbl(vL, -11, 3, lbl.vL || 'A')}
+          {renderVertexLbl(vF, 0, 14, lbl.vF || 'B')}
+          {renderVertexLbl(vR, 12, 4, lbl.vR || 'C')}
+          {renderVertexLbl(tL, -11, -5, lbl.tL || 'A_1')}
+          {renderVertexLbl(tF, -10, -7, lbl.tF || 'B_1')}
+          {renderVertexLbl(tR, 12, -5, lbl.tR || 'C_1')}
+        </svg>
+      </div>
+    );
+  }
+
+  if (figureType === 'l11_b15_nested_squares') {
+    const t = 1 / Math.max(2, params.ratioDen ?? 2);
+    const size = compact ? 176 : 204;
+    const pad = 18;
+    let pts: Array<{ x: number; y: number }> = [
+      { x: pad, y: pad },
+      { x: size - pad, y: pad },
+      { x: size - pad, y: size - pad },
+      { x: pad, y: size - pad },
+    ];
+    const polys: Array<{ points: string; idx: number }> = [];
+    for (let level = 0; level < 9; level++) {
+      polys.push({ points: pts.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' '), idx: level });
+      pts = pts.map((p, i) => {
+        const nxt = pts[(i + 1) % 4];
+        return { x: p.x + t * (nxt.x - p.x), y: p.y + t * (nxt.y - p.y) };
+      });
+    }
+    return (
+      <div className={`flex justify-center ${compact ? 'my-2' : 'my-3'}`}>
+        <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="bg-white border border-slate-200 rounded select-none">
+          {polys.map((poly) => (
+            <polygon
+              key={poly.idx}
+              points={poly.points}
+              fill={poly.idx % 2 === 0 ? '#e0f2fe' : '#ffffff'}
+              fillOpacity={poly.idx === 0 ? 0.3 : 0.45}
+              stroke={poly.idx === 0 ? '#0f172a' : '#0284c7'}
+              strokeWidth={poly.idx === 0 ? 1.5 : Math.max(0.75, 1.3 - poly.idx * 0.08)}
+            />
+          ))}
+        </svg>
+      </div>
+    );
+  }
+
+  if (figureType === 'l11_b15_nested_triangles') {
+    const w = compact ? 210 : 240;
+    const h = compact ? 178 : 198;
+    const A = { x: w / 2, y: 22 };
+    const B = { x: 28, y: h - 24 };
+    const C = { x: w - 28, y: h - 24 };
+    const mid = (p: { x: number; y: number }, q: { x: number; y: number }) => ({
+      x: (p.x + q.x) / 2,
+      y: (p.y + q.y) / 2,
+    });
+    const A1 = mid(B, C), B1 = mid(C, A), C1 = mid(A, B);
+    const A2 = mid(B1, C1), B2 = mid(C1, A1), C2 = mid(A1, B1);
+    const A3 = mid(B2, C2), B3 = mid(C2, A2), C3 = mid(A2, B2);
+
+    const triPts = (p1: { x: number; y: number }, p2: { x: number; y: number }, p3: { x: number; y: number }) =>
+      `${p1.x.toFixed(1)},${p1.y.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)} ${p3.x.toFixed(1)},${p3.y.toFixed(1)}`;
+
+    return (
+      <div className={`flex justify-center ${compact ? 'my-2' : 'my-3'}`}>
+        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="bg-white border border-slate-200 rounded select-none">
+          <polygon points={triPts(A, B, C)} fill="#ffffff" stroke="#0f172a" strokeWidth="1.5" />
+          <polygon points={triPts(A1, B1, C1)} fill="#e0f2fe" stroke="#0284c7" strokeWidth="1.25" />
+          <polygon points={triPts(A2, B2, C2)} fill="#bae6fd" stroke="#0284c7" strokeWidth="1.15" />
+          <polygon points={triPts(A3, B3, C3)} fill="#7dd3fc" stroke="#0369a1" strokeWidth="1" />
+          <text x={A.x} y={A.y - 6} textAnchor="middle" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">A</text>
+          <text x={B.x - 10} y={B.y + 4} textAnchor="end" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">B</text>
+          <text x={C.x + 10} y={C.y + 4} textAnchor="start" fontSize="11" fontStyle="italic" fontWeight="600" fill="#0f172a">C</text>
+          <text x={A1.x} y={A1.y + 13} textAnchor="middle" fontSize="9.5" fontStyle="italic" fill="#0369a1">A<tspan dy="2" fontSize="7">1</tspan></text>
+          <text x={B1.x + 10} y={B1.y + 2} textAnchor="start" fontSize="9.5" fontStyle="italic" fill="#0369a1">B<tspan dy="2" fontSize="7">1</tspan></text>
+          <text x={C1.x - 10} y={C1.y + 2} textAnchor="end" fontSize="9.5" fontStyle="italic" fill="#0369a1">C<tspan dy="2" fontSize="7">1</tspan></text>
+          <text x={A2.x} y={A2.y - 4} textAnchor="middle" fontSize="8.5" fontStyle="italic" fill="#0f172a">A<tspan dy="2" fontSize="6.5">2</tspan></text>
+        </svg>
+      </div>
+    );
+  }
+
+  if (figureType === 'l11_b15_nested_circles') {
+    const w = compact ? 290 : 330;
+    const h = compact ? 124 : 138;
+    const R = compact ? 36 : 42;
+    const cy = h / 2 - 8;
+    const centers = [w * 0.18, w * 0.5, w * 0.82];
+    const tags = ['a)', 'b)', 'c)'];
+
+    return (
+      <div className={`flex justify-center ${compact ? 'my-2' : 'my-3'}`}>
+        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="bg-white border border-slate-200 rounded select-none">
+          {centers.map((cx, stage) => (
+            <g key={stage}>
+              <circle cx={cx} cy={cy} r={R} fill="#bae6fd" fillOpacity="0.6" stroke="#0f172a" strokeWidth="1.35" />
+              {stage >= 1 && (
+                <>
+                  <circle cx={cx - R / 2} cy={cy} r={R / 2} fill="#fef08a" fillOpacity="0.75" stroke="#0f172a" strokeWidth="1.1" />
+                  <circle cx={cx + R / 2} cy={cy} r={R / 2} fill="#fef08a" fillOpacity="0.75" stroke="#0f172a" strokeWidth="1.1" />
+                </>
+              )}
+              {stage >= 2 &&
+                [-0.75, -0.25, 0.25, 0.75].map((off, idx) => (
+                  <circle
+                    key={idx}
+                    cx={cx + off * R}
+                    cy={cy}
+                    r={R / 4}
+                    fill="#bbf7d0"
+                    fillOpacity="0.85"
+                    stroke="#0f172a"
+                    strokeWidth="0.95"
+                  />
+                ))}
+              <text x={cx} y={cy + R + 17} textAnchor="middle" fontSize="11" fill="#334155">
+                {tags[stage]}
+              </text>
+            </g>
+          ))}
+        </svg>
+      </div>
+    );
+  }
+
+  if (figureType === 'l11_b20_exp_log_plot') {
+    const lbl = diagram.labels || {};
+    const fnType = params.fnType ?? 0; // 0: b^x, 1: (1/b)^x, 2: (sqrt(p))^x, 3: log_b(x), 4: log_{1/b}(x)
+    const rawBase = Math.max(2, params.base ?? 2);
+    const isExp = fnType <= 2;
+    const realBase =
+      fnType === 0
+        ? rawBase
+        : fnType === 1
+        ? 1 / rawBase
+        : fnType === 2
+        ? Math.sqrt(rawBase)
+        : fnType === 3
+        ? rawBase
+        : 1 / rawBase;
+
+    const ptX = fnType <= 2 ? 1 : fnType === 3 ? rawBase : 1 / rawBase;
+    const ptY = fnType <= 2 ? realBase : 1;
+
+    const xMin = isExp ? -2.2 : -0.7;
+    const xMax = isExp ? 2.1 : fnType === 3 ? Math.max(3.6, rawBase + 1.2) : 2.8;
+    const yMin = isExp ? -0.7 : -1.8;
+    const yMax = isExp ? Math.max(3.6, ptY + 1.1) : 2.2;
+
+    const w = compact ? 250 : 290;
+    const h = compact ? 198 : 228;
+    const pad = 22;
+    const plotW = w - pad * 2;
+    const plotH = h - pad * 2;
+    const mapX = (x: number) => pad + ((x - xMin) / (xMax - xMin)) * plotW;
+    const mapY = (y: number) => pad + ((yMax - y) / (yMax - yMin)) * plotH;
+
+    const steps = 180;
+    const startX = isExp ? xMin : 0.008;
+    let d = '';
+    for (let i = 0; i <= steps; i++) {
+      const x = startX + ((xMax - startX) * i) / steps;
+      const y = isExp ? Math.pow(realBase, x) : Math.log(x) / Math.log(realBase);
+      if (!Number.isFinite(y) || y < yMin - 1.5 || y > yMax + 1.5) {
+        continue;
+      }
+      const px = mapX(x).toFixed(2);
+      const py = mapY(y).toFixed(2);
+      d += d ? ` L ${px} ${py}` : `M ${px} ${py}`;
+    }
+
+    const ox = mapX(0);
+    const oy = mapY(0);
+    const clipId = `b20-clip-${fnType}-${rawBase}`;
+
+    const renderCoordLabel = (x: number, y: number, text: string, anchor: 'end' | 'middle' | 'start') => {
+      if (text.includes('/')) {
+        const [num, den] = text.split('/');
+        return (
+          <g>
+            <text x={x} y={y - 3} textAnchor={anchor} fontSize="8.5" fill="#0f172a">{num}</text>
+            <line x1={x - 5} y1={y - 1} x2={x + 5} y2={y - 1} stroke="#0f172a" strokeWidth="0.7" />
+            <text x={x} y={y + 7.5} textAnchor={anchor} fontSize="8.5" fill="#0f172a">{den}</text>
+          </g>
+        );
+      }
+      return (
+        <text x={x} y={y} textAnchor={anchor} fontSize="9.5" fill="#0f172a">
+          {text}
+        </text>
+      );
+    };
+
+    const ptPxX = mapX(ptX);
+    const ptPxY = mapY(ptY);
+    const xLabel = lbl.xLabel || (fnType <= 2 ? '1' : fnType === 3 ? String(rawBase) : `1/${rawBase}`);
+    const yLabel = lbl.yLabel || (fnType === 0 ? String(rawBase) : fnType === 1 ? `1/${rawBase}` : fnType === 2 ? `√${rawBase}` : '1');
+
+    return (
+      <div className={`flex justify-center ${compact ? 'my-2' : 'my-3'}`}>
+        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="bg-white border border-slate-200 rounded select-none">
+          <defs>
+            <clipPath id={clipId}>
+              <rect x={pad} y={pad} width={plotW} height={plotH} />
+            </clipPath>
+            <marker id={`${clipId}-arr`} viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#334155" />
+            </marker>
+          </defs>
+
+          {/* Axes */}
+          <line x1={pad} y1={oy} x2={w - pad + 8} y2={oy} stroke="#334155" strokeWidth="1.2" markerEnd={`url(#${clipId}-arr)`} />
+          <line x1={ox} y1={h - pad} x2={ox} y2={pad - 8} stroke="#334155" strokeWidth="1.2" markerEnd={`url(#${clipId}-arr)`} />
+          <text x={w - pad + 4} y={oy + 12} fontSize="10.5" fontStyle="italic" fill="#0f172a">x</text>
+          <text x={ox - 12} y={pad - 2} fontSize="10.5" fontStyle="italic" fill="#0f172a">y</text>
+          <text x={ox - 10} y={oy + 12} fontSize="9.5" fontStyle="italic" fill="#334155">O</text>
+
+          {/* Unit intercept (0,1) for exp or (1,0) for log */}
+          {isExp ? (
+            <>
+              <circle cx={ox} cy={mapY(1)} r="1.8" fill="#334155" />
+              <text x={ox + (fnType === 1 ? 7 : -8)} y={mapY(1) + (fnType === 1 ? 3 : -4)} textAnchor={fnType === 1 ? 'start' : 'end'} fontSize="9.5" fill="#0f172a">1</text>
+            </>
+          ) : (
+            <>
+              <circle cx={mapX(1)} cy={oy} r="1.8" fill="#334155" />
+              <text x={mapX(1)} y={oy + 12} textAnchor="middle" fontSize="9.5" fill="#0f172a">1</text>
+            </>
+          )}
+
+          {/* Curve clipped */}
+          <g clipPath={`url(#${clipId})`}>
+            {d && <path d={d} fill="none" stroke="#0284c7" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />}
+          </g>
+
+          {/* Dashed reference lines + highlighted point */}
+          <line x1={ox} y1={ptPxY} x2={ptPxX} y2={ptPxY} stroke="#64748b" strokeWidth="1" strokeDasharray="3.5 2.5" />
+          <line x1={ptPxX} y1={ptPxY} x2={ptPxX} y2={oy} stroke="#64748b" strokeWidth="1" strokeDasharray="3.5 2.5" />
+          <circle cx={ptPxX} cy={ptPxY} r="2.7" fill="#0f172a" />
+
+          {/* Point axis labels */}
+          {renderCoordLabel(ptPxX, oy + (fnType === 4 ? 15 : 12), xLabel, 'middle')}
+          {renderCoordLabel(ox - (yLabel.includes('/') ? 11 : 7), ptPxY + 3, yLabel, yLabel.includes('/') ? 'middle' : 'end')}
+        </svg>
+      </div>
+    );
+  }
+
   // river_bridge
   const w = compact ? 290 : 340;
   const h = compact ? 155 : 175;

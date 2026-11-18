@@ -1515,6 +1515,153 @@ function diagramToTexLines(diagram?: QuestionDiagramSpec): string[] {
         '\\end{center}',
       ];
     }
+    if (figureType === 'l11_b10_tetra_3d') {
+      const lbl = diagram.labels || {};
+      return [
+        '\\begin{center}',
+        '\\begin{tikzpicture}[scale=0.7]',
+        `  \\coordinate (A) at (0,0) node at (A) [left] {$${lbl.vL || 'A'}$};`,
+        `  \\coordinate (C) at (1,-2) node at (C) [below] {$${lbl.vF || 'C'}$};`,
+        `  \\coordinate (D) at (4,0) node at (D) [right] {$${lbl.vR || 'D'}$};`,
+        `  \\coordinate (S) at (1,3) node at (S) [above] {$${lbl.apex || 'S'}$};`,
+        '  \\draw[dashed] (A)--(D);',
+        '  \\draw (A)--(C) (C)--(D) (S)--(A) (S)--(C) (S)--(D);',
+        '\\end{tikzpicture}',
+        '\\end{center}',
+      ];
+    }
+    if (figureType === 'l11_b10_para_pyramid_3d') {
+      const lbl = diagram.labels || {};
+      return [
+        '\\begin{center}',
+        '\\begin{tikzpicture}[line join=round, line cap=round,thick,scale=0.6]',
+        `  \\coordinate (A) at (0,0); \\node at (A) [left]{$${lbl.vBL || 'A'}$};`,
+        `  \\coordinate (D) at (-2,-2); \\node at (D) [left]{$${lbl.vFL || 'D'}$};`,
+        `  \\coordinate (B) at (5,0); \\node at (B) [right]{$${lbl.vBR || 'B'}$};`,
+        `  \\coordinate (C) at ($(B)+(D)-(A)$); \\node at (C) [below]{$${lbl.vFR || 'C'}$};`,
+        `  \\coordinate (S) at (0,5); \\node at (S) [above]{$${lbl.apex || 'S'}$};`,
+        '  \\draw (S)--(B) (S)--(C) (B)--(C) (S)--(D) (C)--(D);',
+        '  \\draw[dashed,thin] (S)--(A) (A)--(D) (A)--(B);',
+        '\\end{tikzpicture}',
+        '\\end{center}',
+      ];
+    }
+    if (figureType === 'l11_b10_quad_pyramid_3d') {
+      const lbl = diagram.labels || {};
+      return [
+        '\\begin{center}',
+        '\\begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=0.7cm,y=0.7cm]',
+        '  \\draw (0,0)--(2,-2) (5,0)--(3,3) (3,3)--(0,0) (3,3)--(4,-1.5) (3,3)--(2,-2) (4,-1.5)--(2,-2) (4,-1.5)--(5,0);',
+        '  \\draw[dashed] (0,0)--(5,0);',
+        `  \\node[above left] at (0,0) {$${lbl.vBL || 'A'}$};`,
+        `  \\node[below left] at (2,-2) {$${lbl.vFL || 'D'}$};`,
+        `  \\node[above right] at (5,0) {$${lbl.vBR || 'B'}$};`,
+        `  \\node[below right] at (4,-1.5) {$${lbl.vFR || 'C'}$};`,
+        `  \\node[above] at (3,3) {$${lbl.apex || 'S'}$};`,
+        '\\end{tikzpicture}',
+        '\\end{center}',
+      ];
+    }
+    if (figureType === 'l11_b13_prism_3d') {
+      const lbl = diagram.labels || {};
+      return [
+        '\\begin{center}',
+        '\\begin{tikzpicture}[scale=0.7]',
+        `  \\coordinate (A) at (0,0) node at (A) [left] {$${lbl.vL || 'A'}$};`,
+        `  \\coordinate (B) at (2,-1) node at (B) [below] {$${lbl.vF || 'B'}$};`,
+        `  \\coordinate (C) at (4,0) node at (C) [right] {$${lbl.vR || 'C'}$};`,
+        `  \\coordinate (A1) at (1,4) node at (A1) [above] {$${lbl.tL || 'A_1'}$};`,
+        `  \\coordinate (B1) at (3,3) node at (B1) [above] {$${lbl.tF || 'B_1'}$};`,
+        `  \\coordinate (C1) at (5,4) node at (C1) [above] {$${lbl.tR || 'C_1'}$};`,
+        '  \\draw[dashed] (A)--(C);',
+        '  \\draw (A)--(B)--(C) (A1)--(B1)--(C1)--(A1) (A)--(A1) (B)--(B1) (C)--(C1);',
+        '\\end{tikzpicture}',
+        '\\end{center}',
+      ];
+    }
+    if (figureType === 'l11_b15_nested_squares') {
+      const b = Number((1 / Math.max(2, params.ratioDen ?? 2)).toFixed(3));
+      return [
+        '\\begin{center}',
+        '\\begin{tikzpicture}[scale=0.75]',
+        `  \\def\\a{3}\\def\\b{${b}}\\def\\levels{8}`,
+        '  \\coordinate (A0) at (0,0); \\coordinate (B0) at (\\a,0); \\coordinate (C0) at (\\a,\\a); \\coordinate (D0) at (0,\\a);',
+        '  \\draw (A0)--(B0)--(C0)--(D0)--cycle;',
+        '  \\foreach \\i in {1,...,\\levels} {',
+        '    \\coordinate (A\\i) at ($(A\\the\\numexpr\\i-1\\relax)!\\b!(B\\the\\numexpr\\i-1\\relax)$);',
+        '    \\coordinate (B\\i) at ($(B\\the\\numexpr\\i-1\\relax)!\\b!(C\\the\\numexpr\\i-1\\relax)$);',
+        '    \\coordinate (C\\i) at ($(C\\the\\numexpr\\i-1\\relax)!\\b!(D\\the\\numexpr\\i-1\\relax)$);',
+        '    \\coordinate (D\\i) at ($(D\\the\\numexpr\\i-1\\relax)!\\b!(A\\the\\numexpr\\i-1\\relax)$);',
+        '    \\draw (A\\i)--(B\\i)--(C\\i)--(D\\i)--cycle;',
+        '  }',
+        '\\end{tikzpicture}',
+        '\\end{center}',
+      ];
+    }
+    if (figureType === 'l11_b15_nested_triangles') {
+      return [
+        '\\begin{center}',
+        '\\begin{tikzpicture}[scale=0.8]',
+        '  \\def\\a{4}',
+        '  \\coordinate (A) at (\\a/2,{\\a*sqrt(3)/2}); \\coordinate (B) at (0,0); \\coordinate (C) at (\\a,0);',
+        '  \\draw (A)--(B)--(C)--cycle;',
+        '  \\coordinate (A1) at ($(B)!0.5!(C)$); \\coordinate (B1) at ($(C)!0.5!(A)$); \\coordinate (C1) at ($(A)!0.5!(B)$);',
+        '  \\draw[fill=gray!20] (A1)--(B1)--(C1)--cycle;',
+        '  \\coordinate (A2) at ($(B1)!0.5!(C1)$); \\coordinate (B2) at ($(C1)!0.5!(A1)$); \\coordinate (C2) at ($(A1)!0.5!(B1)$);',
+        '  \\draw[fill=gray!35] (A2)--(B2)--(C2)--cycle;',
+        '  \\node[above] at (A) {\\scriptsize $A$}; \\node[left] at (B) {\\scriptsize $B$}; \\node[right] at (C) {\\scriptsize $C$};',
+        '  \\node[below] at (A1) {\\scriptsize $A_1$}; \\node[right] at (B1) {\\scriptsize $B_1$}; \\node[left] at (C1) {\\scriptsize $C_1$};',
+        '\\end{tikzpicture}',
+        '\\end{center}',
+      ];
+    }
+    if (figureType === 'l11_b15_nested_circles') {
+      return [
+        '\\begin{center}',
+        '\\begin{tikzpicture}[scale=0.75]',
+        '  \\begin{scope}\\fill[blue!25](0,0)circle(1.4);\\draw(0,0)circle(1.4);\\node at(0,-1.8){a)};\\end{scope}',
+        '  \\begin{scope}[xshift=3.8cm]\\fill[blue!25](0,0)circle(1.4);\\foreach\\x in{-0.7,0.7}{\\fill[yellow!30](\\x,0)circle(0.7);\\draw(\\x,0)circle(0.7);}\\draw(0,0)circle(1.4);\\node at(0,-1.8){b)};\\end{scope}',
+        '  \\begin{scope}[xshift=7.6cm]\\fill[blue!25](0,0)circle(1.4);\\foreach\\x in{-0.7,0.7}{\\fill[yellow!30](\\x,0)circle(0.7);\\draw(\\x,0)circle(0.7);}\\foreach\\x in{-1.05,-0.35,0.35,1.05}{\\fill[green!30](\\x,0)circle(0.35);\\draw(\\x,0)circle(0.35);}\\draw(0,0)circle(1.4);\\node at(0,-1.8){c)};\\end{scope}',
+        '\\end{tikzpicture}',
+        '\\end{center}',
+      ];
+    }
+    if (figureType === 'l11_b20_exp_log_plot') {
+      const fnType = params.fnType ?? 0;
+      const b = Math.max(2, params.base ?? 2);
+      const isExp = fnType <= 2;
+      const ptX = fnType <= 2 ? 1 : fnType === 3 ? b : Number((1 / b).toFixed(4));
+      const ptY = fnType === 0 ? b : fnType === 1 ? Number((1 / b).toFixed(4)) : fnType === 2 ? Number(Math.sqrt(b).toFixed(3)) : 1;
+      const plotExpr =
+        fnType === 0
+          ? `${b}^(\\x)`
+          : fnType === 1
+          ? `(${b})^(-\\x)`
+          : fnType === 2
+          ? `(${Math.sqrt(b).toFixed(3)})^(\\x)`
+          : fnType === 3
+          ? `ln(\\x)/ln(${b})`
+          : `ln(\\x)/ln(1/${b})`;
+      const xLbl = fnType <= 2 ? '1' : fnType === 3 ? String(b) : `\\frac{1}{${b}}`;
+      const yLbl = fnType === 0 ? String(b) : fnType === 1 ? `\\frac{1}{${b}}` : fnType === 2 ? `\\sqrt{${b}}` : '1';
+      return [
+        '\\begin{center}',
+        '\\begin{tikzpicture}[>=stealth, scale=0.85]',
+        `  \\draw[->] (${isExp ? -2.3 : -0.8},0) -- (${isExp ? 2.3 : Math.max(3.6, b + 0.8)},0) node[below] {$x$};`,
+        `  \\draw[->] (0,${isExp ? -0.8 : -1.8}) -- (0,${isExp ? Math.max(3.8, ptY + 0.9) : 2.2}) node[left] {$y$};`,
+        '  \\draw[fill=black] (0,0) node[below right]{$O$} circle (1pt);',
+        isExp
+          ? '  \\draw (0,1) node[above left]{$1$};'
+          : '  \\draw (1,0) node[below]{$1$};',
+        `  \\draw (${ptX},0) node[below]{$${xLbl}$};`,
+        `  \\draw (0,${ptY}) node[left]{$${yLbl}$};`,
+        `  \\draw[fill=black] (${ptX},${ptY}) circle (1.5pt);`,
+        `  \\draw[dashed] (0,${ptY}) -- (${ptX},${ptY}) -- (${ptX},0);`,
+        `  \\draw[color=blue,thick,smooth,samples=120,domain=${isExp ? '-2:2' : `0.02:${Math.max(3.4, b + 0.5)}`}] plot (\\x,{${plotExpr}});`,
+        '\\end{tikzpicture}',
+        '\\end{center}',
+      ];
+    }
     return [
       '\\begin{center}',
       '\\begin{tikzpicture}[line join=round, line cap=round,scale=0.85]',
@@ -1964,6 +2111,14 @@ function getGeometryFigureDescription(gf: GeometryFigureDiagram): string {
     l11_b1_unit_circle_point: '[Hình minh họa: Đường tròn lượng giác trong mặt phẳng $Oxy$ đánh dấu điểm biểu diễn góc lượng giác]',
     l11_b1_unit_circle_axes: '[Hình minh họa: Đường tròn lượng giác trong mặt phẳng $Oxy$ với bốn điểm $A, A\', B, B\'$]',
     l11_b1_unit_circle_quad_sym: '[Hình minh họa: Đường tròn lượng giác trong mặt phẳng $Oxy$ với bốn điểm đối xứng $M, N, P, Q$]',
+    l11_b10_tetra_3d: '[Hình minh họa 3D: Tứ diện với các điểm phụ trên cạnh]',
+    l11_b10_para_pyramid_3d: '[Hình minh họa 3D: Hình chóp đáy hình bình hành]',
+    l11_b10_quad_pyramid_3d: '[Hình minh họa 3D: Hình chóp tứ giác]',
+    l11_b13_prism_3d: '[Hình minh họa 3D: Hình lăng trụ tam giác]',
+    l11_b15_nested_squares: '[Hình minh họa: Chuỗi hình vuông lồng nhau vô hạn]',
+    l11_b15_nested_triangles: '[Hình minh họa: Chuỗi tam giác đều nối trung điểm vô hạn]',
+    l11_b15_nested_circles: '[Hình minh họa: Quy trình cắt các hình tròn chồng lên nhau vô hạn]',
+    l11_b20_exp_log_plot: '[Hình minh họa: Đồ thị hàm số mũ / hàm số lôgarit trên hệ trục tọa độ $Oxy$]',
   };
   return figureMap[gf.figureType] ?? `[Hình minh họa: ${gf.figureType}]`;
 }

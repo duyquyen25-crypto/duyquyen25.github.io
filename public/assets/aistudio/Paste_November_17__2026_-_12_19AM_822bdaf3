@@ -1,0 +1,732 @@
+\begin{ex}
+ Cho tứ diện ${SACD}$. Gọi ${N}$ là trung điểm của cạnh ${CD}$. Gọi ${G}$ là trọng tâm của tam giác ${ACD}$. Tìm khẳng định đúng trong các khẳng định sau 
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\coordinate (A) at (0,0)   node at (A) [left] {$A$};
+\coordinate (C) at (1,-2) node at (C) [below] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (S) at (1,3)   node at (S) [above] {$S$};
+\draw [dashed] (A)--(D) ; 
+\draw (A)--(C) (C)--(D) (S)--(A) (S)--(C) (S)--(D);
+\end{tikzpicture}
+
+\end{center}
+\choice
+{ \True ${SN}\subset (SCD)$ }
+   { $AD \subset (SAC)$ }
+     { $G \in (SAD)$ }
+    { $N\in SD$ }
+\loigiai{ 
+ ${SN}\subset (SCD)$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABMN}$ có đáy là hình bình hành tâm ${H}$. Gọi ${K}$ là trung điểm của ${SH}$. Tìm khẳng định sai trong các khẳng định sau 
+\begin{center}
+ \begin{tikzpicture}[line join=round, line cap=round,thick,scale=0.6]
+\coordinate (A) at (0,0); \node at (A) [left]{$A$};
+\coordinate (N) at (2,-2); \node at (N) [left]{$N$};
+\coordinate (B) at (5,0); \node at (B) [right]{$B$};
+\coordinate (M) at ($(B)+(N)-(A)$); \node at (M) [below]{$M$};
+\coordinate (O) at ($(A)!0.5!(M)$);
+\coordinate (S) at ($(O)+(0,5)$);
+\draw(S)--(A)  (S)--(M) (S)--(N) (A)--(N) (M)--(N) ;
+\draw[dashed,thin](S)--(B) (A)--(M) (A)--(B) (B)--(M)   (B)--(N);
+\foreach \i/\g in {S/90,A/180,B/-90,M/-90,N/0}{\draw[fill=white](\i) circle (1.5pt);}
+\end{tikzpicture}
+
+\end{center}
+\choice
+{ \True ${H} \in (SBM)$ }
+   { ${KM} \subset (SAM)$ }
+     { ${KN} \subset (SBN)$ }
+    { ${H} \in (SAH)$ }
+\loigiai{ 
+ ${H} \in (SBM)$ là khẳng định sai. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp tứ giác ${S.ABCD}$. Gọi ${G}$ là giao điểm của các đường thẳng ${AC}$ và ${BD}$. Gọi ${I}$ là trung điểm của ${SG}$. Tìm khẳng định sai trong các khẳng định sau 
+\begin{center}
+ \begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=0.7cm,y=0.7cm]
+			\draw (0.0,-0.0)-- (2.0,-2.0);
+			\draw (5.0,0.0)-- (3.0,3.0);
+			\draw (3.0,3.0)-- (0.0,-0.0);
+			\draw (3.0,3.0)-- (4.0,-1.5);
+			\draw (3.0,3.0)-- (2.0,-2.0);
+			\draw (4.0,-1.5)-- (2.0,-2.0);
+			\draw (4.0,-1.5)-- (5.0,0.0);
+			\draw [dash pattern=on 2pt off 2pt] (0.0,-0.0)-- (5.0,0.0);
+			\begin{scriptsize}
+			\draw [fill=black] (0.0,-0.0) circle (1pt);
+			\draw[color=black] (-0.06,0.2) node {$A$};
+			\draw [fill=black] (2.0,-2.0) circle (1pt);
+			\draw[color=black] (1.7,-1.95) node {$D$};
+			\draw [fill=black] (5.0,0.0) circle (1pt);
+			\draw[color=black] (5.15,0.15) node {$B$};
+			\draw [fill=black] (4.0,-1.5) circle (1pt);
+			\draw[color=black] (4.2,-1.65) node {$C$};
+			\draw [fill=black] (3.0,3.0) circle (1pt);
+			\draw[color=black] (3.2,3.0) node {$S$};
+			\end{scriptsize}
+			\end{tikzpicture}
+
+\end{center}
+\choice
+{ \True ${I} \in (SCD)$ }
+   { ${AC} \subset (SAC)$ }
+     { ${IB} \subset (SBD)$ }
+    { ${I} \in (SAG)$ }
+\loigiai{ 
+ ${I} \in (SCD)$ là khẳng định sai. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${OABCD}$. Giao tuyến giữa hai mặt phẳng $(OCD)$ và $(OAD)$ là đường thẳng nào trong các đường thẳng sau? 
+\begin{center}
+ \begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=0.7cm,y=0.7cm]
+			\draw (0.0,-0.0)-- (2.0,-2.0);
+			\draw (5.0,0.0)-- (3.0,3.0);
+			\draw (3.0,3.0)-- (0.0,-0.0);
+			\draw (3.0,3.0)-- (4.0,-1.5);
+			\draw (3.0,3.0)-- (2.0,-2.0);
+			\draw (4.0,-1.5)-- (2.0,-2.0);
+			\draw (4.0,-1.5)-- (5.0,0.0);
+			\draw [dash pattern=on 2pt off 2pt] (0.0,-0.0)-- (5.0,0.0);
+			\begin{scriptsize}
+			\draw [fill=black] (0.0,-0.0) circle (1pt);
+			\draw[color=black] (-0.06,0.2) node {$A$};
+			\draw [fill=black] (2.0,-2.0) circle (1pt);
+			\draw[color=black] (1.7,-1.95) node {$D$};
+			\draw [fill=black] (5.0,0.0) circle (1pt);
+			\draw[color=black] (5.15,0.15) node {$B$};
+			\draw [fill=black] (4.0,-1.5) circle (1pt);
+			\draw[color=black] (4.2,-1.65) node {$C$};
+			\draw [fill=black] (3.0,3.0) circle (1pt);
+			\draw[color=black] (3.2,3.0) node {$O$};
+			\end{scriptsize}
+			\end{tikzpicture}
+
+\end{center}
+\choice
+{ \True ${OD}$ }
+   { ${BD}$ }
+     { ${OB}$ }
+    { ${OA}$ }
+\loigiai{ 
+ ${OD}$ là khẳng định đúng. 
+ }\end{ex}
+
+\begin{ex}
+ Cho tứ diện ${OBCD}$. Gọi ${E,Q}$ lần lượt là trung điểm của các cạnh ${CD, BC}$. Gọi ${H}$ là giao điểm của ${BE}$ và ${DQ}$. Giao tuyến của hai mặt phẳng $(OBE)$ và $(ODQ)$ là đường thẳng 
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (1,-2) node at (C) [below] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (O) at (1,3)   node at (O) [above] {$O$};
+\draw [dashed] (B)--(D) ; 
+\draw (B)--(C) (C)--(D) (O)--(B) (O)--(C) (O)--(D);
+\end{tikzpicture}
+
+\end{center}
+\choice
+{ ${OD}$ }
+   { \True ${OH}$ }
+     { ${HQ}$ }
+    { ${OQ}$ }
+\loigiai{ 
+ $O\in (OBE) \cap (ODQ), H=BE\cap DQ\Rightarrow H\in (OBE) \cap (ODQ)$$\Rightarrow (OBE) \cap (ODQ)=OH$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.BCEF}$ có đáy là hình bình hành tâm ${G}$. Gọi ${P,Q}$ lần lượt là trung điểm của các cạnh ${CE}$ và ${EF}$. Giao điểm của đường thẳng ${CG}$ và mặt phẳng $({SEF})$ là điểm nào trong các điểm sau 
+\begin{center}
+ \begin{tikzpicture}[line join=round, line cap=round,thick,scale=0.6]
+\coordinate (B) at (0,0); \node at (B) [left]{$B$};
+\coordinate (F) at (2,-2); \node at (F) [left]{$F$};
+\coordinate (C) at (5,0); \node at (C) [right]{$C$};
+\coordinate (E) at ($(C)+(F)-(B)$); \node at (E) [below]{$E$};
+\coordinate (O) at ($(B)!0.5!(E)$);
+\coordinate (S) at ($(O)+(0,5)$);
+\draw(S)--(B)  (S)--(E) (S)--(F) (B)--(F) (E)--(F) ;
+\draw[dashed,thin](S)--(C) (B)--(E) (B)--(C) (C)--(E)   (C)--(F);
+\foreach \i/\g in {S/90,B/180,C/-90,E/-90,F/0}{\draw[fill=white](\i) circle (1.5pt);}
+\end{tikzpicture}
+
+\end{center}
+\choice
+{ \True ${F}$ }
+   { ${P}$ }
+     { ${Q}$ }
+    { ${B}$ }
+\loigiai{ 
+ $CG \cap EF=F \Rightarrow CG \cap ({SEF})=F$. 
+ }\end{ex}
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình hình thoi. Gọi $O=AC\cap BD$. Lấy điểm ${N}$ thuộc đoạn ${OC}$, điểm ${M}$ thuộc đoạn ${SA}$. Gọi $E=MN\cap SO, F=SB \cap (MND)$.
+ Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+ \begin{tikzpicture}[line join=round, line cap=round,thick,scale=0.6]
+\coordinate (A) at (0,0); \node at (A) [left]{$A$};
+\coordinate (D) at (-2,-2); \node at (D) [left]{$D$};
+\coordinate (B) at (5,0); \node at (B) [right]{$B$};
+\coordinate (C) at ($(B)+(D)-(A)$); \node at (C) [below]{$C$};
+ %\coordinate (O) at ($(A)!0.5!(C)$);
+\coordinate (S) at (0,5);\node at (S) [above]{$S$};
+\draw (S)--(B) (S)--(C) (B)--(C) (S)--(D)  (C)--(D) ;
+\draw[dashed,thin](S)--(A) (A)--(D)  (A)--(B)  ;
+\foreach \i/\g in {S/90,A/180,B/-90,C/-90,D/0}{\draw[fill=white](\i) circle (1.5pt);}
+\end{tikzpicture}
+
+\end{center}
+\choiceTFt
+{ Điểm ${N}$ thuộc mặt phẳng $(SAD)$ }
+   { ${MN}$ không chứa trong mặt phẳng $(SAC)$ }
+     { \True  Gọi $I=ND\cap AB$. Khi đó $MI\subset (SAB)$ }
+    { \True  Ba điểm ${D,F,E}$ thẳng hàng }
+\loigiai{\begin{center}
+ \begin{tikzpicture}[line join=round, line cap=round, scale=1.2]
+    % --- TỌA ĐỘ CÁC ĐỈNH CHÍNH ---
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (-1.8, -1.8);
+    \coordinate (C) at (1.7, -2.1);
+    \coordinate (D) at (3.5, -0.4);
+    \coordinate (S) at (0, 3.8);
+
+    % Giao điểm hai đường chéo đáy O = AC cắt BD
+    \coordinate (O) at (intersection of A--C and B--D);
+
+    % Điểm M trên SA
+    \coordinate (M) at ($(A)!0.55!(S)$);
+
+    % Điểm I trên đường thẳng AB kéo dài về phía B
+    \coordinate (I) at ($(A)!1.7!(B)$);
+
+    % Điểm N là giao điểm của SB và IM
+    \coordinate (N) at (intersection of S--B and I--M);
+
+    % Điểm E là giao điểm của AC (nằm trên đoạn OC) và ID
+    \coordinate (E) at (intersection of A--C and I--D);
+
+    % Điểm K là giao của ID với cạnh BC (để phân đoạn thấy/khuất của ID)
+    \coordinate (K) at (intersection of B--C and I--D);
+
+    % Điểm H là giao điểm của SO và ND (hoặc ME trong mp(S,A,C))
+    \coordinate (H) at (intersection of S--O and N--D);
+
+    % --- VẼ CÁC ĐƯỜNG NÉT ĐỨT MÀU ĐEN (BỊ KHUẤT TRONG KHỐI CHÓP) ---
+    \draw[thick, dashed] (S) -- (A);
+    \draw[thick, dashed] (A) -- (B);
+    \draw[thick, dashed] (A) -- (D);
+    \draw[thick, dashed] (A) -- (C);
+    \draw[thick, dashed] (B) -- (D);
+    \draw[thick, dashed] (S) -- (O);
+
+    % --- VẼ MẶT PHẲNG VÀ ĐƯỜNG MÀU MAGENTA (HỒNG TÍM) ---
+    \draw[very thick, magenta] (I) -- (N);
+    \draw[very thick, magenta, dashed] (N) -- (M);
+    \draw[very thick, magenta, dashed] (M) -- (D);
+    \draw[very thick, magenta, dashed] (M) -- (E);
+    
+    % Đường ID: đoạn IK ở ngoài chóp (thấy), đoạn KD vào trong (khuất qua E)
+    \draw[very thick, magenta] (I) -- (K);
+    \draw[very thick, magenta, dashed] (K) -- (D);
+
+    % --- ĐƯỜNG NỐI ĐỎ N - H - D ---
+    \draw[very thick, red, dashed] (N) -- (D);
+
+    % --- CÁC ĐƯỜNG NÉT LIỀN MÀU ĐEN (THẤY ĐƯỢC) ---
+    \draw[thick] (B) -- (I); % Kéo dài AB tới I
+    \draw[thick] (S) -- (B) -- (C) -- (D) -- (S);
+    \draw[thick] (S) -- (C);
+
+    % --- VẼ CÁC ĐIỂM (NODES/DOTS) ---
+    % Điểm xanh
+    \fill[blue] (S) circle (2pt);
+    \fill[blue] (M) circle (2pt);
+    \fill[blue] (O) circle (2pt);
+    \fill[blue] (E) circle (2pt);
+
+    % Điểm đỏ
+    \fill[red] (I) circle (2.8pt);
+    \fill[red] (N) circle (2.8pt);
+    \fill[red] (H) circle (2.8pt);
+    \fill[red] (D) circle (2.8pt);
+
+    % Điểm đen
+    \fill[black] (A) circle (1.8pt);
+    \fill[black] (B) circle (1.8pt);
+    \fill[black] (C) circle (1.8pt);
+
+    % --- NHÃN CÁC ĐIỂM ---
+    \node[above right, blue] at (S) {$S$};
+    \node[left] at (A) {$A$};
+    \node[below] at (B) {$B$};
+    \node[below right] at (C) {$C$};
+    \node[above right, red] at (D) {$D$};
+
+    \node[left, blue] at (O) {$O$};
+\end{tikzpicture}
+
+\end{center}
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ Điểm ${N}$ thuộc mặt phẳng $(SAC)$.
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ ${MN}$ chứa trong mặt phẳng $(SAC)$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Gọi $I=ND\cap AB$. Khi đó $MI\subset (SAB)$.
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ ${D,F,E}$ cùng thuộc 2 mặt phẳng $(MND),(SBD)$ nên thẳng hàng.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có $AB\cap CD=J, AC\cap BD=E$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+ \begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=0.7cm,y=0.7cm]
+			\draw (0.0,-0.0)-- (2.0,-2.0);
+			\draw (5.0,0.0)-- (3.0,3.0);
+			\draw (3.0,3.0)-- (0.0,-0.0);
+			\draw (3.0,3.0)-- (4.0,-1.5);
+			\draw (3.0,3.0)-- (2.0,-2.0);
+			\draw (4.0,-1.5)-- (2.0,-2.0);
+			\draw (4.0,-1.5)-- (5.0,0.0);
+			\draw [dash pattern=on 2pt off 2pt] (0.0,-0.0)-- (5.0,0.0);
+			\begin{scriptsize}
+			\draw [fill=black] (0.0,-0.0) circle (1pt);
+			\draw[color=black] (-0.06,0.2) node {$A$};
+			\draw [fill=black] (2.0,-2.0) circle (1pt);
+			\draw[color=black] (1.7,-1.95) node {$D$};
+			\draw [fill=black] (5.0,0.0) circle (1pt);
+			\draw[color=black] (5.15,0.15) node {$B$};
+			\draw [fill=black] (4.0,-1.5) circle (1pt);
+			\draw[color=black] (4.2,-1.65) node {$C$};
+			\draw [fill=black] (3.0,3.0) circle (1pt);
+			\draw[color=black] (3.2,3.0) node {$S$};
+			\end{scriptsize}
+			\end{tikzpicture}
+
+\end{center}
+\choiceTFt
+{ Đường thẳng ${SJ}$ nằm trong mặt phẳng $(SBC)$ }
+   { \True  Giao tuyến của mặt phẳng $(SAB)$ và mặt phẳng $(ABC)$ là đường thẳng ${AB}$ }
+     { \True  Giao tuyến của mặt phẳng $(SAB)$ và mặt phẳng $(SCD)$ là đường thẳng ${SJ}$ }
+    { Gọi $G=JE\cap AD$. Khi đó $(SJE)\cap (SAD)=BG$ }
+\loigiai{\begin{center}
+ \begin{tikzpicture}[scale=1.1, line join=round, line cap=round]
+% Define coordinates
+\coordinate (A) at (0, 2.5);
+\coordinate (D) at (1.8, 0);
+\coordinate (C) at (4.3, 0.8);
+\coordinate (B) at (5.1, 2.5);
+\coordinate (S) at (2.6, 5.5);
+% E is the intersection of lines AB and CD
+\coordinate (J) at (intersection of A--B and D--C);
+% F is the intersection of diagonals AC and BD
+\coordinate (E) at (intersection of A--C and B--D);
+% G is the intersection of line EF and AD
+\coordinate (G) at (intersection of J--E and A--D);
+% Intersection of EF with BC (entry point into the pyramid base)
+\coordinate (H) at (intersection of J--E and B--C);
+
+% --- Dashed lines (hidden inside the pyramid) ---
+\draw[dashed, thick] (A) -- (B);
+\draw[dashed, thick] (A) -- (C);
+\draw[dashed, thick] (B) -- (D);
+\draw[dashed, thick] (S) -- (E);
+\draw[dashed, thick] (G) -- (H);
+
+% --- Solid lines (visible) ---
+\draw[thick] (S) -- (A) -- (D) -- (C) -- (B) -- cycle; % Outer pyramid faces
+\draw[thick] (S) -- (D);
+\draw[thick] (S) -- (C);
+\draw[thick] (B) -- (J);
+\draw[thick] (C) -- (J);
+\draw[thick] (H) -- (J);
+
+% --- Dots at key points ---
+\foreach \p in {S, A, B, C, D, J, E, G} {
+\filldraw[fill=black] (\p) circle (1.2pt);
+}
+
+% --- Labels ---
+\node[above] at (S) {$S$};
+\node[left] at (A) {$A$};
+\node[above right] at (B) {$B$};
+\node[below] at (C) {$C$};
+\node[below left] at (D) {$D$};
+\node[above right] at (J) {$J$};
+\node[below] at (E) {$E$};
+\node[left] at (G) {$G$};
+\end{tikzpicture}
+\end{center}
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ Đường thẳng ${SJ}$ nằm trong mặt phẳng $(SCD)$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ Giao tuyến của mặt phẳng $(SAB)$ và $(ABC)$ là đường thẳng ${AB}$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ Giao tuyến của mặt phẳng $(SAB)$ và mặt phẳng $(SCD)$ là đường thẳng ${SJ}$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ $(SJE)\cap (SAD)=SG$.
+
+
+}\end{ex}
+
+\begin{ex}
+ Cho tứ diện ${ABCD}$. Gọi ${M,K}$ lần lượt là trung điểm của ${AD,BC}$, ${J}$ là một điểm trên cạnh ${AB}$, ${N}$ là một điểm trên cạnh ${AC}$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (1,-2) node at (C) [below] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (A) at (1,3)   node at (A) [above] {$A$};
+\draw [dashed] (B)--(D) ; 
+\draw (B)--(C) (C)--(D) (A)--(B) (A)--(C) (A)--(D);
+\end{tikzpicture}
+
+\end{center}
+\choiceTFt
+{ $MK \subset (ABD)$ }
+   { \True  $(JND) \cap (ABD) = JD$ }
+     { \True  $(BCM) \cap (ABD)=BM$ }
+    { Giao điểm của đường thẳng ${JD}$ và mặt phẳng $(MBC)$ là giao điểm của ${JD}$ và ${MC}$ }
+\loigiai{\begin{center}
+ \begin{tikzpicture}[line join=round, line cap=round, thick]
+% --- Khai báo 4 tên điểm ngẫu nhiên được truyền từ Python ---
+\def\nameI{M} % Thay bằng giá trị ngẫu nhiên từ Python
+\def\nameJ{K} % Thay bằng giá trị ngẫu nhiên từ Python
+\def\nameM{J} % Thay bằng giá trị ngẫu nhiên từ Python
+\def\nameN{N} % Thay bằng giá trị ngẫu nhiên từ Python
+
+% Tọa độ 4 đỉnh cố định của tứ diện ABCD
+\coordinate (B) at (0,0);
+\coordinate (C) at (2,-1.5);
+\coordinate (D) at (7,0);
+\coordinate (A) at (2.5,4.5);
+
+% Tọa độ các điểm phụ thuộc
+\coordinate (ptI) at ($(A)!0.5!(D)$);
+\coordinate (ptJ) at ($(B)!0.5!(C)$);
+\coordinate (ptM) at ($(A)!0.35!(B)$);
+\coordinate (ptN) at ($(A)!0.65!(C)$);
+
+% Giao điểm E và F
+\path[name path=CI] (C) -- (ptI);
+\path[name path=DN] (D) -- (ptN);
+\path [name intersections={of=CI and DN, by=E}];
+
+\path[name path=BI] (B) -- (ptI);
+\path[name path=DM] (D) -- (ptM);
+\path [name intersections={of=BI and DM, by=F}];
+
+% Các đường nét đứt
+\draw[dashed] (B) -- (D);
+\draw[dashed] (D) -- (ptM);
+\draw[dashed] (ptI) -- (B);
+\draw[dashed] (ptI) -- (ptJ);
+\draw[dashed] (D) -- (ptJ);
+\draw[dashed] (E) -- (F);
+
+% Các đường nét liền
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+\draw (A) -- (C);
+\draw (D) -- (ptN);
+\draw (A) -- (ptJ);
+\draw (C) -- (ptI);
+
+% Chấm điểm và gắn nhãn các đỉnh cố định và giao điểm
+\foreach \p/\pos/\lbl in {A/above/A, B/below left/B, C/below/C, D/right/D, E/right/E, F/above/F}
+\fill (\p) circle (2pt) node[\pos] {$\lbl$};
+
+% Chấm điểm và gắn nhãn 4 điểm ngẫu nhiên
+\fill (ptI) circle (2pt) node[above right] {$\nameI$};
+\fill (ptJ) circle (2pt) node[below left] {$\nameJ$};
+\fill (ptM) circle (2pt) node[above left] {$\nameM$};
+\fill (ptN) circle (2pt) node[left] {$\nameN$};
+
+\end{tikzpicture} 
+
+\end{center}
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ $MK \subset (KAD), (MBC)$.
+
+b) Khẳng định đã cho là khẳng định đúng.
+
+ $(JND) \cap (ABD) = JD$.
+
+c) Khẳng định đã cho là khẳng định đúng.
+
+ $(BCM) \cap (ABD)=BM$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ Giao điểm của đường thẳng ${JD}$ và mặt phẳng $(MBC)$ là giao điểm của ${JD}$ và ${MB}$.
+
+
+}\end{ex}
+
+\begin{ex}
+ Cho tứ diện ${ABCD}$. Gọi ${I,M}$ lần lượt là trung điểm của ${AC,BC}$, trên đoạn ${BD}$ lấy điểm ${P}$ sao cho $BP=3PD$. Gọi $F=CD\cap MP$. Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\coordinate (B) at (0,0)   node at (B) [left] {$B$};
+\coordinate (C) at (1,-2) node at (C) [below] {$C$};
+\coordinate (D) at (4,0)   node at (D) [right] {$D$};
+\coordinate (A) at (1,3)   node at (A) [above] {$A$};
+\draw [dashed] (B)--(D) ; 
+\draw (B)--(C) (C)--(D) (A)--(B) (A)--(C) (A)--(D);
+\end{tikzpicture}
+
+\end{center}
+\choiceTFt
+{ ${IP}$ là giao tuyến của hai mặt phẳng $(IMP)$ và $(BCD)$ }
+   {  ${BC}$ là giao tuyến của hai mặt phẳng $(BMP)$ và $(AID)$ }
+     { Giao điểm của đường thẳng ${CD}$ và mặt phẳng $(IMP)$ là điểm ${M}$ }
+    { \True  Giao điểm của đường thẳng ${AD}$ và mặt phẳng $(IMP)$ là giao điểm của đường thẳng ${AD}$ với đường thẳng ${IF}$ }
+\loigiai{\begin{center}
+
+	\begin{tikzpicture}[line join=round, line cap=round, scale=1.2]
+	    % Tọa độ các đỉnh tứ diện ABCD
+	    \coordinate (A) at (2.2, 4.2);
+	    \coordinate (B) at (0.2, 0.7);
+	    \coordinate (C) at (2.9, -1.2);
+	    \coordinate (D) at (4.3, 0.7);
+
+	    % Tọa độ các điểm phụ thuộc
+	    \coordinate (M) at ($(A)!0.5!(C)$);
+	    \coordinate (N) at ($(B)!0.5!(C)$);
+	    \coordinate (F) at ($(A)!0.66!(D)$);
+	    \coordinate (E) at ($(M)!2.5!(F)$);
+	    \coordinate (P) at (intersection of N--E and B--D);
+
+	    % Các nét đứt
+	    \draw[dashed, thick] (B) -- (D);
+	    \draw[dashed, thick] (N) -- (E);
+
+	    % Các nét liền
+	    \draw[thick] (A) -- (B) -- (C) -- (D) -- (A);
+	    \draw[thick] (A) -- (C);
+	    \draw[thick] (N) -- (M) -- (F) -- (E) -- (D);
+
+	    % Đánh dấu các điểm
+	    \foreach \p in {A, B, C, D, M, N, P, E, F}
+	        \filldraw[black] (\p) circle (1.2pt);
+
+	    % Gán nhãn cho các điểm
+	    \node[above] at (A) {$A$};
+	    \node[left] at (B) {$B$};
+	    \node[below] at (C) {$C$};
+	    \node[right] at (D) {$D$};
+	    \node[left] at (M) {$I$};
+	    \node[below left] at (N) {$M$};
+	    \node[above=2pt] at (P) {$P$};
+	    \node[above right=-1pt] at (F) {$J$};
+	    \node[right] at (E) {$F$};
+	\end{tikzpicture}
+	
+\end{center}
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ ${MP}$ là giao tuyến của hai mặt phẳng $(IMP)$ và $(BCD)$.
+
+b) Khẳng định đã cho là khẳng định sai.
+
+ ${CD}$ là giao tuyến của hai mặt phẳng $(BMP)$ và $(AID)$.
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ Giao điểm của đường thẳng ${CD}$ và mặt phẳng $(IMP)$ là điểm ${F}$
+
+d) Khẳng định đã cho là khẳng định đúng.
+
+ Giao điểm của đường thẳng ${AD}$ và mặt phẳng $(IMP)$ là giao điểm của đường thẳng ${AD}$ với đường thẳng ${IF}$.
+
+
+}\end{ex}
+
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có $AC\cap BD=F$. Trên đoạn ${SC}$ lấy một điểm ${K}$ không trùng với ${S}$ và ${C}$. Gọi ${G}$ là giao điểm của hai đường thẳng ${AK}$ và ${SF}$. 
+Xét tính đúng-sai của các khẳng định sau:
+\begin{center}
+ \begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=0.7cm,y=0.7cm]
+			\draw (0.0,-0.0)-- (2.0,-2.0);
+			\draw (5.0,0.0)-- (3.0,3.0);
+			\draw (3.0,3.0)-- (0.0,-0.0);
+			\draw (3.0,3.0)-- (4.0,-1.5);
+			\draw (3.0,3.0)-- (2.0,-2.0);
+			\draw (4.0,-1.5)-- (2.0,-2.0);
+			\draw (4.0,-1.5)-- (5.0,0.0);
+			\draw [dash pattern=on 2pt off 2pt] (0.0,-0.0)-- (5.0,0.0);
+			\begin{scriptsize}
+			\draw [fill=black] (0.0,-0.0) circle (1pt);
+			\draw[color=black] (-0.06,0.2) node {$A$};
+			\draw [fill=black] (2.0,-2.0) circle (1pt);
+			\draw[color=black] (1.7,-1.95) node {$B$};
+			\draw [fill=black] (5.0,0.0) circle (1pt);
+			\draw[color=black] (5.15,0.15) node {$D$};
+			\draw [fill=black] (4.0,-1.5) circle (1pt);
+			\draw[color=black] (4.2,-1.65) node {$C$};
+			\draw [fill=black] (3.0,3.0) circle (1pt);
+			\draw[color=black] (3.2,3.0) node {$S$};
+			\end{scriptsize}
+			\end{tikzpicture}
+
+\end{center}
+\choiceTFt
+{ ${SB}$ là giao tuyến của hai mặt phẳng $(SBD)$ và $(ABCD)$ }
+   { ${SA}$ là giao tuyến của hai mặt phẳng $(SAC)$ và $(SBD)$ }
+     { Giao điểm của đường thẳng ${SF}$ với mặt phẳng $(ABK)$ là giao điểm của ${SF}$ và ${AB}$ }
+    { Giao điểm của đường thẳng ${SD}$ với mặt phẳng $(ABK)$ là giao điểm của ${SD}$ và ${BK}$ }
+\loigiai{\begin{center}
+\begin{tikzpicture}[line join=round, line cap=round, thick]
+					% Định nghĩa tọa độ các đỉnh đáy và đỉnh chóp
+					\coordinate (A) at (0, 0);
+					\coordinate (B) at (0.8, -1.6);
+					\coordinate (C) at (4.0, -2.4);
+					\coordinate (D) at (6.4, 0);
+					% Giao điểm 2 đường chéo đáy O = AC \cap BD
+					\coordinate (O) at (intersection of A--C and B--D);
+					% Đỉnh chóp S (nằm phía trên O lệch nhẹ sang trái một chút theo hình mẫu)
+					\coordinate (S) at ($(O) + (0.3, 3.2)$);
+					% Điểm M trên cạnh SC và N trên cạnh SD
+					\coordinate (M) at ($(S)!0.55!(C)$);
+					\coordinate (N) at ($(S)!0.32!(D)$);
+					% Điểm K là giao điểm của SO và (AM / BN)
+					\coordinate (K) at (intersection of S--O and A--M);
+					
+					% --- Các nét đứt (bị khuất) ---
+					\draw[dashed] (A) -- (D);
+					\draw[dashed] (A) -- (C);
+					\draw[dashed] (B) -- (D);
+					\draw[dashed] (S) -- (O);
+					\draw[dashed] (A) -- (M);
+					\draw[dashed] (K) -- (N);
+					\draw[dashed] (B) -- (K);
+					
+					% --- Các nét liền (nhìn thấy) ---
+					\draw (S) -- (A) -- (B) -- (C) -- (D) -- (S);
+					\draw (S) -- (B);
+					\draw (S) -- (C);
+					\draw (B) -- (M);
+					
+					% --- Vẽ các điểm tròn ---
+					\foreach \p in {A, B, C, D, S, O, M, N, K} {
+					\fill (\p) circle (1.2pt);
+					}
+					
+					% --- Gán nhãn cho các điểm ---
+					\node[left] at (A) {$A$};
+					\node[below left] at (B) {$B$};
+					\node[below] at (C) {$C$};
+					\node[right] at (D) {$D$};
+					\node[above] at (S) {$S$};
+					\node[below] at (O) {$F$};
+					\node[right] at (M) {$K$};
+					\node[above right] at (N) {$M$};
+					\node[above left] at (K) {$G$};
+					\end{tikzpicture}
+\end{center}
+ 
+
+ a) Khẳng định đã cho là khẳng định sai.
+
+ $(SBD) \cap (ABCD)=BD$.
+
+b) Khẳng định đã cho khẳng định sai.
+
+ $(SAB) \cap (ABCD)=AB$.
+
+c) Khẳng định đã cho là khẳng định sai.
+
+ $G=SF \cap AK \Rightarrow SF \cap (ABK)=G$.
+
+d) Khẳng định đã cho là khẳng định sai.
+
+ Gọi $M=SD\cap BG\Rightarrow M=SD \cap (ABK)$.
+
+
+}\end{ex}
+\begin{ex}
+ Cho hình chóp ${S.ABCD}$ có đáy là hình bình hành. Gọi ${E}$ là điểm thuộc cạnh ${SB}$ sao cho $SE=\frac{1}{2}SB$. Gọi ${H}$ là trung điểm của cạnh ${AD}$. Tìm giao tuyến của hai mặt phẳng $(CEH)$ và $(SAB)$.
+\begin{center}
+\begin{tikzpicture}[line join=round, line cap=round,thick,scale=0.6]
+\coordinate (A) at (0,0);
+\coordinate (D) at (-2,-2);
+\coordinate (B) at (5,0);
+\coordinate (C) at ($(B)+(D)-(A)$);
+\coordinate (S) at (0,5);
+\coordinate (E) at ($(S)!0.5!(B)$);
+\coordinate (H) at ($(A)!0.5!(D)$);
+\draw (S)--(B) (S)--(C) (B)--(C) (S)--(D) (C)--(D);
+\draw[dashed,thin] (S)--(A) (A)--(D) (A)--(B);
+\draw[fill=white] (S) circle (1.5pt) node[above] {$S$};
+\draw[fill=white] (A) circle (1.5pt) node[above left] {$A$};
+\draw[fill=white] (B) circle (1.5pt) node[right] {$B$};
+\draw[fill=white] (C) circle (1.5pt) node[below] {$C$};
+\draw[fill=white] (D) circle (1.5pt) node[left] {$D$};
+\draw[fill=white] (E) circle (1.5pt) node[above right] {$E$};
+\draw[fill=white] (H) circle (1.5pt) node[left] {$H$};
+\end{tikzpicture}
+
+\end{center}
+\loigiai{ 
+ \begin{center}
+\begin{tikzpicture}[line join=round, line cap=round,thick,scale=0.6]
+\coordinate (A) at (0,0);
+\coordinate (D) at (-2,-2);
+\coordinate (B) at (5,0);
+\coordinate (C) at ($(B)+(D)-(A)$);
+\coordinate (S) at (0,5);
+\coordinate (E) at ($(S)!0.5!(B)$);
+\coordinate (H) at ($(A)!0.5!(D)$);
+\draw (S)--(B) (S)--(C) (B)--(C) (S)--(D) (C)--(D);
+\draw[dashed,thin] (S)--(A) (A)--(D) (A)--(B);
+\draw (C)--(E);
+\draw[dashed,thin] (C)--(H) (E)--(H);
+\path[name path=dt1] ($(C)!-5!(H)$)--($(C)!5!(H)$);
+\path[name path=dt2] ($(A)!-5!(B)$)--($(A)!5!(B)$);
+\path[name intersections={of=dt1 and dt2, by=O}];
+\draw[thin] (H)--(O) (A)--(O);
+\draw[dashed,thin] (E)--(O);
+\draw[fill=white] (S) circle (1.5pt) node[above] {$S$};
+\draw[fill=white] (A) circle (1.5pt) node[above left] {$A$};
+\draw[fill=white] (B) circle (1.5pt) node[right] {$B$};
+\draw[fill=white] (C) circle (1.5pt) node[below] {$C$};
+\draw[fill=white] (D) circle (1.5pt) node[left] {$D$};
+\draw[fill=white] (E) circle (1.5pt) node[above right] {$E$};
+\draw[fill=white] (H) circle (1.5pt) node[left] {$H$};
+\draw[fill=white] (O) circle (1.5pt) node[below] {$O$};
+\end{tikzpicture}
+
+\end{center} 
+$E\in SB\subset (SAB)$ và $E\in (CEH)\Rightarrow E\in (CEH)\cap (SAB)$.
+
+Trong mặt phẳng $(ABCD)$, gọi $O=CH \cap AB \Rightarrow O \in (CEH) \cap (SAB)$.
+
+Vậy $(CEH)\cap (SAB)=EO$. 
+ }\end{ex}
