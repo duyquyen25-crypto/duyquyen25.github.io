@@ -3315,7 +3315,7 @@ const GeometryFigureView: React.FC<{ diagram: GeometryFigureDiagram; compact?: b
     const showDiags = (params.showDiags ?? 0) === 1;
     // Intersection of vBL--vFR and vBR--vFL
     const a1 = vFR.y - vBL.y, b1 = vBL.x - vFR.x, c1 = a1 * vBL.x + b1 * vBL.y;
-    const a2 = vFL.y - vBR.y, b2 = vBR.x - vFL.x, c2 = a2 * vBR.x + b2 * vFL.y;
+    const a2 = vFL.y - vBR.y, b2 = vBR.x - vFL.x, c2 = a2 * vBR.x + b2 * vBR.y;
     const det = a1 * b2 - a2 * b1;
     const center = det !== 0
       ? { x: (b2 * c1 - b1 * c2) / det, y: (a1 * c2 - a2 * c1) / det }
@@ -3332,7 +3332,7 @@ const GeometryFigureView: React.FC<{ diagram: GeometryFigureDiagram; compact?: b
               <line x1={apex.x} y1={apex.y} x2={center.x} y2={center.y} stroke="#64748b" strokeWidth="1" strokeDasharray="3 3" />
               <circle cx={center.x} cy={center.y} r="2.5" fill="#0284c7" />
               {lbl.center && (
-                <text x={center.x + 8} y={center.y - 4} fontSize="10.5" fontStyle="italic" fontWeight="600" fill="#0284c7">
+                <text x={center.x + 11} y={center.y + 3} fontSize="10.5" fontStyle="italic" fontWeight="600" fill="#0284c7">
                   {lbl.center}
                 </text>
               )}

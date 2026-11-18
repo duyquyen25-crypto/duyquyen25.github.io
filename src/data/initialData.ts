@@ -142,6 +142,12 @@ import {
   G11_B7_TF_LIST,
   G11_B7_SA_LIST,
 } from '../engine/grade11Lesson7Templates';
+import { G11_B8_MC_LIST } from '../engine/grade11Lesson8Templates';
+import {
+  G11_B9_MC_LIST,
+  G11_B9_TF_LIST,
+  G11_B9_SA_LIST,
+} from '../engine/grade11Lesson9Templates';
 import {
   G11_B10_MC_LIST,
   G11_B10_TF_LIST,
@@ -248,6 +254,16 @@ import {
   G11_B29_TF_LIST,
   G11_B29_SA_LIST,
 } from '../engine/grade11Lesson29Templates';
+import {
+  G11_B30_MC_LIST,
+  G11_B30_TF_LIST,
+  G11_B30_SA_LIST,
+} from '../engine/grade11Lesson30Templates';
+import {
+  G11_B32_MC_LIST,
+  G11_B32_SA_LIST,
+  G11_B32_ES_LIST,
+} from '../engine/grade11Lesson32Templates';
 import { generateValidInstance } from '../engine/templateRunner';
 import { createSeededRng } from '../engine/mathUtils';
 
@@ -796,7 +812,7 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 8. Mẫu số liệu ghép nhóm',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b8_grouped_sample_mc],
+              MC: [TEMPLATE_LIBRARY.t11_b8_grouped_sample_mc, ...G11_B8_MC_LIST],
               TF: [],
               SA: [],
               ES: [],
@@ -807,9 +823,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 9. Các số đặc trưng đo xu thế trung tâm',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [],
-              SA: [TEMPLATE_LIBRARY.t11_b9_grouped_central_sa],
+              MC: [...G11_B9_MC_LIST],
+              TF: [...G11_B9_TF_LIST],
+              SA: [TEMPLATE_LIBRARY.t11_b9_grouped_central_sa, ...G11_B9_SA_LIST],
               ES: [],
             },
           },
@@ -1113,9 +1129,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 30. Công thức nhân xác suất cho hai biến cố độc lập',
             type: 'lesson',
             mathTypes: {
-              MC: [],
-              TF: [TEMPLATE_LIBRARY.t11_prob_indep_tf],
-              SA: [],
+              MC: [...G11_B30_MC_LIST],
+              TF: [TEMPLATE_LIBRARY.t11_prob_indep_tf, ...G11_B30_TF_LIST],
+              SA: [...G11_B30_SA_LIST],
               ES: [],
             },
           },
@@ -1148,10 +1164,10 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 32. Các quy tắc tính đạo hàm',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t11_b32_derivative_rules_mc],
+              MC: [TEMPLATE_LIBRARY.t11_b32_derivative_rules_mc, ...G11_B32_MC_LIST],
               TF: [],
-              SA: [],
-              ES: [],
+              SA: G11_B32_SA_LIST,
+              ES: G11_B32_ES_LIST,
             },
           },
           {

@@ -26,10 +26,10 @@ import { AnalyticsReportView } from './components/AnalyticsReportView';
 type AppTab = 'bank' | 'matrix' | 'grading' | 'analytics';
 
 const STORAGE_KEYS = {
-  TREE: 'edumath2018_tree_v53',
-  EXAMS: 'edumath2018_exams_v27',
+  TREE: 'edumath2018_tree_v58',
+  EXAMS: 'edumath2018_exams_v32',
   STUDENTS: 'edumath2018_students_v3',
-  SUBMISSIONS: 'edumath2018_submissions_v27',
+  SUBMISSIONS: 'edumath2018_submissions_v32',
 };
 
 function loadFromStorage<T>(key: string, fallback: () => T): T {

@@ -1,0 +1,1398 @@
+\begin{ex}
+ Tính đạo hàm của hàm số $y=- 2 x^{2} - 2 x + 5$.
+ 
+\choice
+{ $y'=6 x^{2} - 4 x - 2$ }
+   { $y'=6 - 4 x$ }
+     { \True $y'=- 4 x - 2$ }
+    { $y'=4 x - 2$ }
+\loigiai{ 
+
+ $y'=(- 2 x^{2} - 2 x + 5)'=- 4 x - 2$ . 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=- 4 x^{3} + 4 x^{2} - 3 x + 5 + \dfrac{8}{x}$.
+ 
+\choice
+{ $y'=- 12 x^{2} + 8 x - 3 + \dfrac{8}{x}$ }
+   { $y'=- 12 x^{2} + 8 x - 3 - \dfrac{8}{x}$ }
+     { $y'=- 12 x^{2} + 8 x - 3 + \dfrac{8}{x^{2}}$ }
+    { \True $y'=- 12 x^{2} + 8 x - 3 - \dfrac{8}{x^{2}}$ }
+\loigiai{ 
+
+ $y'=(- 4 x^{3} + 4 x^{2} - 3 x + 5 + \dfrac{8}{x})'=- 12 x^{2} + 8 x - 3 - \dfrac{8}{x^{2}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=- 3 \sqrt{x} - 2 x + 4$.
+ 
+\choice
+{ $y'=- \dfrac{3 \sqrt{x}}{2} - 2$ }
+   { $y'=-2 - \dfrac{3}{\sqrt{x}}$ }
+     { \True $y'=-2 - \dfrac{3}{2 \sqrt{x}}$ }
+    { $y'=- 3 \sqrt{x} - 2$ }
+\loigiai{ 
+
+ $y'=(- 3 \sqrt{x} - 2 x + 4)'=-2 - \dfrac{3}{2 \sqrt{x}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=- 2 \sqrt{x} + x^{3} - 4 x^{2} - 3 x + 3 - \dfrac{5}{x}$.
+ 
+\choice
+{ $y'=- \sqrt{x} + 3 x^{2} - 8 x - 3 + \dfrac{5}{x^{2}}$ }
+   { \True $y'=3 x^{2} - 8 x - 3 + \dfrac{5}{x^{2}} - \dfrac{1}{\sqrt{x}}$ }
+     { $y'=- 2 \sqrt{x} + 3 x^{2} - 8 x - 3 + \dfrac{5}{x^{2}}$ }
+    { $y'=3 x^{2} - 8 x - 3 + \dfrac{1}{x^{2}} - \dfrac{1}{\sqrt{x}}$ }
+\loigiai{ 
+
+ $y'=(- 2 \sqrt{x} + x^{3} - 4 x^{2} - 3 x + 3 - \dfrac{5}{x})'=3 x^{2} - 8 x - 3 + \dfrac{5}{x^{2}} - \dfrac{1}{\sqrt{x}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=11 x - 11$ tại điểm $x=0$ bằng 
+\choice
+{ ${-24}$ }
+   { ${-22}$ }
+     { ${-11}$ }
+    { \True ${11}$ }
+\loigiai{ 
+ Ta có: $f'(x)=11\Rightarrow f'(0)=11$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=\frac{- 3 x - 2}{- 2 x - 7}$ tại điểm $x=2$ bằng 
+\choice
+{ \True ${\frac{17}{121}}$ }
+   { ${- \frac{4}{3}}$ }
+     { ${\frac{8}{11}}$ }
+    { ${\frac{17}{81}}$ }
+\loigiai{ 
+ Ta có: $f'(x)=\frac{17}{\left(2 x + 7\right)^{2}}\Rightarrow f'(2)=\frac{17}{121}$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=- 6 \sqrt{x} + 2 x^{2} - 10$ tại điểm $x=2$ bằng 
+\choice
+{ ${8 - 6 \sqrt{3}}$ }
+   { ${44 - \frac{3 \sqrt{11}}{11}}$ }
+     { ${- 6 \sqrt{2} - 2}$ }
+    { \True ${8 - \frac{3 \sqrt{2}}{2}}$ }
+\loigiai{ 
+ Ta có: $f'(x)=4 x - \frac{3}{\sqrt{x}}\Rightarrow f'(2)=8 - \frac{3 \sqrt{2}}{2}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=10 \sin 8x$.
+ 
+\choice
+{ $y'=80 \cos x$ }
+   { $y'=- 80 \sin x$ }
+     { \True $y'=80 \cos 8x$ }
+    { $y'=10 \sin 8x$ }
+\loigiai{ 
+
+ $y'=(10 \sin 8x)'=80 \cos 8x$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\cos 2x$.
+ 
+\choice
+{ $y'=\sin 2x$ }
+   { $y'=\sin x$ }
+     { $y'=2 \cos 2x$ }
+    { \True $y'=- 2 \sin 2x$ }
+\loigiai{ 
+
+ $y'=(\cos 2x)'=- 2 \sin 2x$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=3 \sin x - 8 \cos x$.
+ 
+\choice
+{ \True $y'=8 \sin x + 3 \cos x$ }
+   { $y'=8 \sin x - 3 \cos x$ }
+     { $y'=- 8 \sin x - 3 \cos x$ }
+    { $y'=- 8 \sin x + 3 \cos x$ }
+\loigiai{ 
+
+ $y'=(3 \sin x - 8 \cos x)'=8 \sin x + 3 \cos x$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=- \tan x - 6 \cot x$.
+ 
+\choice
+{ $y'=- \dfrac{1}{\cos x} + \dfrac{6}{\sin x}$ }
+   { $y'=- 6 \tan x - \cot x$ }
+     { $y'=\dfrac{1}{\cos ^{2}x} - \dfrac{6}{\sin ^{2}x}$ }
+    { \True $y'=- \dfrac{1}{\cos ^{2}x} + \dfrac{6}{\sin ^{2}x}$ }
+\loigiai{ 
+
+ $y'=(- \tan x - 6 \cot x)'=- \frac{1}{\cos ^{2}x} + \frac{6}{\sin ^{2}x}$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=4 \tan 6x$.
+ 
+\choice
+{ $y'=- \dfrac{24}{\cos ^{2}6x}$ }
+   { $y'=\dfrac{4}{\sin ^{2}6x}$ }
+     { \True $y'=\dfrac{24}{\cos ^{2}6x}$ }
+    { $y'=- 24 \cot 6x$ }
+\loigiai{ 
+
+ $y'=(4 \tan 6x)'=4.(6x)'.\dfrac{1}{\cos ^{2}6x}=\dfrac{24}{\cos ^{2}6x}$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=- 6 \cot 8x$.
+ 
+\choice
+{ $y'=\dfrac{48}{\cos ^{2}8x}$ }
+   { \True $y'=\dfrac{48}{\sin ^{2}8x}$ }
+     { $y'=- 48 \tan 8x$ }
+    { $y'=- \dfrac{6}{\cos ^{2}8x}$ }
+\loigiai{ 
+
+ $y'=(- 6 \cot 8x)'=+6.(8x)'.\dfrac{1}{\sin ^{2}8x}=\dfrac{48}{\sin ^{2}8x}$ 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=2 \sin{5 x }$ tại điểm $x=\frac{3 \pi}{4}$ bằng 
+\choice
+{ \True ${5 \sqrt{2}}$ }
+   { ${10}$ }
+     { ${0}$ }
+    { ${- \sqrt{2}}$ }
+\loigiai{ 
+ Ta có: $f'(x)=10 \cos{\left(5 x \right)}\Rightarrow f'(\frac{3 \pi}{4})=5 \sqrt{2}$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=- \sin{x } + 7 \cos{x }$ tại điểm $x=0$ bằng 
+\choice
+{ ${7}$ }
+   { ${\frac{1}{2} + \frac{7 \sqrt{3}}{2}}$ }
+     { ${- 3 \sqrt{2}}$ }
+    { \True ${-1}$ }
+\loigiai{ 
+ Ta có: $f'(x)=- 7 \sin{\left(x \right)} - \cos{\left(x \right)}\Rightarrow f'(0)=-1$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=2 - 3 \tan{x }$ tại điểm $x=\frac{5 \pi}{6}$ bằng 
+\choice
+{ ${-6}$ }
+   { ${\sqrt{3} + 2}$ }
+     { \True ${-4}$ }
+    { ${5}$ }
+\loigiai{ 
+ Ta có: $f'(x)=- \frac{3}{\cos^{2}{\left(x \right)}}\Rightarrow f'(\frac{5 \pi}{6})=-4$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=3^{x}$.
+ 
+\choice
+{ $y'=\frac{3^x}{\ln 3}$ }
+   { \True $y'=3^x\ln 3$ }
+     { $y'=3^x$ }
+    { $y'=3^x\log 3$ }
+\loigiai{ 
+
+ $y'=(3^x)'=3^x\ln 3$. 
+ }\end{ex}
+
+\begin{ex}
+ Câu 1.Tính đạo hàm của hàm số $y=6^{- 5 x^{2} + 2 x - 8}$.
+ 
+\choice
+{ $y'=6^{- 5 x^{2} + 2 x - 8} \log{\left(6 \right)}$ }
+   { \True $y'=6^{- 5 x^{2} + 2 x - 8} \left(2 - 10 x\right) \ln{\left(6 \right)}$ }
+     { $y'=6^{- 5 x^{2} + 2 x - 8} \left(2 - 10 x\right)$ }
+    { $y'=6^{- 5 x^{2} + 2 x - 8}$ }
+\loigiai{ 
+
+ $y'=(- 5 x^{2} + 2 x - 8)'.6^{- 5 x^{2} + 2 x - 8}.\ln 6=6^{- 5 x^{2} + 2 x - 8} \left(2 - 10 x\right) \ln{\left(6 \right)}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=- 2 x + 2 e^{x} + 5$.
+ 
+\choice
+{ $y'=e^{x} - 2$ }
+   { $y'=0$ }
+     { \True $y'=2 e^{x} - 2$ }
+    { $y'=e^{2 x} - 2$ }
+\loigiai{ 
+
+ $y'=(- 2 x + 2 e^{x} + 5)'=2 e^{x} - 2$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=e^{- 3 x - 3}$.
+ 
+\choice
+{ $y'=\left(- 3 x - 3\right) e^{- 3 x - 3}$ }
+   { \True $y'=- 3 e^{- 3 x - 3}$ }
+     { $y'=- 3 x + e^{- 3 x - 3} - 3$ }
+    { $y'=e^{- 3 x - 3}$ }
+\loigiai{ 
+
+ $y'=(e^{- 3 x - 3})'=(- 3 x - 3)'.e^{- 3 x - 3}=- 3 e^{- 3 x - 3}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\log_{99} x$.
+ 
+\choice
+{ $y'=\dfrac{1}{x\log 99}$ }
+   { \True $y'=\dfrac{1}{x\ln 99}$ }
+     { $y'=\dfrac{99}{\ln x}$ }
+    { $y'=\dfrac{99}{\log x}$ }
+\loigiai{ 
+
+ $y=\left(\log_{99} x\right)'=\dfrac{1}{x\ln 99}.$ 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=\log_2 {x}+5^x$ là 
+\choice
+{ $y'=\dfrac{1}{x\log 2}+5^x\ln 5$ }
+   { $y'=\dfrac{1}{x}+5^x\ln 5$ }
+     { $y'=\dfrac{1}{x\log 2}+5^x$ }
+    { \True $y'=\dfrac{1}{x\ln 2}+5^x\ln 5$ }
+\loigiai{ 
+ $y'=\dfrac{1}{x\ln 2}+5^x\ln 5$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=\log_{4} {x}+2\sin x$ là 
+\choice
+{ \True $y'=\dfrac{1}{x\ln 4}+2\cos x$ }
+   { $y'=\dfrac{1}{x}+2\sin x$ }
+     { $y'=\dfrac{1}{x\ln 4}+2\sin x$ }
+    { $y'=\dfrac{1}{x\log 4}+2\cos x$ }
+\loigiai{ 
+ $y'=\dfrac{1}{x\ln 4}+2\cos x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=\log_{8} {x}+2\cos x$ là 
+\choice
+{ \True $y'=\dfrac{1}{x\ln 8}-2\sin x$ }
+   { $y'=\dfrac{1}{x\ln 8}-2\cos x$ }
+     { $y'=\dfrac{1}{x\ln 8}+2\sin x$ }
+    { $y'=\dfrac{1}{x}-2\sin x$ }
+\loigiai{ 
+ $y'=\dfrac{1}{x\ln 8}-2\sin x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=4\ln {x}-3\cos x$ là 
+\choice
+{ $y'=\dfrac{4}{x}-3\sin x$ }
+   { \True $y'=\dfrac{4}{x}+3\sin x$ }
+     { $y'=\dfrac{4}{x}-3\cos x$ }
+    { $y'=\dfrac{4}{x\ln x}+3\sin x$ }
+\loigiai{ 
+ $y'=\dfrac{4}{x}+3\sin x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=4\ln {x}+5\sin x$ là 
+\choice
+{ \True $y'=\dfrac{4}{x}+5\cos x$ }
+   { $y'=-\dfrac{4}{x}-5\sin x$ }
+     { $y'=\dfrac{4}{x}+\cos x$ }
+    { $y'=\dfrac{4}{x}+5\sin x$ }
+\loigiai{ 
+ $y'=\dfrac{4}{x}-5\sin x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=2^x+3\sin x$ là 
+\choice
+{ $y'=2^x\ln 2-3\cos x$ }
+   { $y'=2^x+3\cos x$ }
+     { \True $y'=2^x\ln 2+3\cos x$ }
+    { $y'=2^x\log 2+3\cos x$ }
+\loigiai{ 
+ $y'=2^x\ln 2+3\cos x$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=6^x-4\cos x$ là 
+\choice
+{ $y'=6^x\log 6+4\sin x$ }
+   { $y'=\dfrac{6^x}{\ln 6}-4\sin x$ }
+     { $y'=6^x\log 6-4\sin x$ }
+    { \True $y'=6^x\ln 6+4\sin x$ }
+\loigiai{ 
+ $y'=6^x\ln 6+4\sin x$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\log_{6} (8 x + 7)$.
+ 
+\choice
+{ \True $y'=\dfrac{8}{(8 x + 7)\ln 6}$ }
+   { $y'=\dfrac{6}{(8 x + 7)\log 6}$ }
+     { $y'=\dfrac{8}{8 x + 7}$ }
+    { $y'=\dfrac{8}{(8 x + 7)\log 6}$ }
+\loigiai{ 
+
+ $y=\left[\log_{6} (8 x + 7)\right]'=\dfrac{(8 x + 7)'}{(8 x + 7)\ln 6}=\dfrac{8}{(8 x + 7)\ln 6}.$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\ln (8 x^{2} + 13 x + 9)$.
+ 
+\choice
+{ $y'=\dfrac{1}{8 x^{2} + 13 x + 9}$ }
+   { \True $y'=\dfrac{16 x + 13}{8 x^{2} + 13 x + 9}$ }
+     { $y'=\dfrac{1}{16 x + 13}$ }
+    { $y'=\left(16 x + 13\right) \left(8 x^{2} + 13 x + 9\right)$ }
+\loigiai{ 
+
+ $y=\left[\ln (8 x^{2} + 13 x + 9)\right]'=\dfrac{16 x + 13}{8 x^{2} + 13 x + 9}=\frac{16 x + 13}{8 x^{2} + 13 x + 9}.$ 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=6^{x} + 5$ tại điểm $x=-2$ bằng 
+\choice
+{ ${41}$ }
+   { ${7776 \ln{6 }}$ }
+     { \True ${\frac{\ln{6 }}{36}}$ }
+    { ${\frac{181}{36}}$ }
+\loigiai{ 
+ Ta có: $f'(x)=6^{x} \ln{6 }\Rightarrow f'(-2)=\frac{\ln{6 }}{36}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\sqrt{x} \left(- 6 x - 1\right)$.
+ 
+\choice
+{ $y'=-6 + \dfrac{1}{2 \sqrt{x}}$ }
+   { $y'=- \dfrac{3}{\sqrt{x}}$ }
+     { $y'=\dfrac{- 12 x - 1}{\sqrt{x}}$ }
+    { \True $y'=\dfrac{- 18 x - 1}{2\sqrt{x}}$ }
+\loigiai{ 
+
+ $y'=\left[\sqrt{x} \left(- 6 x - 1\right)\right]'=(- 6 x - 1)'.(\sqrt{x})+(- 6 x - 1).(\sqrt{x})'=\dfrac{- 18 x - 1}{2\sqrt{x}}$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\left(5 x + 10\right) \sin x$.
+ 
+\choice
+{ $y'=10 \sin x + 5 \cos x$ }
+   { $y'=5 \cos x$ }
+     { \True $y'=\left(5 x + 10\right) \cos x + 5 \sin x$ }
+    { $y'=5 \sin x + 10 \cos x$ }
+\loigiai{ 
+
+ $y'=\left[\left(5 x + 10\right) \sin x\right]'=(5 x + 10)'.(\sin x)+(5 x + 10).(\sin x)'=\left(5 x + 10\right) \cos x + 5 \sin x$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\left(3 x - 2\right) \cos x$.
+ 
+\choice
+{ \True $y'=\left(2 - 3 x\right) \sin x + 3 \cos x$ }
+   { $y'=3 \sin x - 2 \cos x$ }
+     { $y'=- 2 \sin x + 3 \cos x$ }
+    { $y'=\left(3 x - 2\right) \sin x + 3 \cos x$ }
+\loigiai{ 
+
+ $y'=\left[\left(3 x - 2\right) \cos x\right]'=(3 x - 2)'.(\cos x)-(3 x - 2).(\cos x)'=\left(2 - 3 x\right) \sin x + 3 \cos x$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=(3 - 5 x){3}^x$.
+ 
+\choice
+{ \True $y'=\left[ -5+(3 - 5 x).\ln 3\right].{3}^x$ }
+   { $y'=-5.{3}^x.\ln 3$ }
+     { $y'=\left(- 5 x - 2\right).{3}^x$ }
+    { $y'=-5.{3}^x$ }
+\loigiai{ 
+
+ $y=\left[(3 - 5 x){3}^x\right]'=(3 - 5 x)'.{3}^x +(3 - 5 x)({3}^x)'$
+
+$=(-5).{3}^x +(3 - 5 x).{3}^x.\ln 3=\left[ -5+(3 - 5 x).\ln 3\right].{3}^x$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\dfrac{21}{7 x - 4}$.
+ 
+\choice
+{ $y'=21 \left(7 x - 4\right)^{2}$ }
+   { \True $y'=- \dfrac{147}{\left(7 x - 4\right)^{2}}$ }
+     { $y'=\dfrac{21}{\left(7 x - 4\right)^{2}}$ }
+    { $y'=- \dfrac{21}{7 x - 4}$ }
+\loigiai{ 
+
+ $y'=(\dfrac{21}{7 x - 4})'=- \dfrac{147}{\left(7 x - 4\right)^{2}}$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\dfrac{7 x + 5}{1 - 4 x}$.
+ 
+\choice
+{ \True $y'=\dfrac{27}{\left(1 - 4 x\right)^{2}}$ }
+   { $y'=\dfrac{27}{\left(1 - 4 x\right)^{4}}$ }
+     { $y'=\dfrac{27}{\left(1 - 4 x\right)^{3}}$ }
+    { $y'=\dfrac{-13}{\left(1 - 4 x\right)^{2}}$ }
+\loigiai{ 
+
+ $y'=\left(\frac{7 x + 5}{1 - 4 x}\right)'=\dfrac{7.1-5.(-4)}{\left(1 - 4 x\right)^{2}}=\dfrac{27}{\left(1 - 4 x\right)^{2}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\dfrac{- 5 x^{2} + 4 x + 4}{- 2 x - 3}$.
+ 
+\choice
+{ $y'=\dfrac{30 x^{2} + 14 x - 20}{\left(- 2 x - 3\right)^{2}}$ }
+   { $y'=\dfrac{30 x^{2} + 14 x - 20}{- 2 x - 3}$ }
+     { $y'=\dfrac{10 x^{2} + 30 x - 4}{- 2 x - 3}$ }
+    { \True $y'=\dfrac{10 x^{2} + 30 x - 4}{\left(- 2 x - 3\right)^{2}}$ }
+\loigiai{ 
+
+ $y'=\left(\dfrac{- 5 x^{2} + 4 x + 4}{- 2 x - 3}\right)'=\dfrac{(- 5 x^{2} + 4 x + 4)'.(- 2 x - 3)-(- 5 x^{2} + 4 x + 4).(- 2 x - 3)'}{(- 2 x - 3)^2}=\dfrac{10 x^{2} + 30 x - 4}{\left(- 2 x - 3\right)^{2}}$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\dfrac{- 5 x - 5}{\sqrt{x}}$.
+ 
+\choice
+{ \True $y'=\dfrac{5 - 5 x}{2x\sqrt{x}}$ }
+   { $y'=-5 + \dfrac{1}{2 \sqrt{x}}$ }
+     { $y'=\dfrac{- 10 x - 5}{\sqrt{x}}$ }
+    { $y'=- \dfrac{5}{2 \sqrt{x}}$ }
+\loigiai{ 
+
+ $y'=\left[\dfrac{- 5 x - 5}{\sqrt{x}}\right]'=\dfrac{(- 5 x - 5)'.(\sqrt{x})-(- 5 x - 5).(\sqrt{x})'}{x}=\dfrac{5 - 5 x}{2x\sqrt{x}}$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\dfrac{- 9 x - 2}{\cos x}$.
+ 
+\choice
+{ $y'=\dfrac{\left(- 9 x - 2\right) \sin x - 9 \cos x}{\cos^2 x}$ }
+   { $y'=\dfrac{\left(9 x + 2\right) \sin x - 9 \cos x}{\cos^2 x}$ }
+     { $y'=\dfrac{\left(9 x + 2\right) \sin x - 9 \cos x}{\cos 2x}$ }
+    { \True $y'=\dfrac{\left(- 9 x - 2\right) \sin x - 9 \cos x}{\cos^2 x}$ }
+\loigiai{ 
+
+ $y'=\left(\frac{- 9 x - 2}{\cos x}\right)'=\dfrac{(- 9 x - 2)'.\cos x-(- 9 x - 2).(\cos x)'}{\cos^2 x}=\dfrac{\left(- 9 x - 2\right) \sin x - 9 \cos x}{\cos^2 x}$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=(- 3 x^{2} + 2 x - 4)^{9}$.
+ 
+\choice
+{ $y'=9(- 3 x^{2} + 2 x - 4)^{8}$ }
+   { \True $y'=\left(18 - 54 x\right) \left(- 3 x^{2} + 2 x - 4\right)^{8}$ }
+     { $y'=(2 - 6 x)(- 3 x^{2} + 2 x - 4)^{8}$ }
+    { $y'=(- 3 x^{2} + 2 x - 4)^{8}$ }
+\loigiai{ 
+
+ $y'=\left[(- 3 x^{2} + 2 x - 4)^{9}\right]'=9(- 3 x^{2} + 2 x - 4)'\left(- 3 x^{2} + 2 x - 4\right)^{8}=\left(18 - 54 x\right) \left(- 3 x^{2} + 2 x - 4\right)^{8}.$
+ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\sqrt{5 x + 7}$.
+ 
+\choice
+{ $y'=5 \sqrt{5 x + 7}$ }
+   { $y'=\frac{5}{\sqrt{5 x + 7}}$ }
+     { $y'=\left(5 x + 7\right)^{\frac{3}{2}}$ }
+    { \True $y'=\frac{5}{2 \sqrt{5 x + 7}}$ }
+\loigiai{ 
+
+ $y'=\left(5 x + 7\right)'=\dfrac{(5 x + 7)'}{2\sqrt{5 x + 7} }=\frac{5}{2 \sqrt{5 x + 7}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\sqrt{\sin(4 x - 3)}$.
+ 
+\choice
+{ $y'=\dfrac{-2}{\sqrt{\sin(4 x - 3)}}$ }
+   { $y'=\dfrac{-2\cos(4 x - 3)}{\sqrt{\sin(4 x - 3)}}$ }
+     { $y'=\dfrac{1}{2\sqrt{\sin(4 x - 3)}}$ }
+    { \True $y'=\dfrac{2\cos(4 x - 3)}{\sqrt{\sin(4 x - 3)}}$ }
+\loigiai{ 
+
+ $y'=\dfrac{\left[\sin(4 x - 3)\right]'} {2\sqrt{\sin(4 x - 3)}}=\dfrac{2\cos(4 x - 3)}{\sqrt{\sin(4 x - 3)}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=\sqrt{\cos(4 x - 7)}$.
+ 
+\choice
+{ $y'=\dfrac{2}{\sqrt{\cos(4 x - 7)}}$ }
+   { $y'=\dfrac{2\sin(4 x - 7)}{\sqrt{\cos(4 x - 7)}}$ }
+     { \True $y'=\dfrac{-2\sin(4 x - 7)}{\sqrt{\cos(4 x - 7)}}$ }
+    { $y'=\dfrac{1}{2\sqrt{\cos(4 x - 7)}}$ }
+\loigiai{ 
+
+ $y'=\dfrac{\left[\cos(4 x - 7)\right]'} {2\sqrt{\cos(4 x - 7)}}=\dfrac{-2\sin(4 x - 7)}{\sqrt{\cos(4 x - 7)}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm của hàm số $y=- \dfrac{5}{4 x^{2} - 2 x + 1}$.
+ 
+\choice
+{ $y'=\dfrac{-5}{(4 x^{2} - 2 x + 1)^2}$ }
+   { $y'=\dfrac{5}{(4 x^{2} - 2 x + 1)^2}$ }
+     { $y'=\ln (4 x^{2} - 2 x + 1)$ }
+    { \True $y'=- \frac{5 \left(2 - 8 x\right)}{\left(4 x^{2} - 2 x + 1\right)^{2}}$ }
+\loigiai{ 
+
+ $y'=\left[- \frac{5}{4 x^{2} - 2 x + 1}\right]'=\dfrac{5(4 x^{2} - 2 x + 1)'}{\left(4 x^{2} - 2 x + 1\right)^2}=- \frac{5 \left(2 - 8 x\right)}{\left(4 x^{2} - 2 x + 1\right)^{2}}.$
+ 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=\dfrac{-2}{\sin 4x}$ là 
+\choice
+{ \True $y'=\dfrac{8\cos 4x}{\sin^2 4x}$ }
+   { $y'=\dfrac{-8}{\sin^2 4x}$ }
+     { $y'=\dfrac{2\cos 4x}{\sin^2 4x}$ }
+    { $y'=\dfrac{-2\cos 4x}{\sin 4x}$ }
+\loigiai{ 
+ $y'=2\dfrac{(\sin 4x)'}{\sin^2 4x}=2\dfrac{(4\cos 4x)'}{\sin^2 4x}=\dfrac{8\cos 4x}{\sin^2 4x}.$ 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm của hàm số $y=\dfrac{-3}{\cos 9x}$ là 
+\choice
+{ $y'=\dfrac{-3\sin 9x}{\cos^2 9x}$ }
+   { $y'=\dfrac{27\sin 9x}{\cos^2 9x}$ }
+     { \True $y'=\dfrac{-27\sin 9x}{\cos^2 9x}$ }
+    { $y'=\dfrac{-3\sin 9x}{\cos 9x}$ }
+\loigiai{ 
+ $y'=3\dfrac{(\cos 9x)'}{\cos^2 9x}=3\dfrac{(-9\sin 9x)'}{\cos^2 9x}=\dfrac{-27\sin 9x}{\cos^2 9x}.$ 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm cấp hai của hàm số $y=- 5 x^{2} - 4 x + 5$.
+ 
+\choice
+{ \True $y''=-10$ }
+   { $y''=- 10 x - 4$ }
+     { $y''=-7$ }
+    { $y''=- 8 x - 4$ }
+\loigiai{ 
+
+ $y'=\left(- 5 x^{2} - 4 x + 5\right)'=- 10 x - 4.$
+
+$y''=\left(- 10 x - 4\right)'=-10$. 
+ }\end{ex}
+
+\begin{ex}
+ Đạo hàm cấp hai của hàm số $y=- 3 x^{3} - 5 x^{2} + 3 x + 3$ tại điểm $x_0=0$ bằng
+ 
+\choice
+{ ${7}$ }
+   { ${8}$ }
+     { \True ${-10}$ }
+    { ${3}$ }
+\loigiai{ 
+
+ $y'=\left(- 3 x^{3} - 5 x^{2} + 3 x + 3\right)'=- 9 x^{2} - 10 x + 3.$
+
+$y''=\left(- 9 x^{2} - 10 x + 3\right)'=- 18 x - 10$.
+
+$y''(0)=-10$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm cấp hai của hàm số $y=\sin(- 5 x - 3)$.
+ 
+\choice
+{ $y''=- 5 \cos{\left(5 x + 3 \right)}$ }
+   { \True $y''=25 \sin{\left(5 x + 3 \right)}$ }
+     { $y''=\cos(- 5 x - 3)$ }
+    { $y''=- 25 \sin{\left(5 x + 3 \right)}$ }
+\loigiai{ 
+
+ $y'=\left[\sin(- 5 x - 3)\right]'=- 5 \cos{\left(5 x + 3 \right)}.$
+
+$y''=\left[- 5 \cos{\left(5 x + 3 \right)}\right]'=25 \sin{\left(5 x + 3 \right)}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm cấp hai của hàm số $y=\cos(1 - 7 x)$.
+ 
+\choice
+{ $y''=\sin(1 - 7 x)$ }
+   { \True $y''=- 49 \cos{\left(7 x - 1 \right)}$ }
+     { $y''=49 \cos{\left(7 x - 1 \right)}$ }
+    { $y''=- 7 \sin{\left(7 x - 1 \right)}$ }
+\loigiai{ 
+
+ $y'=\left[\cos(1 - 7 x)\right]'=- 7 \sin{\left(7 x - 1 \right)}.$
+
+$y''=\left[- 7 \sin{\left(7 x - 1 \right)}\right]'=- 49 \cos{\left(7 x - 1 \right)}$. 
+ }\end{ex}
+
+\begin{ex}
+ Tính đạo hàm cấp hai của hàm số $y=\dfrac{9 - 10 x}{6 x - 9}$.
+ 
+\choice
+{ $y''=\dfrac{36}{\left(6 x - 9\right)^{2}}$ }
+   { $y''=\dfrac{216}{\left(6 x - 9\right)^{3}}$ }
+     { \True $y''=\dfrac{-432}{\left(6 x - 9\right)^{3}}$ }
+    { $y''=\dfrac{36}{\left(6 x - 9\right)^{4}}$ }
+\loigiai{ 
+
+ $y'=\left(\frac{9 - 10 x}{6 x - 9}\right)'=\dfrac{(-10).(-9)-9.6}{\left(6 x - 9\right)^{2}}=\dfrac{36}{\left(6 x - 9\right)^{2}}$.
+
+$y''=\left[\dfrac{-36}{\left(6 x - 9\right)^{2}}\right]'=\dfrac{-36\left[\left(6 x - 9\right)^{2}\right]'}{\left(6 x - 9\right)^{4}}=\dfrac{-432}{\left(6 x - 9\right)^{3}}$. 
+ }\end{ex}
+
+\begin{ex}
+ Một vật chuyển động thẳng không đều xác định bởi phương trình $s(t)=t^{2} + 4$, trong đó ${s}$ tính bằng mét và ${t}$ tính bằng giây. Tính vận tốc của chuyển động tại thời điểm $t=3$.
+ 
+\choice
+{ ${2 }$ m/s }
+   { \True ${6 }$ m/s }
+     { ${13 }$ m/s }
+    { ${17 }$ m/s }
+\loigiai{ 
+
+ $v(t)=\left(t^{2} + 4\right)'=2 t.$
+
+$v(3)=6 $ m/s. 
+ }\end{ex}
+
+\begin{ex}
+ Một vật chuyển động thẳng không đều xác định bởi phương trình $s(t)=2 t^{3} + 3 t^{2} + 4 t + 3$, trong đó ${s}$ tính bằng mét và ${t}$ tính bằng giây. Tính gia tốc của chuyển động tại thời điểm $t=2$.
+ 
+\choice
+{ ${40}$ $m/s^2$ }
+   { ${41}$ $m/s^2$ }
+     { ${39}$ $m/s^2$ }
+    { \True ${30}$ $m/s^2$ }
+\loigiai{ 
+
+ $v(t)=\left(2 t^{3} + 3 t^{2} + 4 t + 3\right)'=6 t^{2} + 6 t + 4.$
+
+$a(t)=\left(6 t^{2} + 6 t + 4\right)'=12 t + 6$.
+
+$a(2)=30$ $m/s^2$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $f(x)=3 x^{3} + 2 x^{2} + x - 10$. Nghiệm của phương trình $f'(x)=4$ là
+ 
+\choice
+{ $x_1=\frac{7}{9} - \frac{\sqrt{31}}{9},x_2=\frac{\sqrt{31}}{9} + \frac{7}{9} $ }
+   { \True $x_1=- \frac{\sqrt{31}}{9} - \frac{2}{9},x_2=- \frac{2}{9} + \frac{\sqrt{31}}{9} $ }
+     { $x=- \frac{1}{3}$ }
+    { Phương trình vô nghiệm }
+\loigiai{ 
+
+ $f'(x)=(3 x^{3} + 2 x^{2} + x - 10)'=9 x^{2} + 4 x + 1$.
+
+$f'(x)=4\Leftrightarrow 9 x^{2} + 4 x + 1=4\Leftrightarrow 9 x^{2} + 4 x - 3=0 \Leftrightarrow x_1=- \frac{\sqrt{31}}{9} - \frac{2}{9},x_2=- \frac{2}{9} + \frac{\sqrt{31}}{9}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=2 x^{4} + x^{3} - 5 x^{2} + 5 x + 4$. Phương trình $y''=7$ có nghiệm là
+ 
+\choice
+{ $x_1=- \frac{1}{8},x_2=- \frac{1}{8} + \frac{\sqrt{417}}{24} $ }
+   { \True $x_1=- \frac{\sqrt{417}}{24} - \frac{1}{8},x_2=- \frac{1}{8} + \frac{\sqrt{417}}{24} $ }
+     { $x=- \frac{17}{24}$ }
+    { Phương trình vô nghiệm }
+\loigiai{ 
+
+ $y'=(2 x^{4} + x^{3} - 5 x^{2} + 5 x + 4)'=8 x^{3} + 3 x^{2} - 10 x + 5$.
+
+$y''=(8 x^{3} + 3 x^{2} - 10 x + 5)'=24 x^{2} + 6 x - 10$.
+
+$y''=7\Leftrightarrow 24 x^{2} + 6 x - 10=7\Leftrightarrow 24 x^{2} + 6 x - 17=0 \Leftrightarrow x_1=- \frac{\sqrt{417}}{24} - \frac{1}{8},x_2=- \frac{1}{8} + \frac{\sqrt{417}}{24}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $f(x)=\frac{5 x^{3}}{3} + \frac{57 x^{2}}{2} + 109 x + 9$. Tập nghiệm của bất phương trình $f'(x)-1\le 0$ là
+ 
+\choice
+{ $S=\emptyset$ }
+   { $S=\left(-\infty;-9\right) \cup \left(- \frac{12}{5};+\infty\right)$ }
+     { \True $S=\left[-9;- \frac{12}{5}\right]$ }
+    { $S=\mathbb{R}$ }
+\loigiai{ 
+
+ $f'(x)=\left(\frac{5 x^{3}}{3} + \frac{57 x^{2}}{2} + 109 x + 9\right)'=5 x^{2} + 57 x + 109$.
+
+$f'(x)-1\le 0\Leftrightarrow 5 x^{2} + 57 x + 108\le 0 \Rightarrow$ $S=\left[-9;- \frac{12}{5}\right]$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $f(x)=- 4 \sqrt{x} + 7 x + 2$. Tập nghiệm của bất phương trình $f'(x) > 0$ là
+ 
+\choice
+{ $\left(-\infty;\frac{4}{49}; \right)$ }
+   { \True $\left( \frac{4}{49}; +\infty \right)$ }
+     { $\left(-\infty;\frac{4}{49}; \right]$ }
+    { $\left[\frac{4}{49}; +\infty \right)$ }
+\loigiai{ 
+
+ $f'(x)> 0 \Leftrightarrow \frac{-4}{2\sqrt x}+ 7 > 0$. (Điều kiện: $x>0$)
+
+$14\sqrt x > 4 \Leftrightarrow \sqrt x > \frac{2}{7} \Leftrightarrow x > \frac{4}{49}$ (thỏa mãn điều kiện).
+
+Vậy tập nghiệm là: $\left( \frac{4}{49}; +\infty \right)$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $f(x)=- \frac{5}{3}x^3 + \left(\dfrac{m + 1}{2}\right)x^2 + (3 m - 5)x+- 3 m - 1$. Tìm tất cả các giá trị của tham số ${m}$ để bất phương trình $f'(x) >0$ vô nghiệm.
+ 
+\choice
+{ $- 2 \sqrt{265} - 31 < m <-31 + 2 \sqrt{265}$ }
+   { \True $- 2 \sqrt{265} - 31 \le m \le -31 + 2 \sqrt{265}$ }
+     { $m < - 2 \sqrt{265} - 31$ hoặc $m > -31 + 2 \sqrt{265}$ }
+    { $m \le - 2 \sqrt{265} - 31$ hoặc  $m\ge -31 + 2 \sqrt{265}$ }
+\loigiai{ 
+
+ Ta có: $f'(x)=-5x^2 + (m + 1)x + (3 m - 5)$.
+
+$-5x^2 + (m + 1)x + (3 m - 5) >0$ vô nghiệm $\Leftrightarrow -5x^2 + (m + 1)x + (3 m - 5) \le 0, \forall x \in \mathbb{R}$.
+
+Ta có: $\Delta =\left(m + 1\right)^{2}-4.(-5).(3 m - 5)=m^{2} + 62 m - 99$.
+
+$-5x^2 + (m + 1)x + (3 m - 5) \le 0, \forall x \in \mathbb{R}$ khi và chỉ khi $\Delta \le 0$
+
+$\Leftrightarrow m^{2} + 62 m - 99 \le 0 \Leftrightarrow$ $- 2 \sqrt{265} - 31 \le m \le -31 + 2 \sqrt{265}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=4 x^{2} - 2 x + 5$. Tiếp tuyến của đồ thị hàm số đã cho tại điểm có hoành độ $x_0=1$ có hệ số góc k bằng.
+ 
+\choice
+{ \True ${k=6}$ }
+   { ${k=23}$ }
+     { ${k=20}$ }
+    { ${k=-19}$ }
+\loigiai{ 
+
+ Ta có: $f'(x)=8 x - 2 \Rightarrow k=f'(1)=6$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\frac{6 - 2 x}{3 x - 2}$. Tiếp tuyến của đồ thị hàm số đã cho tại điểm có hoành độ $x=3$ có hệ số góc bằng 
+\choice
+{ \True ${- \frac{2}{7}}$ }
+   { ${- \frac{7}{32}}$ }
+     { ${0}$ }
+    { ${4}$ }
+\loigiai{ 
+ Ta có: $f'(x)=- \frac{14}{\left(3 x - 2\right)^{2}}$
+
+Hệ số góc của tiếp tuyến: $f'(3)=- \frac{2}{7}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=- x^{2} + 4 x - 1$. Viết phương trình tiếp tuyến của đồ thị hàm số đã cho tại điểm $B(1;2)$.
+ 
+\choice
+{ \True $y=2 x$ }
+   { $y=2 x + 2$ }
+     { $y=3 x$ }
+    { $y=2 x + 4$ }
+\loigiai{ 
+
+ Ta có: $f'(x)=4 - 2 x \Rightarrow f'(1)=2$.
+
+Phương trình tiếp tuyến là: $y=2(x-1)+2 \Leftrightarrow $ $y=2 x$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=4 x^{2} - 4 x - 1$. Tiếp tuyến của đồ thị hàm số đã cho tại điểm ${H}$ có hoành độ bằng ${1}$ có phương trình là
+ 
+\choice
+{ $y=6 x$ }
+   { \True $y=4 x - 5$ }
+     { $y=4 x - 1$ }
+    { $y=4 x + 3$ }
+\loigiai{ 
+
+ Ta có: $f'(x)=8 x - 4 \Rightarrow f'(1)=4$.
+
+$x_0=1\Rightarrow y_0=f(1)=-1$.
+
+Phương trình tiếp tuyến là: $y=4(x-1)-1 \Leftrightarrow $ $y=4 x - 5$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=3 x^{2} - 2 x + 2$. Tiếp tuyến của đồ thị hàm số đã cho tại điểm ${A}$ có tung độ bằng ${18}$ có phương trình là
+ 
+\choice
+{ $y=- 14 x - 10$ }
+   { $y=14 x - \frac{52}{3}$ }
+     { $y=- 14 x - 8, y=14 x - \frac{61}{3}$ }
+    { \True $y=- 14 x - 10, y=14 x - \frac{58}{3}$ }
+\loigiai{ 
+
+ Xét phương trình: $3 x^{2} - 2 x + 2=18 \Rightarrow x=-2,x=\frac{8}{3}$.
+
+$f'(x)=6 x - 2 \Rightarrow f'(-2)=-14, f'(\frac{8}{3})=14$.
+
+Phương trình tiếp tuyến là: $y=- 14 x - 10$ hoặc $y=14 x - \frac{58}{3}$. 
+ }\end{ex}
+\begin{ex}
+ Cho ${a, b}$ là hai số thực dương khác 1 thỏa mãn đồ thị hàm số $y=f(x)=\log_a x+\log_b x$ luôn đi qua điểm $M(e;9)$. Tính đạo hàm của hàm số tại điểm $x=7$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{1,3}
+
+\loigiai{ 
+ Ta có $f(x)=\log_a x+\log_b x=\dfrac{\ln x}{\ln a}+\dfrac{\ln x}{\ln b}=\ln x\left(\dfrac{1}{\ln a}+\dfrac{1}{\ln b}\right)$.
+
+Vì đồ thị hàm số đi qua điểm $M(e;9)$ nên $f(e)=9$.
+
+Suy ra $\ln e\left(\dfrac{1}{\ln a}+\dfrac{1}{\ln b}\right)=9$.
+
+Do đó $\dfrac{1}{\ln a}+\dfrac{1}{\ln b}=9$.
+
+Ta có $f'(x)=\dfrac{1}{x}\left(\dfrac{1}{\ln a}+\dfrac{1}{\ln b}\right)=\dfrac{9}{x}$.
+
+Vậy $f'(7)=\dfrac{9}{7}=1,3$. 
+ }\end{ex}
+
+\begin{ex}
+ Một vật chuyển động thẳng không đều xác định bởi phương trình $s(t)=5 t^{2} + 3 t + 4$, trong đó ${s}$ tính bằng mét và ${t}$ tính bằng giây. Tính vận tốc của chuyển động tại thời điểm $t=8$.
+
+
+\shortans[4]{83}
+
+\loigiai{ 
+ $v(t)=\left(5 t^{2} + 3 t + 4\right)'=10 t + 3.$
+
+$v(8)=83 $ m/s. 
+ }\end{ex}
+
+\begin{ex}
+ Một vật chuyển động thẳng không đều xác định bởi phương trình $s(t)=2 t^{3} + 2 t^{2} + t + 6$, trong đó ${s}$ tính bằng mét và ${t}$ tính bằng giây. Tính gia tốc của chuyển động tại thời điểm $t=6$.
+
+
+\shortans[4]{76}
+
+\loigiai{ 
+ $v(t)=\left(2 t^{3} + 2 t^{2} + t + 6\right)'=6 t^{2} + 4 t + 1.$
+
+$a(t)=\left(6 t^{2} + 4 t + 1\right)'=12 t + 4$.
+
+$a(6)=76$ $m/s^2$. 
+ }\end{ex}
+
+\begin{ex}
+ Một vật đang chuyển động thẳng theo thời gian ${t}$ (tính bằng giây) xác định bởi hàm số $s(t)=\frac{t^{3}}{3} - 2 t^{2} - 12 t$ (đơn vị: mét). Tính gia tốc của vật tại thời điểm vận tốc của vật triệt tiêu.
+
+
+\shortans[4]{8}
+
+\loigiai{ 
+ $v(t)=s'(t)=t^{2} - 4 t - 12.$ 
+
+Vận tốc triệt tiêu khi $v(t)=0$:
+
+$t^{2} - 4 t - 12=0 \Rightarrow t=-2$(loại) hoặc $t=6$.
+
+$a(t)=v'(t)=2 t - 4.$ 
+
+$a(6)=8$. 
+ }\end{ex}
+
+\begin{ex}
+ Quãng đường chuyển động của một chất điểm xác định bởi $s(t)=2 t^{3} - 12,5 t^{2} + 29,2 t + 2$, trong đó ${s}$ tính bằng mét và ${t}$ tính bằng giây. Tính vận tốc tại thời điểm gia tốc triệt tiêu (quá trình tính toán các kết quả làm tròn đến hàng phần trăm).
+
+
+\shortans[4]{3,16}
+
+\loigiai{ 
+ Vận tốc của chất điểm $v(t)=s'(t)=6 t^{2} - 25,0 t + 29,2$.
+
+Gia tốc của chất điểm $a(t)=v'(t)=12 t - 25,0$.
+
+Gia tốc triệt tiêu khi: $a(t)=0\Leftrightarrow 12 t - 25,0=0 \Leftrightarrow t=2,08$.
+
+Vận tốc lúc đó của chất điểm là: $v\left(2,08\right)=3,16$ (m/s). 
+ }\end{ex}
+
+\begin{ex}
+ Quãng đường chuyển động của một chất điểm xác định bởi $s(t)=t^{3} - t^{2} + 9 t + 4$, trong đó ${s}$ tính bằng mét và ${t}$ tính bằng giây. Tính vận tốc nhỏ nhất của chuyển động. (quá trình tính toán các kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{8,7}
+
+\loigiai{ 
+ Vận tốc của chất điểm $v(t)=s'(t)=3 t^{2} - 2 t + 9$.
+
+Vận tốc nhỏ nhất khi $t=-\dfrac{-2}{2.3}=\frac{1}{3}$.
+
+Vận tốc lúc đó của chất điểm là: $v\left(\frac{1}{3}\right)=8,7$ (m/s). 
+ }\end{ex}
+
+\begin{ex}
+ Quãng đường chuyển động của một chất điểm xác định bởi $s(t)=- t^{3} + \frac{9 t^{2}}{2} + 14$, trong đó ${s}$ tính bằng mét và ${t}$ tính bằng giây. Tính vận tốc lớn nhất của chuyển động. (quá trình tính toán các kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{6,8}
+
+\loigiai{ 
+ Vận tốc của chất điểm $v(t)=s'(t)=- 3 t^{2} + 9 t$.
+
+Vận tốc nhỏ nhất khi $t=-\dfrac{9}{2.(-3)}=\frac{3}{2}$.
+
+Vận tốc lúc đó của chất điểm là: $v\left(\frac{3}{2}\right)=6,8$ (m/s). 
+ }\end{ex}
+
+\begin{ex}
+ Một vật chuyển động thẳng được cho bởi phương trình $s=f(t)=t^{3} - 15 t^{2} + 63 t$, trong đó ${t}$ tính bằng giây và ${s}$ tính bằng mét. Tính tổng quãng đường vật đi được trong 9 giây đầu tiên.
+
+
+\shortans[4]{145}
+
+\loigiai{ 
+ Ta có vận tốc của vật là
+
+$v(t)=s'(t)=3 t^{2} - 30 t + 63=3 \left(t - 7\right) \left(t - 3\right)$.
+
+Vật đổi chiều chuyển động tại $t=3$ và $t=7$.
+
+$s(0)=0$, $s(3)=81$, $s(7)=49$, $s(9)=81$.
+
+Tổng quãng đường vật đi được trong $9$ giây đầu tiên là
+
+$S=|s(3)-s(0)|+|s(7)-s(3)|+|s(9)-s(7)|$.
+
+$S=81+32+32=145$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $f(x)=2 x+\cos(2 x + \frac{2 \pi}{3})$. Số nghiệm thuộc đoạn $[- 10 \pi;10 \pi]$ của phương trình $f'(x)=0$ là
+\shortans[4]{20}
+
+\loigiai{ 
+ $f'(x)=0 \Leftrightarrow \sin \left(2 x + \frac{2 \pi}{3}\right)=1 \Leftrightarrow 2 x + \frac{2 \pi}{3} =\frac{\pi}{2}+k2\pi \Leftrightarrow x=- \frac{\pi}{12}+k\pi, k\in \mathbb{Z}$.
+
+Do $x\in [- 10 \pi;10 \pi]$ nên $- 10 \pi\le - \frac{\pi}{12}+k\pi \le 10 \pi \Rightarrow - \frac{119}{12}\le k \le \frac{121}{12}$.
+
+Có ${20}$ số ${k}$ thỏa mãn nên phương trình có ${20}$ nghiệm. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $f(x)=\sin \left(x + \frac{\pi}{4}\right)+x$. Số nghiệm thuộc đoạn $[- 4 \pi;4 \pi]$ của phương trình $f'(x)=0$ là
+\shortans[4]{4}
+
+\loigiai{ 
+ $f'(x)=0\Leftrightarrow \cos \left(x + \frac{\pi}{4}\right)=-1 \Leftrightarrow x + \frac{\pi}{4} =\pi+ k2\pi \Leftrightarrow x=\frac{3 \pi}{4}+k2 \pi, k\in \mathbb{Z}$.
+
+Do $x\in [- 4 \pi;4 \pi]$ nên $- 4 \pi\le \frac{3 \pi}{4}+k2 \pi \le 4 \pi \Rightarrow - \frac{19}{8}\le k \le \frac{13}{8}$.
+
+Có ${4}$ số k thỏa mãn nên phương trình có ${4}$ nghiệm. 
+ }\end{ex}
+
+\begin{ex}
+ Dân số của một đô thị được cho bởi hàm số $P(t)=C.e^{0,06t}+M$, trong đó ${C, M}$ là các hằng số (đơn vị: nghìn người), thời gian ${t}$ tính bằng năm. Tốc độ biến thiên dân số tại thời điểm $t$ thỏa mãn hệ thức $P'(t)=0,06\cdot P(t)-9$ với $t \ge 0$. Biết rằng dân số tại thời điểm ban đầu $(t=0)$ là 395 nghìn người. Sau 14 năm $(t=14)$, dân số của đô thị này tăng thêm khoảng bao nhiêu nghìn người (kết quả làm tròn đến hàng đơn vị)?
+
+
+\shortans[4]{323}
+
+\loigiai{ 
+ Ta có $P'(t)=0,06Ce^{0,06t}$.
+
+Xét phương trình:
+$0,06Ce^{0,06t}=0,06(Ce^{0,06t}+M)-9$.
+
+$\Rightarrow 0,06M-9=0 \Rightarrow M=\dfrac{9}{0,06}=150$.
+
+Từ $P(0)=395$ suy ra $C+150=395 \Rightarrow C=245$.
+
+Vậy $P(t)=245e^{0,06t}+150$.
+
+$P(14)=245e^{0,84}+150\approx 717,51$ (nghìn).
+
+Mức tăng dân số sau 14 năm là:
+
+$P(14)-P(0)\approx 717,51-395=322,51$ (nghìn).
+
+Làm tròn đến hàng đơn vị: 323 (nghìn người). 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=- x^{2} + 3 x + 5$. Biết một tiếp tuyến của đồ thị hàm số có hệ số góc $k=-7$ có phương trình dạng $y=ax+b$. Tính $4 a - 3 b$.
+
+
+\shortans[4]{-118}
+
+\loigiai{ 
+ Xét phương trình $y'=-7\Leftrightarrow 3 - 2 x=-7 \Rightarrow x=5$.
+
+ Với $x=5\Rightarrow y=f(5)=-5$.
+
+ Phương trình tiếp tuyến là: $y=-7(x-5)-5\Leftrightarrow y=-7x+30$.
+
+ Do đó: $4 a - 3 b=-118$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\frac{x^{3}}{3} - \frac{7 x^{2}}{2} + 5 x$. Biết các tiếp tuyến của đồ thị hàm số có hệ số góc $k=-5$ có các phương trình lần lượt là $y=a_1x+b_1$ và $y=a_2x+b_2$. Tính $|b_1+b_2|$(kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{12,8}
+
+\loigiai{ 
+ Xét phương trình:
+
+ $y'=-5\Leftrightarrow x^{2} - 7 x + 5=-5 \Leftrightarrow x^{2} - 7 x + 10=0 \Rightarrow x=2,x=5$.
+
+ Với $x=2\Rightarrow y=f(2)=- \frac{4}{3}$.
+
+ Phương trình tiếp tuyến là: $y=-5(x-2)- \frac{4}{3}\Leftrightarrow y=-5x+\frac{26}{3}$.
+
+ Với $x=5\Rightarrow y=f(5)=- \frac{125}{6}$.
+
+ Phương trình tiếp tuyến là: $y=-5(x-5)- \frac{125}{6}\Leftrightarrow y=-5x+\frac{25}{6}$.
+
+ Do đó: $|b_1+b_2|=|\frac{26}{3}+\frac{25}{6}|=\frac{77}{6}=12,8$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=2 x^{3} + 4 x + 3$ có đồ thị $(C)$. Tiếp tuyến của $(C)$ tại điểm có hoành độ $x_0=1$ có phương trình dạng $y=ax+b$. Tính $a+b$.
+
+
+\shortans[4]{9}
+
+\loigiai{ 
+ Ta có $y'=6 x^{2} + 4$.
+
+Tại $x_0=1$, ta có:
+
+$y'(1)=10$.
+
+$y_0=f(1)=9$.
+
+Phương trình tiếp tuyến của $(C)$ tại điểm có hoành độ $x_0=1$ là:
+
+$y=10(x-1)+9$.
+
+$\Rightarrow y=10x-1$.
+
+Suy ra $a+b=9$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=- 4 x^{3} + x^{2} + x - 3$ có đồ thị là $\left(C\right)$. Tìm hệ số góc lớn nhất của tiếp tuyến tại một điểm ${M}$ trên đồ thị $\left(C\right)$(kết quả làm tròn đến hàng phần mười).
+\shortans[4]{1,1}
+
+\loigiai{ 
+ Ta có đạo hàm: $y'=- 12 x^{2} + 2 x + 1$.
+
+Hệ số góc tiếp tuyến là: $k=y'$.
+
+Xét $k=- 12 x^{2} + 2 x + 1$ là tam thức bậc hai, có hệ số $a=-12<0$ nên đạt giá trị lớn nhất tại
+$x=\dfrac{-2}{2\cdot -12}=\frac{1}{12}$.
+
+Khi đó:
+$k_{max}=\frac{13}{12}=1,1$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho đường cong $(C):y=\frac{1 - 4 x}{2 - 4 x}$. Phương trình tiếp tuyến của $(C)$ tại điểm có hoành độ $x=3$có dạng $y=ax+b$. Tính $a+b$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{1,2}
+
+\loigiai{ 
+ Với $x=3\Rightarrow y_0=\frac{11}{10}$.
+
+Đạo hàm: $y'=\dfrac{-4}{\left(2 - 4 x\right)^{2} }$. 
+
+$y'(3)=- \frac{1}{25}$. 
+
+Tiếp tuyến: $y=- \frac{1}{25}(x-3)+\frac{11}{10}$. 
+
+$\Rightarrow y=- \frac{1}{25}x+\frac{61}{50}$. 
+
+$a+b=1,2$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho đường cong $(C):y=\frac{- x - 2}{- 2 x - 3}$. Phương trình tiếp tuyến của $(C)$ tại điểm có tung độ bằng $0$ có dạng $y=ax+b$. Tính $a+b$.
+
+
+\shortans[4]{-3}
+
+\loigiai{ 
+ Với $y=0\Rightarrow \frac{- x - 2}{- 2 x - 3}=0\Rightarrow x_0=-2$.
+
+Đạo hàm: $y'=\dfrac{-1}{\left(- 2 x - 3\right)^{2} }$. 
+
+$y'(-2)=-1$. 
+
+Tiếp tuyến: $y=-1(x+2)+0$. 
+
+$\Rightarrow y=-1x-2$. 
+
+$a+b=-3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho đường cong $(C):y=\frac{2 x - 4}{5 x - 1}$. Phương trình tiếp tuyến của $(C)$ tại giao điểm của $(C)$ với trục hoành có dạng $y=ax+b$. Tính $a+b$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{-0,2}
+
+\loigiai{ 
+ Ta có $y=0 \Rightarrow 2x-4=0 \Rightarrow x_0=2$.
+
+Đạo hàm: $y'=\dfrac{18}{\left(5 x - 1\right)^{2} }$. 
+
+$y'(2)=\frac{2}{9}$. 
+
+Tiếp tuyến: $y=\frac{2}{9}(x-2)$. 
+
+$\Rightarrow y=\frac{2}{9}x- \frac{4}{9}$. 
+
+$a+b=-0,2$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho đường cong $(C):y=\frac{5 x + 3}{2 x + 1}$. Phương trình tiếp tuyến của $(C)$ tại giao điểm của $(C)$ với trục tung có dạng $y=ax+b$. Tính $a+b$.
+
+
+\shortans[4]{2}
+
+\loigiai{ 
+ Giao điểm của $(C)$ với trục tung là điểm có hoành độ bằng $0$.
+
+Ta có $y(0)=3$ nên tọa độ giao điểm là $A(0;3)$.
+
+Đạo hàm: $y'=\dfrac{-1}{\left(2 x + 1\right)^{2} }$. 
+
+$y'(0)=-1$. 
+
+Phương trình tiếp tuyến của $(C)$ tại $A$ là:
+
+$y=-1(x-0)+3$.
+
+$\Rightarrow y=-1x+3$.
+
+$a+b=2$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\dfrac{2x+3}{-x-3}$. Biết các tiếp tuyến của đồ thị hàm số có hệ số góc $k=-3$ có các phương trình lần lượt là $y=a_1x+b_1$ và $y=a_2x+b_2$. Tính $|b_1+b_2|$.
+
+
+\shortans[4]{22}
+
+\loigiai{ 
+ Xét phương trình:
+
+ $y'=-3\Leftrightarrow \dfrac{-3}{(-x-3)^2}=-3 \Leftrightarrow (-x-3)^2=1 \Rightarrow x=-4,x=-2$.
+
+ Với $x=-4\Rightarrow y=f(-4)=-5$.
+
+ Phương trình tiếp tuyến là: $y=-3(x+4)-5\Leftrightarrow y=-3x-17$.
+
+ Với $x=-2\Rightarrow y=f(-2)=1$.
+
+ Phương trình tiếp tuyến là: $y=-3(x+2)+1\Leftrightarrow y=-3x-5$.
+
+ Do đó: $|b_1+b_2|=|-17-5|=22$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\dfrac{-2x-2}{x+2}$ có đồ thị $(C)$. Biết tiếp tuyến của đồ thị $(C)$ song song với đường thẳng $y=-2x-10$ có phương trình dạng $y=ax+b$. Tính $a+b$.
+
+
+\shortans[4]{-4}
+
+\loigiai{ 
+ Tiếp tuyến song song với đường thẳng $y=-2x-10$ nên có hệ số góc $k=-2$:
+
+ $y'=-2\Leftrightarrow \dfrac{-2}{(x+2)^2}=-2 \Leftrightarrow (x+2)^2=1 \Rightarrow x=-1,x=-3$.
+
+ Với $x=-1\Rightarrow y=f(-1)=0$.
+
+ Phương trình tiếp tuyến là: $y=-2(x+1)+0\Leftrightarrow y=-2x-2$.
+
+ Với $x=-3\Rightarrow y=f(-3)=-4$.
+
+ Phương trình tiếp tuyến là: $y=-2(x+3)-4\Leftrightarrow y=-2x-10$ (loại).
+
+ Do đó: $a+b=-4$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\frac{x^{3}}{3} - \frac{x^{2}}{2} - 4 x$ có đồ thị $(C)$. Biết tiếp tuyến của đồ thị $(C)$ song song với đường thẳng $y=-4x- \frac{1}{6}$ có phương trình dạng $y=ax+b$. Tính $a+b$.
+
+
+\shortans[4]{-4}
+
+\loigiai{ 
+ Xét phương trình:
+
+ $y'=-4\Leftrightarrow x^{2} - x - 4=-4 \Leftrightarrow x^{2} - x=0 \Rightarrow x=0,x=1$.
+
+ Với $x=0\Rightarrow y=f(0)=0$.
+
+ Phương trình tiếp tuyến là: $y=-4(x-0)+0\Leftrightarrow y=-4x+0$.
+
+ Với $x=1\Rightarrow y=f(1)=- \frac{25}{6}$.
+
+ Phương trình tiếp tuyến là: $y=-4(x-1)- \frac{25}{6}\Leftrightarrow y=-4x- \frac{1}{6}$ (loại).
+
+ Do đó: $a+b=-4$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho đường cong $(C):y=\frac{5 x - 4}{x + 4}$. Tính diện tích tam giác tạo bởi tiếp tuyến của $(C)$ tại điểm có hoành độ $x_0=2$ và hai trục tọa độ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{0,1}
+
+\loigiai{ 
+ Ta có $y'=\dfrac{24}{\left(x + 4\right)^{2}}$. 
+
+Tại $x_0=2$, ta có:
+
+$y_0=1$, $k=y'(2)=\frac{2}{3}$. 
+
+Phương trình tiếp tuyến của $(C)$ tại điểm có hoành độ $x_0=2$ là:
+
+$y=\frac{2}{3}(x-2)+1$. 
+
+$\Rightarrow y=\frac{2}{3}x- \frac{1}{3}$. 
+
+Cho $y=0$ ta được giao điểm với trục hoành là $A\left(\frac{1}{2};0\right)$. 
+
+Cho $x=0$ ta được giao điểm với trục tung là $B\left(0;- \frac{1}{3}\right)$. 
+
+Diện tích tam giác tạo bởi tiếp tuyến và hai trục tọa độ là:
+
+$S=\dfrac{1}{2}\cdot OA\cdot OB=\dfrac{1}{2}\cdot \left|\frac{1}{2}\right|\cdot \left|- \frac{1}{3}\right|=0,1$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=x^3- 6 x^{2}+(m+5)x+5$ có đồ thị là $(C_m)$ với ${m}$ là tham số. Tìm ${m}$ để tiếp tuyến của $(C_m)$ có hệ số góc nhỏ nhất vuông góc với đường thẳng $y=3 - x$.
+
+
+\shortans[4]{8}
+
+\loigiai{ 
+ Ta có $y'=3x^2- 12 x+m+5$.
+
+Tiếp tuyến có hệ số góc nhỏ nhất ứng với
+
+$x_0=\dfrac{12}{2\cdot 3}=2$.
+
+$k_{\min}=y'(2)=m - 7$.
+
+Tiếp tuyến vuông góc với đường thẳng $y=3 - x$ nên hệ số góc của tiếp tuyến bằng $-\dfrac{1}{-1}=1$.
+
+$m - 7=1\Rightarrow m=8$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=-x^3+3 x^{2}+(m-2)x+1$ có đồ thị là $(C_m)$ với ${m}$ là tham số. Tìm ${m}$ để tiếp tuyến của $(C_m)$ có hệ số góc lớn nhất vuông góc với đường thẳng $y=1 - 2 x$ (kết quả làm tròn đến hàng phần mười).
+
+
+\shortans[4]{-0,5}
+
+\loigiai{ 
+ Ta có $y'=-3x^2+6 x+m-2$.
+
+Tiếp tuyến có hệ số góc lớn nhất ứng với
+
+$x_0=\dfrac{-6}{2\cdot(-3)}=1$.
+
+$k_{\max}=y'(1)=m + 1$.
+
+Tiếp tuyến vuông góc với đường thẳng $y=1 - 2 x$ nên hệ số góc của tiếp tuyến bằng $-\dfrac{1}{-2}=\frac{1}{2}$.
+
+$m + 1=\frac{1}{2}\Rightarrow m=- \frac{1}{2}$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=x^3+3mx^2+(m+4)x+2$. Tìm $m$ để tiếp tuyến của đồ thị hàm số tại điểm có hoành độ $x_0=1$ đi qua điểm $A\left(-1;23\right)$.
+
+
+\shortans[4]{-3}
+
+\loigiai{ 
+ Ta có $y'=6 m x + m + 3 x^{2} + 4$.
+
+Tại điểm có hoành độ $x_0=1$, ta có:
+
+$y'(1)=7 m + 7$,
+
+$y(1)=4 m + 7$.
+
+Phương trình tiếp tuyến tại điểm có hoành độ $x_0=1$ là
+
+$y=(7 m + 7)(x-1)+4 m + 7$.
+
+Vì tiếp tuyến đi qua điểm $A\left(-1;23\right)$ nên
+
+$23=(7 m + 7)\left(-1-1\right)+4 m + 7$.
+
+ $\Rightarrow m=-3$. 
+ }\end{ex}
+\begin{ex}
+ Cho hàm số $y=- 2 x^{2} + 2 x + 1$. Viết tiếp tuyến của đồ thị hàm số đã cho biết tiếp tuyến có hệ số góc $k=6$.
+\loigiai{ 
+ Xét phương trình $y'=6\Leftrightarrow 2 - 4 x=6 \Rightarrow x=-1$.
+
+ Với $x=-1\Rightarrow y=f(-1)=-3$.
+
+ Phương trình tiếp tuyến là: $y=6(x+1)-3\Leftrightarrow y=6x+3$. 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\frac{x^{3}}{3} - \frac{3 x^{2}}{2} + 7 x$. Viết phương trình tiếp tuyến của đồ thị hàm số đã cho biết tiếp tuyến có hệ số góc $k=5$.
+\loigiai{ 
+ Xét phương trình:
+
+ $y'=5\Leftrightarrow x^{2} - 3 x + 7=5 \Leftrightarrow x^{2} - 3 x + 2=0 \Rightarrow x=1,x=2$.
+
+ Với $x=1\Rightarrow y=f(1)=\frac{35}{6}$.
+
+ Phương trình tiếp tuyến là: $y=5(x-1)+\frac{35}{6}\Leftrightarrow y=5x+\frac{5}{6}$.
+
+ Với $x=2\Rightarrow y=f(2)=\frac{32}{3}$.
+
+ Phương trình tiếp tuyến là: $y=5(x-2)+\frac{32}{3}\Leftrightarrow y=5x+\frac{2}{3}$.
+
+ 
+ }\end{ex}
+
+\begin{ex}
+ Cho hàm số $y=\dfrac{2x-1}{x-3}$. Viết phương trình tiếp tuyến của đồ thị hàm số đã cho biết tiếp tuyến có hệ số góc $k=-5$
+\loigiai{ 
+ Xét phương trình:
+
+ $y'=-5\Leftrightarrow \dfrac{-5}{(x-3)^2}=-5 \Leftrightarrow (x-3)^2=1 \Rightarrow x=4,x=2$.
+
+ Với $x=4\Rightarrow y=f(4)=7$.
+
+ Phương trình tiếp tuyến là: $y=-5(x-4)+7\Leftrightarrow y=-5x+27$.
+
+ Với $x=2\Rightarrow y=f(2)=-3$.
+
+ Phương trình tiếp tuyến là: $y=-5(x-2)-3\Leftrightarrow y=-5x+7$.
+
+ 
+ }\end{ex}
