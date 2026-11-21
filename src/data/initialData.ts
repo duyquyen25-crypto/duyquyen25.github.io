@@ -264,6 +264,16 @@ import {
   G11_B32_SA_LIST,
   G11_B32_ES_LIST,
 } from '../engine/grade11Lesson32Templates';
+import {
+  G10_B1_MC_LIST,
+  G10_B1_TF_LIST,
+  G10_B1_SA_LIST,
+} from '../engine/grade10Lesson1Templates';
+import {
+  G10_B2_MC_LIST,
+  G10_B2_TF_LIST,
+  G10_B2_SA_LIST,
+} from '../engine/grade10Lesson2Templates';
 import { generateValidInstance } from '../engine/templateRunner';
 import { createSeededRng } from '../engine/mathUtils';
 
@@ -283,9 +293,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 1. Mệnh đề',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t10_b1_proposition_mc],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t10_b1_proposition_mc, ...G10_B1_MC_LIST],
+              TF: [...G10_B1_TF_LIST],
+              SA: [...G10_B1_SA_LIST],
               ES: [],
             },
           },
@@ -294,9 +304,9 @@ export const INITIAL_CURRICULUM_TREE: ClassCurriculumNode[] = [
             name: 'Bài 2. Tập hợp và các phép toán trên tập hợp',
             type: 'lesson',
             mathTypes: {
-              MC: [TEMPLATE_LIBRARY.t10_set_intersection],
-              TF: [],
-              SA: [],
+              MC: [TEMPLATE_LIBRARY.t10_set_intersection, ...G10_B2_MC_LIST],
+              TF: [...G10_B2_TF_LIST],
+              SA: [...G10_B2_SA_LIST],
               ES: [],
             },
           },
@@ -1646,14 +1656,22 @@ export function buildSampleExamsFromTree(tree: ClassCurriculumNode[]): ExamPaper
       }
     }
 
+    const subjectLabel =
+      spec.id === 'exam_12_gk2' ? 'TOÁN 12' : spec.id === 'exam_11_hk1' ? 'TOÁN 11' : 'TOÁN 10';
+
     return {
       id: spec.id,
       code: spec.code,
       title: spec.title,
-      schoolName: 'Trường THPT Chuyên Khoa Học Tự Nhiên',
+      departmentName: 'SỞ GD & ĐT LÂM ĐỒNG',
+      schoolLevel: 'TRƯỜNG THPT',
+      schoolName: 'HUỲNH THÚC KHÁNG - SƠN MỸ',
+      groupName: 'TỔ TỰ NHIÊN',
+      schoolYear: 'NĂM HỌC: 2026 - 2027',
       subject: 'Toán học',
+      subjectLabel,
       gradeLabel: spec.gradeLabel,
-      durationMinutes: 60,
+      durationMinutes: 90,
       createdAt: '2026-11-10',
       questions,
       totalPoints: Number(totalPoints.toFixed(2)),

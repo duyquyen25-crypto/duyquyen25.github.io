@@ -23,6 +23,110 @@ import {
 } from '../types/math';
 import { upgradeTopLevelFractions } from '../engine/mathUtils';
 
+export interface SaveFileWritable {
+  write(data: Blob | BufferSource | string): Promise<void>;
+  close(): Promise<void>;
+}
+
+export interface SaveFileHandle {
+  createWritable(): Promise<SaveFileWritable>;
+}
+
+export interface SaveDirectoryHandle {
+  name: string;
+  getFileHandle(name: string, options?: { create?: boolean }): Promise<SaveFileHandle>;
+  queryPermission?: (descriptor?: { mode?: 'read' | 'readwrite' }) => Promise<'granted' | 'denied' | 'prompt'>;
+  requestPermission?: (descriptor?: { mode?: 'read' | 'readwrite' }) => Promise<'granted' | 'denied' | 'prompt'>;
+}
+
+export type SaveTargetMode = 'directory' | 'download';
+
+export interface PickDirectoryResult {
+  handle: SaveDirectoryHandle | null;
+  status: 'selected' | 'cancelled' | 'unsupported' | 'iframe_blocked' | 'error';
+  message?: string;
+}
+
+export interface SingleExportResult {
+  filename: string;
+  mode: SaveTargetMode;
+}
+
+export interface BatchExportResult {
+  count: number;
+  mode: SaveTargetMode;
+  filenames: string[];
+}
+
+export function sanitizeExamFileBase(code: string): string {
+  const cleaned = String(code || '')
+    .trim()
+    .replace(/[\\/:*?"<>|]/g, '');
+  return cleaned || '101';
+}
+
+export function buildUniqueExamFilename(
+  code: string,
+  ext: string,
+  usedFilenames: Set<string>
+): string {
+  const base = sanitizeExamFileBase(code);
+  let candidate = `${base}.${ext}`;
+  let suffix = 2;
+  while (usedFilenames.has(candidate.toLowerCase())) {
+    candidate = `${base}_${suffix}.${ext}`;
+    suffix++;
+  }
+  usedFilenames.add(candidate.toLowerCase());
+  return candidate;
+}
+
+export function isDirectoryPickerSupported(): boolean {
+  return (
+    typeof window !== 'undefined' &&
+    typeof (window as unknown as { showDirectoryPicker?: unknown }).showDirectoryPicker === 'function'
+  );
+}
+
+export async function pickSaveDirectory(): Promise<PickDirectoryResult> {
+  if (!isDirectoryPickerSupported()) {
+    return {
+      handle: null,
+      status: 'unsupported',
+      message:
+        'Trình duyệt hiện tại chưa hỗ trợ chọn thư mục trực tiếp (khuyến nghị Chrome/Edge). File sẽ lưu về thư mục tải xuống mặc định.',
+    };
+  }
+  try {
+    const picker = (
+      window as unknown as {
+        showDirectoryPicker: (options?: { mode?: 'read' | 'readwrite' }) => Promise<SaveDirectoryHandle>;
+      }
+    ).showDirectoryPicker;
+    const handle = await picker({ mode: 'readwrite' });
+    return { handle, status: 'selected' };
+  } catch (err) {
+    const name = err instanceof Error ? err.name : '';
+    const msg = err instanceof Error ? err.message : String(err);
+    if (name === 'AbortError') {
+      return { handle: null, status: 'cancelled' };
+    }
+    if (name === 'SecurityError' || /cross origin|sub frame|iframe/i.test(msg)) {
+      return {
+        handle: null,
+        status: 'iframe_blocked',
+        message:
+          'Trình duyệt chặn hộp thoại chọn thư mục khi chạy trong khung nhúng. Hãy mở ứng dụng ở tab riêng để chọn thư mục, hoặc dùng thư mục tải xuống mặc định.',
+      };
+    }
+    return {
+      handle: null,
+      status: 'error',
+      message: `Không thể chọn thư mục lưu trữ: ${msg}`,
+    };
+  }
+}
+
 function triggerDownload(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -32,6 +136,39 @@ function triggerDownload(blob: Blob, filename: string) {
   a.click();
   document.body.removeChild(a);
   setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function waitMs(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+export async function saveBlobToTarget(
+  blob: Blob,
+  filename: string,
+  dirHandle?: SaveDirectoryHandle | null
+): Promise<SaveTargetMode> {
+  if (dirHandle) {
+    try {
+      if (typeof dirHandle.queryPermission === 'function') {
+        const currentPerm = await dirHandle.queryPermission({ mode: 'readwrite' });
+        if (currentPerm !== 'granted' && typeof dirHandle.requestPermission === 'function') {
+          const requestedPerm = await dirHandle.requestPermission({ mode: 'readwrite' });
+          if (requestedPerm !== 'granted') {
+            throw new Error('Chưa được cấp quyền ghi vào thư mục đã chọn.');
+          }
+        }
+      }
+      const fileHandle = await dirHandle.getFileHandle(filename, { create: true });
+      const writable = await fileHandle.createWritable();
+      await writable.write(blob);
+      await writable.close();
+      return 'directory';
+    } catch (err) {
+      console.warn('Direct directory write failed, falling back to browser download:', err);
+    }
+  }
+  triggerDownload(blob, filename);
+  return 'download';
 }
 
 /**
@@ -273,17 +410,84 @@ export function formatTexAnswer(input: string): string {
 // =====================================================================
 export type TexExportFormat = 'amsmath' | 'ex_test';
 
-function buildExamHeaderTex(exam: ExamPaper): string[] {
-  return [
-    '\\begin{center}',
-    `  \\textbf{\\large ${escapePlainTex(exam.schoolName)}} \\\\`,
-    `  \\textbf{\\LARGE ${escapePlainTex(exam.title)}} \\\\`,
-    `  \\textit{Môn: ${escapePlainTex(exam.subject)} --- ${escapePlainTex(exam.gradeLabel)} --- Thời gian: ${exam.durationMinutes} phút} \\\\`,
-    `  \\textbf{Mã đề: ${escapePlainTex(exam.code)}}`,
-    '\\end{center}',
-    '\\hrule\\vspace{0.4cm}',
+export function resolveExamHeaderFields(exam: ExamPaper) {
+  const gradeFallback = exam.gradeLabel?.includes('12')
+    ? 'TOÁN 12'
+    : exam.gradeLabel?.includes('10')
+      ? 'TOÁN 10'
+      : 'TOÁN 11';
+  return {
+    departmentName: exam.departmentName?.trim() || 'SỞ GD & ĐT LÂM ĐỒNG',
+    schoolLevel: exam.schoolLevel?.trim() || 'TRƯỜNG THPT',
+    schoolName: exam.schoolName?.trim() || 'HUỲNH THÚC KHÁNG - SƠN MỸ',
+    groupName: exam.groupName?.trim() || 'TỔ TỰ NHIÊN',
+    title: exam.title?.trim() || 'ĐỀ KIỂM TRA  GIỮA HỌC KÌ 1',
+    schoolYear: exam.schoolYear?.trim() || 'NĂM HỌC: 2026 - 2027',
+    subjectLabel: exam.subjectLabel?.trim() || gradeFallback,
+    durationMinutes: exam.durationMinutes || 90,
+    code: exam.code?.trim() || '110',
+  };
+}
+
+export function splitSchoolUnderline(schoolName: string): [string, string, string] {
+  const clean = schoolName.trim() || 'HUỲNH THÚC KHÁNG - SƠN MỸ';
+  if (clean.toUpperCase() === 'HUỲNH THÚC KHÁNG - SƠN MỸ') {
+    return [clean.slice(0, 4), clean.slice(4, -4), clean.slice(-4)];
+  }
+  if (clean.length >= 10) {
+    return [clean.slice(0, 4), clean.slice(4, -4), clean.slice(-4)];
+  }
+  if (clean.length >= 4) {
+    return [clean.slice(0, 1), clean.slice(1, -1), clean.slice(-1)];
+  }
+  return ['', clean, ''];
+}
+
+function formatSchoolUnderlineTex(schoolName: string): string {
+  if (schoolName.includes('\\underline{')) return schoolName;
+  const [pre, mid, suf] = splitSchoolUnderline(schoolName);
+  return `${escapePlainTex(pre)}\\underline{${escapePlainTex(mid)}}${escapePlainTex(suf)}`;
+}
+
+function buildExamHeaderTex(exam: ExamPaper, isSubsequentExam = false): string[] {
+  const out: string[] = [];
+  if (isSubsequentExam) {
+    const h = resolveExamHeaderFields(exam);
+    out.push(`\\def\\made{${escapePlainTex(h.code)}}`);
+  }
+  out.push(
+    '\\noindent\\begin{minipage}[t]{9.2cm}\\centering',
+    '\t\t\\fontsize{13.5}{18.0pt}\\selectfont',
+    '\t\t\\textbf{\\textnormal{\\tenSo}}\\\\',
+    '\t\t\\fontsize{13.5}{18pt}\\selectfont',
+    '\t\t\\textbf{\\tenTruon}\\\\',
+    '\t\t\\textbf{\\tenTruong}\\\\',
+    '\t\t\\textbf{\\tenTo}\\\\',
+    '\t\t\\fontsize{13.5}{18pt}\\selectfont',
+    '\t\t\\vspace*{2mm}(\\textit{Đề thi có \\pageref{LastPage}\\ trang})',
+    '\t\\end{minipage}\\hspace{0.1cm}',
+    '\t\\begin{minipage}[t]{9.8cm}\\centering',
+    '\t\t\\fontsize{13.5}{18pt}\\selectfont',
+    '\t\t\\textbf{\\tenBaiKT}\\\\',
+    '\t\t\\fontsize{13.5}{18pt}\\selectfont',
+    '\t\t\\textbf{\\tenNam}\\\\',
+    '\t\t\\textbf{Môn thi: \\tenMon}\\\\',
+    '\t\t\\fontsize{13.5}{18pt}\\selectfont\\it',
+    '\t\tThời \\underline{gian làm bài: \\Time} phút\\\\',
+    '\t\t\\setlength\\fboxsep{3pt}\\vspace*{2mm}\\fbox{\\bf Mã đề: \\made}',
+    '\t\t%Mã đề: \\made',
+    '\t\\end{minipage}\\vspace{0.3cm}\\\\',
+    '\t\\begin{minipage}[c]{15cm}\\vspace{0.2cm}',
+    '\t\t\\fontsize{13}{18pt}\\selectfont',
+    '\t\tHọ và tên thí sinh{: \\scriptsize\\dotfill\\!\\dotfill}',
+    '\t\tSố báo danh{: \\scriptsize\\dotfill}',
+    '\t\\end{minipage}',
     '',
-  ];
+    '\\hrule',
+    '\\vspace{0.3cm}',
+    ''
+  );
+  return out;
 }
 
 function evalPlotCurveForTex(diagram: FunctionPlotDiagram, x: number): number | null {
@@ -1754,13 +1958,17 @@ function diagramToTexLines(diagram?: QuestionDiagramSpec): string[] {
   return lines;
 }
 
-function buildExamTexBody(exam: ExamPaper, includeSolutions: boolean): string[] {
+function buildExamTexBody(
+  exam: ExamPaper,
+  includeSolutions: boolean,
+  isSubsequentExam = false
+): string[] {
   const mc = exam.questions.filter((q) => q.category === 'MC');
   const tf = exam.questions.filter((q) => q.category === 'TF');
   const sa = exam.questions.filter((q) => q.category === 'SA');
   const es = exam.questions.filter((q) => q.category === 'ES');
 
-  const lines: string[] = [...buildExamHeaderTex(exam)];
+  const lines: string[] = [...buildExamHeaderTex(exam, isSubsequentExam)];
 
   const appendSection = (title: string, items: ExamQuestionInstance[]) => {
     if (items.length === 0) return;
@@ -1863,7 +2071,7 @@ function buildExTestExamBody(
     lines.push('\\setcounter{ex}{0}');
   }
 
-  lines.push(...buildExamHeaderTex(exam));
+  lines.push(...buildExamHeaderTex(exam, resetCounters));
   lines.push(`\\Opensolutionfile{ans}[ans_${safeCode}]`);
   lines.push('');
 
@@ -1953,34 +2161,70 @@ function buildExTestExamBody(
   return lines;
 }
 
-const TEX_PREAMBLE_BASE = [
-  '\\documentclass[12pt,a4paper]{article}',
-  '\\usepackage[utf8]{inputenc}',
-  '\\usepackage[T5]{fontenc}',
-  '\\usepackage[vietnamese]{babel}',
-  '\\usepackage{amsmath,amssymb,geometry,enumitem,multicol}',
-  '\\geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}',
-  '\\everymath{\\displaystyle}',
-  '\\setlength{\\parindent}{0pt}',
-  '\\setlength{\\parskip}{0.25em}',
-  '\\setlength{\\columnsep}{0.8cm}',
-];
+function buildUnifiedTexPreamble(
+  firstExam: ExamPaper,
+  includeSolutions: boolean,
+  format: TexExportFormat
+): string[] {
+  const h = resolveExamHeaderFields(firstExam);
+  const hienthiFlag = includeSolutions ? 1 : 0;
+  const hienthiComment = includeSolutions ? 'Bật hiển thị lời giải' : 'Tắt hiển thị lời giải';
+  const dethiLine = includeSolutions
+    ? '%\\usepackage[dethi]{ex_test} % Chỉ hiển thị đề thi'
+    : '\\usepackage[dethi]{ex_test} % Chỉ hiển thị đề thi';
+  const loigiaiLine = includeSolutions
+    ? '\\usepackage[loigiai]{ex_test} % Hiển thị lời giải'
+    : '%\\usepackage[loigiai]{ex_test} % Hiển thị lời giải';
 
-function buildExTestPreamble(includeSolutions: boolean): string[] {
-  const modeOpt = includeSolutions ? 'loigiai' : 'dethi';
-  return [
-    '\\documentclass[12pt,a4paper]{article}',
-    '\\usepackage[utf8]{inputenc}',
-    '\\usepackage[T5]{fontenc}',
-    '\\usepackage[vietnamese]{babel}',
-    '\\usepackage{amsmath,amssymb,geometry,multicol}',
-    `\\usepackage[${modeOpt}]{ex_test}`,
-    '\\geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}',
-    '\\everymath{\\displaystyle}',
-    '\\setlength{\\parindent}{0pt}',
-    '\\setlength{\\parskip}{0.25em}',
-    '\\setlength{\\columnsep}{0.8cm}',
+  const lines: string[] = [
+    '\\documentclass[14pt,a4paper]{extarticle}',
+    '\\usepackage[utf8]{vietnam}',
+    '\\usepackage[top=1.4cm, bottom=1.8cm, left=1.2cm, right=1.5cm, footskip=0.9cm]{geometry}',
+    '\\usepackage{amsmath,amssymb}',
   ];
+  if (format === 'amsmath') {
+    lines.push('\\usepackage{enumitem,multicol}');
+  }
+  lines.push(
+    `\\def\\hienthiloigiai{${hienthiFlag}} % ${hienthiComment}`,
+    '',
+    '',
+    dethiLine,
+    loigiaiLine,
+    '\\usepackage{tikz-3dplot,tkz-euclide,tkz-tab,tabvar,pgfplots,esvect}',
+    '\\usepackage[hidelinks,unicode]{hyperref}',
+    '',
+    '\\usetikzlibrary{shapes.geometric,shadings,calc,snakes,patterns,arrows,intersections,angles,backgrounds,quotes}',
+    '\\def\\vec{\\vv}\\def\\vt{\\vv}\\def\\overrightarrow{\\vv}',
+    '',
+    '%---------- Khai báo viết tắt, in đáp án',
+    '\\newcommand{\\hoac}[1]{ %hệ hoặc',
+    '    \\left[\\begin{aligned}#1\\end{aligned}\\right.}',
+    '\\newcommand{\\heva}[1]{ %hệ và',
+    '    \\left\\{\\begin{aligned}#1\\end{aligned}\\right.}',
+    '',
+    `\\def\\tenSo{${escapePlainTex(h.departmentName)}}`,
+    `\\def\\tenTruon{${escapePlainTex(h.schoolLevel)}}`,
+    `\\def\\tenTruong{${formatSchoolUnderlineTex(h.schoolName)}}`,
+    `\\def\\tenTo{${escapePlainTex(h.groupName)}}`,
+    `\\def\\tenBaiKT{${escapePlainTex(h.title)}}`,
+    `\\def\\tenNam{${escapePlainTex(h.schoolYear)}}`,
+    `\\def\\tenMon{${escapePlainTex(h.subjectLabel)}}`,
+    `\\def\\Time{${h.durationMinutes}}`,
+    `\\def\\made{${escapePlainTex(h.code)}}`,
+    '\\linespread{0.9}',
+    '',
+    '\\usepackage{fancyhdr}',
+    '\\usepackage{lastpage}',
+    '',
+    '\\pagestyle{fancy}',
+    '\\fancyhf{}',
+    '\\renewcommand{\\footrulewidth}{0.4pt}',
+    '\\renewcommand{\\headrulewidth}{0pt}',
+    '\\lfoot{\\textit{Mã đề: \\made}}',
+    '\\rfoot{Trang \\thepage\\ / \\pageref{LastPage}}'
+  );
+  return lines;
 }
 
 export function generateTexSource(
@@ -1989,38 +2233,15 @@ export function generateTexSource(
   format: TexExportFormat = 'amsmath'
 ): string {
   if (exams.length === 0) return '';
-  const headerComment =
-    exams.length === 1
-      ? `% Đề thi sinh tự động từ EduMath 2018 (${format === 'ex_test' ? 'Chuẩn ex_test Việt Nam' : 'LaTeX chuẩn amsmath'})`
-      : `% Bộ ${exams.length} đề thi sinh tự động từ EduMath 2018 (${format === 'ex_test' ? 'Chuẩn ex_test Việt Nam' : 'LaTeX chuẩn amsmath'})`;
-
-  const isTikzKind = (d?: QuestionDiagramSpec) =>
-    d?.kind === 'function_plot' || d?.kind === 'geometry_figure' || d?.kind === 'prob_tree';
-  const hasTikzDiagram = exams.some((ex) =>
-    ex.questions.some(
-      (q) =>
-        isTikzKind(q.content.diagram) ||
-        q.content.tfStatements?.some((st) => isTikzKind(st.diagram))
-    )
-  );
-  const basePreamble =
-    format === 'ex_test' ? buildExTestPreamble(includeSolutions) : [...TEX_PREAMBLE_BASE];
-  const preamble = hasTikzDiagram
-    ? [
-        ...basePreamble.slice(0, 5),
-        '\\usepackage{tikz}',
-        ...basePreamble.slice(5),
-      ]
-    : basePreamble;
-
-  const lines: string[] = [headerComment, ...preamble, '', '\\begin{document}', ''];
+  const preamble = buildUnifiedTexPreamble(exams[0], includeSolutions, format);
+  const lines: string[] = [...preamble, '', '\\begin{document}'];
 
   exams.forEach((exam, idx) => {
     if (idx > 0) lines.push('\\newpage');
     if (format === 'ex_test') {
       lines.push(...buildExTestExamBody(exam, includeSolutions, idx > 0));
     } else {
-      lines.push(...buildExamTexBody(exam, includeSolutions));
+      lines.push(...buildExamTexBody(exam, includeSolutions, idx > 0));
     }
   });
 
@@ -2028,27 +2249,45 @@ export function generateTexSource(
   return lines.join('\n');
 }
 
-export function exportExamToTex(
+export async function exportExamToTex(
   exam: ExamPaper,
   includeSolutions: boolean,
-  format: TexExportFormat = 'amsmath'
-) {
+  format: TexExportFormat = 'amsmath',
+  dirHandle?: SaveDirectoryHandle | null
+): Promise<SingleExportResult> {
   const source = generateTexSource([exam], includeSolutions, format);
   const blob = new Blob([source], { type: 'application/x-tex;charset=utf-8' });
-  const suffix = format === 'ex_test' ? '_ex_test' : '';
-  triggerDownload(blob, `De_Thi_Toan_Ma_${exam.code}${suffix}.tex`);
+  const filename = `${sanitizeExamFileBase(exam.code)}.tex`;
+  const mode = await saveBlobToTarget(blob, filename, dirHandle);
+  return { filename, mode };
 }
 
-export function exportAllExamsToTex(
+export async function exportAllExamsToTex(
   exams: ExamPaper[],
   includeSolutions: boolean,
-  format: TexExportFormat = 'amsmath'
-) {
-  if (exams.length === 0) return;
-  const source = generateTexSource(exams, includeSolutions, format);
-  const blob = new Blob([source], { type: 'application/x-tex;charset=utf-8' });
-  const suffix = format === 'ex_test' ? '_ex_test' : '';
-  triggerDownload(blob, `Bo_${exams.length}_De_Thi_Toan${suffix}.tex`);
+  format: TexExportFormat = 'amsmath',
+  dirHandle?: SaveDirectoryHandle | null,
+  onProgress?: (current: number, total: number, filename: string) => void
+): Promise<BatchExportResult> {
+  if (exams.length === 0) return { count: 0, mode: dirHandle ? 'directory' : 'download', filenames: [] };
+  const usedNames = new Set<string>();
+  const filenames: string[] = [];
+  let lastMode: SaveTargetMode = dirHandle ? 'directory' : 'download';
+
+  for (let i = 0; i < exams.length; i++) {
+    const exam = exams[i];
+    const filename = buildUniqueExamFilename(exam.code, 'tex', usedNames);
+    onProgress?.(i + 1, exams.length, filename);
+    const source = generateTexSource([exam], includeSolutions, format);
+    const blob = new Blob([source], { type: 'application/x-tex;charset=utf-8' });
+    lastMode = await saveBlobToTarget(blob, filename, dirHandle);
+    filenames.push(filename);
+    if (lastMode === 'download' && i < exams.length - 1) {
+      await waitMs(180);
+    }
+  }
+
+  return { count: filenames.length, mode: lastMode, filenames };
 }
 
 // =====================================================================
@@ -2133,27 +2372,32 @@ export function buildExamDocxChildren(
   const sa = exam.questions.filter((q) => q.category === 'SA');
   const es = exam.questions.filter((q) => q.category === 'ES');
 
+  const hdr = resolveExamHeaderFields(exam);
   const children: (Paragraph | Table)[] = [
     new Paragraph({
       pageBreakBefore: startWithPageBreak,
       alignment: AlignmentType.CENTER,
       children: [
-        new TextRun({ text: exam.schoolName.toUpperCase(), bold: true, size: 22 }),
+        new TextRun({
+          text: `${hdr.departmentName.toUpperCase()} — ${hdr.schoolLevel.toUpperCase()} ${hdr.schoolName.toUpperCase()} — ${hdr.groupName.toUpperCase()}`,
+          bold: true,
+          size: 21,
+        }),
       ],
     }),
     new Paragraph({
       alignment: AlignmentType.CENTER,
-      spacing: { after: 100 },
+      spacing: { after: 80 },
       children: [
-        new TextRun({ text: exam.title.toUpperCase(), bold: true, size: 28 }),
+        new TextRun({ text: `${hdr.title.toUpperCase()} (${hdr.schoolYear.toUpperCase()})`, bold: true, size: 26 }),
       ],
     }),
     new Paragraph({
       alignment: AlignmentType.CENTER,
-      spacing: { after: 240 },
+      spacing: { after: 220 },
       children: [
         new TextRun({
-          text: `Môn: ${exam.subject} · ${exam.gradeLabel} · Thời gian: ${exam.durationMinutes} phút · Mã đề: ${exam.code}`,
+          text: `Môn thi: ${hdr.subjectLabel} · Thời gian làm bài: ${hdr.durationMinutes} phút · Mã đề: ${hdr.code}`,
           italics: true,
           size: 22,
         }),
@@ -2576,32 +2820,152 @@ export function buildExamDocxChildren(
   return children;
 }
 
-export async function exportExamToDocx(exam: ExamPaper, includeSolutions: boolean) {
+export async function exportExamToDocx(
+  exam: ExamPaper,
+  includeSolutions: boolean,
+  dirHandle?: SaveDirectoryHandle | null
+): Promise<SingleExportResult> {
   const children = buildExamDocxChildren(exam, includeSolutions, false);
   const doc = new Document({
     sections: [{ children }],
   });
   const blob = await Packer.toBlob(doc);
-  triggerDownload(blob, `De_Thi_Toan_Ma_${exam.code}.docx`);
+  const filename = `${sanitizeExamFileBase(exam.code)}.docx`;
+  const mode = await saveBlobToTarget(blob, filename, dirHandle);
+  return { filename, mode };
 }
 
-export async function exportAllExamsToDocx(exams: ExamPaper[], includeSolutions: boolean) {
-  if (exams.length === 0) return;
-  const children: (Paragraph | Table)[] = [];
-  exams.forEach((exam, idx) => {
-    children.push(...buildExamDocxChildren(exam, includeSolutions, idx > 0));
-  });
-  const doc = new Document({
-    sections: [{ children }],
-  });
-  const blob = await Packer.toBlob(doc);
-  triggerDownload(blob, `Bo_${exams.length}_De_Thi_Toan_LaTeX.docx`);
+export async function exportAllExamsToDocx(
+  exams: ExamPaper[],
+  includeSolutions: boolean,
+  dirHandle?: SaveDirectoryHandle | null,
+  onProgress?: (current: number, total: number, filename: string) => void
+): Promise<BatchExportResult> {
+  if (exams.length === 0) return { count: 0, mode: dirHandle ? 'directory' : 'download', filenames: [] };
+  const usedNames = new Set<string>();
+  const filenames: string[] = [];
+  let lastMode: SaveTargetMode = dirHandle ? 'directory' : 'download';
+
+  for (let i = 0; i < exams.length; i++) {
+    const exam = exams[i];
+    const filename = buildUniqueExamFilename(exam.code, 'docx', usedNames);
+    onProgress?.(i + 1, exams.length, filename);
+    const children = buildExamDocxChildren(exam, includeSolutions, false);
+    const doc = new Document({
+      sections: [{ children }],
+    });
+    const blob = await Packer.toBlob(doc);
+    lastMode = await saveBlobToTarget(blob, filename, dirHandle);
+    filenames.push(filename);
+    if (lastMode === 'download' && i < exams.length - 1) {
+      await waitMs(200);
+    }
+  }
+
+  return { count: filenames.length, mode: lastMode, filenames };
 }
 
 // =====================================================================
 // 3. EXPORT PDF (.pdf) FROM A4 RENDERED DOM WITH SMART BLOCK PAGINATION
 // =====================================================================
-export async function exportElementToPdf(element: HTMLElement, filename: string) {
+const fontDataUrlCache = new Map<string, string>();
+
+async function fetchFontAsDataUrl(url: string): Promise<string | null> {
+  const cached = fontDataUrlCache.get(url);
+  if (cached) return cached;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const blob = await res.blob();
+    const dataUrl = await new Promise<string>((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(String(reader.result || ''));
+      reader.onerror = () => reject(reader.error);
+      reader.readAsDataURL(blob);
+    });
+    if (dataUrl) fontDataUrlCache.set(url, dataUrl);
+    return dataUrl || null;
+  } catch {
+    return null;
+  }
+}
+
+async function buildSafeFontEmbedCss(element: HTMLElement): Promise<string> {
+  const usedFonts = new Set<string>();
+  const walk = (node: Element) => {
+    const family =
+      (node instanceof HTMLElement && node.style.fontFamily) ||
+      window.getComputedStyle(node).fontFamily;
+    if (family) {
+      family.split(',').forEach((f) => {
+        const clean = f.trim().replace(/^["']|["']$/g, '');
+        if (clean) usedFonts.add(clean);
+      });
+    }
+    for (let i = 0; i < node.children.length; i++) {
+      walk(node.children[i]);
+    }
+  };
+  walk(element);
+
+  const fontFaceRules: Array<{ cssText: string; baseUrl: string }> = [];
+  for (const sheet of Array.from(document.styleSheets)) {
+    let rules: CSSRuleList;
+    try {
+      rules = sheet.cssRules;
+    } catch {
+      // Silently skip cross-origin / browser-extension stylesheets that disallow cssRules access
+      continue;
+    }
+    const baseUrl = sheet.href || window.location.href;
+    for (const rule of Array.from(rules)) {
+      if (rule.type === CSSRule.FONT_FACE_RULE) {
+        const ffRule = rule as CSSFontFaceRule;
+        const family = ffRule.style.getPropertyValue('font-family').trim().replace(/^["']|["']$/g, '');
+        if (usedFonts.has(family) || family.startsWith('KaTeX_')) {
+          fontFaceRules.push({ cssText: ffRule.cssText, baseUrl });
+        }
+      }
+    }
+  }
+
+  const inlinedRules = await Promise.all(
+    fontFaceRules.map(async ({ cssText, baseUrl }) => {
+      // Prefer woff2 source when multiple formats are listed (e.g. KaTeX fonts) to keep embedding fast
+      let workingCss = cssText;
+      const woff2Match = workingCss.match(/url\((['"]?)([^'")]+?\.woff2(?:\?[^'")]+)?)\1\)\s*format\((['"]?)woff2\3\)/i);
+      if (woff2Match) {
+        workingCss = workingCss.replace(/src\s*:[^;]+;/i, `src: ${woff2Match[0]};`);
+      }
+
+      const urlRegex = /url\((['"]?)([^'")]+)\1\)/g;
+      const matches = Array.from(workingCss.matchAll(urlRegex));
+      for (const m of matches) {
+        const rawUrl = m[2];
+        if (!rawUrl || rawUrl.startsWith('data:')) continue;
+        let resolved: string;
+        try {
+          resolved = new URL(rawUrl, baseUrl).href;
+        } catch {
+          continue;
+        }
+        const dataUrl = await fetchFontAsDataUrl(resolved);
+        if (dataUrl) {
+          workingCss = workingCss.replace(m[0], `url("${dataUrl}")`);
+        }
+      }
+      return workingCss;
+    })
+  );
+
+  return inlinedRules.join('\n');
+}
+
+export async function exportElementToPdf(
+  element: HTMLElement,
+  filename: string,
+  dirHandle?: SaveDirectoryHandle | null
+): Promise<SaveTargetMode> {
   const rootRect = element.getBoundingClientRect();
   const domWidth = rootRect.width || element.scrollWidth || 820;
   const domHeight = rootRect.height || element.scrollHeight || 1100;
@@ -2620,10 +2984,13 @@ export async function exportElementToPdf(element: HTMLElement, filename: string)
     .filter((b) => b.bottom > b.top + 2)
     .sort((a, b) => a.top - b.top);
 
+  const fontEmbedCSS = await buildSafeFontEmbedCss(element);
+
   const sourceCanvas = await toCanvas(element, {
     quality: 0.98,
     pixelRatio: 2,
     backgroundColor: '#ffffff',
+    fontEmbedCSS,
     style: {
       border: 'none',
       boxShadow: 'none',
@@ -2724,7 +3091,8 @@ export async function exportElementToPdf(element: HTMLElement, filename: string)
     });
   });
 
-  pdf.save(filename);
+  const blob = pdf.output('blob');
+  return saveBlobToTarget(blob, filename, dirHandle);
 }
 
 // =====================================================================

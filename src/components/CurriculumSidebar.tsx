@@ -67,14 +67,7 @@ export const CurriculumSidebar: React.FC<CurriculumSidebarProps> = ({
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [gradeFilter, setGradeFilter] = useState<'all' | 'l10' | 'l11' | 'l12'>('all');
-  const [expandedIds, setExpandedIds] = useState<Record<string, boolean>>({
-    l12: true,
-    l12_c1: true,
-    l12_c1_b1: true,
-    l11: true,
-    l11_c1: true,
-    l10: false,
-  });
+  const [expandedIds, setExpandedIds] = useState<Record<string, boolean>>({});
 
   const [addingTarget, setAddingTarget] = useState<{
     parentId: string;

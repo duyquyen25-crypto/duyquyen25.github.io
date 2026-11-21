@@ -278,8 +278,13 @@ export interface ExamPaper {
   id: string;
   code: string; // e.g., "101", "102"
   title: string;
+  departmentName?: string;
+  schoolLevel?: string;
   schoolName: string;
+  groupName?: string;
+  schoolYear?: string;
   subject: string;
+  subjectLabel?: string;
   gradeLabel: string;
   durationMinutes: number;
   createdAt: string;

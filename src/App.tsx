@@ -19,6 +19,7 @@ import {
 } from './data/initialData';
 import { CurriculumSidebar } from './components/CurriculumSidebar';
 import { BankManagerView } from './components/BankManagerView';
+import { SelectedTemplatesPanel } from './components/SelectedTemplatesPanel';
 import { ExamMatrixView } from './components/ExamMatrixView';
 import { AutoGradingView } from './components/AutoGradingView';
 import { AnalyticsReportView } from './components/AnalyticsReportView';
@@ -26,10 +27,10 @@ import { AnalyticsReportView } from './components/AnalyticsReportView';
 type AppTab = 'bank' | 'matrix' | 'grading' | 'analytics';
 
 const STORAGE_KEYS = {
-  TREE: 'edumath2018_tree_v58',
-  EXAMS: 'edumath2018_exams_v32',
+  TREE: 'edumath2018_tree_v60',
+  EXAMS: 'edumath2018_exams_v33',
   STUDENTS: 'edumath2018_students_v3',
-  SUBMISSIONS: 'edumath2018_submissions_v32',
+  SUBMISSIONS: 'edumath2018_submissions_v33',
 };
 
 function loadFromStorage<T>(key: string, fallback: () => T): T {
@@ -70,36 +71,20 @@ export default function App() {
     })
   );
 
-  // Selection state for BankManagerView — preselect Toán 12 Chương I Bài 1 Template 1
-  const defaultCls = treeData.find((c) => c.id === 'l12') || treeData[0] || null;
-  const defaultChap = defaultCls?.children[0] || null;
-  const defaultLesson = defaultChap?.children[0] || null;
-  const defaultTemplate = defaultLesson?.mathTypes.MC[0] || null;
-
-  const [selectedClassId, setSelectedClassId] = useState<string | null>(defaultCls?.id || null);
-  const [selectedChapterId, setSelectedChapterId] = useState<string | null>(defaultChap?.id || null);
-  const [selectedLessonId, setSelectedLessonId] = useState<string | null>(defaultLesson?.id || null);
-  const [selectedTemplateId, setSelectedTemplateId] = useState<string | null>(
-    defaultTemplate?.id || null
-  );
+  // Selection state for BankManagerView — start unselected so teachers choose their own grade/lesson/template
+  const [selectedClassId, setSelectedClassId] = useState<string | null>(null);
+  const [selectedChapterId, setSelectedChapterId] = useState<string | null>(null);
+  const [selectedLessonId, setSelectedLessonId] = useState<string | null>(null);
+  const [selectedTemplateId, setSelectedTemplateId] = useState<string | null>(null);
   const [addingTemplateTarget, setAddingTemplateTarget] = useState<{
     lessonId: string;
     category: QuestionCategory;
   } | null>(null);
 
-  // Matrix selection checkboxes — preselect Toán 12 templates for immediate matrix readiness
-  const [checkedTemplateIds, setCheckedTemplateIds] = useState<string[]>(() => {
-    const ids: string[] = [];
-    const cls12 = INITIAL_CURRICULUM_TREE.find((c) => c.id === 'l12');
-    cls12?.children.forEach((ch) =>
-      ch.children.forEach((l) =>
-        (['MC', 'TF', 'SA', 'ES'] as QuestionCategory[]).forEach((cat) =>
-          l.mathTypes[cat].forEach((t) => ids.push(t.id))
-        )
-      )
-    );
-    return ids;
-  });
+  // Matrix selection checkboxes — start empty so teachers freely select math types
+  const [checkedTemplateIds, setCheckedTemplateIds] = useState<string[]>([]);
+  // Shared question counts per template across Ngân hàng động & Ma trận & Xuất đề
+  const [countsByTemplate, setCountsByTemplate] = useState<Record<string, number>>({});
 
   // Sync changes to localStorage
   useEffect(() => {
@@ -158,6 +143,13 @@ export default function App() {
       }
       return prev.filter((id) => !ids.includes(id));
     });
+  };
+
+  const handleUpdateTemplateCount = (templateId: string, val: number) => {
+    setCountsByTemplate((prev) => ({
+      ...prev,
+      [templateId]: Math.max(1, Math.min(10, Math.floor(val) || 1)),
+    }));
   };
 
   const handleAddChapter = (classId: string, name: string) => {
@@ -228,6 +220,12 @@ export default function App() {
       }))
     );
     setCheckedTemplateIds((prev) => prev.filter((id) => id !== targetId));
+    setCountsByTemplate((prev) => {
+      if (!(targetId in prev)) return prev;
+      const next = { ...prev };
+      delete next[targetId];
+      return next;
+    });
     if (selectedTemplateId === targetId) setSelectedTemplateId(null);
   };
 
@@ -408,24 +406,43 @@ export default function App() {
         )}
 
         {activeTab === 'bank' && (
-          <BankManagerView
-            selectedClass={selectedClass}
-            selectedChapter={selectedChapter}
-            selectedLesson={selectedLesson}
-            selectedTemplate={selectedTemplate}
-            addingTemplateTarget={addingTemplateTarget}
-            onSelectTemplate={(tpl, lesson, chapter, cls) => {
-              setSelectedClassId(cls.id);
-              setSelectedChapterId(chapter.id);
-              setSelectedLessonId(lesson.id);
-              setSelectedTemplateId(tpl.id);
-              setAddingTemplateTarget(null);
-            }}
-            onUpdateTemplate={handleUpdateTemplate}
-            onCreateTemplate={handleCreateTemplate}
-            onCancelCreateTemplate={() => setAddingTemplateTarget(null)}
-            onTriggerAddTemplate={handleTriggerAddTemplate}
-          />
+          <>
+            <BankManagerView
+              selectedClass={selectedClass}
+              selectedChapter={selectedChapter}
+              selectedLesson={selectedLesson}
+              selectedTemplate={selectedTemplate}
+              addingTemplateTarget={addingTemplateTarget}
+              onSelectTemplate={(tpl, lesson, chapter, cls) => {
+                setSelectedClassId(cls.id);
+                setSelectedChapterId(chapter.id);
+                setSelectedLessonId(lesson.id);
+                setSelectedTemplateId(tpl.id);
+                setAddingTemplateTarget(null);
+              }}
+              onUpdateTemplate={handleUpdateTemplate}
+              onCreateTemplate={handleCreateTemplate}
+              onCancelCreateTemplate={() => setAddingTemplateTarget(null)}
+              onTriggerAddTemplate={handleTriggerAddTemplate}
+            />
+            <SelectedTemplatesPanel
+              treeData={treeData}
+              checkedTemplateIds={checkedTemplateIds}
+              countsByTemplate={countsByTemplate}
+              selectedTemplateId={selectedTemplateId}
+              onUpdateTemplateCount={handleUpdateTemplateCount}
+              onUncheckTemplate={(tplId) => handleToggleCheckIds([tplId], false)}
+              onClearAllChecked={() => setCheckedTemplateIds([])}
+              onSelectTemplate={(tpl, lesson, chapter, cls) => {
+                setSelectedClassId(cls.id);
+                setSelectedChapterId(chapter.id);
+                setSelectedLessonId(lesson.id);
+                setSelectedTemplateId(tpl.id);
+                setAddingTemplateTarget(null);
+              }}
+              onGoToMatrix={() => setActiveTab('matrix')}
+            />
+          </>
         )}
 
         {activeTab === 'matrix' && (
@@ -433,6 +450,8 @@ export default function App() {
             treeData={treeData}
             checkedTemplateIds={checkedTemplateIds}
             onSetCheckedIds={setCheckedTemplateIds}
+            countsByTemplate={countsByTemplate}
+            onUpdateTemplateCount={handleUpdateTemplateCount}
             generatedExams={generatedExams}
             onSaveGeneratedExams={handleSaveGeneratedExams}
           />

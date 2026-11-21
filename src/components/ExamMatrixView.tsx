@@ -9,6 +9,8 @@ import {
   FileCode2,
   FileSpreadsheet,
   FileText,
+  FolderCheck,
+  FolderOpen,
   Layers,
   Printer,
   Sparkles,
@@ -26,6 +28,7 @@ import { generateValidInstance } from '../engine/templateRunner';
 import { MathText } from './MathText';
 import { QuestionDiagram } from './QuestionDiagram';
 import {
+  buildUniqueExamFilename,
   exportAllExamsToDocx,
   exportAllExamsToTex,
   exportElementToPdf,
@@ -33,6 +36,11 @@ import {
   exportExamToTex,
   exportRowsToCsv,
   generateTexSource,
+  pickSaveDirectory,
+  resolveExamHeaderFields,
+  sanitizeExamFileBase,
+  SaveDirectoryHandle,
+  splitSchoolUnderline,
   TexExportFormat,
 } from '../utils/exporters';
 
@@ -40,6 +48,8 @@ interface ExamMatrixViewProps {
   treeData: ClassCurriculumNode[];
   checkedTemplateIds: string[];
   onSetCheckedIds: (ids: string[]) => void;
+  countsByTemplate: Record<string, number>;
+  onUpdateTemplateCount: (templateId: string, count: number) => void;
   generatedExams: ExamPaper[];
   onSaveGeneratedExams: (newPapers: ExamPaper[]) => void;
 }
@@ -60,17 +70,90 @@ const DEFAULT_POINTS: Record<QuestionCategory, number> = {
   ES: 1.5,
 };
 
+const ExamOfficialHeader: React.FC<{
+  departmentName: string;
+  schoolLevel: string;
+  schoolName: string;
+  groupName: string;
+  title: string;
+  schoolYear: string;
+  subjectLabel: string;
+  durationMinutes: number;
+  code: string;
+  compact?: boolean;
+}> = ({
+  departmentName,
+  schoolLevel,
+  schoolName,
+  groupName,
+  title,
+  schoolYear,
+  subjectLabel,
+  durationMinutes,
+  code,
+  compact = false,
+}) => {
+  const [pre, mid, suf] = splitSchoolUnderline(schoolName);
+  return (
+    <div
+      data-pdf-block=""
+      className={`font-serif text-slate-950 border-b border-slate-900 ${
+        compact ? 'pb-2 text-[12px] leading-snug' : 'pb-3 text-[13.5px] leading-snug'
+      }`}
+    >
+      <div className="grid grid-cols-12 gap-3 items-start">
+        <div className="col-span-6 text-center">
+          <div>{departmentName || 'SỞ GD & ĐT LÂM ĐỒNG'}</div>
+          <div className="font-bold">{schoolLevel || 'TRƯỜNG THPT'}</div>
+          <div className="font-bold">
+            {pre}
+            <span className="underline underline-offset-2">{mid}</span>
+            {suf}
+          </div>
+          <div className="font-bold">{groupName || 'TỔ TỰ NHIÊN'}</div>
+          <div className="mt-1">
+            (<span className="italic">Đề thi có ... trang</span>)
+          </div>
+        </div>
+        <div className="col-span-6 text-center">
+          <div className="font-bold">{title || 'ĐỀ KIỂM TRA GIỮA HỌC KÌ 1'}</div>
+          <div className="font-bold">{schoolYear || 'NĂM HỌC: 2026 - 2027'}</div>
+          <div className="font-bold">Môn thi: {subjectLabel || 'TOÁN 11'}</div>
+          <div className="italic">
+            Thời <span className="underline underline-offset-2">gian làm bài: {durationMinutes || 90}</span> phút
+          </div>
+          <div className="inline-block mt-1.5 px-2.5 py-0.5 border border-slate-950 font-bold">
+            Mã đề: {code}
+          </div>
+        </div>
+      </div>
+      <div className={compact ? 'mt-2 text-[11.5px]' : 'mt-3 text-[13px]'}>
+        <span>Họ và tên thí sinh: ...........................................</span>
+        <span className="ml-4">Số báo danh: ..........................</span>
+      </div>
+    </div>
+  );
+};
+
 export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
   treeData,
   checkedTemplateIds,
   onSetCheckedIds,
+  countsByTemplate,
+  onUpdateTemplateCount,
   generatedExams,
   onSaveGeneratedExams,
 }) => {
-  const [countsByTemplate, setCountsByTemplate] = useState<Record<string, number>>({});
-  const [examTitle, setExamTitle] = useState('ĐỀ KIỂM TRA ĐỊNH KỲ MÔN TOÁN (GDPT 2018)');
-  const [schoolName, setSchoolName] = useState('TRƯỜNG THPT CHUYÊN KHOA HỌC TỰ NHIÊN');
-  const [durationMinutes, setDurationMinutes] = useState(60);
+  const [departmentName, setDepartmentName] = useState('SỞ GD & ĐT LÂM ĐỒNG');
+  const [schoolLevel, setSchoolLevel] = useState('TRƯỜNG THPT');
+  const [schoolName, setSchoolName] = useState('HUỲNH THÚC KHÁNG - SƠN MỸ');
+  const [groupName, setGroupName] = useState('TỔ TỰ NHIÊN');
+  const [examTitle, setExamTitle] = useState('ĐỀ KIỂM TRA  GIỮA HỌC KÌ 1');
+  const [schoolYear, setSchoolYear] = useState('NĂM HỌC: 2026 - 2027');
+  const [subjectLabel, setSubjectLabel] = useState('TOÁN 11');
+  const [durationMinutes, setDurationMinutes] = useState(90);
+  const [startCodeInput, setStartCodeInput] = useState('101');
+  const startCode = Math.max(100, Math.min(999, Math.floor(Number(startCodeInput) || 101)));
   const [variantCountInput, setVariantCountInput] = useState('12');
   const variantCount = Math.max(1, Math.min(100, Math.floor(Number(variantCountInput) || 1)));
   const [includeSolutions, setIncludeSolutions] = useState(true);
@@ -83,12 +166,14 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
   const [viewMode, setViewMode] = useState<'matrix' | 'exam'>('matrix');
   const [toastMsg, setToastMsg] = useState('');
   const [isExporting, setIsExporting] = useState(false);
+  const [exportProgress, setExportProgress] = useState('');
+  const [saveDirHandle, setSaveDirHandle] = useState<SaveDirectoryHandle | null>(null);
 
   const printableRef = useRef<HTMLDivElement>(null);
 
   const showToast = (msg: string) => {
     setToastMsg(msg);
-    setTimeout(() => setToastMsg(''), 3500);
+    setTimeout(() => setToastMsg(''), 4200);
   };
 
   // Flatten checked templates with full hierarchy metadata
@@ -120,10 +205,7 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
   const getCount = (tplId: string) => Math.max(1, countsByTemplate[tplId] ?? 1);
 
   const updateCount = (tplId: string, val: number) => {
-    setCountsByTemplate((prev) => ({
-      ...prev,
-      [tplId]: Math.max(1, Math.min(10, val)),
-    }));
+    onUpdateTemplateCount(tplId, val);
   };
 
   // Build Matrix Aggregation by Chapter -> Lesson
@@ -227,8 +309,10 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
         )
       )
     );
+    const gradeSubject = gradeId === 'l10' ? 'TOÁN 10' : gradeId === 'l11' ? 'TOÁN 11' : 'TOÁN 12';
+    setSubjectLabel(gradeSubject);
     onSetCheckedIds(ids);
-    showToast(`Đã chọn tất cả ${ids.length} dạng toán thuộc ${cls.name}`);
+    showToast(`Đã chọn tất cả ${ids.length} dạng toán thuộc ${cls.name} (${gradeSubject})`);
   };
 
   const handleGenerateExams = () => {
@@ -243,7 +327,7 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
     const gradeLabel = gradeSet.size === 1 ? Array.from(gradeSet)[0] : 'Tổng hợp THPT';
 
     for (let v = 0; v < variantCount; v++) {
-      const code = String(101 + v);
+      const code = String(startCode + v);
       const questions: ExamQuestionInstance[] = [];
       let order = 1;
       let totalPoints = 0;
@@ -283,8 +367,13 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
         id: `exam_${Date.now()}_${code}`,
         code,
         title: examTitle,
+        departmentName,
+        schoolLevel,
         schoolName,
+        groupName,
+        schoolYear,
         subject: 'Toán học',
+        subjectLabel,
         gradeLabel,
         durationMinutes,
         createdAt: new Date().toISOString().slice(0, 10),
@@ -374,27 +463,102 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
     showToast('Đã xuất Ma trận đề thi (.csv)');
   };
 
+  const formatDestinationLabel = (mode: 'directory' | 'download') =>
+    mode === 'directory' && saveDirHandle
+      ? `thư mục "${saveDirHandle.name}"`
+      : 'thư mục tải xuống mặc định';
+
+  const handleChooseSaveDirectory = async () => {
+    const res = await pickSaveDirectory();
+    if (res.status === 'selected' && res.handle) {
+      setSaveDirHandle(res.handle);
+      showToast(`Đã chọn thư mục lưu trữ: ${res.handle.name}`);
+    } else if (res.status !== 'cancelled' && res.message) {
+      showToast(res.message);
+    }
+  };
+
+  const handleClearSaveDirectory = () => {
+    setSaveDirHandle(null);
+    showToast('Đã chuyển về thư mục tải xuống mặc định của trình duyệt.');
+  };
+
+  const waitForNextPaint = () =>
+    new Promise<void>((resolve) => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTimeout(resolve, 120);
+        });
+      });
+    });
+
   const handleExportPdf = async () => {
     if (!activeExam || !printableRef.current) return;
     setIsExporting(true);
+    const filename = `${sanitizeExamFileBase(activeExam.code)}.pdf`;
+    setExportProgress(`Đang xuất ${filename}...`);
     try {
-      await exportElementToPdf(printableRef.current, `De_Thi_Toan_Ma_${activeExam.code}.pdf`);
-      showToast(`Đã xuất file PDF: De_Thi_Toan_Ma_${activeExam.code}.pdf`);
+      const mode = await exportElementToPdf(printableRef.current, filename, saveDirHandle);
+      showToast(`Đã lưu file ${filename} vào ${formatDestinationLabel(mode)}`);
     } catch (err) {
       showToast(`Lỗi xuất PDF: ${err instanceof Error ? err.message : String(err)}`);
     } finally {
       setIsExporting(false);
+      setExportProgress('');
+    }
+  };
+
+  const handleExportAllPdf = async () => {
+    if (generatedExams.length === 0) return;
+    const originalId = activeExam?.id || generatedExams[0].id;
+    const usedNames = new Set<string>();
+    const exportedFiles: string[] = [];
+    let lastMode: 'directory' | 'download' = saveDirHandle ? 'directory' : 'download';
+
+    setIsExporting(true);
+    try {
+      for (let i = 0; i < generatedExams.length; i++) {
+        const exam = generatedExams[i];
+        const filename = buildUniqueExamFilename(exam.code, 'pdf', usedNames);
+        setExportProgress(`Đang xuất PDF (${i + 1}/${generatedExams.length}): ${filename}`);
+        setActiveExamId(exam.id);
+        await waitForNextPaint();
+        if (!printableRef.current) continue;
+        lastMode = await exportElementToPdf(printableRef.current, filename, saveDirHandle);
+        exportedFiles.push(filename);
+        if (lastMode === 'download' && i < generatedExams.length - 1) {
+          await new Promise((resolve) => setTimeout(resolve, 180));
+        }
+      }
+      const sampleRange =
+        exportedFiles.length > 1
+          ? `${exportedFiles[0]} → ${exportedFiles[exportedFiles.length - 1]}`
+          : exportedFiles[0] || '';
+      showToast(
+        `Đã lưu riêng ${exportedFiles.length} file PDF (${sampleRange}) vào ${formatDestinationLabel(lastMode)}`
+      );
+    } catch (err) {
+      showToast(`Lỗi xuất PDF hàng loạt: ${err instanceof Error ? err.message : String(err)}`);
+    } finally {
+      setActiveExamId(originalId);
+      setIsExporting(false);
+      setExportProgress('');
     }
   };
 
   const handleExportDocx = async () => {
     if (!activeExam) return;
     setIsExporting(true);
+    const filename = `${sanitizeExamFileBase(activeExam.code)}.docx`;
+    setExportProgress(`Đang xuất ${filename}...`);
     try {
-      await exportExamToDocx(activeExam, includeSolutions);
-      showToast(`Đã xuất file Word (.docx) chuẩn $...$: De_Thi_Toan_Ma_${activeExam.code}.docx`);
+      const res = await exportExamToDocx(activeExam, includeSolutions, saveDirHandle);
+      showToast(`Đã lưu file Word ${res.filename} vào ${formatDestinationLabel(res.mode)}`);
+    } catch (err) {
+      showToast(`Lỗi xuất Word: ${err instanceof Error ? err.message : String(err)}`);
     } finally {
       setIsExporting(false);
+      setExportProgress('');
     }
   };
 
@@ -402,26 +566,66 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
     if (generatedExams.length === 0) return;
     setIsExporting(true);
     try {
-      await exportAllExamsToDocx(generatedExams, includeSolutions);
-      showToast(`Đã xuất trọn bộ ${generatedExams.length} mã đề Word (.docx) với công thức $...$`);
+      const res = await exportAllExamsToDocx(
+        generatedExams,
+        includeSolutions,
+        saveDirHandle,
+        (cur, total, fname) => setExportProgress(`Đang xuất Word (${cur}/${total}): ${fname}`)
+      );
+      const sampleRange =
+        res.filenames.length > 1
+          ? `${res.filenames[0]} → ${res.filenames[res.filenames.length - 1]}`
+          : res.filenames[0] || '';
+      showToast(
+        `Đã lưu riêng ${res.count} file Word (${sampleRange}) vào ${formatDestinationLabel(res.mode)}`
+      );
+    } catch (err) {
+      showToast(`Lỗi xuất Word hàng loạt: ${err instanceof Error ? err.message : String(err)}`);
+    } finally {
+      setIsExporting(false);
+      setExportProgress('');
+    }
+  };
+
+  const handleExportTex = async () => {
+    if (!activeExam) return;
+    setIsExporting(true);
+    try {
+      const res = await exportExamToTex(activeExam, includeSolutions, texFormat, saveDirHandle);
+      const label = texFormat === 'ex_test' ? 'ex_test' : 'amsmath';
+      showToast(`Đã lưu file ${res.filename} (${label}) vào ${formatDestinationLabel(res.mode)}`);
+    } catch (err) {
+      showToast(`Lỗi xuất .tex: ${err instanceof Error ? err.message : String(err)}`);
     } finally {
       setIsExporting(false);
     }
   };
 
-  const handleExportTex = () => {
-    if (!activeExam) return;
-    exportExamToTex(activeExam, includeSolutions, texFormat);
-    const label = texFormat === 'ex_test' ? 'chuẩn ex_test' : 'LaTeX chuẩn (amsmath)';
-    const suffix = texFormat === 'ex_test' ? '_ex_test' : '';
-    showToast(`Đã xuất file ${label}: De_Thi_Toan_Ma_${activeExam.code}${suffix}.tex`);
-  };
-
-  const handleExportAllTex = () => {
+  const handleExportAllTex = async () => {
     if (generatedExams.length === 0) return;
-    exportAllExamsToTex(generatedExams, includeSolutions, texFormat);
-    const label = texFormat === 'ex_test' ? 'chuẩn ex_test' : 'LaTeX chuẩn (amsmath)';
-    showToast(`Đã xuất trọn bộ ${generatedExams.length} mã đề ${label} (.tex)`);
+    setIsExporting(true);
+    try {
+      const res = await exportAllExamsToTex(
+        generatedExams,
+        includeSolutions,
+        texFormat,
+        saveDirHandle,
+        (cur, total, fname) => setExportProgress(`Đang xuất .tex (${cur}/${total}): ${fname}`)
+      );
+      const sampleRange =
+        res.filenames.length > 1
+          ? `${res.filenames[0]} → ${res.filenames[res.filenames.length - 1]}`
+          : res.filenames[0] || '';
+      const label = texFormat === 'ex_test' ? 'ex_test' : 'amsmath';
+      showToast(
+        `Đã lưu riêng ${res.count} file .tex (${label}: ${sampleRange}) vào ${formatDestinationLabel(res.mode)}`
+      );
+    } catch (err) {
+      showToast(`Lỗi xuất .tex hàng loạt: ${err instanceof Error ? err.message : String(err)}`);
+    } finally {
+      setIsExporting(false);
+      setExportProgress('');
+    }
   };
 
   return (
@@ -506,30 +710,81 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
-              <div className="md:col-span-4">
-                <label className="block text-xs font-medium text-slate-700 mb-1">
-                  Tiêu đề đề thi
-                </label>
-                <input
-                  value={examTitle}
-                  onChange={(e) => setExamTitle(e.target.value)}
-                  className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded-md focus:outline-none focus:border-blue-600"
-                />
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-end">
               <div className="md:col-span-3">
                 <label className="block text-xs font-medium text-slate-700 mb-1">
-                  Đơn vị / Trường THPT
+                  Sở GD & ĐT
                 </label>
                 <input
-                  value={schoolName}
-                  onChange={(e) => setSchoolName(e.target.value)}
-                  className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded-md focus:outline-none focus:border-blue-600"
+                  value={departmentName}
+                  onChange={(e) => setDepartmentName(e.target.value)}
+                  className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:outline-none focus:border-blue-600"
                 />
               </div>
               <div className="md:col-span-2">
                 <label className="block text-xs font-medium text-slate-700 mb-1">
-                  Thời gian (phút)
+                  Cấp đơn vị
+                </label>
+                <input
+                  value={schoolLevel}
+                  onChange={(e) => setSchoolLevel(e.target.value)}
+                  className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:outline-none focus:border-blue-600"
+                />
+              </div>
+              <div className="md:col-span-4">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
+                  Tên trường
+                </label>
+                <input
+                  value={schoolName}
+                  onChange={(e) => setSchoolName(e.target.value)}
+                  className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:outline-none focus:border-blue-600"
+                />
+              </div>
+              <div className="md:col-span-3">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
+                  Tổ chuyên môn
+                </label>
+                <input
+                  value={groupName}
+                  onChange={(e) => setGroupName(e.target.value)}
+                  className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:outline-none focus:border-blue-600"
+                />
+              </div>
+
+              <div className="md:col-span-4">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
+                  Tên bài kiểm tra / Tiêu đề
+                </label>
+                <input
+                  value={examTitle}
+                  onChange={(e) => setExamTitle(e.target.value)}
+                  className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:outline-none focus:border-blue-600"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
+                  Năm học
+                </label>
+                <input
+                  value={schoolYear}
+                  onChange={(e) => setSchoolYear(e.target.value)}
+                  className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:outline-none focus:border-blue-600"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
+                  Môn thi
+                </label>
+                <input
+                  value={subjectLabel}
+                  onChange={(e) => setSubjectLabel(e.target.value)}
+                  className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:outline-none focus:border-blue-600"
+                />
+              </div>
+              <div className="md:col-span-1">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
+                  Phút
                 </label>
                 <input
                   type="number"
@@ -537,14 +792,28 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
                   max={180}
                   value={durationMinutes}
                   onChange={(e) => setDurationMinutes(Number(e.target.value))}
-                  className="w-full px-2.5 py-1.5 text-sm border border-slate-300 rounded-md font-mono tabular-nums"
+                  className="w-full px-2 py-1.5 text-xs border border-slate-300 rounded-md font-mono tabular-nums"
                 />
               </div>
-              <div className="md:col-span-3">
+              <div className="md:col-span-1">
                 <label className="block text-xs font-medium text-slate-700 mb-1">
-                  Số lượng đề cần tạo (1–100)
+                  Mã đầu
                 </label>
-                <div className="flex items-center gap-2">
+                <input
+                  type="number"
+                  min={100}
+                  max={999}
+                  value={startCodeInput}
+                  onChange={(e) => setStartCodeInput(e.target.value)}
+                  onBlur={() => setStartCodeInput(String(startCode))}
+                  className="w-full px-2 py-1.5 text-xs border border-slate-300 rounded-md font-mono tabular-nums"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <label className="block text-xs font-medium text-slate-700 mb-1">
+                  Số đề (1–100)
+                </label>
+                <div className="flex items-center gap-1.5">
                   <input
                     type="number"
                     min={1}
@@ -552,18 +821,37 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
                     value={variantCountInput}
                     onChange={(e) => setVariantCountInput(e.target.value)}
                     onBlur={() => setVariantCountInput(String(variantCount))}
-                    placeholder="VD: 12, 16, 24..."
-                    className="w-24 px-2.5 py-1.5 text-sm border border-slate-300 rounded-md font-mono tabular-nums focus:outline-none focus:border-blue-600"
+                    className="w-16 px-2 py-1.5 text-xs border border-slate-300 rounded-md font-mono tabular-nums focus:outline-none focus:border-blue-600"
                   />
                   <button
                     onClick={handleGenerateExams}
                     disabled={matrixData.chapters.length === 0}
-                    className="flex-1 px-3 py-1.5 text-xs font-medium text-white bg-blue-700 rounded-md hover:bg-blue-800 disabled:opacity-50 flex items-center justify-center gap-1.5 whitespace-nowrap"
+                    className="flex-1 px-2.5 py-1.5 text-xs font-medium text-white bg-blue-700 rounded-md hover:bg-blue-800 disabled:opacity-50 flex items-center justify-center gap-1 whitespace-nowrap"
                   >
                     <Sparkles size={13} />
                     Tạo {variantCount} đề
                   </button>
                 </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-50/70 border border-slate-200 rounded-md p-4">
+              <div className="text-[11px] font-medium text-slate-500 mb-2">
+                Xem trước phần đầu đề thi chuẩn thống nhất
+              </div>
+              <div className="bg-white border border-slate-200 rounded px-5 py-3 max-w-2xl mx-auto">
+                <ExamOfficialHeader
+                  departmentName={departmentName}
+                  schoolLevel={schoolLevel}
+                  schoolName={schoolName}
+                  groupName={groupName}
+                  title={examTitle}
+                  schoolYear={schoolYear}
+                  subjectLabel={subjectLabel}
+                  durationMinutes={durationMinutes}
+                  code={String(startCode)}
+                  compact
+                />
               </div>
             </div>
           </div>
@@ -785,157 +1073,252 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
       {/* VIEW MODE 2: EXAM PAPER PREVIEW & EXPORT */}
       {viewMode === 'exam' && (
         <div className="flex-1 flex flex-col overflow-hidden">
-          {/* Sub-bar with Exam Code selector & Export Actions */}
-          <div className="bg-slate-50 border-b border-slate-200 px-6 py-2.5 flex flex-wrap items-center justify-between gap-3 shrink-0">
-            <div className="flex items-center gap-2 min-w-0">
-              <span className="text-xs font-medium text-slate-500 whitespace-nowrap">
-                Bộ {generatedExams.length} mã đề:
-              </span>
-              {generatedExams.length > 0 && (
-                <>
-                  <button
-                    onClick={() => {
-                      const curIdx = generatedExams.findIndex((e) => e.id === activeExam?.id);
-                      const prevIdx = curIdx > 0 ? curIdx - 1 : generatedExams.length - 1;
-                      setActiveExamId(generatedExams[prevIdx].id);
-                    }}
-                    className="p-1 text-slate-600 bg-white border border-slate-300 rounded hover:bg-slate-100"
-                    title="Mã đề trước"
-                  >
-                    <ChevronLeft size={14} />
-                  </button>
-                  <select
-                    value={activeExam?.id || ''}
-                    onChange={(e) => setActiveExamId(e.target.value)}
-                    className="px-2.5 py-1 text-xs font-semibold text-slate-900 bg-white border border-slate-300 rounded font-mono tabular-nums"
-                  >
-                    {generatedExams.map((ex, i) => (
-                      <option key={ex.id} value={ex.id}>
-                        #{i + 1} — Mã đề {ex.code} ({ex.questions.length} câu)
-                      </option>
-                    ))}
-                  </select>
-                  <button
-                    onClick={() => {
-                      const curIdx = generatedExams.findIndex((e) => e.id === activeExam?.id);
-                      const nextIdx = curIdx >= 0 && curIdx < generatedExams.length - 1 ? curIdx + 1 : 0;
-                      setActiveExamId(generatedExams[nextIdx].id);
-                    }}
-                    className="p-1 text-slate-600 bg-white border border-slate-300 rounded hover:bg-slate-100"
-                    title="Mã đề tiếp theo"
-                  >
-                    <ChevronRight size={14} />
-                  </button>
-                </>
-              )}
-              <div className="hidden xl:flex items-center gap-1 overflow-x-auto max-w-md py-0.5">
-                {generatedExams.slice(0, 12).map((ex) => (
-                  <button
-                    key={ex.id}
-                    onClick={() => setActiveExamId(ex.id)}
-                    className={`px-2 py-1 text-xs font-mono font-medium rounded border transition-colors whitespace-nowrap tabular-nums ${
-                      activeExam?.id === ex.id
-                        ? 'bg-blue-700 text-white border-blue-700'
-                        : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'
-                    }`}
-                  >
-                    {ex.code}
-                  </button>
-                ))}
-                {generatedExams.length > 12 && (
-                  <span className="text-[11px] text-slate-500 whitespace-nowrap pl-1">
-                    +{generatedExams.length - 12} mã khác
-                  </span>
+          {/* Sub-bar with Exam Code selector, Save Directory Picker & Export Actions */}
+          <div className="bg-slate-50 border-b border-slate-200 px-6 py-2.5 space-y-2 shrink-0">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="text-xs font-medium text-slate-500 whitespace-nowrap">
+                  Bộ {generatedExams.length} mã đề:
+                </span>
+                {generatedExams.length > 0 && (
+                  <>
+                    <button
+                      onClick={() => {
+                        const curIdx = generatedExams.findIndex((e) => e.id === activeExam?.id);
+                        const prevIdx = curIdx > 0 ? curIdx - 1 : generatedExams.length - 1;
+                        setActiveExamId(generatedExams[prevIdx].id);
+                      }}
+                      disabled={isExporting}
+                      className="p-1 text-slate-600 bg-white border border-slate-300 rounded hover:bg-slate-100 disabled:opacity-50"
+                      title="Mã đề trước"
+                    >
+                      <ChevronLeft size={14} />
+                    </button>
+                    <select
+                      value={activeExam?.id || ''}
+                      onChange={(e) => setActiveExamId(e.target.value)}
+                      disabled={isExporting}
+                      className="px-2.5 py-1 text-xs font-semibold text-slate-900 bg-white border border-slate-300 rounded font-mono tabular-nums disabled:opacity-50"
+                    >
+                      {generatedExams.map((ex, i) => (
+                        <option key={ex.id} value={ex.id}>
+                          #{i + 1} — Mã đề {ex.code} ({ex.questions.length} câu)
+                        </option>
+                      ))}
+                    </select>
+                    <button
+                      onClick={() => {
+                        const curIdx = generatedExams.findIndex((e) => e.id === activeExam?.id);
+                        const nextIdx = curIdx >= 0 && curIdx < generatedExams.length - 1 ? curIdx + 1 : 0;
+                        setActiveExamId(generatedExams[nextIdx].id);
+                      }}
+                      disabled={isExporting}
+                      className="p-1 text-slate-600 bg-white border border-slate-300 rounded hover:bg-slate-100 disabled:opacity-50"
+                      title="Mã đề tiếp theo"
+                    >
+                      <ChevronRight size={14} />
+                    </button>
+                  </>
                 )}
+                <div className="hidden xl:flex items-center gap-1 overflow-x-auto max-w-md py-0.5">
+                  {generatedExams.slice(0, 12).map((ex) => (
+                    <button
+                      key={ex.id}
+                      onClick={() => setActiveExamId(ex.id)}
+                      disabled={isExporting}
+                      className={`px-2 py-1 text-xs font-mono font-medium rounded border transition-colors whitespace-nowrap tabular-nums disabled:opacity-50 ${
+                        activeExam?.id === ex.id
+                          ? 'bg-blue-700 text-white border-blue-700'
+                          : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'
+                      }`}
+                    >
+                      {ex.code}
+                    </button>
+                  ))}
+                  {generatedExams.length > 12 && (
+                    <span className="text-[11px] text-slate-500 whitespace-nowrap pl-1">
+                      +{generatedExams.length - 12} mã khác
+                    </span>
+                  )}
+                </div>
               </div>
-            </div>
 
-            {activeExam && (
-              <div className="flex items-center gap-2 flex-wrap">
-                <label className="flex items-center gap-1.5 text-xs text-slate-700 mr-1 cursor-pointer whitespace-nowrap">
-                  <input
-                    type="checkbox"
-                    checked={includeSolutions}
-                    onChange={(e) => setIncludeSolutions(e.target.checked)}
-                    className="rounded border-slate-300 text-blue-600"
-                  />
-                  Kèm đáp án
-                </label>
+              {activeExam && (
+                <div className="flex items-center gap-2 flex-wrap">
+                  <label className="flex items-center gap-1.5 text-xs text-slate-700 mr-1 cursor-pointer whitespace-nowrap">
+                    <input
+                      type="checkbox"
+                      checked={includeSolutions}
+                      onChange={(e) => setIncludeSolutions(e.target.checked)}
+                      className="rounded border-slate-300 text-blue-600"
+                    />
+                    Kèm đáp án
+                  </label>
 
-                <button
-                  onClick={handleExportPdf}
-                  disabled={isExporting}
-                  className="px-2.5 py-1.5 text-xs font-medium text-white bg-red-600 hover:bg-red-700 rounded-md flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
-                >
-                  <Download size={13} />
-                  PDF
-                </button>
-                <button
-                  onClick={handleExportDocx}
-                  disabled={isExporting}
-                  className="px-2.5 py-1.5 text-xs font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-md flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
-                  title="Xuất mã đề hiện tại sang Word với công thức LaTeX $...$"
-                >
-                  <FileText size={13} />
-                  Word ($...$)
-                </button>
-                {generatedExams.length > 1 && (
                   <button
-                    onClick={handleExportAllDocx}
+                    onClick={handleExportPdf}
                     disabled={isExporting}
-                    className="px-2.5 py-1.5 text-xs font-medium text-blue-800 bg-blue-50 border border-blue-200 hover:bg-blue-100 rounded-md flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
-                    title="Gộp toàn bộ các mã đề đã sinh vào 1 file Word với công thức LaTeX $...$"
+                    className="px-2.5 py-1.5 text-xs font-medium text-white bg-red-600 hover:bg-red-700 rounded-md flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
+                    title={`Xuất riêng mã đề hiện tại thành file ${sanitizeExamFileBase(activeExam.code)}.pdf`}
                   >
-                    <FileText size={13} />
-                    Xuất {generatedExams.length} đề Word
-                  </button>
-                )}
-                <div className="inline-flex items-center rounded-md border border-slate-300 bg-white overflow-hidden">
-                  <select
-                    aria-label="Định dạng LaTeX"
-                    value={texFormat}
-                    onChange={(e) => setTexFormat(e.target.value as TexExportFormat)}
-                    className="px-2 py-1.5 text-xs font-medium text-slate-700 bg-slate-50 border-r border-slate-300 focus:outline-none cursor-pointer"
-                    title="Chọn chuẩn xuất mã nguồn LaTeX"
-                  >
-                    <option value="amsmath">LaTeX chuẩn (amsmath)</option>
-                    <option value="ex_test">Chuẩn ex_test (Việt Nam)</option>
-                  </select>
-                  <button
-                    type="button"
-                    onClick={() => setShowTexPreview(true)}
-                    className="px-2.5 py-1.5 text-xs font-medium text-blue-700 bg-blue-50/70 hover:bg-blue-100 border-r border-slate-300 flex items-center gap-1.5 whitespace-nowrap"
-                    title="Xem trước mã nguồn LaTeX (.tex) của mã đề hiện tại"
-                  >
-                    <Eye size={13} />
-                    Xem trước .tex
-                  </button>
-                  <button
-                    onClick={handleExportTex}
-                    className="px-2.5 py-1.5 text-xs font-medium text-slate-800 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap"
-                    title={`Xuất mã đề hiện tại định dạng ${texFormat === 'ex_test' ? 'chuẩn ex_test Việt Nam' : 'LaTeX chuẩn amsmath'}`}
-                  >
-                    <FileCode2 size={13} />
-                    .tex
+                    <Download size={13} />
+                    PDF ({sanitizeExamFileBase(activeExam.code)})
                   </button>
                   {generatedExams.length > 1 && (
                     <button
-                      onClick={handleExportAllTex}
-                      className="px-2.5 py-1.5 text-xs font-medium text-slate-800 border-l border-slate-300 hover:bg-slate-100 flex items-center gap-1.5 whitespace-nowrap"
-                      title={`Xuất trọn bộ ${generatedExams.length} mã đề định dạng ${texFormat === 'ex_test' ? 'chuẩn ex_test Việt Nam' : 'LaTeX chuẩn amsmath'}`}
+                      onClick={handleExportAllPdf}
+                      disabled={isExporting}
+                      className="px-2.5 py-1.5 text-xs font-medium text-red-700 bg-red-50 border border-red-200 hover:bg-red-100 rounded-md flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
+                      title={`Xuất riêng từng mã đề thành ${generatedExams.length} file PDF độc lập theo số mã đề`}
+                    >
+                      <Download size={13} />
+                      {generatedExams.length} đề PDF
+                    </button>
+                  )}
+                  <button
+                    onClick={handleExportDocx}
+                    disabled={isExporting}
+                    className="px-2.5 py-1.5 text-xs font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-md flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
+                    title={`Xuất riêng mã đề hiện tại thành file ${sanitizeExamFileBase(activeExam.code)}.docx với công thức LaTeX $...$`}
+                  >
+                    <FileText size={13} />
+                    Word ($...$)
+                  </button>
+                  {generatedExams.length > 1 && (
+                    <button
+                      onClick={handleExportAllDocx}
+                      disabled={isExporting}
+                      className="px-2.5 py-1.5 text-xs font-medium text-blue-800 bg-blue-50 border border-blue-200 hover:bg-blue-100 rounded-md flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
+                      title={`Xuất riêng từng mã đề thành ${generatedExams.length} file Word (.docx) độc lập đặt tên theo số mã đề`}
+                    >
+                      <FileText size={13} />
+                      Xuất {generatedExams.length} đề Word
+                    </button>
+                  )}
+                  <div className="inline-flex items-center rounded-md border border-slate-300 bg-white overflow-hidden">
+                    <select
+                      aria-label="Định dạng LaTeX"
+                      value={texFormat}
+                      onChange={(e) => setTexFormat(e.target.value as TexExportFormat)}
+                      className="px-2 py-1.5 text-xs font-medium text-slate-700 bg-slate-50 border-r border-slate-300 focus:outline-none cursor-pointer"
+                      title="Chọn chuẩn xuất mã nguồn LaTeX"
+                    >
+                      <option value="amsmath">LaTeX chuẩn (amsmath)</option>
+                      <option value="ex_test">Chuẩn ex_test (Việt Nam)</option>
+                    </select>
+                    <button
+                      type="button"
+                      onClick={() => setShowTexPreview(true)}
+                      className="px-2.5 py-1.5 text-xs font-medium text-blue-700 bg-blue-50/70 hover:bg-blue-100 border-r border-slate-300 flex items-center gap-1.5 whitespace-nowrap"
+                      title="Xem trước mã nguồn LaTeX (.tex) của mã đề hiện tại"
+                    >
+                      <Eye size={13} />
+                      Xem trước .tex
+                    </button>
+                    <button
+                      onClick={handleExportTex}
+                      disabled={isExporting}
+                      className="px-2.5 py-1.5 text-xs font-medium text-slate-800 hover:bg-slate-100 flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
+                      title={`Xuất riêng mã đề hiện tại thành file ${sanitizeExamFileBase(activeExam.code)}.tex`}
                     >
                       <FileCode2 size={13} />
-                      {generatedExams.length} đề .tex
+                      .tex
+                    </button>
+                    {generatedExams.length > 1 && (
+                      <button
+                        onClick={handleExportAllTex}
+                        disabled={isExporting}
+                        className="px-2.5 py-1.5 text-xs font-medium text-slate-800 border-l border-slate-300 hover:bg-slate-100 flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
+                        title={`Xuất riêng từng mã đề thành ${generatedExams.length} file .tex độc lập đặt tên theo số mã đề`}
+                      >
+                        <FileCode2 size={13} />
+                        {generatedExams.length} đề .tex
+                      </button>
+                    )}
+                  </div>
+                  <button
+                    onClick={() => window.print()}
+                    disabled={isExporting}
+                    className="px-2.5 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 rounded-md flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
+                  >
+                    <Printer size={13} />
+                    In A4
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Save Directory Picker & Per-Code File Naming Bar */}
+            {activeExam && (
+              <div className="pt-2 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-2 text-xs">
+                <div className="flex items-center gap-2 min-w-0 flex-wrap">
+                  <span className="font-medium text-slate-600 flex items-center gap-1.5 whitespace-nowrap">
+                    {saveDirHandle ? (
+                      <FolderCheck size={14} className="text-emerald-600 shrink-0" />
+                    ) : (
+                      <FolderOpen size={14} className="text-slate-500 shrink-0" />
+                    )}
+                    Thư mục lưu trữ:
+                  </span>
+                  <div
+                    className={`px-2.5 py-1 rounded border font-mono text-[11.5px] max-w-xs sm:max-w-md truncate ${
+                      saveDirHandle
+                        ? 'bg-emerald-50 border-emerald-200 text-emerald-800 font-semibold'
+                        : 'bg-white border-slate-200 text-slate-600'
+                    }`}
+                    title={
+                      saveDirHandle
+                        ? `Đang lưu trực tiếp vào thư mục: ${saveDirHandle.name}`
+                        : 'Chưa chọn thư mục — trình duyệt sẽ lưu về thư mục tải xuống mặc định'
+                    }
+                  >
+                    {saveDirHandle ? saveDirHandle.name : 'Thư mục tải xuống mặc định (Downloads)'}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleChooseSaveDirectory}
+                    disabled={isExporting}
+                    className="px-2.5 py-1 text-xs font-medium text-blue-700 bg-white border border-blue-200 hover:bg-blue-50 rounded flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
+                  >
+                    <FolderOpen size={13} />
+                    {saveDirHandle ? 'Đổi thư mục' : 'Chọn thư mục lưu'}
+                  </button>
+                  {saveDirHandle && (
+                    <button
+                      type="button"
+                      onClick={handleClearSaveDirectory}
+                      disabled={isExporting}
+                      className="px-2 py-1 text-xs text-slate-500 hover:text-slate-800 hover:bg-slate-200/70 rounded flex items-center gap-1 whitespace-nowrap"
+                      title="Quay lại lưu ở thư mục tải xuống mặc định"
+                    >
+                      <X size={12} />
+                      Mặc định
                     </button>
                   )}
                 </div>
-                <button
-                  onClick={() => window.print()}
-                  className="px-2.5 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 rounded-md flex items-center gap-1.5 whitespace-nowrap"
-                >
-                  <Printer size={13} />
-                  In A4
-                </button>
+
+                <div className="flex items-center gap-2 text-[11.5px] text-slate-500">
+                  {exportProgress ? (
+                    <span className="font-medium text-blue-700 font-mono tabular-nums">
+                      {exportProgress}
+                    </span>
+                  ) : (
+                    <span className="whitespace-nowrap">
+                      Xuất riêng từng mã đề:{' '}
+                      <span className="font-mono font-medium text-slate-700">
+                        {sanitizeExamFileBase(activeExam.code)}.pdf
+                      </span>
+                      ,{' '}
+                      <span className="font-mono font-medium text-slate-700">
+                        {sanitizeExamFileBase(activeExam.code)}.docx
+                      </span>
+                      ,{' '}
+                      <span className="font-mono font-medium text-slate-700">
+                        {sanitizeExamFileBase(activeExam.code)}.tex
+                      </span>
+                    </span>
+                  )}
+                </div>
               </div>
             )}
           </div>
@@ -960,26 +1343,22 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
                 style={{ backgroundColor: '#ffffff', color: '#0f172a' }}
               >
                 {/* Exam Header */}
-                <div data-pdf-block="" className="flex justify-between items-start border-b-2 border-slate-800 pb-4 gap-4">
-                  <div className="text-center flex-1">
-                    <div className="font-bold text-xs uppercase tracking-wide">
-                      {activeExam.schoolName}
-                    </div>
-                    <div className="text-xs italic text-slate-600 mt-0.5">
-                      Đề thi sinh tự động từ Ngân hàng câu hỏi động
-                    </div>
-                  </div>
-                  <div className="text-center flex-[1.4]">
-                    <div className="font-bold text-sm uppercase">{activeExam.title}</div>
-                    <div className="text-xs mt-1">
-                      Môn: {activeExam.subject} · {activeExam.gradeLabel} · Thời gian:{' '}
-                      {activeExam.durationMinutes} phút
-                    </div>
-                    <div className="inline-block mt-1.5 px-3 py-0.5 border border-slate-800 font-bold text-xs">
-                      MÃ ĐỀ: {activeExam.code}
-                    </div>
-                  </div>
-                </div>
+                {(() => {
+                  const hdr = resolveExamHeaderFields(activeExam);
+                  return (
+                    <ExamOfficialHeader
+                      departmentName={hdr.departmentName}
+                      schoolLevel={hdr.schoolLevel}
+                      schoolName={hdr.schoolName}
+                      groupName={hdr.groupName}
+                      title={hdr.title}
+                      schoolYear={hdr.schoolYear}
+                      subjectLabel={hdr.subjectLabel}
+                      durationMinutes={hdr.durationMinutes}
+                      code={hdr.code}
+                    />
+                  );
+                })()}
 
                 {/* Sections */}
                 {(['MC', 'TF', 'SA', 'ES'] as QuestionCategory[]).map((cat) => {
@@ -1091,7 +1470,8 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
                 <p className="text-xs text-slate-500 mt-0.5 tabular-nums">
                   {previewTexSource.split('\n').length} dòng ·{' '}
                   {texFormat === 'ex_test' ? 'Chuẩn ex_test (Việt Nam)' : 'LaTeX chuẩn (amsmath)'} ·{' '}
-                  {includeSolutions ? 'Có lời giải / đáp án' : 'Chỉ đề thi'}
+                  {includeSolutions ? 'Có lời giải / đáp án' : 'Chỉ đề thi'} ·{' '}
+                  Lưu tại: {saveDirHandle ? saveDirHandle.name : 'Tải xuống mặc định'}
                 </p>
               </div>
               <div className="flex items-center gap-2 flex-wrap">
@@ -1124,10 +1504,11 @@ export const ExamMatrixView: React.FC<ExamMatrixViewProps> = ({
                 <button
                   type="button"
                   onClick={handleExportTex}
-                  className="px-3 py-1.5 text-xs font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-md flex items-center gap-1.5 whitespace-nowrap"
+                  disabled={isExporting}
+                  className="px-3 py-1.5 text-xs font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-md flex items-center gap-1.5 disabled:opacity-50 whitespace-nowrap"
                 >
                   <Download size={13} />
-                  Tải file .tex
+                  Tải {sanitizeExamFileBase(activeExam.code)}.tex
                 </button>
                 <button
                   type="button"
